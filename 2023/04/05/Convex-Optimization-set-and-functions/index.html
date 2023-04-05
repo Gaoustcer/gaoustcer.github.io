@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://.disqus.com"/>
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Convex Optimization:set and functions | 
+        
+        Hexo
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.svg">
+    <link rel="icon" href="/img/favicon.svg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",Convex Optimization">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Hexo">
+    <meta name="msapplication-starturl" content="http://example.com/2023/04/05/Convex-Optimization-set-and-functions/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.svg">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://example.com/2023/04/05/Convex-Optimization-set-and-functions/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Convex Optimization:set and functions | Hexo">
+    <meta property="og:image" content="/img/favicon.svg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="Convex Optimization"> 
+
+    
+        <meta property="article:published_time" content="Wed Apr 05 2023 11:00:35 GMT+0800">
+        <meta property="article:modified_time" content="Wed Apr 05 2023 11:03:32 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://example.com/2023/04/05/Convex-Optimization-set-and-functions/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://example.com/2023/04/05/Convex-Optimization-set-and-functions/index.html",
+    "headline": "Convex Optimization:set and functions",
+    "datePublished": "Wed Apr 05 2023 11:00:35 GMT+0800",
+    "dateModified": "Wed Apr 05 2023 11:03:32 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "John Doe",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Convex Optimization",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Convex-Optimization%E2%80%94%E2%80%94Sets-and-Functions"><span class="post-toc-number">1.</span> <span class="post-toc-text">Convex Optimization——Sets and Functions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Define-and-Examples-of-Convex-Set"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Define and Examples of Convex Set</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Define"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Define</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Example-oof-Convex-Cone"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Example oof Convex Cone</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Properties-and-Operation-of-Convex-Set"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Properties and Operation of Convex Set</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Properties"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Properties</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%88%86%E5%89%B2%E8%B6%85%E5%B9%B3%E9%9D%A2"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">分割超平面</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%94%AF%E6%92%91%E8%B6%85%E5%B9%B3%E9%9D%A2"><span class="post-toc-number">1.2.1.2.</span> <span class="post-toc-text">支撑超平面</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Operations"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Operations</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Define-and-Example-of-Convex-functions"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Define and Example of Convex functions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Define-1"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">Define</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Example"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">Example</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Properties-of-convex-function"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Properties of convex function</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Convex-Optimization-USTC"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Convex Optimization(USTC)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Affine-Set"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">Affine Set</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Affine-Combination"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">Affine Combination</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">例子</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%94%A5%E5%92%8C%E5%87%B8%E9%94%A5"><span class="post-toc-number">1.5.4.</span> <span class="post-toc-text">锥和凸锥</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%A9%BA%E9%97%B4%E5%92%8C%E5%AD%90%E7%A9%BA%E9%97%B4"><span class="post-toc-number">1.5.5.</span> <span class="post-toc-text">空间和子空间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%B6%85%E5%B9%B3%E9%9D%A2%E4%B8%8E%E5%8D%8A%E7%A9%BA%E9%97%B4"><span class="post-toc-number">1.5.6.</span> <span class="post-toc-text">超平面与半空间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89%E5%A4%9A%E9%9D%A2%E4%BD%93"><span class="post-toc-number">1.5.7.</span> <span class="post-toc-text">定义多面体</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89%E5%8D%95%E7%BA%AF%E6%80%A7"><span class="post-toc-number">1.5.8.</span> <span class="post-toc-text">定义单纯性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AF%B9%E7%A7%B0%E7%9F%A9%E9%98%B5%E9%9B%86%E5%90%88"><span class="post-toc-number">1.5.9.</span> <span class="post-toc-text">对称矩阵集合</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BF%9D%E6%8C%81%E5%87%B8%E6%80%A7%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="post-toc-number">1.5.10.</span> <span class="post-toc-text">保持凸性的操作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%87%B8%E5%87%BD%E6%95%B0%E7%9A%84%E5%BB%B6%E6%8B%93"><span class="post-toc-number">1.5.11.</span> <span class="post-toc-text">凸函数的延拓</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%9B%86%E5%90%88%E7%9A%84%E7%A4%BA%E6%80%A7%E5%87%BD%E6%95%B0%E6%98%AF%E5%87%B8%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.5.12.</span> <span class="post-toc-text">集合的示性函数是凸函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%87%B8%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%80%E9%98%B6%E6%9D%A1%E4%BB%B6"><span class="post-toc-number">1.5.13.</span> <span class="post-toc-text">凸函数的一阶条件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%98%A0%E5%B0%84%E5%87%B8%E5%87%BD%E6%95%B0%E5%88%B0%E4%BD%8E%E7%BB%B4-%E6%9B%B2%E9%9D%A2%E6%98%A0%E5%B0%84%E5%88%B0%E6%9B%B2%E7%BA%BF"><span class="post-toc-number">1.5.14.</span> <span class="post-toc-text">映射凸函数到低维(曲面映射到曲线)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BA%8C%E9%98%B6%E6%9D%A1%E4%BB%B6"><span class="post-toc-number">1.5.15.</span> <span class="post-toc-text">二阶条件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%8C%83%E6%95%B0"><span class="post-toc-number">1.5.16.</span> <span class="post-toc-text">范数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#0-%E8%8C%83%E6%95%B0-%E5%88%BB%E7%94%BB%E5%90%91%E9%87%8F%E7%9A%84%E7%A8%80%E7%96%8F%E7%A8%8B%E5%BA%A6"><span class="post-toc-number">1.5.16.1.</span> <span class="post-toc-text">0-范数(刻画向量的稀疏程度)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9E%81%E5%A4%A7%E5%80%BC"><span class="post-toc-number">1.5.17.</span> <span class="post-toc-text">极大值</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9E%81%E5%A4%A7%E6%9E%81%E5%B0%8F%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.5.17.1.</span> <span class="post-toc-text">极大极小问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%8D%E5%8F%AF%E5%AF%BC%E5%87%BD%E6%95%B0%E7%9A%84%E8%A7%A3%E6%9E%90%E9%80%BC%E8%BF%91-log-sum-up"><span class="post-toc-number">1.5.18.</span> <span class="post-toc-text">不可导函数的解析逼近(log-sum-up)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%AF%B9%E6%95%B0"><span class="post-toc-number">1.5.19.</span> <span class="post-toc-text">行列式的对数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Operations-that-conserve-convex"><span class="post-toc-number">1.5.20.</span> <span class="post-toc-text">Operations that conserve convex</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%9D%9E%E8%B4%9F%E5%8A%A0%E6%9D%83%E5%92%8C"><span class="post-toc-number">1.5.20.1.</span> <span class="post-toc-text">非负加权和</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%A7%AF%E5%88%86"><span class="post-toc-number">1.5.20.2.</span> <span class="post-toc-text">积分</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BB%BF%E5%B0%84%E6%98%A0%E5%B0%84"><span class="post-toc-number">1.5.20.3.</span> <span class="post-toc-text">仿射映射</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#max%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.5.20.4.</span> <span class="post-toc-text">max函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.5.20.5.</span> <span class="post-toc-text">函数的函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E9%80%8F%E8%A7%86"><span class="post-toc-number">1.5.20.6.</span> <span class="post-toc-text">函数的透视</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B1%E8%BD%AD"><span class="post-toc-number">1.5.20.7.</span> <span class="post-toc-text">函数的共轭</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%87%B8%E9%9B%86%E5%92%8C%E5%87%B8%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.5.21.</span> <span class="post-toc-text">凸集和凸函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Quasi-Convex-function"><span class="post-toc-number">1.5.22.</span> <span class="post-toc-text">Quasi Convex function</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Convex Optimization:set and functions
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>John Doe</strong>
+        <span>4月 05, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Convex-Optimization/" rel="tag">Convex Optimization</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Convex Optimization:set and functions&url=http://example.com/2023/04/05/Convex-Optimization-set-and-functions/index.html&pic=http://example.com/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Convex Optimization:set and functions&url=http://example.com/2023/04/05/Convex-Optimization-set-and-functions/index.html&via=John Doe" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2023/04/05/Convex-Optimization-set-and-functions/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://example.com/2023/04/05/Convex-Optimization-set-and-functions/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Convex-Optimization——Sets-and-Functions"><a href="#Convex-Optimization——Sets-and-Functions" class="headerlink" title="Convex Optimization——Sets and Functions"></a>Convex Optimization——Sets and Functions</h1><h2 id="Define-and-Examples-of-Convex-Set"><a href="#Define-and-Examples-of-Convex-Set" class="headerlink" title="Define and Examples of Convex Set"></a>Define and Examples of Convex Set</h2><h3 id="Define"><a href="#Define" class="headerlink" title="Define"></a>Define</h3><ol>
+<li>凸集</li>
+<li>n个点的凸组合</li>
+<li>集合C的凸锥 $\{tx+(1-t)y|\forall x,y\in C,\forall t\in[0,1] \}$</li>
+<li>Cone:$\forall x\in C,t\geq 0 \to tx \in C$</li>
+<li>Convex Cone $x_1,x_2\in C\to t_1 x_1 +t_2 x_2\in C,\forall t_1,t_2\geq 0$</li>
+<li>Conic Combination $x_1,x_2,\cdots,x_k\in \R$.Conic Combination is $\sum_{i=1}^k \theta_i x_i,\theta_i\geq 0$</li>
+<li>Conic hull of set C:C中所有点组成的Conic Combination</li>
+</ol>
+<h3 id="Example-oof-Convex-Cone"><a href="#Example-oof-Convex-Cone" class="headerlink" title="Example oof Convex Cone"></a>Example oof Convex Cone</h3><blockquote>
+<p> Normal Cone: the normal cone of a given set C and $x\in C$ is</p>
+<script type="math/tex; mode=display">
+\mathcal N_{C} =\{g|g^T x\geq g^T y \forall y\in C\}</script><p>必然是Convex，随后不等式两边同乘正标量并不影响不等式，理论解释是和给定一个凸锥中一个向量和凸集中一点内积大于其和凸集中任何一点向量内积</p>
+</blockquote>
+<h2 id="Properties-and-Operation-of-Convex-Set"><a href="#Properties-and-Operation-of-Convex-Set" class="headerlink" title="Properties and Operation of Convex Set"></a>Properties and Operation of Convex Set</h2><h3 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h3><h4 id="分割超平面"><a href="#分割超平面" class="headerlink" title="分割超平面"></a>分割超平面</h4><p>两个不相交凸集存在分割超平面</p>
+<h4 id="支撑超平面"><a href="#支撑超平面" class="headerlink" title="支撑超平面"></a>支撑超平面</h4><p>非空凸集在边界点处存在支撑超平面</p>
+<h3 id="Operations"><a href="#Operations" class="headerlink" title="Operations"></a>Operations</h3><ol>
+<li>凸集之交</li>
+<li>线性变换$aC+b =\{ax+b|x\in C \}$(拉伸+平移)</li>
+<li>Affine images and preimages $f(x) = Ax+b,x\in C$，反之假设D为Affine Set，则$\{x:f(x)\in D \}$为Convex Set</li>
+</ol>
+<blockquote>
+<p>讲义中还提到一个例子称为Linear matrix inequality</p>
+<script type="math/tex; mode=display">
+A_1,A_2,\cdots,A_k,B\in S^n,x=(x_1,x_2,\cdots,x_k)\in \R^k\\
+x_1A_1+x_2A_2 +\cdots+x_k A_k\succeq B</script><p>给定$A_1,A_2,\cdots,A_k,B$，则满足上述不等式的$x\in \R^k$组成的集合C是凸集</p>
+<blockquote>
+<p>Suppose $x,y\in C,t\in [0,1]$，则要证明</p>
+<script type="math/tex; mode=display">
+(t x_1+(1-t) y_1) A_1 +(t x_2 +(1-t) y_2) A_2 +\cdots+(tx_k +(1-y) y_k) A_k\succeq B</script><p>结论显然</p>
+</blockquote>
+<p>perspective images and preimages，定义$\R^n \times R_{++}\to \R^n$上的perspective function$R_{++}$是由正实数组成的空间</p>
+<script type="math/tex; mode=display">
+P(x,z) = \frac{x}{z}</script><p>$\forall z&gt;0$如果$C\subseteq dom(P)$是凸的那么$P(C)$也是Convex的</p>
+</blockquote>
+<h2 id="Define-and-Example-of-Convex-functions"><a href="#Define-and-Example-of-Convex-functions" class="headerlink" title="Define and Example of Convex functions"></a>Define and Example of Convex functions</h2><h3 id="Define-1"><a href="#Define-1" class="headerlink" title="Define"></a>Define</h3><script type="math/tex; mode=display">
+f(t x+(1-t)y)\leq t f(x) + (1-t) f(y),t\in [0,1]</script><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><ol>
+<li>Quadratic function $f(x) = x^T Q x+b^T x+c,Q$是正定矩阵</li>
+<li>Least Square loss $\parallel y -Ax \parallel_2^2$</li>
+<li>任何向量范数$\parallel x\parallel$</li>
+</ol>
+<blockquote>
+<p>1的证明，只需要证明</p>
+<script type="math/tex; mode=display">
+(t x+(1-t) y)^T Q (tx +(1-t))\leq t x^T Q x + (1-t) y^T Q y\\
+等价于 \quad t^2 x^T Q x+(1-t)^2 y^T Q y + t(1-t) x^T Q y+ t(1-t) y^T Q x \leq t  x^T Q x +(1-t) y^T Qy</script><p>写成</p>
+<script type="math/tex; mode=display">
+t(1-t) x^T Q x+t(1-t) y^T Q y - t(1-t) x^T Q y - t(1-t) y^T Q x\geq 0\\
+x^TQ x +y^T Qy - x^T Q y - y^TQ x\geq 0\\
+(x-y)^T Q(x-y)\geq 0</script><p>2写成$f(x) = (y-Ax)^T (y -A x) =y^T y +x^T A^T A x-y^T A x-x^T A y$</p>
+</blockquote>
+<h2 id="Properties-of-convex-function"><a href="#Properties-of-convex-function" class="headerlink" title="Properties of convex function"></a>Properties of convex function</h2><ol>
+<li>Epi graph定义为$epi(f) = (x,t)\in dom (f)\times \R:f(x)\leq t$，一个函数是convex当且仅当epigraph是convex</li>
+<li>Sublevel set对于所有t都是convex</li>
+</ol>
+<blockquote>
+<p>Epigraph是$\R^{n+1}$维，而Sublevel set是$\R^n$维</p>
+</blockquote>
+<h2 id="Convex-Optimization-USTC"><a href="#Convex-Optimization-USTC" class="headerlink" title="Convex Optimization(USTC)"></a>Convex Optimization(USTC)</h2><h3 id="Affine-Set"><a href="#Affine-Set" class="headerlink" title="Affine Set"></a>Affine Set</h3><p>$x_1,x_2$，经过两点的直线表示为</p>
+<script type="math/tex; mode=display">
+\theta x_1 + (1-\theta )x_2,\theta\in \R</script><p>$\theta\in [0,1]$表示线段</p>
+<p>定义Affine Set</p>
+<blockquote>
+<p>A Set $C$ is Affine Set $\Rightarrow ,\forall x_1,x_2\in C,\theta\in \R,(1-\theta)x_1+\theta x_2\in C$</p>
+</blockquote>
+<h3 id="Affine-Combination"><a href="#Affine-Combination" class="headerlink" title="Affine Combination"></a>Affine Combination</h3><p>$x_1,x_2,\cdots,x_n\in C,\theta_1,\theta_2,\cdots,\theta_n\in \R$并且</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^n \theta_i =1</script><p>仿射组合定义为</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^n \theta_i x_i</script><p>仿射集的第二个定义为</p>
+<blockquote>
+<p>对于$\forall x_1,x_2,\cdots,x_n\in C$，它们的仿射组合属于C</p>
+</blockquote>
+<p>讨论特殊的仿射集，满足</p>
+<script type="math/tex; mode=display">
+\theta x_1+ (1-\theta)x_2\in C\to \alpha x_1+\beta x_2\in C</script><p>显然这样的集合需要满足$0\in C$，假设C是Affine Set，定义集合</p>
+<script type="math/tex; mode=display">
+V = C-x_0 =\{x-x_0|x\in C \quad x_0\in C\}</script><p>满足上述条件</p>
+<blockquote>
+<p>V定义了仿射集的一个变换，这是$\R^n$空间的一个子空间</p>
+</blockquote>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><blockquote>
+<p>线性方程组的解集合$\{x|Ax=b \}$是Affine Set，对应的子空间是满足$\{x|Ax=0 \}$解空间(A的化0空间)</p>
+<p>反之：任意仿射集可以看成线性方程解空间</p>
+<blockquote>
+<p>假设C是$\R^n$上的仿射集，必然$\exist A\in \R^{m\times n},b\in R^m,\forall x\in C,Ax = b$</p>
+</blockquote>
+<p>基于任意集合C，构造尽可能小的仿射集</p>
+<blockquote>
+<p>仿射包</p>
+<script type="math/tex; mode=display">
+Aff \ C = \{\sum_{i=1}^k \theta_i x_i|x_1,x_2,\cdots,x_k \in C,\sum_{i=1}^k \theta_i =1 \}</script><p>仿射集的仿射包是它本身</p>
+</blockquote>
+</blockquote>
+<h3 id="锥和凸锥"><a href="#锥和凸锥" class="headerlink" title="锥和凸锥"></a>锥和凸锥</h3><blockquote>
+<ol>
+<li>锥 $x\in C,\forall \theta \geq 0,\theta x\in C$</li>
+<li>凸锥 $x_1,x_2\in C,\forall \theta_1,\theta_2\geq 0$</li>
+<li>凸锥组合 $x_1,x_2,\cdots,x_k,\theta_1,\theta_2,\cdots,\theta_k\geq 0$, $\sum_{i=1}^k \theta_i x_i$称为k个点的凸锥组合</li>
+<li>凸锥包</li>
+</ol>
+</blockquote>
+<h3 id="空间和子空间"><a href="#空间和子空间" class="headerlink" title="空间和子空间"></a>空间和子空间</h3><p>满足对加减数乘闭合并且是空间的子集</p>
+<h3 id="超平面与半空间"><a href="#超平面与半空间" class="headerlink" title="超平面与半空间"></a>超平面与半空间</h3><p>定义超平面</p>
+<script type="math/tex; mode=display">
+\{x|a^T x=b \}</script><p>半空间</p>
+<script type="math/tex; mode=display">
+\{x|a^T x\geq b \}</script><h3 id="定义多面体"><a href="#定义多面体" class="headerlink" title="定义多面体"></a>定义多面体</h3><blockquote>
+<script type="math/tex; mode=display">
+P=\{x|a_j^T x\leq b_j,j=1,2,\cdots,m,c_i^Tx=d_i,i=1,2,\cdots,n \}</script></blockquote>
+<h3 id="定义单纯性"><a href="#定义单纯性" class="headerlink" title="定义单纯性"></a>定义单纯性</h3><blockquote>
+<p>Suppose $x_0,x_1,\cdots,x_k\in\R^n$，$x_1-x_0,x_2-x_0,\cdots,x_k-x_0$线性无关，则称</p>
+<script type="math/tex; mode=display">
+\{c|c =\sum_{i=0}^k \theta_i x_i,\sum_{i=0}^k \theta_i =1,\theta_i\in [0,1] \}</script><p>每一个单纯性都能写成多面体的形式</p>
+<blockquote>
+<p>proof</p>
+<script type="math/tex; mode=display">
+c = v_0 +\sum_{i=1}^k \theta_i(v_i-v_0)= v_0 +By\\
+B=(v_1-v_0,v_2-v_0,\cdots,v_k -v_0)\\
+y = (\theta_1,\theta_2,\cdots,\theta_k)^T</script><p>$B\in \R^{n\times k},rank(B)=k$，因此可以变换为上三角矩阵</p>
+<script type="math/tex; mode=display">
+AB = \begin{pmatrix}
+I_k\\
+0
+\end{pmatrix}\\
+A= \begin{pmatrix}
+A_1\\
+A_2
+\end{pmatrix}</script><p>两边乘上A，得到</p>
+<script type="math/tex; mode=display">
+Ac = Av_0 + AB y\Rightarrow \begin{pmatrix}
+A_1\\
+A_2
+\end{pmatrix}c +\begin{pmatrix}
+I_k\\
+0\end{pmatrix} y</script><p>得到</p>
+<script type="math/tex; mode=display">
+A_1 x = A_1 v_0 +y\\
+A_2 x = A_2 v_0</script><p>考虑到</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^k \theta_i \leq 1,\theta_i\geq 0</script><p>因此(21)写成</p>
+<script type="math/tex; mode=display">
+A_1 x \geq A_1 v_0\\
+1^TA_1  x\leq 1+ 1^T A_1 v_0\\
+A_2x= A_2 v_0</script><p>这样推导出它的多面体形式</p>
+</blockquote>
+</blockquote>
+<h3 id="对称矩阵集合"><a href="#对称矩阵集合" class="headerlink" title="对称矩阵集合"></a>对称矩阵集合</h3><script type="math/tex; mode=display">
+S^n =\{x\in \R^{n\times n}|x=x6T \}</script><p>对称半正定矩阵集合和正定矩阵集合</p>
+<script type="math/tex; mode=display">
+S_+^n,S_{++}^n</script><p>n=1 $S_+^1 = \R_+$</p>
+<p>n=2，写成</p>
+<script type="math/tex; mode=display">
+S_+^2 = \{\begin{pmatrix}x & y\\ y & x \end{pmatrix}|x>0,z>0,xz>zy \}</script><h3 id="保持凸性的操作"><a href="#保持凸性的操作" class="headerlink" title="保持凸性的操作"></a>保持凸性的操作</h3><ol>
+<li>交集</li>
+<li>仿射函数，m维到n维的线性变换</li>
+</ol>
+<blockquote>
+<p>对应的逆映射也可以保证凸性</p>
+<script type="math/tex; mode=display">
+f^{-1}(S) = \{x| f(x)\in S \}</script><p>如果S是凸集那么$f^{-1}(S)$也是凸集</p>
+</blockquote>
+<ol>
+<li>两个凸集的和$S_1+S_2 = \{x+y|x\in S_1,y\in S_2 \}$两个凸集的乘$S_1\times S_2 = \{(x,y)|x\in S_1,y\in S_2 \}$(先仿射变换，再相加)</li>
+<li>线性矩阵不等式</li>
+</ol>
+<script type="math/tex; mode=display">
+A_i,x_i,B\in S^m(对称矩阵)\\
+A(x) = x_1 A +\cdots + x_n A_n \preceq B\to (A(x)-B)\preceq 0（半正定）</script><p>则集合</p>
+<script type="math/tex; mode=display">
+\{x|A(x)\preceq B \}</script><p>为凸集</p>
+<blockquote>
+<p>定义仿射变换</p>
+<script type="math/tex; mode=display">
+f(x) = B - A (x)</script><p>输入是n个对称m维矩阵，输出一个m维对称矩阵(n维空间映射到1维空间，每个元素是一个对称矩阵)，$S_+^m$是凸集，则它的逆变换</p>
+<script type="math/tex; mode=display">
+f^{-1}(S_+^m) = \{x|B-A(x)\succeq 0 \}</script><p>$f^{-1}(S_+^m)$是凸集，因为$f$是仿射变换，得证</p>
+</blockquote>
+<ol>
+<li>椭球是球的仿射映射</li>
+</ol>
+<blockquote>
+<p>定义椭球</p>
+<script type="math/tex; mode=display">
+\epsilon =\{x|(x-x_c)^T P^{-1} (x-x_c)\leq 1 \},P\succeq 0</script><p>定义仿射变换</p>
+<script type="math/tex; mode=display">
+f(u) = p^{1/2} u+x_c\\
+\parallel u \parallel \leq 1\\
+P^{1/2}P^{1/2}= P</script><p>u表示一个球形空间</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\{f(u)|\parallel u\parallel \leq 1 \}& = \{p^{1/2} u +x_c|\parallel u \parallel \leq 1 \}\\
+&=\{x|\parallel p^{1/2} (x-x_c)\parallel \leq 1 \}(u = p^{-1/2} (x-x_c))\\
+&= \{x|(x-x_c)^T P^{-1} (x-x_c)\leq 1 \}
+\end{aligned}</script></blockquote>
+<ol>
+<li>透视函数</li>
+</ol>
+<script type="math/tex; mode=display">
+f:\R^{n+1}\to \R^{n}</script><p>它定义在</p>
+<script type="math/tex; mode=display">
+P = \R^n \times R_{++}</script><p>第n+1维必须是正实数，定义为</p>
+<script type="math/tex; mode=display">
+P(z,t) = \frac{z}{t},z\in \R^n ,t\in R_{++}</script><p><em><em>消灭</em></em>消灭**一个维度看到的坐标取负</p>
+<p>透视函数是保证集合的凹凸性</p>
+<blockquote>
+<p>考虑$\R^{n+1}$中的线段</p>
+<script type="math/tex; mode=display">
+x= (\overline x,x_{n+1})\\
+y = (\overline y,y_{n+1})\\
+\overline x,\overline y\in \R^{n},x_{n+1},y_{n+1}\in R_{++}</script><p>线段经过透视函数得到n维线段</p>
+<script type="math/tex; mode=display">
+P(\theta x+(1-\theta y)) = \frac{\theta \overline x+(1-\theta)\overline y}{\theta x_{n+1}+(1-\theta )y_{n+1}}\\
+=\frac{\theta x_{n+1}}{\theta x_{n+1} + (1-\theta) y_{n+1}} \frac{\overline x}{x_{n+1}} + \frac{(1-\theta)y_{n+1}}{\theta x_{n+1} + (1-\theta) y_{n+1}} \frac{\overline y}{y_{n+1}}\\
+=\mu P(x)+(1-\mu) P(y)</script><p>任意凸集的反透视都是凸集，定义反透视</p>
+<script type="math/tex; mode=display">
+P^{-1}(C) = \{(x,t)\in \R^{n+1}|\frac{x}{t}\in C,t\geq 0 \}</script><p>只要C是凸集，则$P^{-1}(C)$仍然是凸集</p>
+</blockquote>
+<ol>
+<li>线性分数函数(先线性，再仿射)</li>
+</ol>
+<script type="math/tex; mode=display">
+g:\R^n \to \R^{m+1}</script><p>为仿射映射，写成</p>
+<script type="math/tex; mode=display">
+g(x) = \begin{pmatrix} A\\ C^T \end{pmatrix} x + \begin{pmatrix} b \\ d\end{pmatrix}\\
+A\in \R^{m\times n},C\in \R^n</script><p>实际上是线性变换</p>
+<p>定义透视变换</p>
+<script type="math/tex; mode=display">
+P: \R^{m+1}\to \R^m</script><p>定义线性分数函数</p>
+<script type="math/tex; mode=display">
+f:\R^n \to \R^m = P \odot g</script><p>实际上写成</p>
+<script type="math/tex; mode=display">
+f(x) = \frac{Ax+b}{c^T x +d},dom f = \{x|c^T x+d \}</script><p>任意凸集经过两次变换后还是凸集(两个变换都是保凸的)</p>
+<ol>
+<li>两个随机变量的联合概率映射为条件概率</li>
+</ol>
+<p>随机变量$u=1,2,\cdots,n,v=1,2,\cdots,m$，概率定义为</p>
+<script type="math/tex; mode=display">
+p_{ij} = P(u=i,v=j)\\
+f_{ij} = P(u=i|v=j) = \frac{p_{ij}}{\sum_{k=1}^n p_{kj}}</script><p>条件概率是线性分数映射，假设</p>
+<script type="math/tex; mode=display">
+x = (p_{1j},\cdots p_{2j},\cdots,p_{nj})\in \R^n</script><p>A可以看成</p>
+<script type="math/tex; mode=display">
+A =(0,0,\cdots,1,\cdots,0)\\
+c = (1,1,\cdots,1)</script><p>现在考虑联合概率是否为凸的，定义集合</p>
+<script type="math/tex; mode=display">
+C = \{p|\exists \ i,j,s.t\ p_{ij}  = p \}</script><p>对于离散情况应该不成立？</p>
+<h3 id="凸函数的延拓"><a href="#凸函数的延拓" class="headerlink" title="凸函数的延拓"></a>凸函数的延拓</h3><script type="math/tex; mode=display">
+f = \left\{
+\begin{aligned}
+&f(x),x\in dom f\\
+&\infty ,x\notin dom f
+\end{aligned}
+\right.</script><h3 id="集合的示性函数是凸函数"><a href="#集合的示性函数是凸函数" class="headerlink" title="集合的示性函数是凸函数"></a>集合的示性函数是凸函数</h3><p>定义凸集$C\in \R^n$是凸集</p>
+<script type="math/tex; mode=display">
+f_c(x)=\left\{
+\begin{aligned}
+&\infty ,x\notin C\\
+& 0,x\in C
+\end{aligned}
+\right.</script><p>必须是$\infty$，如果是有限值则不能保证凹凸性</p>
+<h3 id="凸函数的一阶条件"><a href="#凸函数的一阶条件" class="headerlink" title="凸函数的一阶条件"></a>凸函数的一阶条件</h3><p>若$f:\R^n \to \R$可微，$\nabla f$在$dom f$上存在(f必须定义在开集上)，f是凸函数等价于满足</p>
+<ol>
+<li>dom f是凸集</li>
+<li>$f(y)\geq f(x)+\nabla f(x)^T (y-x),\forall x,y\in dom f$</li>
+</ol>
+<blockquote>
+<p>           \nabla f(x_0) = 0$，则</p>
+<script type="math/tex; mode=display">
+\forall y,f(y)\geq f(x_0)</script></blockquote>
+<h3 id="映射凸函数到低维-曲面映射到曲线"><a href="#映射凸函数到低维-曲面映射到曲线" class="headerlink" title="映射凸函数到低维(曲面映射到曲线)"></a>映射凸函数到低维(曲面映射到曲线)</h3><script type="math/tex; mode=display">
+\forall x\in dom f,\forall v,g(t) = f(x+tv)</script><p>为凸，g定义在</p>
+<script type="math/tex; mode=display">
+dom  g= \{t|x+tv\in dom f \}</script><p>显然如果$dom f$凸，则dom g凸</p>
+<blockquote>
+<p>$\forall x,y\in dom f,v= y-x$，define</p>
+<script type="math/tex; mode=display">
+g(t) = f(x+t(y-x))</script><p>$g(0) = f(x),g(1) = f(y)$。Q.E.D</p>
+<p>证明高维凸函数的一阶条件，convex $\to $一阶条件</p>
+<script type="math/tex; mode=display">
+f(y)\geq f(x)+\nabla f(x)^T (y-x)</script><p>定义</p>
+<script type="math/tex; mode=display">
+g(t) = f(ty+(1-t)x) = f(x+t(y-x))</script><p>$g(t)$是凸函数</p>
+<script type="math/tex; mode=display">
+g^\prime(t) = \nabla f^T(x+t(y-x))(y-x)</script><p>则</p>
+<script type="math/tex; mode=display">
+g(1) = f(y)\\
+\nabla g(0) = \nabla f^T(x)\\
+g(0) =f(x)</script><p>则</p>
+<script type="math/tex; mode=display">
+g(1)\geq g(0)+\nabla g(0)</script><p>在dom f中找两个点</p>
+<script type="math/tex; mode=display">
+a= x + t(y-x )\in dom f\\
+b=x+\overline t(y-x) \in \dim f$g(t)$</script><p>f满足一阶条件，写成</p>
+<script type="math/tex; mode=display">
+f(a)\geq f(b) +\nabla f(b)(a-b)\\
+f(x+t(y-x))\geq f(x+\overline t(y-x)) + \nabla ^T f(x+\overline t(y-x))(y-x)(t-\overline t)</script><p>带入$g(t)$</p>
+<p>拆分成</p>
+<script type="math/tex; mode=display">
+g(t)\geq \nabla g(\overline t)(t-\overline t) + g(\overline t)</script><p>x,y任意选择，根据第二个条件的任意性得证</p>
+</blockquote>
+<h3 id="二阶条件"><a href="#二阶条件" class="headerlink" title="二阶条件"></a>二阶条件</h3><p>二阶hessian矩阵半正定(等价条件)</p>
+<script type="math/tex; mode=display">
+\nabla ^2 f(x)\succeq 0</script><blockquote>
+<p>如果Hessian矩阵是正定的，则它严格凸(整个结论反命题并不一定成立！$f(x)=x^4$)</p>
+</blockquote>
+<p>需要保证定义在凸集上，比如</p>
+<script type="math/tex; mode=display">
+f(x) = \frac{1}{x^2}</script><h3 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h3><h4 id="0-范数-刻画向量的稀疏程度"><a href="#0-范数-刻画向量的稀疏程度" class="headerlink" title="0-范数(刻画向量的稀疏程度)"></a>0-范数(刻画向量的稀疏程度)</h4><p>$x\in \R^n,\parallel x\parallel_0$是x中非零元素数量，对于n=1，写成</p>
+<script type="math/tex; mode=display">
+\parallel x\parallel_0 =\left\{
+\begin{aligned}
+& 0 \quad x=0\\
+& 1 \quad x\neq 0
+\end{aligned}
+\right.</script><p>但是它显然不满足凸函数，因为不满足</p>
+<script type="math/tex; mode=display">
+\parallel x + y\parallel\leq \parallel x\parallel +\parallel y\parallel</script><h3 id="极大值"><a href="#极大值" class="headerlink" title="极大值"></a>极大值</h3><script type="math/tex; mode=display">
+f(x) = \max\{x_1,x_2,\cdots,x_n \}</script><p>验证其凹凸性，一定有</p>
+<script type="math/tex; mode=display">
+\max{x+y}\leq \max  x+ \max y</script><h4 id="极大极小问题"><a href="#极大极小问题" class="headerlink" title="极大极小问题"></a>极大极小问题</h4><script type="math/tex; mode=display">
+\min_x \max_y f(x,y)</script><h3 id="不可导函数的解析逼近-log-sum-up"><a href="#不可导函数的解析逼近-log-sum-up" class="headerlink" title="不可导函数的解析逼近(log-sum-up)"></a>不可导函数的解析逼近(log-sum-up)</h3><p>定义</p>
+<script type="math/tex; mode=display">
+f(x) = \log {\sum_{i=1}^n e^{x_i}},x\in \R^n</script><p>一定有</p>
+<script type="math/tex; mode=display">
+\max\{x_1,x_2,\cdots,x_n \}\leq f(x)\leq \max\{ x_1,x_2,\cdots,x_n\}+ \log n</script><p>对$f(x)$求偏导</p>
+<script type="math/tex; mode=display">
+\frac{\partial f}{\partial x_i} = \frac{e^{x_i}}{\sum_{j=1}^n e^{x_j}}\\
+\frac{\partial^2 f}{\partial x_i \partial x_j} = H=(h_{ij})_{i=1,j=1}^{n,n}</script><p>定义</p>
+<script type="math/tex; mode=display">
+z = [e^{x_1},e^{x_2},\cdots,e^{x_n}]</script><p>于是Hessian矩阵写成</p>
+<script type="math/tex; mode=display">
+h_{ij} = \left\{
+\begin{aligned}
+& -\frac{e^{x_i+x_j}}{\parallel z\parallel_1^2},\quad i\neq j\\
+& \frac{-e^{2x_i}+e^{x_1}\parallel z\parallel_1}{\parallel z\parallel_1^2},\quad i=j
+\end{aligned}
+\right.\\
+\parallel z \parallel_1 = 1^T z</script><p>Hessian矩阵写成</p>
+<script type="math/tex; mode=display">
+H = \frac{1}{\parallel z\parallel_1^2}(diag(e^{x_i}(\sum_{j=1}^n e^{x_j})) - \begin{pmatrix}
+e^{x_1}\\
+e^{x_2}\\
+\cdots \\
+e^{x_n}
+\end{pmatrix}\begin{pmatrix}
+e^{x_1},e^{x_2},\cdots,e^{x_n}
+\end{pmatrix})=\frac{1}{\parallel z\parallel_1^2}(\parallel z\parallel_1^2 diag(z) - z z^T)=\frac{1}{\parallel z\parallel_1^2}K</script><p>K是否为半正定？$\forall v\in \R^n$</p>
+<script type="math/tex; mode=display">
+v^T K v = \sum_{i=1} z_i \sum_i v_i^2 z_i - (\sum_i v_i z_i)^2</script><p>定义</p>
+<script type="math/tex; mode=display">
+a_i = v_i \sqrt{z_i},b_i = \sqrt{z_i}\\</script><p>写成</p>
+<script type="math/tex; mode=display">
+v^T K v = (b^T b)(a^T a) - (a^T b)^2\geq0</script><p>Cauchy-Schwartz不等式</p>
+<script type="math/tex; mode=display">
+\lang a,b\rang ^2 \leq \lang a,a\rang\lang b,b\rang</script><h3 id="行列式的对数"><a href="#行列式的对数" class="headerlink" title="行列式的对数"></a>行列式的对数</h3><script type="math/tex; mode=display">
+f(x) = \log \det (X),X\in S_{++}^n</script><p>X的特征值为$\lambda_1,\lambda_2,\cdots,\lambda_n&gt; 0$，满足</p>
+<script type="math/tex; mode=display">
+f(x) =\sum_{i=1}^n \log \lambda_i</script><p>只需要证明</p>
+<script type="math/tex; mode=display">
+\forall z\in S_{++}^n ,v\in\R^{n\times n},\forall t\in R\\
+z+tv\in S_{++}^n,g(t) = f(z+tv)</script><p>是凹函数，可知$v\in S_{++}^n$，于是有</p>
+<script type="math/tex; mode=display">
+g(t) = \log \det (z^{1/2}(I+t z^{-1/2} v z^{-1/2}) z^{1/2})=2\log \det {z^{1/2}}+\log\det(I+t z^{-1/2} vz^{-1/2})</script><p>假设$\lambda_i$为$P =z^{-1/2}v z^{-1/2}$的特征值，写成</p>
+<script type="math/tex; mode=display">
+g(t) = \log \det (z) + \sum_{i=1}^n \log (1+t\lambda_i)</script><p>P是对称矩阵(多个对称矩阵乘积)，因此可以进行正交变换</p>
+<script type="math/tex; mode=display">
+P = Q\Lambda Q^T,QQ^T = I</script><p>考虑微分</p>
+<script type="math/tex; mode=display">
+g^\prime(t) = \sum_{i=1}^n \frac{\lambda_i}{1+t\lambda_i}\\
+g^{\prime\prime}(t) =-\sum_{i=1}^i \frac{\lambda_i^2}{(1+t\lambda_i)^2}\leq 0</script><h3 id="Operations-that-conserve-convex"><a href="#Operations-that-conserve-convex" class="headerlink" title="Operations that conserve convex"></a>Operations that conserve convex</h3><h4 id="非负加权和"><a href="#非负加权和" class="headerlink" title="非负加权和"></a>非负加权和</h4><script type="math/tex; mode=display">
+\sum_{i=1}^n w_i f_i,w_i\geq 0</script><h4 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h4><p>若$f(x,y),\forall x\in A$，都有$f(x,y)$都是凸函数(并不一定对(x,y)joint convex)，假设</p>
+<script type="math/tex; mode=display">
+w(y)\geq 0,\forall y\in A(A不一定是凸集)</script><p>定义</p>
+<script type="math/tex; mode=display">
+g(x) =\int_{y\in A}w(y)f(x,y) dy</script><p>为凸</p>
+<h4 id="仿射映射"><a href="#仿射映射" class="headerlink" title="仿射映射"></a>仿射映射</h4><p>$f(\R^n \to R),A\in \R^{m\times n},b\in \R^n$，定义</p>
+<script type="math/tex; mode=display">
+g(x) = f(Ax+b)</script><p>在<code>dom g</code>上是凸的</p>
+<blockquote>
+<p>仿射映射保证<code>dom g</code>是凸集</p>
+</blockquote>
+<p>$f_i(\R^n \to \R),i=1,2,\cdots,m$为凸，$A\in \R^{n},b\in \R$，定义</p>
+<script type="math/tex; mode=display">
+g(x) = A^T [f_1(x),f_2(x),\cdots,f_m(x)]^T +b</script><p><strong>不一定保证凸</strong><em><em>A&gt;0</em></em><em>A&gt;0*</em></p>
+<h4 id="max函数"><a href="#max函数" class="headerlink" title="max函数"></a>max函数</h4><script type="math/tex; mode=display">
+f(x) =\max (f_1(x),f_2(x))</script><blockquote>
+<p>向量$x\in \R^n$中r个最大元素的和</p>
+<script type="math/tex; mode=display">
+f(x) = \sum_{i=1}^r x^i</script><p>定义$1_n^r$表示n维向量，其中包含r个1，剩下位置是0，显然有</p>
+<script type="math/tex; mode=display">
+C_n^r</script><p>个$1_n^r$向量，写成</p>
+<script type="math/tex; mode=display">
+f(x )=\max 1_n^r x</script><p>因此这是凸函数</p>
+<p>实对称矩阵的最大特征值(奇异值分解，主方向)</p>
+<script type="math/tex; mode=display">
+f(x) =\lambda_{\max}(X),dom f= S^m</script><p>特征值满足</p>
+<script type="math/tex; mode=display">
+X y = \lambda y</script><p>可以写成</p>
+<script type="math/tex; mode=display">
+f(X) = \max_{\parallel v\parallel =1} v ^T X  v</script><p>因此凸</p>
+</blockquote>
+<h4 id="函数的函数"><a href="#函数的函数" class="headerlink" title="函数的函数"></a>函数的函数</h4><script type="math/tex; mode=display">
+f(x) = h(g(x))</script><p>$f(x),h(x)$均为convex function，讨论$g(x)$的凹凸性(一维，可微)</p>
+<script type="math/tex; mode=display">
+f^{\prime\prime}(x) = h^{\prime\prime}(g(x)) g^\prime(x)^2 + h^\prime(g(x))g^{\prime\prime}(x)</script><ol>
+<li>$h$是凸函数且不降，g为凸函数，则f为凸函数</li>
+<li>h为凸函数，不增，g为凹函数，则f为凸函数</li>
+</ol>
+<p>讨论</p>
+<script type="math/tex; mode=display">
+h(x) = -\log x,x\in R_{++}</script><p>并将其延拓到$\R$</p>
+<script type="math/tex; mode=display">
+\overline h(x) = \left\{
+\begin{aligned}
+& -\log x,x\in R_{++}\\
+&\infty ,else
+\end{aligned}
+\right.</script><ol>
+<li>$h$为凸,$\overline h$不降，g凸，则f为凸</li>
+<li>h为凸,$\overline h$增，g凹，则f为凸</li>
+</ol>
+<blockquote>
+<p>                                              g$，并且</p>
+<script type="math/tex; mode=display">
+g(x),g(y)\in dom h</script><p>因为g是凸的</p>
+<script type="math/tex; mode=display">
+g(\theta x+(1-\theta)y)\leq \theta g(x)+(1-\theta)g(y)</script><p>h为凸的，因此</p>
+<script type="math/tex; mode=display">
+\theta g(x) + (1-\theta )g(y)\in dom h\\
+h(\theta g(x) + (1-\theta )g(y))\leq \theta h(g(x)) + (1-\theta) h(g(y))=\theta f(x)+(1-\theta) f(y)</script><p>同时在(99)两边都加上h，得到</p>
+<script type="math/tex; mode=display">
+h(g(\theta x+(1-\theta)y))\leq h( \theta g(x)+(1-\theta)g(y))</script><p>这个式子不是显然的，因为不能确定$g(\theta x +(1-\theta )y)\in dom h$</p>
+<p>因此需要对h进行延拓，所以(101)总是成立</p>
+<p>$g$为凸，$\exp{g(x)}$为凸</p>
+</blockquote>
+<h4 id="函数的透视"><a href="#函数的透视" class="headerlink" title="函数的透视"></a>函数的透视</h4><p>定义$f(\R^n\to \R)g(\R^n \times \R_{++}\to \R)$为透视函数，定义为</p>
+<script type="math/tex; mode=display">
+g(x,t) = tf(\frac{x}{t})</script><p>g定义在</p>
+<script type="math/tex; mode=display">
+dom g = \{(x,t) |t>0\quad\frac{x}{t}\in dom f \}</script><p>f是凸，g为凸，f为凹，g为凹</p>
+<blockquote>
+<p>$\forall (x_1,t_1),(x_2,t_2)\in dom g$，先证明dom g是凸集，$\forall 0\leq \theta \leq 1$，必然有</p>
+<script type="math/tex; mode=display">
+\frac{x_1}{t_1},\frac{x_2}{t_2}\in dom f</script><p>下面对于$\theta \in (0,1)$，构造凸组合</p>
+<script type="math/tex; mode=display">
+x = \theta x_1 + (1-\theta ) x_2\\
+t = \theta t_1 + (1-\theta )t_2</script><p>考虑</p>
+<script type="math/tex; mode=display">
+\frac{x}{t} =\frac{\theta x_1 +(1-\theta)x_2 }{\theta t_1+(1-\theta)t_2}</script><p>已知</p>
+<script type="math/tex; mode=display">
+\theta \frac{x_1}{t_1} + (1-\theta )\frac{x_2}{t_2}\in dom f</script><p>做变形</p>
+<script type="math/tex; mode=display">
+\frac{x}{t} =\frac{\theta t_1}{t}  \frac{x_1}{t_1} + \frac{(1-\theta)t_2}{t}\frac{x_2}{t_2} = \Theta \frac{x_1}{t_1} + (1-\Theta)\frac{x_2}{t_2}</script><p>因此dom g也是凸集</p>
+<p>现在证明函数的凸性，对于$g(x,t)$，有</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+g(x,t)& = (\theta t_1 +(1-\theta)t_2 )f(\frac{\theta x_1+(1-\theta)x_2}{\theta t_1 + (1-\theta)t_2})\\
+&\leq (\theta t_1 + (1-\theta )t_2) (\frac{\theta t_1}{t} f(\frac{x_1}{t_1})+\frac{(1-\theta )t_2}{t}f(\frac{x_2}{t}))\\
+&\leq \theta g(x_1,t_1) + (1-\theta)g(x_2,t_2)
+\end{aligned}
+得证</script></blockquote>
+<p>例子：范数平方</p>
+<blockquote>
+<p>$f(x) = x^T x,dom f = \R^n$,定义</p>
+<script type="math/tex; mode=display">
+g(x,t)=\frac{x^T x}{t}</script><p>对$(x,t)$联合凸</p>
+</blockquote>
+<p>例子：负对数</p>
+<blockquote>
+<p>$f(x) = -\log x,dom f = R_{++}$</p>
+<script type="math/tex; mode=display">
+g(x,t) = t(-\log \frac{x}{t}) = t \log \frac{t}{x}</script><p>实际上是交叉熵，进一步考虑</p>
+<script type="math/tex; mode=display">
+g(u,v) = \sum_{i=1}^n u_i \log \frac{u_i}{v_i} = \sum_{i=1}^n g(u_i,v_i)</script><p>不能直接使用非负加权和的性质判断，因为不同函数实际上对应相同变量</p>
+</blockquote>
+<p>扩展到Bregman Divergence，定义为</p>
+<script type="math/tex; mode=display">
+D_B(u,v) = f(u) - f(v)-\nabla f(v)(u-v)</script><p>当$f(x) = \sum_{i=1}^n x_i \log x_i -\sum_{i=1}^n x_i$时，<code>Bregman</code>退化为KL散度，实际上不能保证凸性</p>
+<h4 id="函数的共轭"><a href="#函数的共轭" class="headerlink" title="函数的共轭"></a>函数的共轭</h4><p>对于复数共轭的推广，假设$f(\R^n \to \R),$定义它的共轭为$f^*$，满足</p>
+<script type="math/tex; mode=display">
+f^*(y) = \sup_{x\in dom f}(y^T x- f(x))</script><p>对于n=1，$y^Tx$可以看成斜率为y的过原点直线在x处取值</p>
+<blockquote>
+<ol>
+<li>若$f(x)$可微，则$f^*(y)$对应的x满足$f^\prime(x) = y$(直线和某点处曲线的切线平行)</li>
+<li><em>(y)$必然是凸函数(多个线性函数的最大值)，实际上$f^</em>个线性函数的最大值)，实际上$f^*(y)$是分段线性函数</li>
+</ol>
+<p>关于函数扩展单调性的讨论(为何需要对h进行扩展)，对于$f:h\odot g$</p>
+<script type="math/tex; mode=display">
+g(x)=x^2,dom g \in \R\\
+h(z) = 0,dom z = [0,1]</script><p>h(z)是凸函数，并且不增不降，现在考虑复合函数</p>
+<script type="math/tex; mode=display">
+\overline h(g(x)) = \begin{aligned}
+&0,x\in [-\sqrt 2,-1]\bigcup [1,\sqrt 2]\\
+&not define
+\end{aligned}</script><p>显然这个函数没有凹凸性，因为定义域不是convex set，因此对于复合函数$f = h\odot g$</p>
+<p><strong>需要保证h的扩展在全集上的单调性，才能判断复合函数的单调性</strong></p>
+<p>$g(x)\geq 0$为凸，则$g^p(x),p\geq 1$是凸的</p>
+<blockquote>
+<p>定义$h(z)$</p>
+<script type="math/tex; mode=display">
+h(z)=\begin{aligned}
+&z^p,z\geq 0\\
+&0,z<0
+\end{aligned}</script><p>现在考虑复合函数$h(g(x))$，满足</p>
+<ol>
+<li>g(x)为凸</li>
+<li>$h(z)$全局增</li>
+</ol>
+<p>因此复合函数是凸函数</p>
+</blockquote>
+<p>计算函数的对偶</p>
+<script type="math/tex; mode=display">
+f(x)= ax+b</script><p>对偶是</p>
+<script type="math/tex; mode=display">
+f^*(y) = \sup_{x\in dom f} (yx -(ax+b))=\left\{
+\begin{aligned}
+& -b,y=a\\
+& \infty,else
+\end{aligned}
+\right.</script><p>考虑对数函数</p>
+<script type="math/tex; mode=display">
+f(x)=-\log x,x\in R_{++}</script><script type="math/tex; mode=display">
+f^*(y) = \sup_{x> 0}(yx+\log x)\\
+y+\frac{1}{x} = 0\to x=-\frac{1}{y} \\
+f^*(y) = \left\{
+\begin{aligned}
+&-1-\log -y, y<0\\
+&\infty,y\geq 0
+\end{aligned}
+\right.</script><p>考虑二次函数</p>
+<script type="math/tex; mode=display">
+f(x)= \frac{1}{2}x^T Q x,Q\in S_{++}^n</script><p>计算</p>
+<script type="math/tex; mode=display">
+f^*(y) =\sup_x (y^T x-\frac{1}{2}x^T Qx)</script><p>计算</p>
+<script type="math/tex; mode=display">
+\frac{\partial y^T x-\frac{1}{2}x^T Qx }{\partial x}= y -Qx</script><p>得到</p>
+<script type="math/tex; mode=display">
+x = Q^{-1}y,Q^{-1}\in S_{++}^n \\
+f^*(y) = y^T Q^{-1} y - \frac{1}{2} y^T Q^{-1} y =\frac{1}{2} y^T Q^{-1}y</script><p>它的共轭仍然是二次项</p>
+<p>一个复数$a+bj$的共轭是$a-bj$，满足$\overline {\overline z}=z$，考虑函数共轭的共轭，显然没有</p>
+<script type="math/tex; mode=display">
+f^{**} = f</script><p>因为共轭的共轭都是凸函数，如果约定f是凸函数并且f是闭函数，则共轭的共轭是其自身</p>
+</blockquote>
+<h3 id="凸集和凸函数"><a href="#凸集和凸函数" class="headerlink" title="凸集和凸函数"></a>凸集和凸函数</h3><p>$\alpha-$sub level set</p>
+<blockquote>
+<p>若$f(\R^n \to \R)$定义其$\alpha-sublevel$ set \</p>
+<script type="math/tex; mode=display">
+C_{\alpha} = \{x\in dom f|f(x)\leq \alpha \}</script></blockquote>
+<p>性质：凸函数的所有$\alpha-$sublevel set都是凸集</p>
+<blockquote>
+<p>反之不一定成立：如果函数的所有$\alpha-$sublevel set都是凸集，则它不一定是凸函数$f(x)=-e^x$</p>
+</blockquote>
+<p>考虑$f(\R^2\to \R)$的$\alpha-$sublevel set $f(x_1,x_2)=x^T x$，$\alpha-$sublevel set满足</p>
+<script type="math/tex; mode=display">
+x_1^2+x_2^2\leq \alpha</script><h3 id="Quasi-Convex-function"><a href="#Quasi-Convex-function" class="headerlink" title="Quasi Convex function"></a>Quasi Convex function</h3><p>所有$\alpha$-sublevel set都是凸的函数</p>
+<blockquote>
+<script type="math/tex; mode=display">
+f(x)=\left\{
+\begin{aligned}
+& \sqrt x,x\geq 0\\
+& \sqrt {-x},x\leq 0
+\end{aligned}
+\right.</script></blockquote>
+<p>Quasi Convex定义为</p>
+<script type="math/tex; mode=display">
+S_\alpha = \{x\in dom f|f(x)\leq \alpha \}</script><p>convex $\forall \alpha \in \R$</p>
+<p>同样定义Quasi Concave</p>
+<script type="math/tex; mode=display">
+S_\alpha^\prime = \{x\in dom f|f(x)\geq \alpha \}</script><p>对于$\forall \alpha \in \R$是convex的</p>
+<p>定义Quasi linear</p>
+<script type="math/tex; mode=display">
+S_\alpha^{\prime \prime}=\{x\in dom f|f(x)=\alpha \}</script><p>是凸集</p>
+<p>Quasi convex优化起来比较容易，尽管不能用convex function方法分析</p>
+<p>拟凸下，有</p>
+<script type="math/tex; mode=display">
+\forall x,y\in dom f,\max(f(x),f(y))\geq f(\theta +(1-\theta(y)))</script><blockquote>
+<p>向量$x\in \R^n$的长度，定义为x中最后一个非零元素的个数</p>
+<script type="math/tex; mode=display">
+f(x)=\left\{
+\begin{aligned}
+& \max_{i,x_i\neq 0} i,x\neq 0\\
+& 0,x=0
+\end{aligned}
+\right.</script><p>$f(x)$是拟凸函数，对于它的$\alpha-$sublevel set</p>
+<script type="math/tex; mode=display">
+f(x)\leq \alpha \to x_{\alpha+1},x_{\alpha+2},\cdots,x_{n} = 0</script><p>显然是凸集</p>
+<p>线性分数函数</p>
+<script type="math/tex; mode=display">
+f(x) =\frac{a^Tx+b}{c^T x+d}\\
+dom f = \{x|c^T x+d >0 \}</script><p>是拟凸的</p>
+<script type="math/tex; mode=display">
+S_\alpha \to \{x|c^T x+d >0,a^T x+b \leq \alpha (c^T x+d) \}</script><p>多面体一定是凸集</p>
+<script type="math/tex; mode=display">
+f(x) = (x_1x_2\cdots x_n)^{\frac{1}{n}}在\R_{++}^n\bigcap \{\parallel R\parallel _2\leq 1\}上是凸函数</script></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/2023/04/05/Convex-Optimization-set-and-functions/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2023/04/05/Convex-Optimization-set-and-functions/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/04/04/RLTransformer/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="John Doe's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2023/04/">四月 2023<span class="sidebar_archives-count">3</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/bollnh/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Hexo
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+    for (var i = 0; i < all.length; ++i)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+
+</body>
+    
+</html>
