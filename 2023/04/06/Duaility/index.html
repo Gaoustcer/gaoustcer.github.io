@@ -48,7 +48,7 @@
     
     <title>
         
-            RLTransformer | 
+            Duaility | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Reinforcement Learning">
+    <meta name="keywords" content=",Convex Optimization">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://example.com/2023/04/04/RLTransformer/">
+    <meta name="msapplication-starturl" content="http://example.com/2023/04/06/Duaility/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,16 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://example.com/2023/04/04/RLTransformer/">
+    <meta property="og:url" content="http://example.com/2023/04/06/Duaility/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="RLTransformer | Hexo">
+    <meta property="og:title" content="Duaility | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Reinforcement Learning"> 
+    <meta property="og:article:tag" content="Convex Optimization"> 
 
     
-        <meta property="article:published_time" content="Tue Apr 04 2023 22:24:14 GMT+0800">
-        <meta property="article:modified_time" content="Wed Apr 05 2023 00:35:06 GMT+0800">
+        <meta property="article:published_time" content="Thu Apr 06 2023 13:25:24 GMT+0800">
+        <meta property="article:modified_time" content="Thu Apr 06 2023 13:26:04 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://example.com/2023/04/04/RLTransformer/index.html" />
+        <link rel="canonical" href="http://example.com/2023/04/06/Duaility/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://example.com/2023/04/04/RLTransformer/index.html",
-    "headline": "RLTransformer",
-    "datePublished": "Tue Apr 04 2023 22:24:14 GMT+0800",
-    "dateModified": "Wed Apr 05 2023 00:35:06 GMT+0800",
+    "mainEntityOfPage": "http://example.com/2023/04/06/Duaility/index.html",
+    "headline": "Duaility",
+    "datePublished": "Thu Apr 06 2023 13:25:24 GMT+0800",
+    "dateModified": "Thu Apr 06 2023 13:26:04 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Gaoustcer",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.svg"
         }
     },
-    "keywords": ",Reinforcement Learning",
+    "keywords": ",Convex Optimization",
     "description": "",
 }
 </script>
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#RL-Transformer"><span class="post-toc-number">1.</span> <span class="post-toc-text">RL Transformer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9E%E9%A1%BE%EF%BC%9ATransformer"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">回顾：Transformer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9B%9E%E9%A1%BEAttention%E6%9C%BA%E5%88%B6"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">回顾Attention机制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Attention-for-Seq2Seq"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Attention for Seq2Seq</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#From-Attention-to-Self-Attention"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">From Attention to Self-Attention</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#From-Attention-to-Multi-head-Attention"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">From Attention to Multi-head Attention</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#From-Single-head-Self-Attention-to-Encoder"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">From Single-head Self-Attention to Encoder</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Decoder%E7%BD%91%E7%BB%9C"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">Decoder网络</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Pytorch%E4%B8%ADTransformer%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Pytorch中Transformer的实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Embedding"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Embedding</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Position-Embedding"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Position Embedding</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Transformer-from-pytorch%E2%80%94%E2%80%94target-Masking"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">Transformer from pytorch——target Masking</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Padding-Masking"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">Padding Masking</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Offline-Reinforcement-Learning-as-One-Big-Sequence-Modeling-Problem"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Offline Reinforcement Learning as One Big Sequence Modeling Problem</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Summary"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">Summary</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%BD%A8%E8%BF%B9"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">轨迹</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9E%84%E5%BB%BA%E5%AD%97%E5%85%B8"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">构建字典</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8E%9F%E6%96%87%EF%BC%88Reinforcement-Learning-and-Control-as-Sequence-Modeling%EF%BC%89"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">原文（Reinforcement Learning and Control as Sequence Modeling）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%BF%9E%E7%BB%AD%E7%A9%BA%E9%97%B4%E7%A6%BB%E6%95%A3%E5%8C%96-%E7%94%A8%E4%BA%8E%E8%BE%93%E5%87%BA%E4%BC%BC%E7%84%B6%E6%A6%82%E7%8E%87"><span class="post-toc-number">1.3.4.1.</span> <span class="post-toc-text">连续空间离散化(用于输出似然概率)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.3.4.2.</span> <span class="post-toc-text">损失函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%AE%97%E6%B3%95%EF%BC%9ABeam-Search"><span class="post-toc-number">1.3.4.3.</span> <span class="post-toc-text">算法：Beam Search</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Planning-with-Beam-Search"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">Planning with Beam Search</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#What-is-Beam-search"><span class="post-toc-number">1.3.5.1.</span> <span class="post-toc-text">What is Beam search</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Input-of-torch-transformer"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">Input of torch.transformer</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Decision-Transformer-Reinforcement-Learning-via-Sequence-Modeling"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Decision Transformer: Reinforcement Learning via Sequence Modeling</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9A%E9%80%89%E6%8B%A9%E4%B8%A4%E7%82%B9%E4%B9%8B%E9%97%B4%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">例子：选择两点之间最短路径</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Methods%E2%80%94%E2%80%94%E8%BD%A8%E8%BF%B9%E8%A1%A8%E7%A4%BA"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">Methods——轨迹表示</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Methods%E2%80%94%E2%80%94Outline-of-the-algorithm"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">Methods——Outline of the algorithm</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AE%AD%E7%BB%83"><span class="post-toc-number">1.4.3.1.</span> <span class="post-toc-text">训练</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%8E%A8%E7%90%86"><span class="post-toc-number">1.4.3.2.</span> <span class="post-toc-text">推理</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Transformer-GPT"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">Transformer-GPT</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#GPT%E5%8A%A8%E6%9C%BA"><span class="post-toc-number">1.4.4.1.</span> <span class="post-toc-text">GPT动机</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PyTorch-nn-MultiheadAttention%E4%BD%BF%E7%94%A8"><span class="post-toc-number">1.4.4.2.</span> <span class="post-toc-text">PyTorch.nn.MultiheadAttention使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%BE%93%E5%85%A5"><span class="post-toc-number">1.4.4.3.</span> <span class="post-toc-text">输入</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Self-Mask%E6%9C%BA%E5%88%B6"><span class="post-toc-number">1.4.4.4.</span> <span class="post-toc-text">Self Mask机制</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Pytorch-nn-Transformer%E4%B8%AD%E7%9A%84Mask"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">Pytorch.nn.Transformer中的Mask</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Duality"><span class="post-toc-number">1.</span> <span class="post-toc-text">Duality</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A6%82%E5%BF%B5%E5%92%8C%E5%AE%9A%E4%B9%89"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">概念和定义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">拉格朗日函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E5%AF%B9%E5%81%B6%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">拉格朗日对偶函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%80%A7%E8%B4%A8-%E4%B8%8E%E5%8E%9F%E9%97%AE%E9%A2%98%E6%97%A0%E5%85%B3%EF%BC%8C%E4%B8%80%E5%AE%9A%E6%88%90%E7%AB%8B"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">性质(与原问题无关，一定成立)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AF%B9%E5%81%B6%E5%87%BD%E6%95%B0%E4%B8%80%E5%AE%9A%E6%98%AF%E5%87%B9%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.1.3.1.</span> <span class="post-toc-text">对偶函数一定是凹函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%A2%AB%E6%9C%80%E4%BC%98%E5%80%BC%E7%BA%A6%E6%9D%9F"><span class="post-toc-number">1.1.3.2.</span> <span class="post-toc-text">被最优值约束</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B1%E8%BD%AD%E5%92%8C%E5%AF%B9%E5%81%B6%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">函数的共轭和对偶函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9E%81%E5%A4%A7%E5%8C%96-p-%E7%9A%84%E4%B8%8B%E7%95%8C-g-lambda-v-lambda-geq-0"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">极大化$p^*$的下界$g(\lambda,v),\lambda \geq 0$</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%BC%BA-%E5%BC%B1%E5%AF%B9%E5%81%B6"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">强&#x2F;弱对偶</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8E%9F%E9%97%AE%E9%A2%98%E7%9A%84%E5%9F%9F"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">原问题的域</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Slater%E2%80%99s-condition-%E6%BB%A1%E8%B6%B3%E5%AF%B9%E5%81%B6%E9%97%B4%E9%9A%99%E4%B8%BA0%E7%9A%84%E5%85%85%E5%88%86%E6%9D%A1%E4%BB%B6"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Slater’s condition(满足对偶间隙为0的充分条件)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%B2%A1%E6%9C%89%E7%BA%BF%E6%80%A7%E5%92%8C%E5%B8%B8%E6%95%B0%E7%BA%A6%E6%9D%9F"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">没有线性和常数约束</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#d-d"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">&#x3D;d^&#x3D;d^^*$</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%9E%8D%E7%82%B9%E8%A7%A3%E9%87%8A"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">鞍点解释</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%A4%9A%E7%9B%AE%E6%A0%87%E4%BC%98%E5%8C%96%E8%A7%A3%E9%87%8A"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">多目标优化解释</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Economy"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">Economy</span></a></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -383,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                RLTransformer
+                Duaility
             </p>
         </div>
 
@@ -402,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Gaoustcer</strong>
-        <span>4月 04, 2023</span>
+        <span>4月 06, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -426,7 +426,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a>
+        <a class="post_tag-none-link" href="/tags/Convex-Optimization/" rel="tag">Convex Optimization</a>
     </ul>
     
 
@@ -443,7 +443,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=RLTransformer&url=http://example.com/2023/04/04/RLTransformer/index.html&pic=http://example.com/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Duaility&url=http://example.com/2023/04/06/Duaility/index.html&pic=http://example.com/img/favicon.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -452,7 +452,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=RLTransformer&url=http://example.com/2023/04/04/RLTransformer/index.html&via=Gaoustcer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Duaility&url=http://example.com/2023/04/06/Duaility/index.html&via=Gaoustcer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2023/04/04/RLTransformer/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2023/04/06/Duaility/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://example.com/2023/04/04/RLTransformer/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://example.com/2023/04/06/Duaility/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,203 +495,286 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="RL-Transformer"><a href="#RL-Transformer" class="headerlink" title="RL Transformer"></a>RL Transformer</h1><p>回顾使用Sequential Net处理强化学习的一些工作</p>
-<h2 id="回顾：Transformer"><a href="#回顾：Transformer" class="headerlink" title="回顾：Transformer"></a>回顾：Transformer</h2><p>只包括Attention和全连接</p>
-<h3 id="回顾Attention机制"><a href="#回顾Attention机制" class="headerlink" title="回顾Attention机制"></a>回顾Attention机制</h3><p>输入状态(token)(decoder状态)</p>
+        <h1 id="Duality"><a href="#Duality" class="headerlink" title="Duality"></a>Duality</h1><h2 id="概念和定义"><a href="#概念和定义" class="headerlink" title="概念和定义"></a>概念和定义</h2><h3 id="拉格朗日函数"><a href="#拉格朗日函数" class="headerlink" title="拉格朗日函数"></a>拉格朗日函数</h3><p>对于带约束优化问题(可能非凸)</p>
 <script type="math/tex; mode=display">
-s_j</script><p>编码为query向量</p>
+\min f_0(x)\\
+s.t\quad f_i(x)\leq 0,i=1,2,\cdots,n\\
+h_i(x)=0,i=1,2,\cdots,p</script><p>目标函数最优值为$p^*$</p>
+<p>定义Lagrange Function，定义为</p>
 <script type="math/tex; mode=display">
-q_j = W_q s_k</script><p>隐藏状态$h_1,\cdots,h_m$映射到key</p>
+L(x,\lambda,v) = f_0(x)+\sum_{i=1}^m \lambda_i f_i(x) + \sum_{i=1}^p v_i h_i(x),\lambda\in \R^m,v\in\R^p</script><p>关于$\lambda,v$是线性函数</p>
+<h3 id="拉格朗日对偶函数"><a href="#拉格朗日对偶函数" class="headerlink" title="拉格朗日对偶函数"></a>拉格朗日对偶函数</h3><p>已知拉格朗日函数，定义对偶函数</p>
 <script type="math/tex; mode=display">
-k_i = W_k h_i\\
-K = (k_i)</script><p>通过隐藏状态(Encoder)计算Value</p>
-<script type="math/tex; mode=display">
-v_i = W_v h_i</script><p>计算Attention系数</p>
-<script type="math/tex; mode=display">
-a_j = softmax(K^T q_j)\in \R^m</script><p>计算Attention下Value值</p>
-<script type="math/tex; mode=display">
-c_j=\sum_{i=1}^m \alpha_{ij}v_i</script><h3 id="Attention-for-Seq2Seq"><a href="#Attention-for-Seq2Seq" class="headerlink" title="Attention for Seq2Seq"></a>Attention for Seq2Seq</h3><p>Encoder inputs</p>
-<script type="math/tex; mode=display">
-x_1,x_2,\cdots,x_m</script><p>Decoder input</p>
-<script type="math/tex; mode=display">
-x_1^\prime,x_2^\prime,\cdots,x_t^\prime</script><p>Encoder编码输入为key和value</p>
-<script type="math/tex; mode=display">
-k_i = W_k x_i,K\in \R^{m\times key}\\
-v_i =W_V x_i,V\in \R^{m\times  value}</script><p>Decoder输入同样进行线性变换，得到Query</p>
-<script type="math/tex; mode=display">
-q_j = W_Q x_j^\prime,Q\in \R^{t\times Query}</script><p>计算权重，取$q_1$和所有key组成的矩阵$K=(k_i)_{i=1}^m$，得到m维向量</p>
-<script type="math/tex; mode=display">
-\alpha_1 = K^T q_1\in\R^m</script><p>计算context vector $c_1$</p>
-<script type="math/tex; mode=display">
-c_1 = \alpha_{11} v_1 +\alpha_{21}v_2+\cdots + \alpha_{m1}v_m=V\alpha_1</script><p>写成</p>
-<script type="math/tex; mode=display">
-c_j = V\times softmax(K^T q_j)</script><p>对于Seq2Seq任务，得到$c_j$后经过Softmax Classifier得到概率分布，采样得到下一个特征编码作为$x_{t+1}^\prime$，这是Transformer在推理中的行为</p>
-<h3 id="From-Attention-to-Self-Attention"><a href="#From-Attention-to-Self-Attention" class="headerlink" title="From Attention to Self-Attention"></a>From Attention to Self-Attention</h3><p>只包含一个输入序列$X=x_1,x_2,\cdots,x_n$，两个输入Sequence都是X</p>
-<h3 id="From-Attention-to-Multi-head-Attention"><a href="#From-Attention-to-Multi-head-Attention" class="headerlink" title="From Attention to Multi-head Attention"></a>From Attention to Multi-head Attention</h3><p>多head attention有3L个参数矩阵，输入都是</p>
-<script type="math/tex; mode=display">
-x_1,x_2,\cdots,x_m</script><p>得到l个context sequence</p>
-<script type="math/tex; mode=display">
-c_{11},c_{12},\cdots,c_{1m}\\
-c_{21},c_{22},\cdots,c_{2m}\\
-\cdots\\
-c_{L1},c_{L2},\cdots,c_{Lm}</script><p>将它们concat起来，得到</p>
-<script type="math/tex; mode=display">
-c_1 = (c_{11},c_{21},\cdots,c_{L1})</script><p>输入:$X\in \R^{m\times n}$,n是编码向量长度，输出$Y\in \R^{m\times n}$，使用skip connection将其连接</p>
-<script type="math/tex; mode=display">
-Y = X+Y</script><h3 id="From-Single-head-Self-Attention-to-Encoder"><a href="#From-Single-head-Self-Attention-to-Encoder" class="headerlink" title="From Single-head Self-Attention to Encoder"></a>From Single-head Self-Attention to Encoder</h3><p>输入</p>
-<script type="math/tex; mode=display">
-x_1,x_2,\cdots,x_m</script><p>经过Attention layer输出</p>
-<script type="math/tex; mode=display">
-c_1,c_2,\cdots,c_m</script><p>经过全连接(参数共享)变化为</p>
-<script type="math/tex; mode=display">
-u_1,u_2,\cdots,u_m</script><h3 id="Decoder网络"><a href="#Decoder网络" class="headerlink" title="Decoder网络"></a>Decoder网络</h3><p>假设Encoder输出Y满足</p>
-<script type="math/tex; mode=display">
-Y\in \R^{m\times n}</script><p>m是Encoder Sequence长度，将Decoder序列通过Multi-head attention得到</p>
-<script type="math/tex; mode=display">
-x_1^\prime \to c_1</script><p>再将两个Sequence</p>
-<script type="math/tex; mode=display">
-u_1,u_2,\cdots,u_m\\
-c_1,c_2,\cdots,c_t</script><p>输入到一个新的Multi-head attention中，得到新的输出</p>
-<script type="math/tex; mode=display">
-z_1,z_2,\cdots,z_t\R^n</script><p>再通过全连接层，得到</p>
-<script type="math/tex; mode=display">
-z\to s</script><p>这样得到Decoder一个block</p>
-<p><img src="https://s2.loli.net/2022/11/02/zuxZGrWJhn4dTMg.png" alt="image-20221102113758892"></p>
-<p>$512\times m$来自Encoder输入</p>
-<h2 id="Pytorch中Transformer的实现"><a href="#Pytorch中Transformer的实现" class="headerlink" title="Pytorch中Transformer的实现"></a>Pytorch中Transformer的实现</h2><h3 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h3><p><code>nn.Embedding</code>构造函数参数包括</p>
+g(\lambda,v) = \inf_{x\in D} L(x,\lambda,v)</script><p>D是问题的域，定义在所有函数的dom交集中</p>
 <ol>
-<li>词汇表大小V</li>
-<li>编码向量长度n</li>
+<li>$\lambda$和不等式相关的拉格朗日乘子</li>
+<li>$\mu$和等式相关的拉格朗日乘子</li>
 </ol>
-<p>这样对于输入的词$0,1,\cdots,V$，embedding层将其转化为对应的向量，embedding层实际上存储了int到长度为n的向量的映射</p>
-<h3 id="Position-Embedding"><a href="#Position-Embedding" class="headerlink" title="Position Embedding"></a>Position Embedding</h3><p>对于输入序列$x_i$，增加位置编码</p>
-<ol>
-<li>$i=2k,PE=\sin(\frac{pos}{10000^{2i/d_{model}}})$</li>
-<li>$i=2k+1,PE=\sin (\frac{pos}{10000^{2i/d_{modelvscod}}})$</li>
-</ol>
-<p>pos=i</p>
-<p><img src="https://s2.loli.net/2022/11/03/Sh5OqnlrAxTULXW.png" alt="image-20221103155647449"></p>
-<h3 id="Transformer-from-pytorch——target-Masking"><a href="#Transformer-from-pytorch——target-Masking" class="headerlink" title="Transformer from pytorch——target Masking"></a>Transformer from pytorch——target Masking</h3><p><em><em><em><em>，需要增加Mask去遮盖尚未出现的部分，encoder向量$X\in \R^{m\times n}$,n为输入词向量维度，m为输入sequence长度，经过encoder后编码为$\hat X\in \R^{m\times n}$大小的矩阵，对于输入decoder的target向量大小为$Y\in \R^{m_1\times n}$，</em></em>$，**不能将其完全暴露给输入encoding</em></em>给输入encoding**</p>
-<h3 id="Padding-Masking"><a href="#Padding-Masking" class="headerlink" title="Padding Masking"></a>Padding Masking</h3><p>保证每个输入sequence长度相同，因此需要特殊的token</p>
-<ol>
-<li><SOS>表示一个sentence开始</li>
-<li><EOS>表示一个sentence结束</li>
-<li><PAD>用于补齐matrix的每一行</li>
-</ol>
-<p>为了告诉那些token仅仅用于补齐，我们需要为输入$X\in \R^{k\times m\times  n}$,k为输入句子数量，m为padding后的总长度，对应的padding matrix是一个binary矩阵，大小为$M\in \R^{k\times m}$</p>
-<h2 id="Offline-Reinforcement-Learning-as-One-Big-Sequence-Modeling-Problem"><a href="#Offline-Reinforcement-Learning-as-One-Big-Sequence-Modeling-Problem" class="headerlink" title="Offline Reinforcement Learning as One Big Sequence Modeling Problem"></a>Offline Reinforcement Learning as One Big Sequence Modeling Problem</h2><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>将RL视为序列决策问题，Trajectory Transformer在动作-状态序列上序列，相比基于价值和策略的模型在长序列决策上更加有效</p>
-<h3 id="轨迹"><a href="#轨迹" class="headerlink" title="轨迹"></a>轨迹</h3><p>表示为N-维状态，M维动作和标量奖励的序列</p>
+<h3 id="性质-与原问题无关，一定成立"><a href="#性质-与原问题无关，一定成立" class="headerlink" title="性质(与原问题无关，一定成立)"></a>性质(与原问题无关，一定成立)</h3><h4 id="对偶函数一定是凹函数"><a href="#对偶函数一定是凹函数" class="headerlink" title="对偶函数一定是凹函数"></a>对偶函数一定是凹函数</h4><p>$\forall \lambda_1,v_1,\lambda_2,v_2,\theta\in [0,1]$</p>
 <script type="math/tex; mode=display">
-\tau= \{s_t^0,s_t^1,\cdots,s_t^{N-1},a_t^0,a_t^1,\cdots,a_t^{M-1},r_t \}_{t=0}^{T-1}</script><h3 id="构建字典"><a href="#构建字典" class="headerlink" title="构建字典"></a>构建字典</h3><p>连续状态动作需要进行离散化，假设</p>
-<script type="math/tex; mode=display">
-s_t^i \in [l^i,r^i )</script><p>离散化为</p>
-<script type="math/tex; mode=display">
-\overline s_t^i =[V\frac{S_t^i-l^i}{r^i -l^i}] + V_i</script><h3 id="原文（Reinforcement-Learning-and-Control-as-Sequence-Modeling）"><a href="#原文（Reinforcement-Learning-and-Control-as-Sequence-Modeling）" class="headerlink" title="原文（Reinforcement Learning and Control as Sequence Modeling）"></a>原文（Reinforcement Learning and Control as Sequence Modeling）</h3><p>对于N维状态空间和M维动作空间，建模为长度为T*(N+M+1)的序列，T为总的Transition数量</p>
-<script type="math/tex; mode=display">
-\tau = (s_t^1,s_t^2,\cdots,s_t^N,a_t^1,a_t^2,\cdots,a_t^M,r_t)</script><h4 id="连续空间离散化-用于输出似然概率"><a href="#连续空间离散化-用于输出似然概率" class="headerlink" title="连续空间离散化(用于输出似然概率)"></a>连续空间离散化(用于输出似然概率)</h4><ol>
-<li>uniform，适用于任何维度的状态-动作都能被约束到有限范围内</li>
-<li>分位数，事先需要统计先验概率分布</li>
-</ol>
-<h4 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h4><p>最大化对数似然概率</p>
-<p><img src="https://s2.loli.net/2022/11/01/nV9uWpJK6TlYmjU.png" alt="image-20221101114847359"></p>
-<h4 id="算法：Beam-Search"><a href="#算法：Beam-Search" class="headerlink" title="算法：Beam Search"></a>算法：Beam Search</h4><p>输入：序列x，词汇表$\mathcal V$，序列长$T$，beam width $B$</p>
-<h3 id="Planning-with-Beam-Search"><a href="#Planning-with-Beam-Search" class="headerlink" title="Planning with Beam Search"></a>Planning with Beam Search</h3><p>从三个角度看Sequence生成如何实现智能体控制</p>
-<ol>
-<li>模仿学习</li>
-<li>基于目标导向的强化学习</li>
-</ol>
-<h4 id="What-is-Beam-search"><a href="#What-is-Beam-search" class="headerlink" title="What is Beam search"></a>What is Beam search</h4><p>对于Seq2Seq模型，Beam Search应用于推理时(训练时知道Ground Truth)，假设输入的Seq为</p>
-<script type="math/tex; mode=display">
-s_0s_1\cdots s_n</script><p>对于第一个输入token $s_0$,Transformer预测下一个token按照概率从大到小是</p>
-<script type="math/tex; mode=display">
-a_0,a_1,\cdots,a_m</script><p>选择概率最大的两个token，比如$a_0,a_1$，生成第二个token时需要将$a_0,a_1$和词汇表中所有词结合，生成如下序列</p>
-<script type="math/tex; mode=display">
-a_0b_0,a_0b_1,\cdots,a_0b_m,\cdots,a_1b_0,a_1b_1,\cdots,a_1b_m</script><p>在这些序列中选择似然最大的两个序列，进入第三轮，直到遇到结束符或者达到最大长度为止</p>
+\lambda = \theta \lambda_1+(1-\theta)\lambda_2\\
+v=\theta v_1+(1-\theta)v_2\\
+\begin{aligned}
+g(\lambda,v) &=\inf f_0(x) +\sum_{i=1}^n (\theta\lambda_1 +(1-\theta)\lambda_2)f_i(x) + \sum_{i=1}^p (\theta v_1 +(1-\theta)v_2)h_i(x)\\
+&\geq \theta g(\lambda_1,v_1)+(1-\theta)g(\lambda_2,v_2)(\min(x+y)\geq \min x+\min y) 
+\end{aligned}</script><h4 id="被最优值约束"><a href="#被最优值约束" class="headerlink" title="被最优值约束"></a>被最优值约束</h4><script type="math/tex; mode=display">
+\forall \lambda\geq 0,\forall v,g(\lambda,v)\leq p^*</script><p>基于无约束的对偶函数求出的函数值一定是最优值的下界(被bound住)</p>
 <blockquote>
-<p>为什么不选择greedy search(我认为是增加强化学习中的搜索)</p>
+<p>任意在feasible set中的函数取值$L(x,\lambda,v)$一定被$p^*$ bound住</p>
 </blockquote>
-<p>定义序列单位似然</p>
-<script type="math/tex; mode=display">
-\log P_\theta(Y|x) =\sum_{y\in Y} \log P_\theta(y|x)</script><h3 id="Input-of-torch-transformer"><a href="#Input-of-torch-transformer" class="headerlink" title="Input of torch.transformer"></a>Input of <code>torch.transformer</code></h3><p>输入串</p>
-<script type="math/tex; mode=display">
-x_0x_1\cdots x_n</script><p>每个输入的token需要进行embedding，即构建映射</p>
-<script type="math/tex; mode=display">
-x_i\to s_i</script><p>embedding结果$s_i$包含token的位置信息，训练时我们有GroundTruth作为生成的翻译序列</p>
-<script type="math/tex; mode=display">
-y_0y_1\cdots y_m</script><p>给它增加一个起始符</p>
+<p>希望最大化$g(\lambda,\mu),\forall \lambda\geq 0$，实际上是凸问题</p>
 <blockquote>
-<p>总的而言感到这篇文章不够简洁</p>
+<script type="math/tex; mode=display">
+\min x^T x\\
+s.t \quad Ax =b</script><p>Lagrange function</p>
+<script type="math/tex; mode=display">
+L(x,v) = x^T x+ v^T (Ax-b)</script><p>Dual function</p>
+<script type="math/tex; mode=display">
+g(v)  =\inf_x L(x,v) \to 2 x= A^T v\to x^* = -\frac{A^T v}{2}\\
+g(v) = -\frac{v^T A A^T v}{4}-v^T b</script><p>$g(v)$是凹函数(负定矩阵+线性函数)</p>
+<script type="math/tex; mode=display">
+\min c^T x\\
+s.t Ax=b\\
+x\geq 0\label{linear}</script><p>Lagrange function</p>
+<script type="math/tex; mode=display">
+f(x,\lambda,v) = c^T x +v^T (Ax-b) -\lambda^T x= (c^T +v^T A-\lambda^T) x -v^T b</script><p>Dual function</p>
+<script type="math/tex; mode=display">
+g(\lambda,v) = \begin{aligned}
+& -v^T b,c^T+v^TA-\lambda^T =0 \\
+&-\infty,else
+\end{aligned}\tag{dual}\label{dual}</script><p>仅在超平面上为线性函数，在空间中其他位置取$-\infty$</p>
+<script type="math/tex; mode=display">
+\min x^T W x\\
+s.t \quad x_i =-1/+1，i=1,\cdots,m</script><p>离散约束$x_i^2-1=0$</p>
+<p>Lagrange Function</p>
+<script type="math/tex; mode=display">
+L(x,v) =x^T Wx+\sum_{i=1}^m v_i (x_i^2-1)=x^T (W+diag(v_i)) x-1^T v</script><p> Dual Function</p>
+<script type="math/tex; mode=display">
+g(v) =-1^T v\quad \forall W+diag(v) \succeq 0</script><p>满足$W+diag(v)\succeq 0$的v向量为凸集，因为两个正定矩阵相加还是正定的</p>
 </blockquote>
-<h2 id="Decision-Transformer-Reinforcement-Learning-via-Sequence-Modeling"><a href="#Decision-Transformer-Reinforcement-Learning-via-Sequence-Modeling" class="headerlink" title="Decision Transformer: Reinforcement Learning via Sequence Modeling"></a>Decision Transformer: Reinforcement Learning via Sequence Modeling</h2><h3 id="例子：选择两点之间最短路径"><a href="#例子：选择两点之间最短路径" class="headerlink" title="例子：选择两点之间最短路径"></a>例子：选择两点之间最短路径</h3><ol>
-<li>设计reward：在目标节点上reward=0，否则为-1</li>
-<li>在随机游走的数据上训练</li>
+<h3 id="函数的共轭和对偶函数"><a href="#函数的共轭和对偶函数" class="headerlink" title="函数的共轭和对偶函数"></a>函数的共轭和对偶函数</h3><p>$f^*$是$f:\R^n\to \R$的共轭，若</p>
+<script type="math/tex; mode=display">
+f^*(y)=\sup_{x\in dom \ f} (y^T x - f(x))=\inf_{x\in dom\ f } (f(x) - y^T x)</script><p>考虑约束优化</p>
+<script type="math/tex; mode=display">
+\min f(x)\\
+s.t \quad x= 0</script><p>的拉格朗日函数</p>
+<script type="math/tex; mode=display">
+L(x,v) = f(x) + v^T x,dom \ L = dom \ f\times \R^n\\
+g(v) = -\sup_{x\in dom \ f} (-v^T x- f(x))=-f^*(-v)</script><blockquote>
+<p>约束均为线性的优化问题</p>
+<script type="math/tex; mode=display">
+\min f_0(x)\\
+s.t\quad Ax\leq b\\
+Cx = d\\
+L(x,\lambda,v) = f_0(x) +\lambda^T (Ax-b) +v^T(Cx-d)= f_0(x)+(\lambda^T A+v^T C)x-\lambda^T b -v^T d</script><p>对偶函数</p>
+<script type="math/tex; mode=display">
+g(\lambda,v) = \sup_{x\in dom \ f} L(x,\lambda,v) = -f_0^*(-(\lambda^TA+v^T C)^T )-\lambda^T b - v^T d</script></blockquote>
+<h3 id="极大化-p-的下界-g-lambda-v-lambda-geq-0"><a href="#极大化-p-的下界-g-lambda-v-lambda-geq-0" class="headerlink" title="极大化$p^*$的下界$g(\lambda,v),\lambda \geq 0$"></a>极大化$p^*$的下界$g(\lambda,v),\lambda \geq 0$</h3><script type="math/tex; mode=display">
+\max  g(\lambda,v)\\
+s.t \quad \lambda \geq 0</script><p><em>$，原问题最优解记作$p^</em>，原问题最优解记作$p^*$，一定有</p>
+<script type="math/tex; mode=display">
+d^* \leq p^*</script><ol>
+<li>何时对偶间距为0</li>
+<li><em>,v^</em><em>,v^</em><em>$(最优的拉格朗日乘子)，使得$g(\lambda6</em><em>,v^</em><em>) = d^</em>*$</li>
 </ol>
-<h3 id="Methods——轨迹表示"><a href="#Methods——轨迹表示" class="headerlink" title="Methods——轨迹表示"></a>Methods——轨迹表示</h3><p>轨迹表示为累积奖励-状态-动作对，注意当前状态根据未来累计奖励计算，因此对于一个长度为T的奖励序列</p>
+<blockquote>
+<p>线性优化$\eqref{linear}$的对偶函数为$\eqref{dual}$，极大化</p>
 <script type="math/tex; mode=display">
-r_1,r_2,\cdots,r_T</script><p>定义t时刻之后的未来累计奖励$\hat {R_t}$为</p>
+g(\lambda,v) = -b^T v\quad A^T v-\lambda ^T +c6^T=0</script><p>于是对偶问题最优变成</p>
 <script type="math/tex; mode=display">
-\hat R_t = \sum_{t^\prime=t}^T r_{t^\prime}</script><p>轨迹记作</p>
+\max -b^T v\\
+\lambda \geq 0\\
+A^T v-\lambda +c =0</script><p>合并等式约束和不等式约束</p>
 <script type="math/tex; mode=display">
-\tau = (\hat R_1 ,s_1,a_1,\hat R_2 ,s_2,a_2,\cdots,\hat R_T,s_T,a_T)</script><p>使用累计奖励：避免局部奖励陷入局部最优</p>
-<h3 id="Methods——Outline-of-the-algorithm"><a href="#Methods——Outline-of-the-algorithm" class="headerlink" title="Methods——Outline of the algorithm"></a>Methods——Outline of the algorithm</h3><p>将3K个token(包含K个累计奖励、K个状态和K个动作)送入transformer，为序列中每种模态的数据使用线性层变换到embedding dimension</p>
-<h4 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h4><p>state,action and reward_to_go are mapped into same size m and add position embedding into them.</p>
+A^T v+c\geq 0</script><p>等价的目标函数(最优解相同，最优值不同)</p>
 <script type="math/tex; mode=display">
-state\to eembedding\\
-action\to aembedding\\
-reward-to-go\to rembedding</script><p><em><em>从中取出对应a动作的部分</em></em><em><em>从中取出对应a动作的部分</em></em><em><em>从中取出对应a动作的部分</em></em>取出对应a动作的部分**</p>
-<h4 id="推理"><a href="#推理" class="headerlink" title="推理"></a>推理</h4><p>推理和训练的区别在于：</p>
+\max -b^T v\\
+A^T v+c \geq 0 \label{dual1}</script><p>考虑</p>
+<script type="math/tex; mode=display">
+\min c^T x\\
+s.t\quad Ax \leq b\label{linear2}</script><p>的对偶函数和对偶问题</p>
+<script type="math/tex; mode=display">
+L(x,\lambda ) = c^T x +\lambda^T (Ax-b) = (c^T +\lambda^T A) x - \lambda^T b</script><p>显然对偶函数满足</p>
+<script type="math/tex; mode=display">
+L(\lambda )= -\lambda^T b\quad c^T +\lambda^T A=0</script><p>对偶问题</p>
+<script type="math/tex; mode=display">
+\max -\lambda^T b\\
+s.t\quad A^T \lambda +c =0\\
+\lambda \geq 0\label{dual2}</script><p>考虑$\ref{dual1}$和$\ref{dual2}$,$\ref{dual1}$将$\ref{linear}$中$x\to \lambda$,​</p>
+<script type="math/tex; mode=display">
+\min c^T \lambda \\
+s.t\quad A\lambda = b\\
+\lambda \geq 0\tag{P1}\label{P1}</script><p>$\ref{dual2}$改写成</p>
+<script type="math/tex; mode=display">
+\min \lambda^T b\\
+s.t\quad A^T \lambda =-c\\
+\lambda \geq 0\tag{D2}\label{D2}</script><p> 原问题$\ref{linear}$和对偶问题形式类似，原问题$\ref{linear}$的对偶问题$\ref{dual1}$，改写为</p>
+<script type="math/tex; mode=display">
+\min b^T x\\
+s.t\quad A^T x+ c\geq 0\tag{D1}</script><p>考虑$\ref{linear2}$，令$-A=A^T$(做代换，并非等式)，写成</p>
+<script type="math/tex; mode=display">
+\min c^T x\\
+-Ax+b \geq 0\tag{P2}\label{P2}</script><p>$P1,P2$代表原问题1，2，$D1,D2$代表对偶问题1，2</p>
+<p>说明了$P1$对偶问题的对偶问题是它自身，现在从原始约束的角度考虑这个问题，对于原始问题$\ref{linear}$</p>
+<script type="math/tex; mode=display">
+\min c^T x\\
+s.t\quad A^T x=b,c\in \R^n ,b\in \R^p，A\in \R^{n\times p}</script><p>优化变量是$\R^n$上的变量，拉格朗日函数和对偶函数在约束上添加变量，因此是一个p维约束</p>
+<blockquote>
+<p>n个约束上$\R^p$的优化，p个约束上$\R^n$优化</p>
+<p>对偶问题的对偶问题不一定是自身，以为对偶问题一定是凸问题</p>
+<blockquote>
+<p>何时两者等价</p>
+</blockquote>
+</blockquote>
+<p>关键词：拉格朗日函数，对偶函数，对偶问题</p>
+</blockquote>
+<h2 id="强-弱对偶"><a href="#强-弱对偶" class="headerlink" title="强/弱对偶"></a>强/弱对偶</h2><p><em>$与原问题最优解$p^</em>$与原问题最优解$p^*$满足</p>
+<script type="math/tex; mode=display">
+d^*= p^*</script><p>则称为强对偶，定义</p>
+<script type="math/tex; mode=display">
+p^*-d^*</script><p>为对偶间隙</p>
+<h3 id="原问题的域"><a href="#原问题的域" class="headerlink" title="原问题的域"></a>原问题的域</h3><p><em><em>相对内部</em></em><em><em>相对内部</em></em>对内部**</p>
+<script type="math/tex; mode=display">
+Relint D = \{x\in D|B(x,r)\bigcap affine D\subseteq D,\exists r>0\}</script><p>仿射包和球交集在D内</p>
+<blockquote>
+<p>D是一个开集，则$ReLint D=D$</p>
+</blockquote>
+<h3 id="Slater’s-condition-满足对偶间隙为0的充分条件"><a href="#Slater’s-condition-满足对偶间隙为0的充分条件" class="headerlink" title="Slater’s condition(满足对偶间隙为0的充分条件)"></a>Slater’s condition(满足对偶间隙为0的充分条件)</h3><blockquote>
+<p>若有凸问题</p>
+<script type="math/tex; mode=display">
+\min f_0(x)\\
+s.t \quad f_i(x)\leq 0,i=1,2,\cdots,m\\
+Ax =b</script><p>当$\exists x\in relint D$，使得</p>
+<script type="math/tex; mode=display">
+f_i(x)< 0,i=1,2,\cdots,m,Ax=b</script><p><em>=d^</em><em>=d^</em>^*$</p>
+<blockquote>
+<p>相对内点内点满足约束严格小，并且等式约束成立</p>
+</blockquote>
+<p>A weaker Slater’s condition</p>
+<p><em>=d^</em><em>=d^</em><em>=d^</em><em>=d^</em><em>=d^</em><em>=d^</em>*$</p>
+<blockquote>
+<p>不等式约束写成</p>
+<script type="math/tex; mode=display">
+c_i x+ d_i\leq 0</script><p>表示一个半空间，原来问题域是</p>
+<script type="math/tex; mode=display">
+D=relint \{dom f_0 \}</script><p>$f_i$的域是全空间</p>
 <ol>
-<li>推理不知道动作</li>
-<li>推理时不知道<code>reward-to-go</code></li>
+<li>$f_0$定义在全空间内，则必然满足weaker Slater’s condition(约束在空间中形成多面体)<ol>
+<li>不需要考虑$f_0(x)\leq 0和f_1(x)=-f_0(x)\leq 0$两个不等式同时在$f_i(x)$中的情况，此时转化为等式约束</li>
 </ol>
-<p>因此需要设置一个expert-reward，根据每步奖励减去当前这步奖励r</p>
-<h3 id="Transformer-GPT"><a href="#Transformer-GPT" class="headerlink" title="Transformer-GPT"></a>Transformer-GPT</h3><p>GPT保留Transformer中Decoder部分，每个模块由</p>
+</li>
+<li>其它情况下，集合内部和多面体交集必然存在交集</li>
+</ol>
+</blockquote>
+<p>目标函数、不等式约束，等式约束都是仿射(线性规划)，如果存在可行解，则一定是强对偶</p>
+<blockquote>
+<p><em>=d^</em><em>=d^</em><em>=d^</em><em>=d^</em>=d^*$</p>
+<blockquote>
+<p>原问题定义在全空间上，全空间和多面体一定有交点，满足所有约束严格小</p>
+</blockquote>
+</blockquote>
+<script type="math/tex; mode=display">
+\min x^T x\\\
+s.t Ax = b</script><p><em>=d^</em><em>=d^</em><em>=d^</em><em>=d^</em><em>=d^</em>*$，它的对偶问题是</p>
+<script type="math/tex; mode=display">
+\max -\frac{1}{4}t^T A^T A v- b^T v</script><p>两个问题最优值等价</p>
+<p>QCQP</p>
+<script type="math/tex; mode=display">
+\min \frac{1}{2}x^T P_0x +q_0^T x+r_0\\
+s.t\quad \frac{1}{2}x^T p_ix +q_ix+r_i\leq 0,i=1,2,\cdots,m\\
+P_0\in S_{++}^n ,P_i\in S_+^n</script><script type="math/tex; mode=display">
+L(x,\lambda) = \frac{1}{2}x^T P_0x +1_0^T x+r_0 +\sum_{i=1}^m (\frac{1}{2}\lambda _i x^T P_ix+\lambda_i q_i^Tb x+\lambda_i)\\
+g(\lambda) =\inf_x L(x,\lambda) = \inf_x \frac{1}{2}x^T(P_0+\sum_{i=1}^m \lambda_i P_i)x+(q_0+\sum_{i=1}^m\lambda_i q_i)^T x+(r_0+\sum_{i=1}^m \lambda_i r_i)</script><p>当$\lambda&gt;0$时，一定是凸问题，写成</p>
+<script type="math/tex; mode=display">
+g(\lambda) = \inf_x \frac{1}{2}x^T P(\lambda) x+q(\lambda)^T x+r</script><p>对x求微分</p>
+<script type="math/tex; mode=display">
+\frac{\partial L(x,\lambda)}{\partial x} = P(\lambda) x+ q(\lambda) = 0\\
+x=-P^{-1}(\lambda) q(\lambda)\\
+g(\lambda) = -\frac{1}{2}q^T(\lambda) P^{-1}(\lambda)q(\lambda) + r(\lambda)</script><p>$g(\lambda)$是凹函数，并且$P(\lambda)$是正定矩阵(前提是$\lambda&gt;0$)，对偶问题</p>
+<script type="math/tex; mode=display">
+\max\ -\frac{1}{2}q^T(\lambda) P^{-1}(\lambda)q(\lambda) + r(\lambda)\\
+s.t\quad \lambda \geq 0</script><p>若$\exist x\in \R^n,s.t$</p>
+<script type="math/tex; mode=display">
+\frac{1}{2}x^T P_i x+q_i^T x+r_i <0</script><p><em>=d^</em><em>=d^</em>=d^*$</p>
+<h4 id="没有线性和常数约束"><a href="#没有线性和常数约束" class="headerlink" title="没有线性和常数约束"></a>没有线性和常数约束</h4><p>此时约束退化为</p>
+<script type="math/tex; mode=display">
+\frac{1}{2}x^T P_i x<0</script><p>显然不可能，此时仅能让$x=0$才能满足所有约束，原问题最优值为</p>
+<script type="math/tex; mode=display">
+p^* = 0</script><p>此时对偶问题退化为</p>
+<script type="math/tex; mode=display">
+\max -\frac{1}{2}q^T(\lambda)P^{-1}(\lambda)q(\lambda)\\
+s.t \lambda \geq 0</script><p>显然$d^*=0$，可见Slater条件只是充分条件</p>
+</blockquote>
+<h3 id="d-d"><a href="#d-d" class="headerlink" title="=d^=d^^*$"></a><em>=d^</em><em>=d^</em>^*$</h3><p>对于只包含一个不等式约束的优化问题</p>
+<script type="math/tex; mode=display">
+\min f_0(x)\\
+f_1(x)\leq 0</script><p>定义</p>
+<script type="math/tex; mode=display">
+G =\{(f_1(x),f_0(x))|x\in D \}</script><p>G是$\R^2$的子集，原问题的最优值$p^*$定义为</p>
+<script type="math/tex; mode=display">
+p^* = \inf\{t|(u,t)\in G,u\leq 0 \}(满足约束的最小值)</script><p>对偶函数定义为</p>
+<script type="math/tex; mode=display">
+g(\lambda) =\inf\{\lambda u+t|(u,t)\in G \}</script><p>对偶函数是目标和优化的线性组合，并且存在$x^*$使得函数值最小</p>
+<blockquote>
+<p>如果在$\R^2$上画出G组成的集合，则$p^*$为在全空间左边部分中G中最矮的点，对于特定$g(\lambda)$</p>
+<script type="math/tex; mode=display">
+g(\lambda) = \inf_x f_0(x)+\lambda f_1(x)=\inf \{\lambda u + t,(u,t)\in G\}</script><p>考虑$\lambda u + t = m$，是$\R^2$上的一条斜率为$-\lambda$的直线，m是在t轴上的截距</p>
 <ol>
-<li>Mask Multi-head self-attention</li>
-<li>feed forward</li>
+<li>直线和G没有交集</li>
+<li>直线和G有交集，则意味着m可以取到</li>
 </ol>
-<p>构成，Mask Multi-head self-attention输入一个序列，最终得到和它长度相同的序列。</p>
-<h4 id="GPT动机"><a href="#GPT动机" class="headerlink" title="GPT动机"></a>GPT动机</h4><p>基于无标注的数据进行预训练，在下游任务上进行少量finetune</p>
-<h4 id="PyTorch-nn-MultiheadAttention使用"><a href="#PyTorch-nn-MultiheadAttention使用" class="headerlink" title="PyTorch.nn.MultiheadAttention使用"></a><code>PyTorch.nn.MultiheadAttention</code>使用</h4><p>初始化</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.nn.MultiheadAttention(embed_dim, num_heads, dropout=<span class="number">0.0</span>, bias=<span class="literal">True</span>, add_bias_kv=<span class="literal">False</span>, add_zero_attn=<span class="literal">False</span>, kdim=<span class="literal">None</span>, vdim=<span class="literal">None</span>, batch_first=<span class="literal">False</span>, device=<span class="literal">None</span>, dtype=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
-<ol>
-<li>embed_dim，输入query,key,value维度</li>
-<li>num_head 多头数量</li>
+<p>平移斜率为$-\lambda$的直线，直到与G有交集并在t轴上截距最小(相切)</p>
+<p><em>$的几何意义，$d^</em>，$d^*$就是在上述直线的基础上调整$\lambda&gt;0$，使得相切直线在t轴的截距最高</p>
+</blockquote>
+<h3 id="鞍点解释"><a href="#鞍点解释" class="headerlink" title="鞍点解释"></a>鞍点解释</h3><p>拉格朗日函数的鞍点，如果有</p>
+<script type="math/tex; mode=display">
+\inf_{x\in D}\sup_{\lambda\geq 0}L(x,\lambda) =\sup_{\lambda \geq 0}\inf_{x\in D}L(x,\lambda)</script><p><em>,\lambda^</em>ambda^*)$处取到</p>
+<p>RHS对应$d^*$</p>
+<p>LHS拉格朗日函数写成</p>
+<script type="math/tex; mode=display">
+f_0(x) +\sum_{i} \lambda_i f_i(x)</script><ol>
+<li>如果满足约束，即$f_i(x)\leq 0,\forall i=1,2,\cdots$，则显然取$\lambda_i =0$使得对于任意给定x，$L(x,\lambda)$尽量大<ol>
+<li>描述原问题的最优值</li>
 </ol>
-<h4 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h4><p>输入Q,K,V张量，它们的维度可能不同，需要在<code>kdim</code>和<code>vdim</code>中设置，先通过线性变换转化为维度相同的矩阵，并编码为query,key,value向量</p>
-<script type="math/tex; mode=display">
-Q = QW_i^Q = (q_1,q_2,\cdots,q_n)\\
-K = K W_i^K = (k_1,k_2,\cdots,k_m)\\
-V = V W_i^V = (v_1,v_2,\cdots,v_m)\\
-q_i,k_i,v_i\in\R^k</script><p>对于每个query，计算注意力系数</p>
-<script type="math/tex; mode=display">
-q_i \to K q_i= \lambda+_i\in \R^m</script><p>在此基础上$\lambda$和V加权计算$q_i$的Attention嵌入</p>
-<script type="math/tex; mode=display">
-a_i = V\lambda_i\in \R^k</script><p>n个multi-head针对一个query生成多个Attention vector $a_i^1,a_i^2,\cdots,a_i^n$，将其拼接</p>
-<script type="math/tex; mode=display">
-a_i = concat(a_i^1,a_i^2,\cdots,a_i^n)</script><p>通过全连接层得到最终的编码向量</p>
-<h4 id="Self-Mask机制"><a href="#Self-Mask机制" class="headerlink" title="Self Mask机制"></a>Self Mask机制</h4><p>不希望在提前暴露未来时间的词向量</p>
-<h3 id="Pytorch-nn-Transformer中的Mask"><a href="#Pytorch-nn-Transformer中的Mask" class="headerlink" title="Pytorch.nn.Transformer中的Mask"></a><code>Pytorch.nn.Transformer</code>中的Mask</h3><p>输入Mask的参数包括</p>
-<ol>
-<li>src 输入encoder的序列，假设为$(N,L,E)$，代表sequence数量，sequence padding长度，每个token维度</li>
-<li>tgt 输入decoder的序列，假设为<code>(N,K,E)</code></li>
-<li>src/tgt_mask</li>
-<li>src/tgt_key_padding_mask</li>
+</li>
+<li>存在一个约束不被满足$f_i(x)$，则$\sup_\lambda L(x,\lambda)=\infty$</li>
 </ol>
-<p><em><em>只能看到上文信息</em></em><em><em>只能看到上文信息</em></em><em><em>只能看到上文信息</em></em><em><em>只能看到上文信息</em></em><em><em>只能看到上文信息</em></em><em><em>只能看到上文信息</em></em><em><em>只能看到上文信息</em></em><strong>只能看到上文信息</strong>，这里对src和tgt mask进行额外说明，假设src,tgt mask均为下三角为1的矩阵</p>
+<blockquote>
+<p>对偶间距为0的一个等价条件是对于新的优化问题</p>
 <script type="math/tex; mode=display">
-\begin{pmatrix}
-1 & 0 & 0 & \cdots & 0 \\
-1 & 1 & 0 & \cdots &0\\
-1 & 1 & 1 & \cdots & 0\\
-\vdots & \vdots & \vdots & \cdots  \\
-1 & 1 & 1 & \cdots & 1
-\end{pmatrix}</script><p>则对于输入sequence</p>
+target:L(x,\lambda)\\
+\lambda \geq 0</script><p><em>,\lambda^</em>mbda^*)$为该问题的鞍点</p>
+</blockquote>
+<h3 id="多目标优化解释"><a href="#多目标优化解释" class="headerlink" title="多目标优化解释"></a>多目标优化解释</h3><p>考虑多目标优化</p>
 <script type="math/tex; mode=display">
-x_1,x_2,\cdots,x_n</script><p>的embedding(对于src是encoder出的memory，对于tgt就是最后的输出)时，对于第i个token$x_i$，实际上是在一个子序列</p>
+\min \{f_0(x),f_1(x),\cdots,f_m(x) \}</script><p>给定一组系数$\lambda_i\geq 0$得到一组帕累托面，求解下列优化问题</p>
 <script type="math/tex; mode=display">
-x_1,x_2,\cdots,x_i</script><p>中计算Attention机制</p>
-<p><code>_key_padding_mask</code>用于处理多个batch的序列长度不一样的情况，具体来说<code>src_key_padding_mask</code>大小为<code>(N,L)</code>，每一行是一个长度为L的binary向量，True表示对应的词向量实际上是补全句子长度所做的padding</p>
+\min f_0(x)+\sum_{i} \lambda_i f_i(x) = L(x,\lambda)</script><p>对于给定的$\lambda$，找到x使得$L$极小，得到$\overline x$，得到$g(\lambda)$的值，在所有$g(\lambda)$中找到最大化$g$对应的$\overline \lambda$</p>
+<blockquote>
+<p>反之，带入$\overline \lambda$到$L(x,\lambda)$中，记作$L(x,\overline \lambda)$，随后对于x求解极小化问题得到$\overline x$，是系数取$\overline \lambda$对应的帕累托面上的顶点</p>
+</blockquote>
+<h3 id="Economy"><a href="#Economy" class="headerlink" title="Economy"></a>Economy</h3><script type="math/tex; mode=display">
+\min f_0(x)\\
+s.t f_i(x)\leq 0,i=1,2,\cdots,m</script><ol>
+<li>x 生产商品量</li>
+<li>$f_0(x)$生产x的损失</li>
+<li>$f_i(x)$原材料的约束</li>
+</ol>
+<blockquote>
+<p>给定原材料上限生产利润$-f_0(x)$最大化</p>
+</blockquote>
+<p>假设原材料i单价为$\lambda_i$，购买原材料多余的部分$f_i(x)&gt;0$表示多出的原材料，则拉格朗日函数</p>
+<script type="math/tex; mode=display">
+\min _x f_0(x)+\sum_{i=1}^m \lambda_i f_i(x)</script><blockquote>
+<p>$f_i(x)&lt;0$表示第i类原材料不足，购买第i类原材料还需要花费$-\lambda_i f_i(x)$，总的目标是让生产损失和购买原材料损失之和尽量小</p>
+</blockquote>
+<p>$g(\lambda )=\min_x f_0(x) +\sum_{i=1}^m \lambda_i f_i(x)$表示在不同市场价格下，最低生产成本有所不同$\max g(\lambda)$意味着找到最大损失</p>
+<blockquote>
+<p><em>\leq p^</em>eq p^*$表示在可交换原材料的情况下，最大损失必然小于原材料不可买卖的最大损失(买卖可以不浪费资源)</p>
+<blockquote>
+<p>$\lambda ^*$称为影子价格，商品价格取到影子价格可以让资源配置最优</p>
+</blockquote>
+</blockquote>
 
         
     
@@ -710,8 +793,8 @@ x_1,x_2,\cdots,x_i</script><p>中计算Attention机制</p>
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2023/04/04/RLTransformer/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://example.com/2023/04/04/RLTransformer/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://example.com/2023/04/06/Duaility/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2023/04/06/Duaility/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -741,21 +824,13 @@ x_1,x_2,\cdots,x_i</script><p>中计算Attention机制</p>
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/04/05/Convex-Optimization-set-and-functions/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2023/04/04/hello-world/" id="post_nav-older" class="next-content">
+        <a href="/2023/04/06/Convex-Optimization-Introduction/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
