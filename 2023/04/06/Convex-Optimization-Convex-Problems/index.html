@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://.disqus.com"/>
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Convex Optimization Convex Problems | 
+        
+        Hexo
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.svg">
+    <link rel="icon" href="/img/favicon.svg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",Convex Optimization">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Hexo">
+    <meta name="msapplication-starturl" content="http://example.com/2023/04/06/Convex-Optimization-Convex-Problems/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.svg">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://example.com/2023/04/06/Convex-Optimization-Convex-Problems/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Convex Optimization Convex Problems | Hexo">
+    <meta property="og:image" content="/img/favicon.svg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="Convex Optimization"> 
+
+    
+        <meta property="article:published_time" content="Thu Apr 06 2023 13:07:58 GMT+0800">
+        <meta property="article:modified_time" content="Thu Apr 06 2023 13:17:27 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://example.com/2023/04/06/Convex-Optimization-Convex-Problems/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://example.com/2023/04/06/Convex-Optimization-Convex-Problems/index.html",
+    "headline": "Convex Optimization Convex Problems",
+    "datePublished": "Thu Apr 06 2023 13:07:58 GMT+0800",
+    "dateModified": "Thu Apr 06 2023 13:17:27 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Convex Optimization",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Convex-Optimization%E2%80%94%E2%80%94Convex-Problems"><span class="post-toc-number">1.</span> <span class="post-toc-text">Convex Optimization——Convex Problems</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89-%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">定义-优化问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">优化问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E5%9F%9F"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text">优化问题的域</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8F%AF%E8%A1%8C%E8%A7%A3feasible-set"><span class="post-toc-number">1.1.1.2.</span> <span class="post-toc-text">可行解feasible set</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9C%80%E4%BC%98%E5%80%BCoptimal-value"><span class="post-toc-number">1.1.1.3.</span> <span class="post-toc-text">最优值optimal value</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9C%80%E4%BC%98%E8%A7%A3-%E9%9B%86-optimal-set-point"><span class="post-toc-number">1.1.1.4.</span> <span class="post-toc-text">最优解(集)optimal set&#x2F;point</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#epsilon-%E6%AC%A1%E4%BC%98%E8%A7%A3%E9%9B%86"><span class="post-toc-number">1.1.1.5.</span> <span class="post-toc-text">$\epsilon$次优解集</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E8%A7%A3"><span class="post-toc-number">1.1.1.6.</span> <span class="post-toc-text">局部最优解</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B4%BB%E5%8A%A8%E7%BA%A6%E6%9D%9F"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">活动约束</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">可行性优化问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B9%BF%E4%B9%89%E4%B8%8A"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">广义上</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E7%AD%89%E4%BB%B7%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">优化问题的等价问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%9B%92%E5%AD%90%E7%BA%A6%E6%9D%9F"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">盒子约束</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98%E7%9A%84%E7%BC%A9%E6%94%BE%E5%92%8C%E5%8F%98%E6%8D%A2"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">问题的缩放和变换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B6%88%E9%99%A4%E7%AD%89%E5%BC%8F%E7%BA%A6%E6%9D%9F-h-i-x-0"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">消除等式约束$h_i(x)&#x3D;0$</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89-%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">定义-凸优化问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9F%BA%E4%BA%8E%E4%BB%BF%E5%B0%84%E7%BA%A6%E6%9D%9F%E5%AF%B9%E9%97%AE%E9%A2%98%E9%99%8D%E7%BB%B4"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">基于仿射约束对问题降维</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BB%BF%E5%B0%84%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%BA%A6%E6%9D%9F%E8%BF%9B%E8%A1%8C%E5%8D%87%E7%BB%B4"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">仿射不等式约束进行升维</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#properity-of-convex-problem"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">properity of convex problem</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98-%E5%85%A8%E5%B1%80%E6%9C%80%E4%BC%98"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">局部最优&#x3D;全局最优</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0%E5%8F%AF%E5%BE%AE"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">目标函数可微</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%AA%E5%8C%85%E5%90%AB%E7%AD%89%E5%BC%8F%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%87%B8%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">只包含等式约束的凸问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BB%85%E5%8C%85%E5%90%AB%E9%9D%9E%E8%B4%9F%E7%BA%A6%E6%9D%9F"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">仅包含非负约束</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%8B%A5-nabla-f-T-x-lt-0"><span class="post-toc-number">1.4.4.1.</span> <span class="post-toc-text">若$\nabla f^T(x^*)&lt; 0$</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9B%A0%E6%AD%A4%E5%BF%85%E7%84%B6%E6%9C%89-nabla-f-T-x-geq-0"><span class="post-toc-number">1.4.4.2.</span> <span class="post-toc-text">因此必然有$\nabla f^T(x^*)\geq 0$</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%87%A0%E4%BD%95%E4%B8%8A%E7%9C%8B%E8%BF%99%E4%B8%AA%E7%BB%93%E8%AE%BA"><span class="post-toc-number">1.4.4.3.</span> <span class="post-toc-text">几何上看这个结论</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%B8%E5%9E%8B%E7%9A%84%E5%87%B8%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">典型的凸问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%87%B8%E9%97%AE%E9%A2%98%E7%9A%84%E7%8B%AD%E4%B9%89%E5%AE%9A%E4%B9%89"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">凸问题的狭义定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">线性规划</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%A3%9F%E8%B0%B1%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.5.2.1.</span> <span class="post-toc-text">食谱问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%BA%BF%E6%80%A7%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92"><span class="post-toc-number">1.5.2.2.</span> <span class="post-toc-text">线性分数规划</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E8%AF%81%E6%98%8E%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E7%AD%89%E4%BB%B7%E6%80%A7"><span class="post-toc-number">1.5.2.2.1.</span> <span class="post-toc-text">证明优化问题的等价性</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">二次规划</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BA%8C%E6%AC%A1%E7%BA%A6%E6%9D%9F%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92-QCQB"><span class="post-toc-number">1.5.4.</span> <span class="post-toc-text">二次约束二次规划(QCQB)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%B8%A6%E5%99%AA%E5%A3%B0%E7%9A%84%E6%B5%8B%E9%87%8F%E7%B3%BB%E7%BB%9F"><span class="post-toc-number">1.5.4.1.</span> <span class="post-toc-text">带噪声的测量系统</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#x%E7%A8%80%E7%96%8F"><span class="post-toc-number">1.5.4.1.1.</span> <span class="post-toc-text">x稀疏</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Ridge-regression-x%E4%B8%AD%E5%85%83%E7%B4%A0%E7%B1%BB%E4%BC%BC"><span class="post-toc-number">1.5.4.1.2.</span> <span class="post-toc-text">Ridge regression(x中元素类似)</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.5.4.2.</span> <span class="post-toc-text">投资组合问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8D%8A%E6%AD%A3%E5%AE%9A%E8%A7%84%E5%88%92"><span class="post-toc-number">1.5.5.</span> <span class="post-toc-text">半正定规划</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%BA%BF%E6%80%A7%E7%9F%A9%E9%98%B5%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.5.5.1.</span> <span class="post-toc-text">线性矩阵函数</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%A4%9A%E7%9B%AE%E6%A0%87%E4%BC%98%E5%8C%96"><span class="post-toc-number">1.5.6.</span> <span class="post-toc-text">多目标优化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%A4%9A%E7%9B%AE%E6%A0%87%E5%BD%A2%E5%BC%8F%E7%9A%84%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88"><span class="post-toc-number">1.5.6.1.</span> <span class="post-toc-text">多目标形式的投资组合</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89-Pareto-optimal-front"><span class="post-toc-number">1.5.6.1.1.</span> <span class="post-toc-text">定义 Pareto optimal front</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Oracle-Solution"><span class="post-toc-number">1.5.6.1.2.</span> <span class="post-toc-text">Oracle Solution</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%AD%89%E4%BB%B7%E7%9A%84%E5%8D%95%E7%9B%AE%E6%A0%87%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.5.6.2.</span> <span class="post-toc-text">等价的单目标优化问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Ridge-Regression"><span class="post-toc-number">1.5.7.</span> <span class="post-toc-text">Ridge Regression</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quasi-convex-problem"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Quasi convex problem</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Convex Optimization Convex Problems
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>4月 06, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Convex-Optimization/" rel="tag">Convex Optimization</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Convex Optimization Convex Problems&url=http://example.com/2023/04/06/Convex-Optimization-Convex-Problems/index.html&pic=http://example.com/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Convex Optimization Convex Problems&url=http://example.com/2023/04/06/Convex-Optimization-Convex-Problems/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2023/04/06/Convex-Optimization-Convex-Problems/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://example.com/2023/04/06/Convex-Optimization-Convex-Problems/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Convex-Optimization——Convex-Problems"><a href="#Convex-Optimization——Convex-Problems" class="headerlink" title="Convex Optimization——Convex Problems"></a>Convex Optimization——Convex Problems</h1><h2 id="定义-优化问题"><a href="#定义-优化问题" class="headerlink" title="定义-优化问题"></a>定义-优化问题</h2><h3 id="优化问题"><a href="#优化问题" class="headerlink" title="优化问题"></a>优化问题</h3><script type="math/tex; mode=display">
+\min f_0(x)\\
+s.t\ f_i(x)\leq 0,i=1,2,\cdots,m\\
+h_i(x) = 0,i=1,2,\cdots,p</script><h4 id="优化问题的域"><a href="#优化问题的域" class="headerlink" title="优化问题的域"></a>优化问题的域</h4><p>$dom  f_0\bigcap dom f_i \bigcap dom h_i$</p>
+<h4 id="可行解feasible-set"><a href="#可行解feasible-set" class="headerlink" title="可行解feasible set"></a>可行解feasible set</h4><p>域中满足约束的点集$x_f$</p>
+<h4 id="最优值optimal-value"><a href="#最优值optimal-value" class="headerlink" title="最优值optimal value"></a>最优值optimal value</h4><script type="math/tex; mode=display">
+p^* =\inf\{f_0(x)|x\in x_f \}</script><p>$x_f=\phi\to p^*=\infty$</p>
+<h4 id="最优解-集-optimal-set-point"><a href="#最优解-集-optimal-set-point" class="headerlink" title="最优解(集)optimal set/point"></a>最优解(集)optimal set/point</h4><script type="math/tex; mode=display">
+x^*\in x_f,f_0(x^*)= p^*</script><h4 id="epsilon-次优解集"><a href="#epsilon-次优解集" class="headerlink" title="$\epsilon$次优解集"></a>$\epsilon$次优解集</h4><p>并非要求目标函数最小(Satisificing solutions)</p>
+<ol>
+<li>满足约束</li>
+<li>目标函数取值与最优值距离不太远</li>
+</ol>
+<script type="math/tex; mode=display">
+x_\epsilon = \{x|x\in x_f,f_0(x)\leq p^* +\epsilon \}</script><h4 id="局部最优解"><a href="#局部最优解" class="headerlink" title="局部最优解"></a>局部最优解</h4><p>$x$是局部最优解，则存在一个子集使得局部最优</p>
+<script type="math/tex; mode=display">
+\exists R>0,f_0(x )= \inf \{f_0(z)|x\in x_f\bigcap \parallel z-x\parallel\leq R \}</script><p>找到一个球和可行解集的交集，满足在这个交集中最优</p>
+<h3 id="活动约束"><a href="#活动约束" class="headerlink" title="活动约束"></a>活动约束</h3><p>若$ x\in x_f,f_i(x)=0$，则称$f_i(x)\leq 0$为活动约束</p>
+<blockquote>
+<p>可行解在约束上取=</p>
+</blockquote>
+<p>如果不存在$x\in x_f$，使得$f_i(x)=0$，则称$f_i(x)\leq 0$为non-active</p>
+<blockquote>
+<p>能否将$\leq $改成$&lt;0$</p>
+<blockquote>
+<p>对于non-active约束是$\leq $和&lt;是等价的，实际中可以将$&lt;$变成$\leq$</p>
+<p>原始约束$f_i(x)&lt; 0$，修改成约束和域的交集</p>
+<ol>
+<li>$f_i(x)\leq 0$</li>
+<li>$-|\log {-f_i(x)}|\leq 0$</li>
+</ol>
+</blockquote>
+</blockquote>
+<h3 id="可行性优化问题"><a href="#可行性优化问题" class="headerlink" title="可行性优化问题"></a>可行性优化问题</h3><p>只需要找到可行解</p>
+<script type="math/tex; mode=display">
+find \ x\to \min \theta(constant)\\
+s.t \quad f_i(x)\leq 0,i=1,2,\cdots,m\\
+h_i(x)= 0,i=1,2,\cdots,p</script><h3 id="广义上"><a href="#广义上" class="headerlink" title="广义上"></a>广义上</h3><ol>
+<li>目标函数是凸函数</li>
+<li>约束在凸集上</li>
+</ol>
+<h2 id="优化问题的等价问题"><a href="#优化问题的等价问题" class="headerlink" title="优化问题的等价问题"></a>优化问题的等价问题</h2><h3 id="盒子约束"><a href="#盒子约束" class="headerlink" title="盒子约束"></a>盒子约束</h3><script type="math/tex; mode=display">
+\min f_0(x)\\
+s.t l_i\leq x_i\leq u_i,i=1,2,\cdots,n</script><p>约束写成</p>
+<script type="math/tex; mode=display">
+l_i-x_i\leq 0\\
+x_i-u_i\leq 0</script><h3 id="问题的缩放和变换"><a href="#问题的缩放和变换" class="headerlink" title="问题的缩放和变换"></a>问题的缩放和变换</h3><p>对原始约束问题做缩放</p>
+<script type="math/tex; mode=display">
+\min \alpha _0f_0(x)\\
+s.t\quad \alpha_i f_i(x)\leq0,i=1,2,\cdots,m\\
+\beta_i h_i(x)=0,i=1,2,\cdots,p\\
+\alpha_i>0,\beta_i\neq 0</script><p>另一种等价形式，定义如下函数</p>
+<ol>
+<li>$\psi_0(\R\to \R)$单调递减</li>
+<li>$\psi_i,i=1,2,\cdots,m：\R\to \R$，满足$\psi_i(u)\leq 0\Leftrightarrow u\leq 0 $</li>
+<li>$\phi_i,i=1,2,\cdots,p,\R\to \R$，满足$\phi_i(u)=0\Leftrightarrow u = 0$</li>
+</ol>
+<p>写出等价形式</p>
+<script type="math/tex; mode=display">
+\min \psi_0(f_0(x))\\
+s.t \ \psi_i(f_i(x))\leq 0\\
+\phi_i(h_i(x))=0</script><h3 id="消除等式约束-h-i-x-0"><a href="#消除等式约束-h-i-x-0" class="headerlink" title="消除等式约束$h_i(x)=0$"></a>消除等式约束$h_i(x)=0$</h3><script type="math/tex; mode=display">
+\{h_i(x)=0,i=1,2,\cdots,p \}构成一组方程</script><p>对于满足等式约束的情况，一定有</p>
+<script type="math/tex; mode=display">
+\exists z\in \R^k,\phi:\R^k \to \R^n</script><p>使得</p>
+<script type="math/tex; mode=display">
+x= \phi(z)</script><blockquote>
+<p>$h_i(x) = 0$实际上构成一组方程组，那么满足这个方程组的解(假设x为n维向量，有p个约束)，则它的解空间一定是n-p维的$\to$等式约束转化为某种升维映射</p>
+<p>例子，对于$x\in \R^3$上的约束</p>
+<script type="math/tex; mode=display">
+x_1 + x_2 + x_3 = 0\\
+x_1 + 2 x_2 = 0</script><p>写成$\R\to \R^3$的映射$\phi$，满足</p>
+<script type="math/tex; mode=display">
+z\in\R,\phi(z) = (z,-\frac{z}{2},-\frac{z}{2})</script><p>有两条结论</p>
+<ol>
+<li>                     \phi(z) = x$</li>
+<li>$\forall z\in \R,x=\phi(z)$满足等式约束</li>
+</ol>
+</blockquote>
+<script type="math/tex; mode=display">
+\min f_0(x)\\
+s.t\quad f_i(x)\leq 0,i=1,2,\cdots,m\\
+x= g(z)</script><p>进一步去掉这个约束</p>
+<script type="math/tex; mode=display">
+\min f_0(g(z))\\
+s.t \ f_i(g(z))\leq 0\\
+z\in \R^k</script><blockquote>
+<p>消除线性等式约束</p>
+<script type="math/tex; mode=display">
+Ax = b,x\in \R^n,A\in \R^{p\times n}</script><ol>
+<li><p>Ax=b无解，无意义</p>
+</li>
+<li><p>$x= A^{-1}b$，解空间上只有一个点</p>
+</li>
+<li><p>一般情况，求出$Ax =b$化0空间上的所有向量，假设有m个$z_1,z_2,\cdots,z_m\in \R^n$，满足$Az_i=0$，此时构造$\mu \in \R^m$，并且$Ax =b$有一组特解$x_0$，解写成</p>
+<script type="math/tex; mode=display">
+x = \mu z+x_0 = \phi(z)\\
+z=(z_1,z_2,\cdots,z_m)</script></li>
+</ol>
+</blockquote>
+<h2 id="定义-凸优化问题"><a href="#定义-凸优化问题" class="headerlink" title="定义-凸优化问题"></a>定义-凸优化问题</h2><ol>
+<li>目标函数是凸函数</li>
+<li>不等式约束的左边是凸函数$\to 0-sublevel$ set是凸集</li>
+<li>等式约束是仿射函数$a_i^T x=b_i$，仿射集合构成凸集</li>
+</ol>
+<h3 id="基于仿射约束对问题降维"><a href="#基于仿射约束对问题降维" class="headerlink" title="基于仿射约束对问题降维"></a>基于仿射约束对问题降维</h3><p>一组线性等式约束</p>
+<script type="math/tex; mode=display">
+Ax = b,A\in \R^{m\times n},x\in \R^n</script><p>等价于</p>
+<script type="math/tex; mode=display">
+x = F z + x_0\\
+z=(z_1,z_2,\cdots,z_k),Az_i = 0,Ax_0 = b,F = (f_1,f_2,\cdots,f_k)^T</script><p>因此写成</p>
+<script type="math/tex; mode=display">
+\min f_0(Fz + x_0)\\
+s.t\quad  f_i(Fz + x_0)\leq 0,i=1,2,\cdots,m</script><h3 id="仿射不等式约束进行升维"><a href="#仿射不等式约束进行升维" class="headerlink" title="仿射不等式约束进行升维"></a>仿射不等式约束进行升维</h3><p>假设$f_i(x)$也是仿射变换</p>
+<script type="math/tex; mode=display">
+\min f_0(x)\\
+s.t \quad \delta_i \leq 0,i=1,2,\cdots,m\\
+f_i(x) - \delta_i = 0,i =1,2,\cdots,m\\
+a_i^T x = b_i,i=1,2,\cdots,p\\</script><p><em><em>松弛变量</em></em><em><em>松弛变量</em></em><em><em>松弛变量</em></em>松弛变量**</p>
+<blockquote>
+<p>为什么要假定$f_i(x)$也是仿射变换？如果非仿射变换能否引入松弛变量得到等价问题？</p>
+</blockquote>
+<h2 id="properity-of-convex-problem"><a href="#properity-of-convex-problem" class="headerlink" title="properity of convex problem"></a>properity of convex problem</h2><h3 id="局部最优-全局最优"><a href="#局部最优-全局最优" class="headerlink" title="局部最优=全局最优"></a>局部最优=全局最优</h3><p>满足局部最优</p>
+<script type="math/tex; mode=display">
+\exists R>0,f_0(x) = \inf\{f_0(z)|z\in x_f\bigcap \parallel z-x\parallel <R \}</script><p>假设x不是全局最优$\exists y\in x_f,s.t f_0(y)&lt; f_0(x)$，则</p>
+<script type="math/tex; mode=display">
+\parallel y-x\parallel > R</script><p>构造z，满足</p>
+<script type="math/tex; mode=display">
+z = (1-\theta)x + \theta y,\theta =\frac{R}{2\parallel y-x\parallel}</script><p>必然$z\in x_f(x_f是凸集)$，并且凸函数有</p>
+<script type="math/tex; mode=display">
+f_0(z)\leq (1-\theta )f_0(x) + \theta f_0(y)</script><p>同时</p>
+<script type="math/tex; mode=display">
+\parallel z-x\parallel =\frac{R}{2}< R</script><p>z应该落在邻域内，但是$f_0(z)&lt; f_0(x)$，矛盾</p>
+<h3 id="目标函数可微"><a href="#目标函数可微" class="headerlink" title="目标函数可微"></a>目标函数可微</h3><p>可微函数满足一阶条件</p>
+<script type="math/tex; mode=display">
+f_0(y)\geq f_0(x) +\nabla f_0^T(x)(y-x),\forall x,y\in dom f</script><p>在凸优化问题中，还应该约束</p>
+<script type="math/tex; mode=display">
+\forall x,y\in x_f</script><p>则</p>
+<script type="math/tex; mode=display">
+x^*\in x_f最优\Leftrightarrow \nabla f_0^T(x^*)(y-x^*) \geq 0,\forall y\in x_f</script><p>如果能找到$\nabla f_0(x^*)^T = 0$并且落在可行域内，则一定为最优解</p>
+<blockquote>
+<p><em><em>登高线</em></em><em><em>登高线</em></em><em>登高线*</em></p>
+<script type="math/tex; mode=display">
+\{x|f(x)=c \}</script><p><em>$处取一个集合和这个等高线相交，并且集合C内任意一点x都有$f(x)\geq f(x^</em><em>)=c$，则$\nabla f^T(x^</em><em>)$必然在$x^</em><em>$处和等高线相切，并且$\forall y\in C,\lang \nabla f(x^</em>x^*),y-x\rang\geq $0</p>
+<p><img src="https://s2.loli.net/2022/11/21/pYOeSiWFXnBoUwj.png" alt="image-20221121213554422"></p>
+</blockquote>
+<h3 id="只包含等式约束的凸问题"><a href="#只包含等式约束的凸问题" class="headerlink" title="只包含等式约束的凸问题"></a>只包含等式约束的凸问题</h3><script type="math/tex; mode=display">
+\min f_0(x),dom f= \R^n\\
+s.t \quad Ax = b,A\in \R^{n\times n}</script><p>根据最优条件，在最优点$x^*$上有</p>
+<script type="math/tex; mode=display">
+\forall y,s.t\quad  Ay =b\\
+\nabla f^T_0(x^*)(y-x)\leq 0</script><p>并且有$Ax^*=b$，则y写成</p>
+<script type="math/tex; mode=display">
+y = x^* +v ,v\in \mathcal N(A),Av = 0</script><p>$\forall y\in \{y|Ay =b\}$都有(34)，则(34)等价于</p>
+<script type="math/tex; mode=display">
+\nabla f_0^T(x^*) v\leq 0,\forall v\in \mathcal N(A)</script><p>如果$rank(A)\leq n$，必然有</p>
+<script type="math/tex; mode=display">
+\lang\nabla f_0^T(x^*), v\rang=0</script><p>梯度方向和矩阵$\mathcal N(A)$空间正交</p>
+<blockquote>
+<p>一个$\R^n$上的函数添加一个线性约束$Ax =b$，实际上相当于从某个维度对函数做了切分(可以考虑n=2在变量平面上画一条线的情况)，此时最优解必然处在等高线和线性约束相切的位置</p>
+<blockquote>
+<p>$f_0(x)=x_1^2 +x_2^2,x_1+x_2=1$，$\mathcal N(A)$空间满足</p>
+<script type="math/tex; mode=display">
+\{(x_1,x_2)|x_1 + x_2 = 0 \}</script><p>对于等高线</p>
+<script type="math/tex; mode=display">
+x_1^2+x_2^2 =c\\</script><p>与$x_1+x_2=1$只有一个位置相交，满足</p>
+<script type="math/tex; mode=display">
+x_1^2 + (1-x_1)^2=c\\
+2 x_1^2 -2x_1 + 1-c=0</script><p>只有唯一解，等价于</p>
+<script type="math/tex; mode=display">
+4 - 8 \times (1-c) = 0</script><p>等价于$c=\frac{1}{2}$，在$(1/2,1/2)$处梯度为$(1,1)$，必然与$\mathcal N(A)$正交</p>
+</blockquote>
+</blockquote>
+<h3 id="仅包含非负约束"><a href="#仅包含非负约束" class="headerlink" title="仅包含非负约束"></a>仅包含非负约束</h3><script type="math/tex; mode=display">
+\min f_0(x)\\
+s.t\quad x\geq 0</script><p>一阶条件，$x^*$最优有</p>
+<script type="math/tex; mode=display">
+\forall y\geq 0,\nabla f^T(x^*)(y-x^*)\geq 0\to \nabla f^T(x^*) y \geq \nabla f^T(x^*) x^*</script><h4 id="若-nabla-f-T-x-lt-0"><a href="#若-nabla-f-T-x-lt-0" class="headerlink" title="若$\nabla f^T(x^*)&lt; 0$"></a>若$\nabla f^T(x^*)&lt; 0$</h4><p>梯度每个分量都小于0，则在$\geq 0$的半空间内必然可以让$\nabla f^T(x^*)y$取到无穷小，(44)必然不能被满足</p>
+<h4 id="因此必然有-nabla-f-T-x-geq-0"><a href="#因此必然有-nabla-f-T-x-geq-0" class="headerlink" title="因此必然有$\nabla f^T(x^*)\geq 0$"></a>因此必然有$\nabla f^T(x^*)\geq 0$</h4><p>若$x=(x_1,x_2,\cdots,x_n)$且$f_0(x)$为线性函数，则$f_0(x)$可以写成</p>
+<script type="math/tex; mode=display">
+f_0(x) = \sum_{i=1}^n a_i x_i,a_i \geq 0</script><p>令$y=0$，有</p>
+<script type="math/tex; mode=display">
+\nabla f^T(x^*)x ^*\leq 0</script><p><em>)\geq 0,x^</em><em>)\geq 0,x^</em> 0,x^*\geq 0$，则</p>
+<script type="math/tex; mode=display">
+\nabla f^T(x^*) x^* \geq 0</script><p>因此必然有</p>
+<script type="math/tex; mode=display">
+\nabla f^T(x^*) x^* =0</script><p>得到，如果$x^*=(x_1,x_2,\cdots,x_n)$是最优解，则一定满足以下三个条件(实际上这是等价条件)</p>
+<ol>
+<li>$x\geq 0$</li>
+<li>$\nabla f_0(x)\geq 0$</li>
+<li>如果$x_i\neq 0$，则$(\nabla f_0(x))_i$=0</li>
+</ol>
+<blockquote>
+<p> 互补条件，$x,\nabla f_0(x)$对应分量当且最多仅有一个非零元素(不可能出现$x_i\neq 0,\nabla f(x)_i\neq 0$)</p>
+</blockquote>
+<h4 id="几何上看这个结论"><a href="#几何上看这个结论" class="headerlink" title="几何上看这个结论"></a>几何上看这个结论</h4><p>对于$\R^2$上的函数，如果约束在$\R_{++}^2$上求解最优化问题</p>
+<script type="math/tex; mode=display">
+f_0(x) = (x_1-1)^2 + (x_2+1)^2\\
+x_1,x_2\geq 0</script><p>最优点为$x_1=1,x_2=0$，最优值为1，在$(1,0)$处的梯度为</p>
+<script type="math/tex; mode=display">
+\nabla f_0(x)_{(1,0)}= (0,2)</script><p>满足互补</p>
+<h2 id="典型的凸问题"><a href="#典型的凸问题" class="headerlink" title="典型的凸问题"></a>典型的凸问题</h2><h3 id="凸问题的狭义定义"><a href="#凸问题的狭义定义" class="headerlink" title="凸问题的狭义定义"></a>凸问题的狭义定义</h3><p>等式约束为仿射函数</p>
+<script type="math/tex; mode=display">
+\min f_0(x)\\
+s.t \quad f_i(x)\leq 0,i=1,2,\cdots,m\\
+Ax\leq b,A\in \R^{k\times n}</script><h3 id="线性规划"><a href="#线性规划" class="headerlink" title="线性规划"></a>线性规划</h3><script type="math/tex; mode=display">
+\min c^T x +d,c\in \R^n,d\in \R \\
+Gx\leq h,G\in \R^{m\times n},h\in\R^m\\
+Ax = b,A\in \R^{k\times n},b\in R^k</script><p>feasible set是凸的(多面体)，Ax$\leq b$将全空间划分出一个子空间，不等式约束在子空间中切出一部分</p>
+<p>对于目标函数也为仿射函数，最优解一定能在顶点取到</p>
+<blockquote>
+<p>等价变换</p>
+<script type="math/tex; mode=display">
+\min c^T x+d \\
+Gx +S =h\\
+Ax=b\\
+S\geq 0</script><p>S是松弛变量</p>
+<blockquote>
+<p>等式约束全部为仿射，不等式约束要求在半空间，线性规划写成</p>
+<script type="math/tex; mode=display">
+\min c^T x\\
+s.t \quad Ax=b\\
+x\geq 0</script></blockquote>
+<p>分开X中正负元素，$X=X_+-X_{-},X_+\geq ,X_-\geq 0$</p>
+<script type="math/tex; mode=display">
+\min c^T (x_+-x_-)+ d\\
+G(x_+-x_-)+S=h\\
+A(x_+-x_-)=b\\
+S\geq 0</script><p>一定是等价问题</p>
+<blockquote>
+<ol>
+<li>原问题中任意可行解可以在等价问题中找到对应可行解，并且目标函数值相同</li>
+<li>等价问题中任意解可以在原问题中找到可行解使得函数值相同</li>
+</ol>
+</blockquote>
+</blockquote>
+<h4 id="食谱问题"><a href="#食谱问题" class="headerlink" title="食谱问题"></a>食谱问题</h4><p>人需要m种营养物质，每样物质不小于$b_1,b_2,\cdots,b_m$，第i种食物包含第j类营养物质的含量为$a_{ij},i=1,2,\cdots,n,j=1,2,\cdots,m$，价格为$c_1,c_2,\cdots,c_n$</p>
+<script type="math/tex; mode=display">
+\min \sum_{i=1}^n c_i x_i\\
+\sum_{i=1}^n a_{ij} x_i \geq b_j\\
+x_i\geq 0</script><h4 id="线性分数规划"><a href="#线性分数规划" class="headerlink" title="线性分数规划"></a>线性分数规划</h4><p>原问题的约束和线性规划相同，目标函数是线性分数函数</p>
+<script type="math/tex; mode=display">
+\min f_0(x) =\frac{c^T x+d}{ e^T x+f},e^T x+f >0</script><p>$f_0(x)$本身不是凸函数，例如</p>
+<script type="math/tex; mode=display">
+f_0(x) = -\frac{x}{x-1} = -1 -\frac{1}{x-1}</script><p>显然非凸</p>
+<p>变成凸问题，写出等价线性规划，假设可行域不是空集，即</p>
+<script type="math/tex; mode=display">
+\{x|Gx \leq h,Ax=b,e^T x+f >0 \}</script><p>不是空集，写出它的等价形式</p>
+<script type="math/tex; mode=display">
+\min c^T y +dz\\
+s.t\quad Gy -hz\leq 0\\
+Ay -bz =0\\
+e^T y + fz=1\\
+z\geq 0</script><p>引入非负变量$z$，变成$\R^{n+1}$上的优化问题</p>
+<h5 id="证明优化问题的等价性"><a href="#证明优化问题的等价性" class="headerlink" title="证明优化问题的等价性"></a>证明优化问题的等价性</h5><p><em>$，等价问题feasible set是$y_f^</em>题feasible set是$y_f^*$，目的是说明</p>
+<script type="math/tex; mode=display">
+\forall x\in x_f\to \exists z,y\in y_f^*,s.t \quad c^T y +dz= f_0(x)</script><p>反之也需要成立</p>
+<blockquote>
+<p>$\Rightarrow,\forall x\in x_f^*,y=\frac{x}{e^T x +f},z=\frac{1}{e^T x+f}$</p>
+<p>先证明$(y,z)\in y_f^*$</p>
+<script type="math/tex; mode=display">
+Gy - hz =\frac{Gx - h}{e^T x+f}\leq 0(Gx\leq h)\\
+Ay - bz = \frac{Ax-b}{e^T x+f}=0\\
+e^T y + fz=\frac{e^T x+f }{e^T +f}=1\\z>0</script><p>同时</p>
+<script type="math/tex; mode=display">
+c^T y + dz=\frac{c^T x+d}{e^T x+ f} =f_0(x)</script><p>得证</p>
+<p><em><em>假设$z\geq 0$</em></em><em><em>假设$z\geq 0$</em></em>\geq 0$**，定义</p>
+<script type="math/tex; mode=display">
+x= \frac{y}{z}</script><p>x是原问题的可行解，且函数值相同</p>
+<p>考虑$z=0$的情况，若$(y,0)$是等价问题的可行解，假设$x_0\in x_f^*$是原问题的一个可行解，尝试证明</p>
+<script type="math/tex; mode=display">
+x=x_0+t y,t\geq 0</script><p>是原问题的一个可行解，因为$z=0$是等价问题的可行解，因此有</p>
+<script type="math/tex; mode=display">
+Gy \leq 0\\
+Ay = 0\\
+e^T y =1</script><p>考虑$x= x_0+ty$</p>
+<script type="math/tex; mode=display">
+Gx = Gx_0+tGy \leq h + t Gy \leq h\\
+Ax = Ax_0+ t Ay = b\\
+e^T x+f = e^T x_0 +f + t e^T y >0</script><p>计算</p>
+<script type="math/tex; mode=display">
+f_0(x )= f_0(x_0+ty) = \frac{c^T x_0 + t c^T y + dt}{e^T x+ t e^T y + f}</script><p>希望找到t，使得</p>
+<script type="math/tex; mode=display">
+f_0(x_0+t y)= c^T y</script><p>令$t\to \infty$即可</p>
+<script type="math/tex; mode=display">
+\lim_{t\to \infty} f_0(x_0+ty) = c^T y</script><blockquote>
+<p>证明极限等价于证明了存在性么？</p>
+</blockquote>
+</blockquote>
+<h3 id="二次规划"><a href="#二次规划" class="headerlink" title="二次规划"></a>二次规划</h3><script type="math/tex; mode=display">
+\min \frac{1}{2}x^T P x + q^T x + r,P\in S_+^n \\
+s.t \quad Gx \leq h\\
+Ax = b</script><p>最优解可能在集合内部(二次函数最小值在多面体内取到)</p>
+<h3 id="二次约束二次规划-QCQB"><a href="#二次约束二次规划-QCQB" class="headerlink" title="二次约束二次规划(QCQB)"></a>二次约束二次规划(QCQB)</h3><p>约束也是二次规划</p>
+<script type="math/tex; mode=display">
+\min \frac{1}{2} x^T P x+q^T x + r\\
+\frac{1}{2}x^T P_i x+q_i^T x + r_i \leq 0\\
+Ax =b</script><h4 id="带噪声的测量系统"><a href="#带噪声的测量系统" class="headerlink" title="带噪声的测量系统"></a>带噪声的测量系统</h4><p>x是测量值，带有噪声e，求解的物理量y和x之间的关系满足</p>
+<script type="math/tex; mode=display">
+y = Ax +e</script><p>目标写成</p>
+<script type="math/tex; mode=display">
+\hat x = \arg\min_x \parallel b - Ax \parallel_2^2 = x^T A^T A x - 2 b^T A x +b^T b\\
+\min x^T A^T A x -2 b^T Ax + b^Tb</script><p>最优解为</p>
+<script type="math/tex; mode=display">
+x = (A^T A)^{-1} A^T b(A^TA可逆)</script><p>关于x的先验知识</p>
+<h5 id="x稀疏"><a href="#x稀疏" class="headerlink" title="x稀疏"></a>x稀疏</h5><script type="math/tex; mode=display">
+\hat x = \arg\min _x \parallel b-Ax\parallel_2^2 + \lambda_0 \parallel x\parallel_0\to \lambda _1 \parallel x\parallel_1</script><p>0-范数不是凸函数，改写成1范数 $L_1$ regularized</p>
+<p>消除绝对值，切分</p>
+<script type="math/tex; mode=display">
+x = x^+ - x^-</script><p>原始损失函数改写成</p>
+<script type="math/tex; mode=display">
+\min \parallel b - Ax^+ Ax^-\parallel_2^2 +\lambda_1 \parallel x^+-x^-\parallel_1\\
+\lambda_1\parallel x^+ -x^-\parallel_1 = \lambda_11^T x^+ +\lambda _1 1^T x^-\\
+{x^+},x^-\geq 0</script><p>变成$\R^{2n}$上的凸优化问题，转化为光滑的问题</p>
+<p>变成</p>
+<script type="math/tex; mode=display">
+\min \parallel b-Ax^+ + Ax^-\parallel_2^2 +\lambda_1 1^T x^+\lambda_1 1^T x^-\\
+x^+,x^-\geq 0</script><h5 id="Ridge-regression-x中元素类似"><a href="#Ridge-regression-x中元素类似" class="headerlink" title="Ridge regression(x中元素类似)"></a>Ridge regression(x中元素类似)</h5><script type="math/tex; mode=display">
+\min \parallel b- Ax\parallel_2^2 +\lambda_2 \parallel x\parallel _2^2</script><p>减少数据的方差，二次项系数为</p>
+<script type="math/tex; mode=display">
+A^T A+\lambda_2 I</script><p>一定是正定的$\lambda_2\geq 0$</p>
+<p>它的等价形式为</p>
+<script type="math/tex; mode=display">
+\min \parallel b -Ax\parallel_2^2\\
+s.t \quad \parallel x\parallel _2^2 \leq \theta</script><p>有如下结论</p>
+<blockquote>
+<p>$\forall \lambda_2\geq 0,\exists \theta \geq 0,s.t x\in \R^n$同时满足原问题和对偶问题的最优解</p>
+<blockquote>
+<p>直观上理解这个问题，对于原问题</p>
+<script type="math/tex; mode=display">
+\min \parallel b -Ax \parallel _2^2 + \lambda_2 \parallel x \parallel_2^2</script><p>假设$x=  \hat x$使得原问题取得最优解，则令</p>
+<script type="math/tex; mode=display">
+\theta = { \parallel x\parallel_2^2}</script><p>验证$x = \hat x$同时满足对偶问题的最优解，假设对偶问题存在更优解$\hat x^\prime$，使得在满足</p>
+<script type="math/tex; mode=display">
+\parallel x\parallel_2^2 \leq \theta</script><p>的前提下，满足</p>
+<script type="math/tex; mode=display">
+\parallel b - A\hat x^\prime\parallel_2^2\leq \parallel b - A\hat x\parallel_2^2</script><p>此时将得到</p>
+<script type="math/tex; mode=display">
+\parallel b- Ax^\prime \parallel_2^2 + \lambda _2\parallel x^\prime\parallel_2^2\leq \parallel b - A\hat x\parallel_2^2 +\lambda_2 \parallel \hat x\parallel_2^2</script><p>$x^\prime$是原问题的最优解，矛盾。Q.E.D</p>
+</blockquote>
+</blockquote>
+<p>变成QCQP问题</p>
+<h4 id="投资组合问题"><a href="#投资组合问题" class="headerlink" title="投资组合问题"></a>投资组合问题</h4><p>总的资金数量B，有n种投资方案，分别投资$x_1,x_2,\cdots,x_n$，一定时间后获得回报为$p_1x_1,p_2x_2,\cdots,p_nx_n$</p>
+<script type="math/tex; mode=display">
+\max p_1x_1+\cdots+p_n x_n\\
+x_1+x_2+\cdots +x_n \leq B\\
+x_i \geq 0</script><p>显然问题不等式取=得到等价问题</p>
+<p>这个模型过于简化，$p_i$往往未知，一个可靠的投资需要满足</p>
+<ol>
+<li>收益高$p_i$较高</li>
+<li>风险低$p_i$方差较低</li>
+</ol>
+<p>假设$\overline p$是p的期望组成的向量，$\sum$为协方差矩阵，假设是一个对角矩阵$diag(a_1,a_2,\cdots,a_n)$，新的投资组合模型为在奖励最大的情况下极小化风险(奖励满足某个下界)</p>
+<script type="math/tex; mode=display">
+\min x^T \sum x\\
+s.t\quad \overline p^T x\geq r_{\min}\\
+1^T x= B\\
+x\geq 0</script><p>这里引入$r_\min$用于最大化奖励，和$l_1$正则化技巧类似</p>
+<h3 id="半正定规划"><a href="#半正定规划" class="headerlink" title="半正定规划"></a>半正定规划</h3><script type="math/tex; mode=display">
+\min tr(CX)\\
+s.t\quad tr(A_i X) = b_i,i=1,2,\cdots,p\\
+X\succeq 0\\
+X\in S_+^n ,C\in \R^{n\times n},A_i\in \R^{n\times n},b_i\in \R</script><p>约束是仿射变换(矩阵上的线性规划)</p>
+<blockquote>
+<p>对角矩阵$C,X$，对角矩阵对角元素组成向量$diag(\cdot)$</p>
+<script type="math/tex; mode=display">
+\min diag(c)^T diag(X)\\
+diag(A_i)^T diag(X) = b_i\\
+diag(X)\geq 0</script></blockquote>
+<p>另一种形式，对向量的优化(基于半正定矩阵的分解)</p>
+<script type="math/tex; mode=display">
+\min c^T x\\
+s.t\quad x_1A_1+\cdots+x_n A_n\leq B\\
+x\in \R^n,B,A_i\in S^n,c\in \R^n</script><p>不等式约束中的$\leq$表示的是$x_1A_1+\cdots+x_nA_n-B$是半负定矩阵，$x=(x_1,x_2,\cdots,x_n)$不等式约束表明的是矩阵线性组合</p>
+<h4 id="线性矩阵函数"><a href="#线性矩阵函数" class="headerlink" title="线性矩阵函数"></a>线性矩阵函数</h4><p>考虑线性矩阵函数</p>
+<script type="math/tex; mode=display">
+A(x) =A_0+x_1A_1+\cdots+x_n A_n\\
+A_i\in \R^{p\times q},x\in \R^n = (x_1,x_2,\cdots,x_n)</script><p>定义矩阵谱范数$\parallel A(x)\parallel_2$为矩阵$A(x)$最大的奇异值(实际上是$A(x)^T A(x)$的特征值开根号)，优化目标是</p>
+<script type="math/tex; mode=display">
+\min \parallel A(x)\parallel_2</script><blockquote>
+<p>引理（奇异值不等式）</p>
+<script type="math/tex; mode=display">
+\parallel A(x)\parallel_2\leq \sqrt S\Leftrightarrow A^T(x) A(x)- SI \leq 0</script><p><em><em>最大</em></em><strong>最大</strong>特征值，因此一定是半负定的，满足不等式$\parallel A(x)\parallel_2\leq \sqrt S$的不等式奇异值不超过$\sqrt S$(实际上意味着存在奇异值为$\sqrt S$的矩阵$A(x)$)</p>
+</blockquote>
+<p>改写上述优化问题，写成</p>
+<script type="math/tex; mode=display">
+\min \sqrt S\\
+s.t \quad A^T(x) A(x)\preceq  SI</script><blockquote>
+<p> 引入新变量S，考虑约束是否为凸，考虑$f(x) = A^T(x)A(x) -SI= (A_0 + x_1 A_1 +\cdots,x_n A_n)^T (A_0 +x_1 A_1+\cdots+x_n A_n)-SI$，证明它关于x，s联合凸</p>
+<script type="math/tex; mode=display">
+ \begin{aligned} 
+ f(x) 
+ &=\sum_{i,j}^{n,n} x_i A_i^TA_j x_j -SI\\
+ \end{aligned}</script><p> 假设$(x,s_1),(y,s_2)$满足</p>
+<script type="math/tex; mode=display">
+ f(x) =\sum_{i,j}^{n,n} x_i A_i^T A_j x_j -s_1 I \preceq 0\\
+ f(y) = \sum_{i,j}^{n,n} y_i A_i^T A_j y_j -s_2 I \preceq 0\\
+ \forall \theta \in (0,1)，计算(\theta x+(1-\theta)y,\theta s_1+(1-\theta)s_2)是否为负定矩阵\\
+ \begin{aligned}
+ f(\theta x+(1-\theta) y,\theta s_1 + (1-\theta) s_2)&=\theta^2 \sum_{i,j}^{n,n}x_i A_i^T A_j x_j +(1-\theta)^2 \sum_{i,j}^{n,n}y_i A_i^T A_j y_j\\&+ 2\theta (1-\theta)\sum_{i,j}^{n,n} x_i A_i ^T A_j y_j - (\theta s_1 +(1-\theta )s_2) I\\
+ &=\theta ^2 (\sum_{i,j}^{n,n} x_i A_i^T A_j x_j -s_1 I)+\theta^2 s_1 I -\theta s_1 I \\ &+(1-\theta)^2 (\sum_{i,j}^{n,n} y_iA_I^T A_j y_i-s_2 I ) +(1-\theta)^2 s_2 I -(1-\theta) s_1 I\\
+ \end{aligned}</script><p> 显然$\theta s_i I -\theta s_i I$是负定矩阵，因此这种情况下还是负定的</p>
+<p> 令$\sqrt s=t$，写成(使得目标函数是线性函数)</p>
+<script type="math/tex; mode=display">
+ \min t \\
+ s.t\quad A^T (x) A(x) - t^2 I \leq 0\\
+ t\geq 0</script><p>  写成$2q\times 2q$矩阵</p>
+<script type="math/tex; mode=display">
+ \begin{pmatrix}
+ tI & A(x)\\
+ A^T(x) & tI
+ \end{pmatrix}\succeq 0</script><p> 两个约束等价，但是约束对$(x,t)$并不联合保凸，只对$(x,t^2)$联合凸</p>
+<p> 问题变成(优化变量为x,t,Y)，下面的问题中等式约束是仿射的，不等式约束是凸的</p>
+<script type="math/tex; mode=display">
+ \min t\\
+ s.t \quad Y = \begin{pmatrix}
+ t I_p  & A(x)\\
+ A^T(x) & tI_q
+ \end{pmatrix}（等式约束）\\
+ Y\succeq 0\\
+ t\geq 0</script></blockquote>
+<h3 id="多目标优化"><a href="#多目标优化" class="headerlink" title="多目标优化"></a>多目标优化</h3><p>考虑映射到向量空间的目标函数</p>
+<script type="math/tex; mode=display">
+\min f_0(x)\\
+s.t\quad f_i(x)\leq 0,i=1,2,\cdots,m\\
+h_i(x) = 0,i=1,2,\cdots,p\\
+f_0:\R^n \to \R^q</script><p>希望同时极小化q个变量</p>
+<h4 id="多目标形式的投资组合"><a href="#多目标形式的投资组合" class="headerlink" title="多目标形式的投资组合"></a>多目标形式的投资组合</h4><script type="math/tex; mode=display">
+\min Rist\\
+\min -income\\
+s.t \quad resource</script><h5 id="定义-Pareto-optimal-front"><a href="#定义-Pareto-optimal-front" class="headerlink" title="定义 Pareto optimal front"></a>定义 Pareto optimal front</h5><p>在某一个方向上增加，必然在某个方向上减少</p>
+<h5 id="Oracle-Solution"><a href="#Oracle-Solution" class="headerlink" title="Oracle Solution"></a>Oracle Solution</h5><p><em>,f_{02}^</em><em>,f_{02}^</em><em>,f_{02}^</em><em>,\cdots,f_{0q}^</em>*)$，实际上不一定能取到</p>
+<h4 id="等价的单目标优化问题"><a href="#等价的单目标优化问题" class="headerlink" title="等价的单目标优化问题"></a>等价的单目标优化问题</h4><p>若$f_0(x)$在$\R^k$中为凸，$f_i(x)$为凸，$h_i(x)$为仿射，则可以求解下列问题求出pareto optimal front上点</p>
+<script type="math/tex; mode=display">
+\min \sum_{i=1}^q \lambda_i f_o(x),\lambda_i\geq 0\\
+f_i(x)\leq 0\\
+h_i(x)=0</script><p>实际上可以在$\R_+^q$上遍历所有点找到pareto optimal front上所有点</p>
+<h3 id="Ridge-Regression"><a href="#Ridge-Regression" class="headerlink" title="Ridge Regression"></a>Ridge Regression</h3><script type="math/tex; mode=display">
+\min  \parallel b-Ax\parallel_2^2 +\lambda \parallel x\parallel_2^2</script><p>对应的多目标优化问题</p>
+<script type="math/tex; mode=display">
+\min \parallel b-Ax\parallel_2^2\\
+\min \parallel x\parallel_2^2</script><p>$\lambda =0$相当于只有第一项优化，$\lambda =\infty$相当于只有第二项优化，Ridge Regression可以通过引入一个变量解决</p>
+<script type="math/tex; mode=display">
+\min \parallel b - Ax\parallel_2^2\\
+s.t\quad \parallel x\parallel_2^2 \leq \epsilon</script><p>对于$\forall \lambda$都可以找到对应的$\epsilon$，使得两个解相同</p>
+<blockquote>
+<p>引子:拉格朗日乘子，当只需要优化$\parallel b-Ax\parallel_2$，即$\lambda =0$时，设置$\epsilon = \infty$即可</p>
+</blockquote>
+<h2 id="Quasi-convex-problem"><a href="#Quasi-convex-problem" class="headerlink" title="Quasi convex problem"></a>Quasi convex problem</h2><ol>
+<li>不等式约束是凸函数</li>
+<li>等式约束是仿射函数</li>
+<li>目标函数是Quasi convex的</li>
+</ol>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/2023/04/06/Convex-Optimization-Convex-Problems/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2023/04/06/Convex-Optimization-Convex-Problems/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2023/04/06/Convex-Optimization-Introduction/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/04/05/Convex-Optimization-set-and-functions/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Gaoustcer's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        kd193104@mail.ustc.edu.cn
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2023/04/">四月 2023<span class="sidebar_archives-count">5</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/bollnh/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Hexo
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+    for (var i = 0; i < all.length; ++i)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+
+</body>
+    
+</html>
