@@ -48,7 +48,7 @@
     
     <title>
         
-            归档: 2023 | 
+            Quasi function | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Convex Optimization">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://example.com/archives/2023/">
+    <meta name="msapplication-starturl" content="http://example.com/2023/04/09/Quasi-function/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://example.com/archives/2023/">
+    <meta property="og:url" content="http://example.com/2023/04/09/Quasi-function/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2023 | Hexo">
+    <meta property="og:title" content="Quasi function | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Convex Optimization"> 
 
+    
+        <meta property="article:published_time" content="Sun Apr 09 2023 18:41:27 GMT+0800">
+        <meta property="article:modified_time" content="Sun Apr 09 2023 18:42:52 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://example.com/archives/2023/index.html" />
+        <link rel="canonical" href="http://example.com/2023/04/09/Quasi-function/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://example.com/2023/04/09/Quasi-function/index.html",
+    "headline": "Quasi function",
+    "datePublished": "Sun Apr 09 2023 18:41:27 GMT+0800",
+    "dateModified": "Sun Apr 09 2023 18:42:52 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Convex Optimization",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,602 +322,374 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Convex-Optimization%E2%80%94%E2%80%94Quasi-function"><span class="post-toc-number">1.</span> <span class="post-toc-text">Convex Optimization——Quasi function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quasi-Convex-function"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Quasi Convex function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%80"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">定义一</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89%E4%BA%8C"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">定义二</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">例子</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8B%9F%E5%87%B8%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B6%E5%AE%83%E5%AE%9A%E4%B9%89%E2%80%94%E2%80%94%E4%B8%80%E9%98%B6%E6%9D%A1%E4%BB%B6%E5%92%8C%E4%BA%8C%E9%98%B6%E6%9D%A1%E4%BB%B6"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">拟凸函数的其它定义——一阶条件和二阶条件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%80%E9%98%B6%E6%9D%A1%E4%BB%B6"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">一阶条件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BA%8C%E9%98%B6%E6%9D%A1%E4%BB%B6"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">二阶条件</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Log-concave-amp-amp-Log-convex"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Log concave &amp;&amp; Log convex</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Relations-between-log-concave"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">Relations between log concave</span></a></li></ol></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/optimizatio-method/">optimization method</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/optimizatio-method/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/duality-review/">duality review</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/duality-review/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/sensitive-analysis/">sensitive-analysis</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/sensitive-analysis/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/duality-explain/">duality explain</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/duality-explain/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/Quasi-function/">Quasi function</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/Quasi-function/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/KKTcondition/">KKTcondition</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/KKTcondition/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/08/Diverse-Policy-in-RL/">Diverse Policy in RL</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/08/Diverse-Policy-in-RL/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 08, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/06/hello-world/">Welcome to Gaoustcer&#39;s homepage</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/06/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 06, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/06/Duaility/">Duaility</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Du...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/06/Duaility/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 06, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/06/Convex-Optimization-Introduction/">Convex Optimization:Introduction</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/06/Convex-Optimization-Introduction/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 06, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <span class="page-number current">1</span><a class="page-number" href="/archives/2023/page/2/">2</a><a class="extend next" rel="next" href="/archives/2023/page/2/">&lt;button aria-label&#x3D;&quot;Next page&quot; class&#x3D;&quot;mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon&quot;&gt;&lt;i class&#x3D;&quot;material-icons&quot; role&#x3D;&quot;presentation&quot;&gt;arrow_forward&lt;&#x2F;i&gt;&lt;&#x2F;button&gt;</a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Quasi function
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>4月 09, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Convex-Optimization/" rel="tag">Convex Optimization</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Quasi function&url=http://example.com/2023/04/09/Quasi-function/index.html&pic=http://example.com/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Quasi function&url=http://example.com/2023/04/09/Quasi-function/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2023/04/09/Quasi-function/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://example.com/2023/04/09/Quasi-function/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Convex-Optimization——Quasi-function"><a href="#Convex-Optimization——Quasi-function" class="headerlink" title="Convex Optimization——Quasi function"></a>Convex Optimization——Quasi function</h1><h2 id="Quasi-Convex-function"><a href="#Quasi-Convex-function" class="headerlink" title="Quasi Convex function"></a>Quasi Convex function</h2><h3 id="定义一"><a href="#定义一" class="headerlink" title="定义一"></a>定义一</h3><p>所有$\alpha$-sublevel set都是凸的函数</p>
+<blockquote>
+<script type="math/tex; mode=display">
+f(x)=\left\{
+\begin{aligned}
+& \sqrt x,x\geq 0\\
+& \sqrt {-x},x\leq 0
+\end{aligned}
+\right.</script></blockquote>
+<p>Quasi Convex定义为</p>
+<script type="math/tex; mode=display">
+S_\alpha = \{x\in dom f|f(x)\leq \alpha \}</script><p>convex $\forall \alpha \in \R$</p>
+<p>同样定义Quasi Concave</p>
+<script type="math/tex; mode=display">
+S_\alpha^\prime = \{x\in dom f|f(x)\geq \alpha \}</script><p>对于$\forall \alpha \in \R$是convex的</p>
+<p>定义Quasi linear</p>
+<script type="math/tex; mode=display">
+S_\alpha^{\prime \prime}=\{x\in dom f|f(x)=\alpha \}</script><p>是凸集</p>
+<p>Quasi convex优化起来比较容易，尽管不能用convex function方法分析</p>
+<h3 id="定义二"><a href="#定义二" class="headerlink" title="定义二"></a>定义二</h3><p>拟凸下，有</p>
+<script type="math/tex; mode=display">
+\forall x,y\in dom f,\max(f(x),f(y))\geq f(\theta +(1-\theta(y)))</script><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><blockquote>
+<p>向量$x\in \R^n$的长度，定义为x中最后一个非零元素的个数</p>
+<script type="math/tex; mode=display">
+f(x)=\left\{
+\begin{aligned}
+& \max_{i,x_i\neq 0} i,x\neq 0\\
+& 0,x=0
+\end{aligned}
+\right.</script><p>$f(x)$是拟凸函数，对于它的$\alpha-$sublevel set</p>
+<script type="math/tex; mode=display">
+f(x)\leq \alpha \to x_{\alpha+1},x_{\alpha+2},\cdots,x_{n} = 0</script><p>显然是凸集</p>
+<p>线性分数函数</p>
+<script type="math/tex; mode=display">
+f(x) =\frac{a^Tx+b}{c^T x+d}\\
+dom f = \{x|c^T x+d >0 \}</script><p>是拟凸的</p>
+<script type="math/tex; mode=display">
+S_\alpha \to \{x|c^T x+d >0,a^T x+b \leq \alpha (c^T x+d) \}</script><p>多面体一定是凸集</p>
+<script type="math/tex; mode=display">
+f(x) = (x_1x_2\cdots x_n)^{\frac{1}{n}}在\R_{++}^n\bigcap \{\parallel R\parallel _2\leq 1\}上是凹函数</script><p>$\forall x,y\in dom f,\theta\in (0,1)$</p>
+<script type="math/tex; mode=display">
+\theta (x_1x_2\cdots x_n)^{1/n}+(1-\theta)(y_1y_2\cdots y_n)^{1/n}\leq {\prod_{i=1}^n \theta x_i +(1-\theta) y_i} ^{1/n}</script><p>向量的0范数(非0元素的个数之和)，考虑在一个集合中找稀疏向量</p>
+<script type="math/tex; mode=display">
+\min \parallel x\parallel_0\\
+s.t x\in C</script><p>这既不是凸问题也不是拟凸问题</p>
+<p>考虑近似问题(松弛)</p>
+<script type="math/tex; mode=display">
+\min \parallel x\parallel_1\\
+s.t x\in C</script><p>变成凸问题</p>
+<p>或者用另一种方法近似</p>
+<script type="math/tex; mode=display">
+f(x) = \log (ax^2 +1)</script><p>变成</p>
+<script type="math/tex; mode=display">
+\min \log x^x +1\\
+x\in C</script><p>是拟凸函数</p>
+</blockquote>
+<h2 id="拟凸函数的其它定义——一阶条件和二阶条件"><a href="#拟凸函数的其它定义——一阶条件和二阶条件" class="headerlink" title="拟凸函数的其它定义——一阶条件和二阶条件"></a>拟凸函数的其它定义——一阶条件和二阶条件</h2><h3 id="一阶条件"><a href="#一阶条件" class="headerlink" title="一阶条件"></a>一阶条件</h3><p>dom f为凸，并且</p>
+<script type="math/tex; mode=display">
+f(y)\leq f(x)\Leftrightarrow \nabla ^T f(x)(y-x)\leq 0</script><p>$dom f\in \R$</p>
+<blockquote>
+<p>Quasi convex具有</p>
+<script type="math/tex; mode=display">
+\max \{f(x),f(y) \}\geq f(\theta x+(1-\theta y))</script><p>则写成</p>
+<script type="math/tex; mode=display">
+f(x)\geq f(\theta x+(1-\theta)y)</script><p>梯度写成</p>
+<script type="math/tex; mode=display">
+f^\prime (x) =\lim_{t\to 0}\frac{f(x+t)-f(x)}{t}=\lim_{y\to x}\frac{f( x+(1-\theta)(y-x))-f( x)}{(1-\theta )(y-x)}</script><p>写成</p>
+<script type="math/tex; mode=display">
+\frac{f(\theta x+(1-\theta)y)- f(x)}{(1-\theta )(y-x)}(1-\theta)(y-x)\leq 0\\
+\theta \to 1\\
+f^\prime(x)(y-x)\leq 0</script><p>$\Leftarrow$得证</p>
+<p>考虑</p>
+<script type="math/tex; mode=display">
+\max\{f(y),f(x)\}- f(\theta x+(1-\theta )y)=f(x)-f(\theta x +(1-\theta )y)</script><p>写成</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{f(x)-f(\theta x +(1-\theta )y)}{(1-\theta)(x-y)}(1-\theta) (x-y)=f^\prime(x)(x-y)\geq 0
+\end{aligned}</script><p>(这个证明貌似只是在$\theta \to 1$)成立？这里貌似要推广到$\forall \theta \in (0,1)$</p>
+<blockquote>
+<p>在第21讲中修正，需要证明</p>
+<script type="math/tex; mode=display">
+\forall x,y\in dom f,f(y)\leq f(x) ,\theta\in [0,1]\\
+\max\{f(x),f(y) \}\leq f(\theta x + (1-\theta) y)</script><p>令 $z= \theta x+(1-\theta )y$，我们证明</p>
+<script type="math/tex; mode=display">
+f(z)\geq f(x)\to f(x)= f(z)</script><p>如果有$f(z)\geq f(x)$，则</p>
+<script type="math/tex; mode=display">
+f(x)\leq f(z),f(y)\leq f(z)</script><p>同时得到</p>
+<script type="math/tex; mode=display">
+f^\prime(z) (y-z)\leq 0\\
+f^\prime (z)(x-z)\leq 0</script><p>带入z，得到</p>
+<script type="math/tex; mode=display">
+f^\prime(z) (\theta (y-x))\leq 0 \to f^\prime(z)(y-x)\leq 0 \\
+f^\prime(z) ((1-\theta)(x-y))\leq 0\to f^\prime(z)(x-y)\leq 0</script><p>因此有</p>
+<script type="math/tex; mode=display">
+f^\prime (z)=0</script><p>则总是存在$z_1$，满足</p>
+<script type="math/tex; mode=display">
+f(z_1)\geq f(x)</script><p>同时$f^\prime (z_1)= 0$，并且对于$\forall z^\prime \in [x,z]$，这个结论都成立</p>
+</blockquote>
+</blockquote>
+<p>对于convex function，如果有$\nabla f(x)=0$，则$\forall y,f(y)\geq f(x)$</p>
+<blockquote>
+<p>这个结论对于Quasi function并不成立</p>
+<blockquote>
+<p> 对于定义域内均可微的函数，是否最小点一定有$\nabla  f(x)=0$?</p>
+</blockquote>
+</blockquote>
+<h3 id="二阶条件"><a href="#二阶条件" class="headerlink" title="二阶条件"></a>二阶条件</h3><p>如果f为拟凸函数，dom f为凸，且</p>
+<script type="math/tex; mode=display">
+y^T \nabla f(x) \geq 0(每个元素都非负)</script><p>一定有</p>
+<script type="math/tex; mode=display">
+y^T \nabla^2 f(x) y \geq 0</script><blockquote>
+<p>n = 1 的情况，如果$y\neq 0$，则$f^\prime(x) \geq 0$</p>
+</blockquote>
+<p>如果不满足拟凸函数的二阶条件，则不为二阶条件</p>
+<h2 id="Log-concave-amp-amp-Log-convex"><a href="#Log-concave-amp-amp-Log-convex" class="headerlink" title="Log concave &amp;&amp; Log convex"></a>Log concave &amp;&amp; Log convex</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>$f(\R^n \to \R)$为log concave，若$f(x)&gt;0,\forall x\in dom f$，且$\log f$为凹函数</p>
+<h3 id="Relations-between-log-concave"><a href="#Relations-between-log-concave" class="headerlink" title="Relations between log concave"></a>Relations between log concave</h3><ol>
+<li>f为log convex，则f为convex</li>
+<li>f为concave，则f为log concave</li>
+</ol>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/2023/04/09/Quasi-function/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2023/04/09/Quasi-function/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2023/04/09/duality-explain/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/04/09/KKTcondition/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

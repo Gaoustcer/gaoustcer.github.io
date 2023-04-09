@@ -48,7 +48,7 @@
     
     <title>
         
-            归档: 2023 | 
+            duality review | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Convex Optimization">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://example.com/archives/2023/">
+    <meta name="msapplication-starturl" content="http://example.com/2023/04/09/duality-review/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://example.com/archives/2023/">
+    <meta property="og:url" content="http://example.com/2023/04/09/duality-review/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2023 | Hexo">
+    <meta property="og:title" content="duality review | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Convex Optimization"> 
 
+    
+        <meta property="article:published_time" content="Sun Apr 09 2023 18:47:46 GMT+0800">
+        <meta property="article:modified_time" content="Sun Apr 09 2023 18:48:16 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://example.com/archives/2023/index.html" />
+        <link rel="canonical" href="http://example.com/2023/04/09/duality-review/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://example.com/2023/04/09/duality-review/index.html",
+    "headline": "duality review",
+    "datePublished": "Sun Apr 09 2023 18:47:46 GMT+0800",
+    "dateModified": "Sun Apr 09 2023 18:48:16 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Convex Optimization",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,602 +322,312 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Convex-Optimization%E2%80%94%E2%80%94Duality-review"><span class="post-toc-number">1.</span> <span class="post-toc-text">Convex Optimization——Duality(review)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Dual-Problem-and-Primal-Problem"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Dual Problem and Primal Problem</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BD%95%E6%97%B6%E5%BC%BA%E5%AF%B9%E5%81%B6%E6%88%90%E7%AB%8B%EF%BC%9F"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">何时强对偶成立？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Slater%E6%9D%A1%E4%BB%B6"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Slater条件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%9B%B8%E5%AF%B9%E5%86%85%E7%82%B9"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">相对内点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Slater%E6%9D%A1%E4%BB%B6-1"><span class="post-toc-number">1.2.1.2.</span> <span class="post-toc-text">Slater条件</span></a></li></ol></li></ol></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/optimizatio-method/">optimization method</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/optimizatio-method/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/duality-review/">duality review</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/duality-review/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/sensitive-analysis/">sensitive-analysis</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/sensitive-analysis/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/duality-explain/">duality explain</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/duality-explain/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/Quasi-function/">Quasi function</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/Quasi-function/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/KKTcondition/">KKTcondition</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/KKTcondition/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/08/Diverse-Policy-in-RL/">Diverse Policy in RL</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/08/Diverse-Policy-in-RL/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 08, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/06/hello-world/">Welcome to Gaoustcer&#39;s homepage</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/06/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 06, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/06/Duaility/">Duaility</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Du...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/06/Duaility/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 06, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/06/Convex-Optimization-Introduction/">Convex Optimization:Introduction</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/06/Convex-Optimization-Introduction/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 06, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <span class="page-number current">1</span><a class="page-number" href="/archives/2023/page/2/">2</a><a class="extend next" rel="next" href="/archives/2023/page/2/">&lt;button aria-label&#x3D;&quot;Next page&quot; class&#x3D;&quot;mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon&quot;&gt;&lt;i class&#x3D;&quot;material-icons&quot; role&#x3D;&quot;presentation&quot;&gt;arrow_forward&lt;&#x2F;i&gt;&lt;&#x2F;button&gt;</a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                duality review
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>4月 09, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Convex-Optimization/" rel="tag">Convex Optimization</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=duality review&url=http://example.com/2023/04/09/duality-review/index.html&pic=http://example.com/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=duality review&url=http://example.com/2023/04/09/duality-review/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2023/04/09/duality-review/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://example.com/2023/04/09/duality-review/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Convex-Optimization——Duality-review"><a href="#Convex-Optimization——Duality-review" class="headerlink" title="Convex Optimization——Duality(review)"></a>Convex Optimization——Duality(review)</h1><h2 id="Dual-Problem-and-Primal-Problem"><a href="#Dual-Problem-and-Primal-Problem" class="headerlink" title="Dual Problem and Primal Problem"></a>Dual Problem and Primal Problem</h2><p>原始问题</p>
+<script type="math/tex; mode=display">
+\min f_0(x)\\
+s.t \ f_i(x)\leq 0,i=1,2,\cdots,m\\
+h_j(x) = 0,j=1,2,\cdots,p</script><p>拉格朗日函数</p>
+<script type="math/tex; mode=display">
+L(x,\lambda,v) = f_0(x) +\sum_{i=1}^{m} \lambda_i f_i(x) + \sum_{j=1}^p v_j h_j(x)</script><p>定义拉格朗日对偶函数</p>
+<script type="math/tex; mode=display">
+g(\lambda,v) =\inf_x L(x,\lambda,v)</script><p>对偶函数两条性质</p>
+<ol>
+<li>一定是凸函数</li>
+<li><em>$的lower bound $g(\lambda,v) \leq p^</em>,v) \leq p^*$</li>
+</ol>
+<p>求解对偶问题</p>
+<script type="math/tex; mode=display">
+\max_{\lambda,v} g(\lambda,v)\\
+s.t \lambda \geq 0</script><ol>
+<li><em>\leq p^</em>p^*$称为弱对偶</li>
+<li><em>=p^</em>p^*$称为强对偶</li>
+</ol>
+<blockquote>
+<p>共轭函数，定义函数$f(x)$的共轭函数是</p>
+<script type="math/tex; mode=display">
+f^*(y) = \sup_{x\in dom f} (y^T x-f(x))</script><p>定理：$f^*$是凸函数</p>
+<p>例子，范数的共轭函数</p>
+<script type="math/tex; mode=display">
+f^*(y) = \sup_{x\in dom f} (y^T x -\parallel x\parallel)</script><p>满足</p>
+<script type="math/tex; mode=display">
+f^*(y) =\left\{
+\begin{aligned}
+& 0,\parallel y \parallel \leq 1\\
+& \infty,else
+\end{aligned}
+\right.</script><p>例子，对于二元函数</p>
+<script type="math/tex; mode=display">
+z = f(x,y)</script><p>求解在约束</p>
+<script type="math/tex; mode=display">
+g(x,y) = 0</script><p>条件下的极值点，根据拉格朗日函数</p>
+<script type="math/tex; mode=display">
+F(x,y,\lambda) = f(x,y )+ \lambda g(x,y)</script><p>求偏导</p>
+<script type="math/tex; mode=display">
+\frac{\partial F}{\partial x} = \frac{\partial f}{\partial x} + \lambda \frac{\partial g}{\partial x} = 0\\
+\frac{\partial F}{\partial y }= \frac{\partial f}{\partial y} + \lambda \frac{\partial g}{\partial y} = 0\\
+\frac{\partial F}{\partial \lambda} = f(x,y) = 0</script><p>上述方程的解$(x,y)$可能是函数在约束条件下的极值点，含义找到$f(x,y)$等高线和$g(x,y) =0$相切的</p>
+<p>最小化范数</p>
+<script type="math/tex; mode=display">
+\min \parallel x\parallel\\
+s.t\quad Ax = b</script><p>拉格朗日函数写成</p>
+<script type="math/tex; mode=display">
+g(v) =\inf_x (\parallel x\parallel + v^T (b-Ax))</script></blockquote>
+<h2 id="何时强对偶成立？"><a href="#何时强对偶成立？" class="headerlink" title="何时强对偶成立？"></a>何时强对偶成立？</h2><h3 id="Slater条件"><a href="#Slater条件" class="headerlink" title="Slater条件"></a>Slater条件</h3><h4 id="相对内点"><a href="#相对内点" class="headerlink" title="相对内点"></a>相对内点</h4><p>C为非空凸集，x为C的相对内点，如果$x\in C$并且存在开球$S_x$使得</p>
+<script type="math/tex; mode=display">
+aff(C)\bigcap S \subset C</script><p>称x为C的相对内点，C的所有相对内点集合记作$ri(C)$</p>
+<h4 id="Slater条件-1"><a href="#Slater条件-1" class="headerlink" title="Slater条件"></a>Slater条件</h4><ol>
+<li>原问题是凸问题</li>
+<li>存在可行域相对内点$x\in relint(D)$，满足所有约束</li>
+</ol>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/2023/04/09/duality-review/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2023/04/09/duality-review/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2023/04/09/optimizatio-method/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/04/09/sensitive-analysis/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
