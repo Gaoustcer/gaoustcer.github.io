@@ -48,7 +48,7 @@
     
     <title>
         
-            duality review | 
+            Batch Constrain Q Learning | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Convex Optimization">
+    <meta name="keywords" content=",Reinforcement Learning,Paper Reading">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/09/duality-review/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/18/Batch-Constrain-Q-Learning/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,16 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/09/duality-review/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/18/Batch-Constrain-Q-Learning/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="duality review | Hexo">
+    <meta property="og:title" content="Batch Constrain Q Learning | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Convex Optimization"> 
+    <meta property="og:article:tag" content="Reinforcement Learning"> <meta property="og:article:tag" content="Paper Reading"> 
 
     
-        <meta property="article:published_time" content="Sun Apr 09 2023 18:47:46 GMT+0800">
-        <meta property="article:modified_time" content="Sun Apr 09 2023 18:48:16 GMT+0800">
+        <meta property="article:published_time" content="Tue Apr 18 2023 22:09:34 GMT+0800">
+        <meta property="article:modified_time" content="Tue Apr 18 2023 22:11:59 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/09/duality-review/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/18/Batch-Constrain-Q-Learning/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/09/duality-review/index.html",
-    "headline": "duality review",
-    "datePublished": "Sun Apr 09 2023 18:47:46 GMT+0800",
-    "dateModified": "Sun Apr 09 2023 18:48:16 GMT+0800",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/18/Batch-Constrain-Q-Learning/index.html",
+    "headline": "Batch Constrain Q Learning",
+    "datePublished": "Tue Apr 18 2023 22:09:34 GMT+0800",
+    "dateModified": "Tue Apr 18 2023 22:11:59 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Gaoustcer",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.svg"
         }
     },
-    "keywords": ",Convex Optimization",
+    "keywords": ",Reinforcement Learning,Paper Reading",
     "description": "",
 }
 </script>
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Convex-Optimization%E2%80%94%E2%80%94Duality-review"><span class="post-toc-number">1.</span> <span class="post-toc-text">Convex Optimization——Duality(review)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Dual-Problem-and-Primal-Problem"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Dual Problem and Primal Problem</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BD%95%E6%97%B6%E5%BC%BA%E5%AF%B9%E5%81%B6%E6%88%90%E7%AB%8B%EF%BC%9F"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">何时强对偶成立？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Slater%E6%9D%A1%E4%BB%B6"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Slater条件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%9B%B8%E5%AF%B9%E5%86%85%E7%82%B9"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">相对内点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Slater%E6%9D%A1%E4%BB%B6-1"><span class="post-toc-number">1.2.1.2.</span> <span class="post-toc-text">Slater条件</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Paper-Reading%E2%80%94%E2%80%94Off-Policy-Deep-Reinforcement-learning-without-Exploration"><span class="post-toc-number">1.</span> <span class="post-toc-text">Paper Reading——Off-Policy Deep Reinforcement learning without Exploration</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Intro"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Intro</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%83%8C%E6%99%AF"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">背景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%A4%96%E5%BB%B6%E8%AF%AF%E5%B7%AE"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">外延误差</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AF%BC%E8%87%B4%E5%A4%96%E5%BB%B6%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">导致外延误差的原因</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%A4%96%E5%BB%B6%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%90%AF%E7%A4%BA"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">外延误差的启示</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%A4%96%E5%BB%B6%E8%AF%AF%E5%B7%AE-%E6%9C%AC%E6%96%87%E6%89%80%E5%81%9A%E7%9A%84%E5%AE%9E%E9%AA%8C"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">强化学习中的外延误差(本文所做的实验)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#batch-1"><span class="post-toc-number">1.3.3.1.</span> <span class="post-toc-text">batch 1</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#batch-2"><span class="post-toc-number">1.3.3.2.</span> <span class="post-toc-text">batch 2</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#batch-3"><span class="post-toc-number">1.3.3.3.</span> <span class="post-toc-text">batch 3</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E8%AE%BA"><span class="post-toc-number">1.3.3.4.</span> <span class="post-toc-text">实验结论</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Batch-Constrained-Reinforcement-Learning"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Batch-Constrained Reinforcement Learning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Three-Objects-for-batch-training"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">Three Objects for batch training</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9C%89%E9%99%90MDP%E4%B8%AD%EF%BC%8C%E6%89%A9%E5%B1%95%E6%8D%9F%E5%A4%B1%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">有限MDP中，扩展损失的影响</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%85%88%E8%AF%81%E6%98%8E%E4%BB%8E%E9%9D%99%E6%80%81%E6%95%B0%E6%8D%AE%E9%9B%86B%E4%B8%AD%E5%AD%A6%E4%B9%A0%E4%BB%B7%E5%80%BC%E5%87%BD%E6%95%B0-Leftrightarrow-%E4%BB%8E%E4%B8%80%E4%B8%AA%E7%AD%89%E4%BB%B7MDP%E8%BF%87%E7%A8%8B-mathcal-M-B-%E4%B8%AD%E5%AD%A6%E4%B9%A0%E4%BB%B7%E5%80%BC%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.4.2.1.</span> <span class="post-toc-text">先证明从静态数据集B中学习价值函数$\Leftrightarrow$从一个等价MDP过程$\mathcal M_B$中学习价值函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%AE%9A%E7%90%861%EF%BC%9AQ%E5%AD%A6%E4%B9%A0%E7%9A%84%E7%AD%89%E4%BB%B7%E6%80%A7"><span class="post-toc-number">1.4.2.1.1.</span> <span class="post-toc-text">定理1：Q学习的等价性</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%AE%9A%E7%90%862-%E5%A6%82%E4%BD%95%E6%B6%88%E9%99%A4%E5%A4%96%E5%BB%B6%E8%AF%AF%E5%B7%AE"><span class="post-toc-number">1.4.2.1.2.</span> <span class="post-toc-text">定理2:如何消除外延误差</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Batch-Constrained-Deep-Reinforcement-Learning"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">Batch-Constrained Deep Reinforcement Learning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Batch-constraint%E5%AE%9E%E7%8E%B0"><span class="post-toc-number">1.4.3.1.</span> <span class="post-toc-text">Batch constraint实现</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%89%B0%E5%8A%A8%E6%A8%A1%E5%9E%8B-%E5%AF%B9%E4%BA%8E%E8%BF%9E%E7%BB%AD%E5%8A%A8%E4%BD%9C%E7%A9%BA%E9%97%B4"><span class="post-toc-number">1.4.3.2.</span> <span class="post-toc-text">扰动模型(对于连续动作空间)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Tradeoff"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">Tradeoff</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">算法概述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%BE%93%E5%85%A5%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="post-toc-number">1.4.5.1.</span> <span class="post-toc-text">输入和初始化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%AE%97%E6%B3%95-%E5%8D%95%E6%AD%A5%E8%BF%AD%E4%BB%A3"><span class="post-toc-number">1.4.5.2.</span> <span class="post-toc-text">算法(单步迭代)</span></a></li></ol></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -383,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                duality review
+                Batch Constrain Q Learning
             </p>
         </div>
 
@@ -402,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Gaoustcer</strong>
-        <span>4月 09, 2023</span>
+        <span>4月 18, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -426,7 +426,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Convex-Optimization/" rel="tag">Convex Optimization</a>
+        <a class="post_tag-none-link" href="/tags/Paper-Reading/" rel="tag">Paper Reading</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a>
     </ul>
     
 
@@ -443,7 +443,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=duality review&url=http://gaoustcer.github.io/2023/04/09/duality-review/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Batch Constrain Q Learning&url=http://gaoustcer.github.io/2023/04/18/Batch-Constrain-Q-Learning/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -452,7 +452,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=duality review&url=http://gaoustcer.github.io/2023/04/09/duality-review/index.html&via=Gaoustcer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Batch Constrain Q Learning&url=http://gaoustcer.github.io/2023/04/18/Batch-Constrain-Q-Learning/index.html&via=Gaoustcer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/09/duality-review/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/18/Batch-Constrain-Q-Learning/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/09/duality-review/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/18/Batch-Constrain-Q-Learning/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,63 +495,139 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Convex-Optimization——Duality-review"><a href="#Convex-Optimization——Duality-review" class="headerlink" title="Convex Optimization——Duality(review)"></a>Convex Optimization——Duality(review)</h1><h2 id="Dual-Problem-and-Primal-Problem"><a href="#Dual-Problem-and-Primal-Problem" class="headerlink" title="Dual Problem and Primal Problem"></a>Dual Problem and Primal Problem</h2><p>原始问题</p>
+        <h1 id="Paper-Reading——Off-Policy-Deep-Reinforcement-learning-without-Exploration"><a href="#Paper-Reading——Off-Policy-Deep-Reinforcement-learning-without-Exploration" class="headerlink" title="Paper Reading——Off-Policy Deep Reinforcement learning without Exploration"></a>Paper Reading——Off-Policy Deep Reinforcement learning without Exploration</h1><h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>本文主要探讨了一种名叫Batch Reinforcement Learning的方法，这种方法基于静态数据集进行学习，免去了与环境交互带来的开销</p>
+<p><em>外延误差</em><em>外延误差</em><em>外延误差</em><em>外延误差</em><em>外延误差</em><em>外延误差</em>*，即没见过的状态-动作对在算法中被错误估计。外延误差被归结于当前策略产生的状态分布和行为策略产生的分布不同</p>
+<p>BCQ算法的目标是在最大化奖励的同时减少state-action pair在训练策略和收集策略中出现概率的差别。</p>
+<p><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em>相似**的动作</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>对于一般的强化学习问题，我们用$(\mathcal S,\mathcal A,p_M,r,\gamma)$描述，定义Bellman最优算子$\Tau^\pi$，它刻画了动作价值函数的性质，记作</p>
 <script type="math/tex; mode=display">
-\min f_0(x)\\
-s.t \ f_i(x)\leq 0,i=1,2,\cdots,m\\
-h_j(x) = 0,j=1,2,\cdots,p</script><p>拉格朗日函数</p>
+\Tau^\pi Q(s,a) = E_{s^\prime}[r+\gamma Q(s^\prime,\pi(s^\prime))]</script><p>求解Q函数实际上变成了求解不动点问题</p>
 <script type="math/tex; mode=display">
-L(x,\lambda,v) = f_0(x) +\sum_{i=1}^{m} \lambda_i f_i(x) + \sum_{j=1}^p v_j h_j(x)</script><p>定义拉格朗日对偶函数</p>
+\Tau^\pi Q = Q</script><p>价值函数更新的范式是</p>
 <script type="math/tex; mode=display">
-g(\lambda,v) =\inf_x L(x,\lambda,v)</script><p>对偶函数两条性质</p>
-<ol>
-<li>一定是凸函数</li>
-<li><em>$的lower bound $g(\lambda,v) \leq p^</em>,v) \leq p^*$</li>
+Q(s,a) = r+\gamma Q(s^\prime,\pi(s^\prime)),\pi(s^\prime) = \arg\max Q(s^\prime,a)</script><p>最终策略为</p>
+<script type="math/tex; mode=display">
+\phi \leftarrow \arg\max_\phi E_{s\in \mathcal B}[Q_\theta(s,\pi_\phi(s))]</script><h2 id="外延误差"><a href="#外延误差" class="headerlink" title="外延误差"></a>外延误差</h2><p>实际推断中$(s^\prime,a^\prime)$可能并没有出现在静态数据集中，导致对它的估算不准</p>
+<h3 id="导致外延误差的原因"><a href="#导致外延误差的原因" class="headerlink" title="导致外延误差的原因"></a>导致外延误差的原因</h3><ol>
+<li>数据缺失(数据集过小)</li>
+<li>模型误差，在数据集D上，贝尔曼最优算子被定义为</li>
 </ol>
-<p>求解对偶问题</p>
 <script type="math/tex; mode=display">
-\max_{\lambda,v} g(\lambda,v)\\
-s.t \lambda \geq 0</script><ol>
-<li><em>\leq p^</em>p^*$称为弱对偶</li>
-<li><em>=p^</em>p^*$称为强对偶</li>
+\Tau^\pi Q(s,a) \approx E_{s^\prime \in B}[r+\gamma Q(s^\prime,\pi(s^\prime))]</script><p>实际上应该来自真实的MDP</p>
+<ol>
+<li>训练不匹配，数据集$D=(s,a,r,s^\prime)$产生的loss被写为(TD Loss之和)</li>
+</ol>
+<script type="math/tex; mode=display">
+\frac{1}{|\mathcal B|}\sum_{(s,a,r,s^\prime)\in \mathcal B} \parallel r+\gamma Q(s,\pi_{\theta^\prime}(s^\prime)-Q_\theta(s,a))</script><p>这里用$\theta,\theta^\prime$区分的是target Q net和Q net，实际上求和号中的每个部分理应有着不同的权重，比如一个状态-动作对出现的概率越高显然权重越高</p>
+<h3 id="外延误差的启示"><a href="#外延误差的启示" class="headerlink" title="外延误差的启示"></a>外延误差的启示</h3><p>受限于数据集，我们需要在TD loss中增加权重以区分常见和罕见的状态-动作对。同时，在给定数据集上仅能对某些和收集策略相似的策略得到准确的评估</p>
+<h3 id="强化学习中的外延误差-本文所做的实验"><a href="#强化学习中的外延误差-本文所做的实验" class="headerlink" title="强化学习中的外延误差(本文所做的实验)"></a>强化学习中的外延误差(本文所做的实验)</h3><h4 id="batch-1"><a href="#batch-1" class="headerlink" title="batch 1"></a>batch 1</h4><p>实时用DDPG训练了100w步，训练中为了增加算法中exploration的部分，对动作增加了服从$\mathcal N(0,0.5)$分布的高斯噪声，保存训练中使用的transition</p>
+<h4 id="batch-2"><a href="#batch-2" class="headerlink" title="batch 2"></a>batch 2</h4><blockquote>
+<p>貌似是相比batch 1添加更小的噪声？($\mathcal N(0,0.1)$)</p>
+</blockquote>
+<p>同步训练off-policy和执行动作的DDPG Agent 100w次，执行动作Agent生成的数据用于训练off-policy Agent</p>
+<blockquote>
+<p>边训练边生成数据</p>
+</blockquote>
+<h4 id="batch-3"><a href="#batch-3" class="headerlink" title="batch 3"></a>batch 3</h4><p>训练好的DDPG被用作专家，收集得到100w数据集</p>
+<blockquote>
+<p>先训练，再生成数据，最后训练另一个Agent</p>
+</blockquote>
+<h4 id="实验结论"><a href="#实验结论" class="headerlink" title="实验结论"></a>实验结论</h4><ol>
+<li>offset agent价值估计非常不稳定，但是行为策略的价值估计非常稳定</li>
+<li>即便off-policy和behavior agent训练自同一个数据源，off-policy表现仍然比behavior要差(初始policy的差别)</li>
+</ol>
+<h2 id="Batch-Constrained-Reinforcement-Learning"><a href="#Batch-Constrained-Reinforcement-Learning" class="headerlink" title="Batch-Constrained Reinforcement Learning"></a>Batch-Constrained Reinforcement Learning</h2><p><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em><em><em>相似</em></em>相似**的行为有着准确的评估，由此反推得到如下结论</p>
+<blockquote>
+<p>如果一个策略推断得到的动作-状态分布和数据集中类似，则对这个策略估算的价值函数是较为准确的，我们称满足这种条件的策略为batch-constrained</p>
+</blockquote>
+<h3 id="Three-Objects-for-batch-training"><a href="#Three-Objects-for-batch-training" class="headerlink" title="Three Objects for batch training"></a>Three Objects for batch training</h3><ol>
+<li>最小化和收集数据的策略之间的距离</li>
+<li>当前策略产生的状态和观察得到的分布相似</li>
+<li>最大化价值函数</li>
+</ol>
+<p>需要尽量减少距离，才能保证对状态价值准确估计</p>
+<h3 id="有限MDP中，扩展损失的影响"><a href="#有限MDP中，扩展损失的影响" class="headerlink" title="有限MDP中，扩展损失的影响"></a>有限MDP中，扩展损失的影响</h3><p>随机采样自经验回访数组中的四元组$(s,a,r,s^\prime)$用于更新Q函数</p>
+<script type="math/tex; mode=display">
+Q(s,a)\leftarrow (1-\alpha) Q(s,a)+\alpha (r + \gamma Q(s^\prime,\pi(s^\prime)))\\
+\pi(s^\prime) =\arg\max_{a^\prime} Q(s^\prime,a^\prime)</script><h4 id="先证明从静态数据集B中学习价值函数-Leftrightarrow-从一个等价MDP过程-mathcal-M-B-中学习价值函数"><a href="#先证明从静态数据集B中学习价值函数-Leftrightarrow-从一个等价MDP过程-mathcal-M-B-中学习价值函数" class="headerlink" title="先证明从静态数据集B中学习价值函数$\Leftrightarrow$从一个等价MDP过程$\mathcal M_B$中学习价值函数"></a>先证明从静态数据集B中学习价值函数$\Leftrightarrow$从一个等价MDP过程$\mathcal M_B$中学习价值函数</h4><p>$\mathcal M_B$和M有着相同的动作和状态空间，状态转移概率为</p>
+<script type="math/tex; mode=display">
+p_{\mathcal B}(s^\prime|s,a)=\frac{N(s,a,s^\prime)}{\sum_{s^\prime} N(s,a,s^\prime)}</script><p>实际上根据蒙特卡洛采样估算转移概率</p>
+<h5 id="定理1：Q学习的等价性"><a href="#定理1：Q学习的等价性" class="headerlink" title="定理1：Q学习的等价性"></a>定理1：Q学习的等价性</h5><p>在静态数据集D上进行Q学习，等价于在MDP过程$\mathcal M_B$上进行学习直到收敛(两者具有相同的收敛结果)</p>
+<blockquote>
+<p>定义$\epsilon_{MDP}$为外延损失，视为在Batch数据$ B$上学习的价值函数$Q_\mathcal B^ \pi$和真实策略的价值$Q^\pi$之差，记作</p>
+<script type="math/tex; mode=display">
+\epsilon_{MDP}(s,a) = Q^\pi(s,a)-Q^\pi_{\mathcal B} (s,a)</script><p>进一步拆分$Q^\pi(s,a)和Q_{\mathcal B}^\pi(s,a)$(Q函数的不动点性质)，于是有</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+Q^\pi(s,a)& =\sum_{s^\prime} p_M(s^\prime|s,a) (r(s,a,s^\prime)+\gamma \sum_{a^\prime} \pi(a^\prime|s^\prime) Q^{\pi}(s,a))\\
+&=\sum_{s^\prime} p_M(s^\prime|s,a) (r(s,a,s^\prime)+\gamma \sum_{a^\prime} \pi(a^\prime|s^\prime)(Q^\pi_{\mathcal B}(s^\prime,a^\prime)+\epsilon_{MDP}(s^\prime,a^\prime)))
+\end{aligned}</script><script type="math/tex; mode=display">
+\begin{aligned}
+Q^\pi_{\mathcal B}(s,a) &=\sum_{s^\prime}P_{\mathcal B}(s^\prime|s,a)(r(s,a,s^\prime)+\gamma \sum_{a^\prime} \pi(a^\prime|s^\prime)Q^\pi_{\mathcal B}(s^\prime,a^\prime))\\
+&=\sum_{s^\prime}P_{\mathcal B}(s^\prime|s,a)(r(s,a,s^\prime)+\gamma \sum_{a^\prime} \pi(a^\prime|s^\prime)(Q^\pi(s^\prime,a^\prime)-\epsilon_{MDP}(s^\prime,a^\prime)))
+\end{aligned}</script><blockquote>
+<p>上面的推导可以看出，$Q^\pi,Q^\pi_{\mathcal B}$之间本质的区别就是它们刻画的实际上是不同的MDP过程！本质上是因为Monte Carlo对环境的建模存在方差导致的</p>
+</blockquote>
+<p>因此$\epsilon_{MDP}(s,a)$拆分成</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\epsilon_{MDP}(s,a)&=\sum_{s^\prime} (p_M(s^\prime|s,a)-p_{\mathcal B}(s^\prime|s,a))\times r(s,a,s^\prime)+\\
+&\sum_{s^\prime} (p_M(s^\prime|s,a)-p_{\mathcal B}(s^\prime|s))\times \gamma \times \sum_{a^\prime}\pi(a^\prime|s)Q_{\mathcal B}^\pi(s^\prime,a^\prime)+\\&\gamma\sum_{s^\prime}p_M(s^\prime|s,a)\times\sum_{a^\prime} \epsilon_{MDP}(s^\prime,a^\prime)
+\end{aligned}</script><p>因此$\epsilon_{MDP}$归结于两个原因</p>
+<ol>
+<li>不同MDP过程状态概率之差</li>
+<li>下一个状态的MDP损失</li>
+</ol>
+</blockquote>
+<p>我们将$\epsilon _{MDP}$写成如下形式(对于$p_M(s^\prime|s,a)=p_{\mathcal B}(s^\prime|s,a)$)的Transition</p>
+<script type="math/tex; mode=display">
+\epsilon_{MDP}^\pi = \sum_s \mu_\pi(s)\sum_a \pi(a|s)|\epsilon_{MDP}(s,a)|</script><p>由此得到如下推论</p>
+<script type="math/tex; mode=display">
+\epsilon_{MDP}^\pi =0\Leftrightarrow p_{\mathcal B}(s^\prime|s,a)=p_M(s^\prime|s,a),\forall s^\prime\in \mathcal S,\mu_\pi(s)>0 \pi(a|s)\geq 0</script><p>我们称一个策略是batch-constrained如果满足如下条件</p>
+<blockquote>
+<p>$\forall (s,a)$如果满足$\mu_\pi(s)&gt;0$并且$\pi(a|s)&gt;0$，则有$(s,a)\in \mathcal B$</p>
+</blockquote>
+<h5 id="定理2-如何消除外延误差"><a href="#定理2-如何消除外延误差" class="headerlink" title="定理2:如何消除外延误差"></a>定理2:如何消除外延误差</h5><blockquote>
+<p>对于确定性MDP过程，$\epsilon_{MDP}^\pi=0$当且仅当策略$\pi$是batch-constrained，如果$\mathcal B$是连贯的数据集(收集经验来自若干次决策过程)，其实策略$s_0\in \mathcal B$</p>
+</blockquote>
+<h3 id="Batch-Constrained-Deep-Reinforcement-Learning"><a href="#Batch-Constrained-Deep-Reinforcement-Learning" class="headerlink" title="Batch-Constrained Deep Reinforcement Learning"></a>Batch-Constrained Deep Reinforcement Learning</h3><p>BCQ方法引入生成模型，评估动作与batch数据的相似程度，选择价值较高并与数据集尽量相似的动作。将相似度作为value估计的一部分</p>
+<h4 id="Batch-constraint实现"><a href="#Batch-constraint实现" class="headerlink" title="Batch constraint实现"></a>Batch constraint实现</h4><p>定义相似矩阵，对于给定状态s，其关联的一个状态-动作序列(s,a)和数据集$\mathcal B$的相似程度使用后验概率$p_{\mathcal B}^G(a|s)$刻画。如果$p_{\mathcal B}^G(a|s)$尽量大，那么对$Q(s,a)$的估计较为准确。对于高维和连续任务，很难直接训练$p_{\mathcal B}^G$，一个替代的想法是训练带参数的生成模型$G_w(s)$，选择动作增加条件</p>
+<script type="math/tex; mode=display">
+a = \arg\max_a p_{\mathcal B}^G (a|s)</script><p>本文使用自动编码器作为生成模型，刻画潜在动作空间的概率分布。首先根据生成模型$G_w$选择n个动作，再选择价值函数$Q_\theta$中较高的那个</p>
+<h4 id="扰动模型-对于连续动作空间"><a href="#扰动模型-对于连续动作空间" class="headerlink" title="扰动模型(对于连续动作空间)"></a>扰动模型(对于连续动作空间)</h4><p>提升动作的多样性，扰动模型$\epsilon_\phi(s,a,\Phi)$输出在$-\Phi$到$\Phi$之间</p>
+<script type="math/tex; mode=display">
+\pi(s)=\arg\max_{a_i+\epsilon_\phi(s,a,\Phi)}Q_\theta (s,a_i+\epsilon_\theta(s,a_i,\Phi))\\
+a_i\in G_w(s)</script><p>扰动模型的参数完全通过更新Q值实现，写成</p>
+<script type="math/tex; mode=display">
+\phi\leftarrow \arg\max_\phi \sum_{s,a\in \mathcal B}Q_\phi(s,a+\epsilon_\phi(s,a,\Phi))</script><h3 id="Tradeoff"><a href="#Tradeoff" class="headerlink" title="Tradeoff"></a>Tradeoff</h3><p>n和$\Phi$两个超参数实际上是模仿学习和强化学习算法之间的tradeoff</p>
+<ol>
+<li>n=1，$\Phi =0$，完全变成模仿学习</li>
+<li>$n\to \infty$，完全变成Q学习</li>
+</ol>
+<h3 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h3><p><img src="image-20220910161134917.png" alt="image-20220910161134917"></p>
+<p>一个batch的数据分成多个Mini-batch进行训练</p>
+<h4 id="输入和初始化"><a href="#输入和初始化" class="headerlink" title="输入和初始化"></a>输入和初始化</h4><ol>
+<li>Batch数据$\mathcal B$，迭代次数T</li>
+<li>目标网络更新参数$\tau$</li>
+<li>Mini-batch大小N</li>
+<li>最大扰动$\Phi$</li>
+<li>采样的动作数n</li>
+<li>最小权重$\lambda$</li>
+<li>初始化两个Qnet(dualling Q net)，扰动网络$\epsilon_\phi$,VAE网络$G_w=(E_{w_1},D_{w_2} )$</li>
+</ol>
+<h4 id="算法-单步迭代"><a href="#算法-单步迭代" class="headerlink" title="算法(单步迭代)"></a>算法(单步迭代)</h4><ol>
+<li>选择大小为N的四元组$(s,a,r,s^\prime)$</li>
+<li>计算$\mu,\sigma=E_{w_1}(s,a),a=D_{w_2}(s,z),z=\mathcal N(\mu,\sigma),w=\arg\min_w \sum{(a-\overline a)62 D_{KL}(\mathcal N(\mu,\sigma)\parallel \mathcal N(0,1))}$</li>
+<li>采样n个动作(能否将数据作为某种Ground Truth，训练生成对应的分类器？)</li>
+<li>对n个动作加扰动$a_i+\epsilon_\phi(s^\prime,a_i,\Phi)$</li>
+<li>计算target value</li>
+<li>更新Qnet</li>
+<li>更新target Q net</li>
 </ol>
 <blockquote>
-<p>共轭函数，定义函数$f(x)$的共轭函数是</p>
-<script type="math/tex; mode=display">
-f^*(y) = \sup_{x\in dom f} (y^T x-f(x))</script><p>定理：$f^*$是凸函数</p>
-<p>例子，范数的共轭函数</p>
-<script type="math/tex; mode=display">
-f^*(y) = \sup_{x\in dom f} (y^T x -\parallel x\parallel)</script><p>满足</p>
-<script type="math/tex; mode=display">
-f^*(y) =\left\{
-\begin{aligned}
-& 0,\parallel y \parallel \leq 1\\
-& \infty,else
-\end{aligned}
-\right.</script><p>例子，对于二元函数</p>
-<script type="math/tex; mode=display">
-z = f(x,y)</script><p>求解在约束</p>
-<script type="math/tex; mode=display">
-g(x,y) = 0</script><p>条件下的极值点，根据拉格朗日函数</p>
-<script type="math/tex; mode=display">
-F(x,y,\lambda) = f(x,y )+ \lambda g(x,y)</script><p>求偏导</p>
-<script type="math/tex; mode=display">
-\frac{\partial F}{\partial x} = \frac{\partial f}{\partial x} + \lambda \frac{\partial g}{\partial x} = 0\\
-\frac{\partial F}{\partial y }= \frac{\partial f}{\partial y} + \lambda \frac{\partial g}{\partial y} = 0\\
-\frac{\partial F}{\partial \lambda} = f(x,y) = 0</script><p>上述方程的解$(x,y)$可能是函数在约束条件下的极值点，含义找到$f(x,y)$等高线和$g(x,y) =0$相切的</p>
-<p>最小化范数</p>
-<script type="math/tex; mode=display">
-\min \parallel x\parallel\\
-s.t\quad Ax = b</script><p>拉格朗日函数写成</p>
-<script type="math/tex; mode=display">
-g(v) =\inf_x (\parallel x\parallel + v^T (b-Ax))</script></blockquote>
-<h2 id="何时强对偶成立？"><a href="#何时强对偶成立？" class="headerlink" title="何时强对偶成立？"></a>何时强对偶成立？</h2><h3 id="Slater条件"><a href="#Slater条件" class="headerlink" title="Slater条件"></a>Slater条件</h3><h4 id="相对内点"><a href="#相对内点" class="headerlink" title="相对内点"></a>相对内点</h4><p>C为非空凸集，x为C的相对内点，如果$x\in C$并且存在开球$S_x$使得</p>
-<script type="math/tex; mode=display">
-aff(C)\bigcap S \subset C</script><p>称x为C的相对内点，C的所有相对内点集合记作$ri(C)$</p>
-<h4 id="Slater条件-1"><a href="#Slater条件-1" class="headerlink" title="Slater条件"></a>Slater条件</h4><ol>
-<li>原问题是凸问题</li>
-<li>存在可行域相对内点$x\in relint(D)$，满足所有约束</li>
-</ol>
+<p>能否直接使用采样的动作，不用添加扰动？</p>
+<p>训练更好的分类器/判别器</p>
+</blockquote>
 
         
     
@@ -570,8 +646,8 @@ aff(C)\bigcap S \subset C</script><p>称x为C的相对内点，C的所有相对�
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://gaoustcer.github.io/2023/04/09/duality-review/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://gaoustcer.github.io/2023/04/09/duality-review/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://gaoustcer.github.io/2023/04/18/Batch-Constrain-Q-Learning/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/04/18/Batch-Constrain-Q-Learning/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -601,7 +677,7 @@ aff(C)\bigcap S \subset C</script><p>称x为C的相对内点，C的所有相对�
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/04/09/optimizatio-method/" id="post_nav-newer" class="prev-content">
+        <a href="/2023/04/18/GMM-EM-VI/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -615,7 +691,7 @@ aff(C)\bigcap S \subset C</script><p>称x为C的相对内点，C的所有相对�
 
     <!-- Next Nav -->
     
-        <a href="/2023/04/09/sensitive-analysis/" id="post_nav-older" class="next-content">
+        <a href="/2023/04/18/Offline-RL-Survey/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

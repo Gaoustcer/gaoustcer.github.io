@@ -48,7 +48,7 @@
     
     <title>
         
-            归档: 2023/4 | 
+            Latent Action Space | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Reinforcement Learning,Paper Reading">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/archives/2023/04/page/2/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/18/Latent-Action-Space/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/archives/2023/04/page/2/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/18/Latent-Action-Space/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2023/4 | Hexo">
+    <meta property="og:title" content="Latent Action Space | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Reinforcement Learning"> <meta property="og:article:tag" content="Paper Reading"> 
 
+    
+        <meta property="article:published_time" content="Tue Apr 18 2023 22:16:21 GMT+0800">
+        <meta property="article:modified_time" content="Tue Apr 18 2023 22:17:29 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/archives/2023/04/page/2/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/18/Latent-Action-Space/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/18/Latent-Action-Space/index.html",
+    "headline": "Latent Action Space",
+    "datePublished": "Tue Apr 18 2023 22:16:21 GMT+0800",
+    "dateModified": "Tue Apr 18 2023 22:17:29 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Reinforcement Learning,Paper Reading",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,546 +322,297 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Paper-Reading%E2%80%94%E2%80%94Latent-Action-Space-for-Offline-Reinforcement-Learning"><span class="post-toc-number">1.</span> <span class="post-toc-text">Paper Reading——Latent Action Space for Offline Reinforcement Learning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Video"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Video</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">学习目标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PLAS"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">PLAS</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Paper"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Paper</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9C%AC%E6%96%87%E7%94%A8%E5%88%B0%E7%9A%84VAE"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">本文用到的VAE</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PLAS-1"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">PLAS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AE%97%E6%B3%95"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AE%AD%E7%BB%83VAE"><span class="post-toc-number">1.2.3.1.</span> <span class="post-toc-text">训练VAE</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AE%AD%E7%BB%83%E7%AD%96%E7%95%A5"><span class="post-toc-number">1.2.3.2.</span> <span class="post-toc-text">训练策略</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CVAE"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">CVAE</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#VAE-EBLO%E6%8E%A8%E5%AF%BC"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">VAE EBLO推导</span></a></li></ol></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/Quasi-function/">Quasi function</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/Quasi-function/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/09/KKTcondition/">KKTcondition</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/09/KKTcondition/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 09, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/08/Diverse-Policy-in-RL/">Diverse Policy in RL</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/08/Diverse-Policy-in-RL/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 08, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/06/hello-world/">Welcome to Gaoustcer&#39;s homepage</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/06/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 06, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/06/Duaility/">Duaility</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Du...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/06/Duaility/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 06, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/06/Convex-Optimization-Introduction/">Convex Optimization:Introduction</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/06/Convex-Optimization-Introduction/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 06, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/06/Convex-Optimization-Convex-Problems/">Convex Optimization Convex Problems</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/06/Convex-Optimization-Convex-Problems/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 06, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/05/Convex-Optimization-set-and-functions/">Convex Optimization:set and functions</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/05/Convex-Optimization-set-and-functions/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 05, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/04/RLTransformer/">RLTransformer</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/04/RLTransformer/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 04, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <a class="extend prev" rel="prev" href="/archives/2023/04/">&lt;button aria-label&#x3D;&quot;Last page&quot; class&#x3D;&quot;mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon&quot;&gt;&lt;i class&#x3D;&quot;material-icons&quot; role&#x3D;&quot;presentation&quot;&gt;arrow_back&lt;&#x2F;i&gt;&lt;&#x2F;button&gt;</a><a class="page-number" href="/archives/2023/04/">1</a><span class="page-number current">2</span>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Latent Action Space
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>4月 18, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Paper-Reading/" rel="tag">Paper Reading</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Latent Action Space&url=http://gaoustcer.github.io/2023/04/18/Latent-Action-Space/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Latent Action Space&url=http://gaoustcer.github.io/2023/04/18/Latent-Action-Space/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/18/Latent-Action-Space/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/18/Latent-Action-Space/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Paper-Reading——Latent-Action-Space-for-Offline-Reinforcement-Learning"><a href="#Paper-Reading——Latent-Action-Space-for-Offline-Reinforcement-Learning" class="headerlink" title="Paper Reading——Latent Action Space for Offline Reinforcement Learning"></a>Paper Reading——Latent Action Space for Offline Reinforcement Learning</h1><h2 id="Video"><a href="#Video" class="headerlink" title="Video"></a>Video</h2><p>在Latent Space上学习策略，限制避免选择OOD的动作</p>
+<h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><p>dataset $\pi_B$</p>
+<script type="math/tex; mode=display">
+\max_{a|\pi(\cdot|s)}E[G_t]\\
+s.t \pi_B(a|s)\geq \epsilon</script><p>同时需要保证策略具有一定的探索性，而不是选择数据集中出现次数最多的动作</p>
+<h3 id="PLAS"><a href="#PLAS" class="headerlink" title="PLAS"></a>PLAS</h3><p>建模行为策略$\pi_B(a|s)$借助条件变分自动编码器(CVAE)</p>
+<p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20221004231953518.png" alt="image-20221004231953518"></p>
+<p>Latent Policy输出动作到Latent Space上，随后通过Decoder(预选连)映射回真实的动作空间上</p>
+<p>引入latent space避免收到数据集影响</p>
+<h2 id="Paper"><a href="#Paper" class="headerlink" title="Paper"></a>Paper</h2><h3 id="本文用到的VAE"><a href="#本文用到的VAE" class="headerlink" title="本文用到的VAE"></a>本文用到的VAE</h3><p>VAE目标是生成和数据集$\{x_i\}_{i=1}^N$分布相似的数据集，通过基于先验分布$p(z)$采样隐变量并建模x关于z的后验分布$p_\theta(x|z)$(译码器)实现，目标是最大化</p>
+<script type="math/tex; mode=display">
+p_\theta(x) =\int p(z) p_\theta(x|z) dz</script><p>这个优化目标不容易求解，实际上用编码器$p_\theta(z|x)=q_\phi(z|x)$预测先验分布，ELBO有</p>
+<script type="math/tex; mode=display">
+ p(x) \geq \max_{\theta,\phi} E_{q_\phi(z|x)}[\log p_\theta(x|z)]-D_{KL}[q_\phi(z|x)\parallel p_\theta(z)]</script><p>回顾一下ELBO，假设模型参数为$\theta$，我们的目的是最大化$p(x|\theta)$，引入latent variable z，此时有</p>
+<script type="math/tex; mode=display">
+p(x|\theta) =\frac{p(x,z|\theta)}{p(z|x,\theta)}\\
+\log p(x|\theta)=\log p(x,z|\theta) -\log p(z|x,\theta)</script><p>两边同乘$q_\phi(z|x)$，并对z积分，得到(注意$p(z|x,\theta)$实际上是关于z的先验分布$p(z)$)</p>
+<script type="math/tex; mode=display">
+\log p(x|\theta)\geq \int_z \log p(x,z|\theta)q_\phi(z|x) dz -D_{KL}[q_\phi(z|x)\parallel p(z)]</script><p>这里的参数$\theta$实际上是encoder-decoder参数$\theta,\phi$，对于$p(x,z|\theta)$，注意x是生成的数据，因此写成</p>
+<script type="math/tex; mode=display">
+p_\theta(x|z)</script><h3 id="PLAS-1"><a href="#PLAS-1" class="headerlink" title="PLAS"></a>PLAS</h3><p>CVAE用于在条件前提下重建动作，实际上用于maximize lower bounder</p>
+<script type="math/tex; mode=display">
+\max_{\alpha ,\beta} E_{z|q_\alpha}[\log p_\beta(a|s,z)]-D_{KL}[q_\alpha(z|a,s)\parallel p(z|s)]</script><p>$\alpha,\beta$分别为编码器和译码器的参数，预训练decoder $p_\beta(a|s,z)$，在此基础上训练一个策略$\pi(s)$将状态s映射到隐变量z，CVAE训练意在最大化$\log p(a|s)$，在decoder确定的情况下写成</p>
+<script type="math/tex; mode=display">
+p(a|s) =\int_z p_\beta (a|s,z)p(z|s) dz = E_{z|p(z|s)}[p_\beta(a|s,z)]</script><p>求解这个积分使用MC采样，即$z|p(z|s),p(a|s)\approx  p_\beta(a|s,z)$</p>
+<p>p(a|s)中收到$p(z|s)$决定的隐变量空间上概率较大的隐变量，因此我们希望latent space上生成的策略$\pi(s)$能够输出使得$p(z|s)$较高的隐变量，即</p>
+<script type="math/tex; mode=display">
+z=\pi(s)= \max_z p(z|s)</script><h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>数据集$\mathcal D=\{(s_t,a_t,r_t,s_{t+1}) \}$</p>
+<h4 id="训练VAE"><a href="#训练VAE" class="headerlink" title="训练VAE"></a>训练VAE</h4><p>从$\mathcal D$中采样$(s_t,a_t)$，计算CVAE loss</p>
+<h4 id="训练策略"><a href="#训练策略" class="headerlink" title="训练策略"></a>训练策略</h4><p>Critic网络$Q_{\phi_1},Q_{\phi_2}(multi-head)$，隐策略网络$\pi_\theta$，对应的target net</p>
+<ol>
+<li>$\mathcal D$中采样k个四元组 $(s_t,a_t,r_t,s_{t+1})$</li>
+<li><em><em>隐动作</em></em><em><em>隐动作</em></em>** $\psi_{t+1}= \pi_\theta(s_{t+1})$</li>
+<li>借助预训练的译码器恢复到动作空间 $a_{t+1}=p_\beta(a|\phi_{t+1},s_{t+1})$</li>
+<li>计算当前已发生动作价值，dueling DQN</li>
+<li>计算TD error</li>
+</ol>
+<h2 id="CVAE"><a href="#CVAE" class="headerlink" title="CVAE"></a>CVAE</h2><p>Conditional Variational Auto Encoder给VAE在隐变量基础上增添了外部标签作为先验</p>
+<h3 id="VAE-EBLO推导"><a href="#VAE-EBLO推导" class="headerlink" title="VAE EBLO推导"></a>VAE EBLO推导</h3><p>数据x的分布写成</p>
+<script type="math/tex; mode=display">
+p_\theta(x)=\int_z p_\theta(x|z)p_\theta(z) dz</script><p>写成对数似然，有</p>
+<script type="math/tex; mode=display">
+\ln p(x)=\ln \int_z p(x,z) \frac{q(z|x)}{q(z|x)} dz\geq E_{z|q(z|x)}[\ln \frac{p(x,z)}{q(z|x)}]=E_{q(z|x)}[\ln \frac{p(x|z)p(z)}{p(z|x)}]</script><p>进一步拆分</p>
+<script type="math/tex; mode=display">
+E_{q(z|x)} [\ln p(x|z)]+E_{q(z|x)}[\ln \frac{p(z)}{q(z|x)}]=E_{q(z|x)}[\ln p(x|z)]-KL[q(z|x)\parallel p(z)]</script><p>应该最大化这个loss，实际上</p>
+<ol>
+<li>$E_{q(z|x)}[\ln p(x|z)]$可以建模为重构的$\hat z$和z之间的MSE loss</li>
+<li>$q(z|x)$可以建模为latent variable $z$分布和先验分布$p(z)|\mathcal N(0,1)$之间的KL散度</li>
+</ol>
+<p><em><em>生成能力</em></em><em><em>生成能力</em></em><em><em>生成能力</em></em><em><em>生成能力</em></em><em>生成能力*</em></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2023/04/18/Latent-Action-Space/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/04/18/Latent-Action-Space/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/04/18/LAPO/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

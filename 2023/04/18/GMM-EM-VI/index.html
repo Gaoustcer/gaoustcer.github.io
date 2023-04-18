@@ -48,7 +48,7 @@
     
     <title>
         
-            duality review | 
+            GMM EM VI | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Convex Optimization">
+    <meta name="keywords" content=",Machine Learning">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/09/duality-review/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/18/GMM-EM-VI/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,16 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/09/duality-review/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/18/GMM-EM-VI/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="duality review | Hexo">
+    <meta property="og:title" content="GMM EM VI | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Convex Optimization"> 
+    <meta property="og:article:tag" content="Machine Learning"> 
 
     
-        <meta property="article:published_time" content="Sun Apr 09 2023 18:47:46 GMT+0800">
-        <meta property="article:modified_time" content="Sun Apr 09 2023 18:48:16 GMT+0800">
+        <meta property="article:published_time" content="Tue Apr 18 2023 22:12:59 GMT+0800">
+        <meta property="article:modified_time" content="Tue Apr 18 2023 22:14:06 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/09/duality-review/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/18/GMM-EM-VI/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/09/duality-review/index.html",
-    "headline": "duality review",
-    "datePublished": "Sun Apr 09 2023 18:47:46 GMT+0800",
-    "dateModified": "Sun Apr 09 2023 18:48:16 GMT+0800",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/18/GMM-EM-VI/index.html",
+    "headline": "GMM EM VI",
+    "datePublished": "Tue Apr 18 2023 22:12:59 GMT+0800",
+    "dateModified": "Tue Apr 18 2023 22:14:06 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Gaoustcer",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.svg"
         }
     },
-    "keywords": ",Convex Optimization",
+    "keywords": ",Machine Learning",
     "description": "",
 }
 </script>
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Convex-Optimization%E2%80%94%E2%80%94Duality-review"><span class="post-toc-number">1.</span> <span class="post-toc-text">Convex Optimization——Duality(review)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Dual-Problem-and-Primal-Problem"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Dual Problem and Primal Problem</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BD%95%E6%97%B6%E5%BC%BA%E5%AF%B9%E5%81%B6%E6%88%90%E7%AB%8B%EF%BC%9F"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">何时强对偶成立？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Slater%E6%9D%A1%E4%BB%B6"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Slater条件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%9B%B8%E5%AF%B9%E5%86%85%E7%82%B9"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">相对内点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Slater%E6%9D%A1%E4%BB%B6-1"><span class="post-toc-number">1.2.1.2.</span> <span class="post-toc-text">Slater条件</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E6%B7%B7%E5%90%88%E9%AB%98%E6%96%AF%E6%A8%A1%E5%9E%8B-EM%E7%AE%97%E6%B3%95-%E5%8F%98%E5%88%86%E6%8E%A8%E6%96%AD"><span class="post-toc-number">1.</span> <span class="post-toc-text">机器学习——混合高斯模型&#x2F;EM算法&#x2F;变分推断</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">混合模型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B-%E5%87%A0%E4%BD%95%E8%A7%92%E5%BA%A6"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">高斯混合模型(几何角度)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B-%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B%E8%A7%92%E5%BA%A6"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">高斯混合模型(混合模型角度)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B1%82%E8%A7%A3%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%82%E6%95%B0"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">求解高斯混合模型的参数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B1%82%E5%92%8C"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">求和</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BB%BB%E5%8A%A1"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">任务</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">极大似然估计</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8EM%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3GMM%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">使用EM算法求解GMM问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%AE%B0%E5%8F%B7"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">记号</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%82%E6%95%B0%E5%AD%A6%E4%B9%A0%EF%BC%9AE%E6%AD%A5"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">参数学习：E步</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6"><span class="post-toc-number">1.3.2.1.</span> <span class="post-toc-text">极大似然</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1"><span class="post-toc-number">1.3.2.2.</span> <span class="post-toc-text">参数估计</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%82%E6%95%B0%E5%AD%A6%E4%B9%A0%EF%BC%9AM%E6%AD%A5"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">参数学习：M步</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#E-step"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">E-step</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#EM%E7%AE%97%E6%B3%95"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">EM算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ELBO-KL-divergence"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">ELBO+KL divergence</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#EBLO-Jensen-Inequality"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">EBLO+Jensen Inequality</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B9%BF%E4%B9%89EM"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">广义EM</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%98%E5%88%86%E6%8E%A8%E6%96%AD"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">变分推断</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%83%8C%E6%99%AF"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">背景</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%8E%A8%E6%96%AD-%E5%86%B3%E7%AD%96"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">推断-决策</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%8E%A8%E5%AF%BC"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">推导</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%81%87%E8%AE%BE"><span class="post-toc-number">1.5.3.1.</span> <span class="post-toc-text">假设</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A0%87%E5%87%86%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E5%88%B0%E4%BB%BB%E6%84%8F%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">标准正态分布到任意正态分布</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83KL%E6%95%A3%E5%BA%A6"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">正态分布KL散度</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -383,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                duality review
+                GMM EM VI
             </p>
         </div>
 
@@ -402,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Gaoustcer</strong>
-        <span>4月 09, 2023</span>
+        <span>4月 18, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -426,7 +426,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Convex-Optimization/" rel="tag">Convex Optimization</a>
+        <a class="post_tag-none-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a>
     </ul>
     
 
@@ -443,7 +443,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=duality review&url=http://gaoustcer.github.io/2023/04/09/duality-review/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=GMM EM VI&url=http://gaoustcer.github.io/2023/04/18/GMM-EM-VI/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -452,7 +452,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=duality review&url=http://gaoustcer.github.io/2023/04/09/duality-review/index.html&via=Gaoustcer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=GMM EM VI&url=http://gaoustcer.github.io/2023/04/18/GMM-EM-VI/index.html&via=Gaoustcer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/09/duality-review/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/18/GMM-EM-VI/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/09/duality-review/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/18/GMM-EM-VI/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,64 +495,181 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Convex-Optimization——Duality-review"><a href="#Convex-Optimization——Duality-review" class="headerlink" title="Convex Optimization——Duality(review)"></a>Convex Optimization——Duality(review)</h1><h2 id="Dual-Problem-and-Primal-Problem"><a href="#Dual-Problem-and-Primal-Problem" class="headerlink" title="Dual Problem and Primal Problem"></a>Dual Problem and Primal Problem</h2><p>原始问题</p>
+        <h1 id="机器学习——混合高斯模型-EM算法-变分推断"><a href="#机器学习——混合高斯模型-EM算法-变分推断" class="headerlink" title="机器学习——混合高斯模型/EM算法/变分推断"></a>机器学习——混合高斯模型/EM算法/变分推断</h1><h2 id="混合模型"><a href="#混合模型" class="headerlink" title="混合模型"></a>混合模型</h2><p>包含K个子分布的概率模型</p>
+<h3 id="高斯混合模型-几何角度"><a href="#高斯混合模型-几何角度" class="headerlink" title="高斯混合模型(几何角度)"></a>高斯混合模型(几何角度)</h3><p>多个高斯分布合成一个分布(加权平均)</p>
 <script type="math/tex; mode=display">
-\min f_0(x)\\
-s.t \ f_i(x)\leq 0,i=1,2,\cdots,m\\
-h_j(x) = 0,j=1,2,\cdots,p</script><p>拉格朗日函数</p>
+p(x)=\sum_{k=1}^K \alpha_k \mathcal (\mu_k,{\sum}_k),\sum_{k=1}^K \alpha_i=1</script><h3 id="高斯混合模型-混合模型角度"><a href="#高斯混合模型-混合模型角度" class="headerlink" title="高斯混合模型(混合模型角度)"></a>高斯混合模型(混合模型角度)</h3><p>之前表示出混合分布的pdf，对于二维情况$x=(x_1,x_2)$，引入隐变量v(对应对应样本x属于哪一个高斯分布)</p>
+<p>v是离散随机变量，概率分布记作</p>
 <script type="math/tex; mode=display">
-L(x,\lambda,v) = f_0(x) +\sum_{i=1}^{m} \lambda_i f_i(x) + \sum_{j=1}^p v_j h_j(x)</script><p>定义拉格朗日对偶函数</p>
-<script type="math/tex; mode=display">
-g(\lambda,v) =\inf_x L(x,\lambda,v)</script><p>对偶函数两条性质</p>
-<ol>
-<li>一定是凸函数</li>
-<li><em>$的lower bound $g(\lambda,v) \leq p^</em>,v) \leq p^*$</li>
+p(v=c_k)=p_k,\sum_{i=1}^K p_i =1,x|z</script><p>高斯混合模型是生成模型，z是一个高斯分布，生成过程变成1.选择一个概率分布2.在概率分布上采样</p>
+<h2 id="求解高斯混合模型的参数"><a href="#求解高斯混合模型的参数" class="headerlink" title="求解高斯混合模型的参数"></a>求解高斯混合模型的参数</h2><p>高斯混合模型求解$p(x)$，实际上基于采样的结果求解$p_k$或$\alpha_k$以及高斯分布的参数$\mu_k,\sigma_k$</p>
+<h3 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h3><script type="math/tex; mode=display">
+p(x)=\sum_z p(x,z)=\sum_{k=1}^K p(z=c_k)p(x|c_k)=\sum_{k=1}^K p_k \mathcal N(x|\mu_k,\sigma_k)</script><h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><ol>
+<li>X观测数据$X=(x_1,x_2,\cdots,x_n)$</li>
+<li>$(X,Z)$完整数据($z_i$是第i个数据属于哪一个高斯分布的标签)</li>
+<li>$\theta$为参数$\theta =(p_1,p_2,\cdots,p_K,\mu_1,\mu_2,\cdots,\mu_K,\sigma_1,\cdots,\sigma_K)$</li>
 </ol>
-<p>求解对偶问题</p>
+<h3 id="极大似然估计"><a href="#极大似然估计" class="headerlink" title="极大似然估计"></a>极大似然估计</h3><script type="math/tex; mode=display">
+\hat \theta_{MLE} = \arg\max_{\theta} \log p(x)=\arg\max_\theta \sum_{k=1}^n \log p(x_i)=\arg\max_\theta \sum_{i=1}^n \log \sum_{k=1}^K p_k p(x_i|\mathcal N (\mu_k,\sigma_k))</script><p>实际上这个问题不能依靠极大似然估计，需要使用EM算法。求导无解析解</p>
+<h2 id="使用EM算法求解GMM问题"><a href="#使用EM算法求解GMM问题" class="headerlink" title="使用EM算法求解GMM问题"></a>使用EM算法求解GMM问题</h2><h3 id="记号"><a href="#记号" class="headerlink" title="记号"></a>记号</h3><p>假定有N组数据$X_1,X_2,\cdots,X_N$，有K组高斯分布，参数分别为$\mu_i,{\sum}_i,i=1,2,\cdots,K$，约定</p>
 <script type="math/tex; mode=display">
-\max_{\lambda,v} g(\lambda,v)\\
-s.t \lambda \geq 0</script><ol>
-<li><em>\leq p^</em>p^*$称为弱对偶</li>
-<li><em>=p^</em>p^*$称为强对偶</li>
-</ol>
+\gamma_{jk},j=1,2,\cdots,N,k=1,2,\cdots,K</script><p>为第j组数据采样自第k个高斯分布的概率，问题是希望估算每个高斯分布的参数$\mu,{\sum}$，记第k组高斯分布的参数为</p>
+<script type="math/tex; mode=display">
+\theta_k = (\mu_k,{\sum}_k)</script><p>这里增加一个假设，对于每次采样，选择某个分布的概率相同，因此记</p>
+<script type="math/tex; mode=display">
+ \gamma_k</script><p>表示选择分布k的概率，我们记</p>
+<script type="math/tex; mode=display">
+\phi(x|\theta_i)</script><p>为在参数为$\theta_i$的高斯分布中采样得到数据x的概率</p>
+<h3 id="参数学习：E步"><a href="#参数学习：E步" class="headerlink" title="参数学习：E步"></a>参数学习：E步</h3><p>给定K个高斯分布的参数$\theta_k$，求$E[\gamma_k|X,\theta]$(起始就是估算选择每个分布的概率)</p>
 <blockquote>
-<p>共轭函数，定义函数$f(x)$的共轭函数是</p>
+<p>给定K个高斯分布参数$\theta_i = (\mu_i,{\sum}_i),i=1,2,\cdots,K$，现在已知数据$X=x_1,x_2,\cdots,x_N$采样自K个高斯分布生成的混合高斯过程，如何求解隐变量$\gamma_k$？</p>
+</blockquote>
+<h4 id="极大似然"><a href="#极大似然" class="headerlink" title="极大似然"></a>极大似然</h4><p>目标是</p>
 <script type="math/tex; mode=display">
-f^*(y) = \sup_{x\in dom f} (y^T x-f(x))</script><p>定理：$f^*$是凸函数</p>
-<p>例子，范数的共轭函数</p>
+\gamma =\arg\max_{\gamma} P(X|\theta,\gamma)=\arg\max_{\gamma } \prod_{x_i}P(x_i|\theta,\gamma)</script><p>现在看看概率$P(x_i|\theta,\gamma)$，根据联合分布的pdf，写成</p>
 <script type="math/tex; mode=display">
-f^*(y) = \sup_{x\in dom f} (y^T x -\parallel x\parallel)</script><p>满足</p>
+P(x_i|\theta,\gamma) = \sum_{j=1}^K \gamma_j P(x_i|\theta_j)</script><p>这个问题很难有解析解(微分不好求)</p>
+<h4 id="参数估计"><a href="#参数估计" class="headerlink" title="参数估计"></a>参数估计</h4><p>假设上个周期中求出的概率选择参数为$\alpha_k$，则可以用下式估算$\gamma_{jk}$</p>
 <script type="math/tex; mode=display">
-f^*(y) =\left\{
+\gamma_{jk} = \frac{\alpha_k \phi(x_i|\theta_k)} {\sum_{k=1}^K \alpha_k \phi(x_i|\theta_k)}</script><p>进一步得到(直接平均)</p>
+<script type="math/tex; mode=display">
+\alpha_{k} =\frac{\sum_{j=1}^N \gamma_{jk}}{N}</script><h3 id="参数学习：M步"><a href="#参数学习：M步" class="headerlink" title="参数学习：M步"></a>参数学习：M步</h3><p>给定选择每个数据点的概率$\gamma_{jk}$，求解参数$\theta_k$，形式化是</p>
+<script type="math/tex; mode=display">
+\theta = \arg\max_{\theta} P(X|\theta,\gamma)</script><p><em><em>权重</em></em><em><em>权重</em></em><em><em>权重</em></em><em><em>权重</em></em><em><em>权重</em></em><em>权重*</em></p>
+<script type="math/tex; mode=display">
+\mu_k =\frac{\sum_{j=1}^N (\gamma_{jk}x_j)}{\sum_{j=1} \gamma_{jk}}\\
+{\sum}_k = \frac{\sum_{j=1}^N \gamma_{jk}(x_j-\mu_k)(x_j-\mu_k)^T}{\sum_{j=1}^N \gamma_{jk}}</script><blockquote>
+<p><em><em>有偏估计</em></em><strong>有偏估计</strong>？E步计算$\gamma_{ik}$中为何直接使用$\alpha_k$而不是$\gamma_{ij}$</p>
+</blockquote>
+<h3 id="E-step"><a href="#E-step" class="headerlink" title="E-step"></a>E-step</h3><p>逐步迭代，即$\max E[\log p(x,z|\theta;\theta^t)]$，记优化目标为$Q(\theta,\theta^t)$</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
-& 0,\parallel y \parallel \leq 1\\
-& \infty,else
-\end{aligned}
-\right.</script><p>例子，对于二元函数</p>
+Q(\theta,\theta^t) &= \int_z \log p(x,z|\theta)\times p(z|\theta,x) dz\\
+&=\sum_z \log\prod_{i=1}^n p(x_i,z_i|\theta)\prod_{i=1}^n p(z_i|x_i,\theta^t)\\
+&=\sum_{z_1,z_2,\cdots,z_n}\sum_{i=1}^n \log p(x_i,z_i|\theta)\prod_{i=1}^n p(z_i|x_i,\theta^t)\\
+&=\sum_{z_1,z_2,\cdots,z_n}[\log p(x_1,z_1|\theta)+\log p(x_2,z_2|\theta)+\cdots +\log p(x_n,z_n|\theta)]\prod_{i=1}^n p(z_i|x_i,\theta^t)
+\end{aligned}</script><p>拆分第一项</p>
 <script type="math/tex; mode=display">
-z = f(x,y)</script><p>求解在约束</p>
+\begin{aligned}
+\sum_{z_1,z_2,\cdots,z_n}\log p(x_1,z_1|\theta)\prod_{i=1}^n p(z_i|x_i,\theta^t)&=\sum_{z_1} \log p(x_1,z_1|\theta)p(z_1|x_1,\theta^t)\\
+&\sum_{z_2,z_3,\cdots,z_n} \prod_{i=2}^n p(z_i|x_i,\theta^t)\\
+\end{aligned}</script><p>实际上</p>
 <script type="math/tex; mode=display">
-g(x,y) = 0</script><p>条件下的极值点，根据拉格朗日函数</p>
+\sum_{z_2,z_3,\cdots,z_n}\prod_{i=2}^n p(z_i|x_i,\theta^t)=1</script><p>可以视为对$(z_2,z_3,\cdots,z_n)$空间上的联合概率分布求和，因此有</p>
 <script type="math/tex; mode=display">
-F(x,y,\lambda) = f(x,y )+ \lambda g(x,y)</script><p>求偏导</p>
+Q(\theta,\theta^t)=\sum_{i=1}^n \sum_{z_i} \log p(x_i,z_i|\theta)p(z_i|x_i,\theta^t)</script><p>考虑联合概率分布</p>
 <script type="math/tex; mode=display">
-\frac{\partial F}{\partial x} = \frac{\partial f}{\partial x} + \lambda \frac{\partial g}{\partial x} = 0\\
-\frac{\partial F}{\partial y }= \frac{\partial f}{\partial y} + \lambda \frac{\partial g}{\partial y} = 0\\
-\frac{\partial F}{\partial \lambda} = f(x,y) = 0</script><p>上述方程的解$(x,y)$可能是函数在约束条件下的极值点，含义找到$f(x,y)$等高线和$g(x,y) =0$相切的</p>
-<p>最小化范数</p>
+p(x,z)= p(z)p(x|z)=p_z \mathcal N (x|\mu_z,{\sum}_z)</script><p>因此</p>
 <script type="math/tex; mode=display">
-\min \parallel x\parallel\\
-s.t\quad Ax = b</script><p>拉格朗日函数写成</p>
+p(z|x) = \frac{p(x,z)}{p(x)}=\frac{p_z \mathcal N(x|\mu_z,{\sum}_z)}{\sum_{z} p_z \mathcal N(x|\mu_z,{\sum}_z)}</script><p>记住：参数不是一个隐变量！因此可以写成</p>
 <script type="math/tex; mode=display">
-g(v) =\inf_x (\parallel x\parallel + v^T (b-Ax))</script></blockquote>
-<h2 id="何时强对偶成立？"><a href="#何时强对偶成立？" class="headerlink" title="何时强对偶成立？"></a>何时强对偶成立？</h2><h3 id="Slater条件"><a href="#Slater条件" class="headerlink" title="Slater条件"></a>Slater条件</h3><h4 id="相对内点"><a href="#相对内点" class="headerlink" title="相对内点"></a>相对内点</h4><p>C为非空凸集，x为C的相对内点，如果$x\in C$并且存在开球$S_x$使得</p>
+Q(\theta,\theta^t) = \sum_{i=1}^n  \sum_{z_i}\log p_{z_i} \mathcal N (x_i|\mu_z,{\sum}_z)\frac{p_{z_i}\mathcal N(x_i|\mu_{z_i},{\sum}_{z_i})}{p(x_i,z_i)}</script><p>迭代</p>
 <script type="math/tex; mode=display">
-aff(C)\bigcap S \subset C</script><p>称x为C的相对内点，C的所有相对内点集合记作$ri(C)$</p>
-<h4 id="Slater条件-1"><a href="#Slater条件-1" class="headerlink" title="Slater条件"></a>Slater条件</h4><ol>
-<li>原问题是凸问题</li>
-<li>存在可行域相对内点$x\in relint(D)$，满足所有约束</li>
+\theta_{t+1} = \arg\max_{\theta}Q(\theta,\theta_t)</script><p>说明一点</p>
+<h2 id="EM算法"><a href="#EM算法" class="headerlink" title="EM算法"></a>EM算法</h2><p>传统机器学习任务实际上是求解优化问题</p>
+<script type="math/tex; mode=display">
+\theta_{MLE}=\log p(x|\theta)</script><p>引入隐变量z，此时优化目标变为</p>
+<script type="math/tex; mode=display">
+\theta^{t+1} =\arg\max_\theta \int_z \log p(x,z|\theta)p(z|x,\theta^t) dz</script><p>E step</p>
+<script type="math/tex; mode=display">
+P(z|x,\theta^t) = E_{z|x,\theta^t} [\log p(x,z|\theta)]</script><p>M step</p>
+<script type="math/tex; mode=display">
+\theta^{t+1} =\arg\max_\theta E_{z|x,\theta^t}[\log p(x,z|\theta)]</script><h3 id="ELBO-KL-divergence"><a href="#ELBO-KL-divergence" class="headerlink" title="ELBO+KL divergence"></a>ELBO+KL divergence</h3><p>概率的性质，显然有</p>
+<script type="math/tex; mode=display">
+\log P(x|\theta) = \log p(x,z|\theta)-\log p(z|x,\theta)</script><p>两边对$z$的先验分布$q(z)$进行积分，得到</p>
+<script type="math/tex; mode=display">
+LHS = \log p(x|\theta)</script><p>对于右边，写成</p>
+<script type="math/tex; mode=display">
+\begin{align}
+RHS &= \int_z q(z)\log \frac{p(x,z|\theta)}{q(z)} dz\\
+&-\int_z q(z)\log \frac{p(z|x,\theta)}{q(z)}
+\end{align}</script><p>(28)显然是KL散度，将(27)记作EBLO，显然有</p>
+<script type="math/tex; mode=display">
+\log p(x|\theta)\geq ELBO</script><p>一个简单的想法是优化ELBO扩大下界，EM算法可以分成两步</p>
+<ol>
+<li>根据数据X，参数$\theta$估算隐变量z的分布$q(z)=q(z|X,\theta)$</li>
+<li>估算ELBO($\log p(x,z|\theta)$在$q(z)$下的期望)</li>
 </ol>
+<h3 id="EBLO-Jensen-Inequality"><a href="#EBLO-Jensen-Inequality" class="headerlink" title="EBLO+Jensen Inequality"></a>EBLO+Jensen Inequality</h3><p>起点仍然是</p>
+<script type="math/tex; mode=display">
+\log p(X|\theta)</script><p>这里假设$X=(x_i)_{i=1}^n ,x_i|p(x),i.i.d$，引入隐变量对隐变量求积分，得到</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\log p(X|\theta)&=\log \int_z p(X,z|\theta) dz\\
+&=\log \int_z \frac{p(x,z|\theta)}{q(z)} q(z) dz\\
+&=\log E_{z|q(z)}[\frac{p(x,z|\theta)}{q(z)}]
+\end{align}</script><p>Jensen不等式表明凸函数下期望的性质，对于凸函数$f(x)$，我们有</p>
+<script type="math/tex; mode=display">
+E_{x|g(x)}[f(x)] \leq  f[E_{x|g(x)}(x)]</script><p>因此根据(33)得到</p>
+<script type="math/tex; mode=display">
+\log p(X|\theta)\geq E_{z|g(z)}[\log \frac{p(x,z|\theta)}{q(z)}]=ELBO</script><p>取等号的条件是</p>
+<script type="math/tex; mode=display">
+\frac{p(z,x|\theta)}{q(z)}=C\Rightarrow q(z)=\frac{p(z,x|\theta)}{C}</script><p>按照概率的积分性质</p>
+<script type="math/tex; mode=display">
+1=\int_z q(z) dz = \int_z \frac{p(x,z|\theta)}{C} dz= \frac{1}{C} p(x|\theta)</script><p>因此</p>
+<script type="math/tex; mode=display">
+q(z) = \frac{p(z,x|\theta)}{p(x|\theta)}=p(z|x,\theta)</script><p>这就是为什么要让$q(z)=p(z|x,\theta)$，这是为了让后验概率接近ELBO</p>
+<h3 id="广义EM"><a href="#广义EM" class="headerlink" title="广义EM"></a>广义EM</h3><p>观测数据$X=(x_i)_{i=1}^n$，隐变量$Z=(z_i)_{i=1}^n$，求解目标为</p>
+<script type="math/tex; mode=display">
+\hat \theta  =\arg\max_\theta  p(x|\theta)=\arg\max_\theta (ELBO+KL(q\parallel p))</script><p>EBLO记作</p>
+<script type="math/tex; mode=display">
+E_{q(z)}[\log \frac{p(x,z|\theta)}{q(z)}]= \mathcal L(q,\theta)</script><p>E-step中需要求$p(z|x,\theta^{t+1})$实际上并不是总能求出来(变分推断，MC采样)</p>
+<p>$\theta$固定(E step)，此时求解q，应该满足</p>
+<script type="math/tex; mode=display">
+\hat q = \arg\min_q KL(q\parallel p)= \arg\max_q \mathcal L(q,\theta)(等式左边是固定的，一项min一项必然max)</script><p>固定$\hat q$</p>
+<script type="math/tex; mode=display">
+\theta = \arg\max_\theta \mathcal L(\hat q,\theta)</script><p>广义EM即为两个max问题，现在对L函数进行变形</p>
+<script type="math/tex; mode=display">
+ELBO = E_{q(z)} [\log{p(x,z|\theta)}]- E_{q(z)}[\log q(z)]</script><p>$-E_{q(z)}[\log q(z)]$是分布q的熵$H(q)$，M步中q固定，因此优化问题中只对</p>
+<script type="math/tex; mode=display">
+E_{q(z)}[\log p(x,z|\theta)]</script><p>求解最优化问题</p>
+<h2 id="变分推断"><a href="#变分推断" class="headerlink" title="变分推断"></a>变分推断</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>概率角度-&gt;优化问题(回归)</p>
+<script type="math/tex; mode=display">
+\arg\max P(X|\theta)</script><p>贝叶斯角度-&gt;积分</p>
+<script type="math/tex; mode=display">
+P(\theta|X) = \frac{p(X|\theta)p(\theta)}{p(X)}</script><h3 id="推断-决策"><a href="#推断-决策" class="headerlink" title="推断-决策"></a>推断-决策</h3><ol>
+<li>推断：求解$p(\theta|X)$</li>
+<li>决策：预测X-数据集 $\hat x$新样本，求解$P(\hat x|X)$</li>
+</ol>
+<script type="math/tex; mode=display">
+P(\hat x|X) =\int_\theta P(\hat x,\theta|X) d\theta=\int_\theta P(\hat x|\theta)P(\theta|X)d\theta = E_{\theta |P_X}[p(\hat x|\theta)]</script><p>两种推断</p>
+<ol>
+<li>精确推断，求后验概率的解析解</li>
+<li>近似推断，确定性近似(VI)，随机近似(MCMC)</li>
+</ol>
+<h3 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h3><p>X-观测参数 Z-隐变量(参数包含在其中) (X,Z)-完整数据，写成ELBO和divergence的形式</p>
+<script type="math/tex; mode=display">
+\log P(X) =ELBO+KL(q(z)\parallel p(z|x))=\mathcal L(q) +KL(q\parallel p)</script><p>$\mathcal L(q)$表明ELBO是q的函数，称为变分，E步的目标是</p>
+<script type="math/tex; mode=display">
+q(z)\approx p(z|x)</script><p>现在问题在于求解后验分布</p>
+<h4 id="假设"><a href="#假设" class="headerlink" title="假设"></a>假设</h4><p>Z是一组隐变量形成的参数，假设可以划分为M组，每组之间互相独立，概率记作(平均场理论)</p>
+<script type="math/tex; mode=display">
+q(z) =\prod_{i=1}^M q_i(z_i)</script><p>求$q_j$，需要将剩下M-1个q固定，ELBO写成</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\mathcal L(q) &= \int_z q(z)\log p(x,z) dz - \\&\int_z q(z)\log q(z) dz\\
 
+\end{align}</script><p>(51)写成</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\int_z \prod_{i=1}^M q_i(z_i) \log p(x,z) dz_1dz_2\cdots d z_M&= \int_z q_j(z_j) (\prod_{i\neq j}^M q_i(z_i)\log p(x,z)\prod_{i\neq j}^M d z_i)d z_j\\
+&=\int_{z_j} q_j(z_j)\int_{z_i,i\neq j} \log P(x,z)\prod_{i\neq j}^M q_i(z_i)d z_i dz_j\\
+&=\int_{z_j} q_j(z_j)E_{\prod_{i\neq j}^M q_i(z_i)}[\log p(x,z)] dz_j\\
+&=\int_{z_j}q_j(z_j)\log \hat p(X,z_j) dz_j
+\end{align}</script><p>(52)写成</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\int_z \prod_{i=1}^M q_i(z_i)\sum_{i=1}^M \log q_i(z_i) dz&=\sum_{i=1}^M \int_{z_i}q_i(z_i)\log q_i(z_i) d z_i\\
+&(只关心z_j)=\int_{z_j}q_j(z_j)\log q_j(z_j) dz_j+C
+\end{align}\\
+\int_z\prod_{i=1}^M q_i(z_i) \log q_j(z_j) dz = \int_{z_j}q_j(z_j)\log q(z_j) dz_j</script><p>因此$\mathcal L(q)$写成</p>
+<script type="math/tex; mode=display">
+\mathcal L(q) =-\int_{z_j} q_j(z_j)\log \frac{q_j(z_j)}{\hat p(x,z_j)} d z_j=-KL(q_j\parallel \hat p(x,z_j))\leq 0</script><p>只关心一个独立分量，优化始终在$\leq 0$的半边进行</p>
+<h2 id="标准正态分布到任意正态分布"><a href="#标准正态分布到任意正态分布" class="headerlink" title="标准正态分布到任意正态分布"></a>标准正态分布到任意正态分布</h2><p>希望从标准正态分布生成分布为$\mathcal N(\mu,\sigma^2)$的数据，可以从$\mathcal N(0,1)$中采样z，然后做线性变换</p>
+<script type="math/tex; mode=display">
+\sigma z+\mu</script><h2 id="正态分布KL散度"><a href="#正态分布KL散度" class="headerlink" title="正态分布KL散度"></a>正态分布KL散度</h2><p>$p=\mathcal N(0,1)$和$q=\mathcal N(\mu,\sigma^2)$之间的KL散度写成</p>
+<script type="math/tex; mode=display">
+D_{KL}(p\parallel q) = -\frac{1}{2}\sum_{i=1}^J (1+\log \sigma_j^2-\sigma_j^2-\mu_j^2)</script>
         
     
 
@@ -570,8 +687,8 @@ aff(C)\bigcap S \subset C</script><p>称x为C的相对内点，C的所有相对�
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://gaoustcer.github.io/2023/04/09/duality-review/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://gaoustcer.github.io/2023/04/09/duality-review/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://gaoustcer.github.io/2023/04/18/GMM-EM-VI/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/04/18/GMM-EM-VI/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -601,7 +718,7 @@ aff(C)\bigcap S \subset C</script><p>称x为C的相对内点，C的所有相对�
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/04/09/optimizatio-method/" id="post_nav-newer" class="prev-content">
+        <a href="/2023/04/18/LAPO/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -615,7 +732,7 @@ aff(C)\bigcap S \subset C</script><p>称x为C的相对内点，C的所有相对�
 
     <!-- Next Nav -->
     
-        <a href="/2023/04/09/sensitive-analysis/" id="post_nav-older" class="next-content">
+        <a href="/2023/04/18/Batch-Constrain-Q-Learning/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
