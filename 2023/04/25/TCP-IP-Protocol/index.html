@@ -48,7 +48,7 @@
     
     <title>
         
-            KKTcondition | 
+            TCP-IP-Protocol | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Convex Optimization">
+    <meta name="keywords" content=",Computer Network,CS144">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/09/KKTcondition/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/25/TCP-IP-Protocol/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,16 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/09/KKTcondition/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/25/TCP-IP-Protocol/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="KKTcondition | Hexo">
+    <meta property="og:title" content="TCP-IP-Protocol | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Convex Optimization"> 
+    <meta property="og:article:tag" content="Computer Network"> <meta property="og:article:tag" content="CS144"> 
 
     
-        <meta property="article:published_time" content="Sun Apr 09 2023 18:40:24 GMT+0800">
-        <meta property="article:modified_time" content="Sun Apr 09 2023 18:41:04 GMT+0800">
+        <meta property="article:published_time" content="Tue Apr 25 2023 10:35:16 GMT+0800">
+        <meta property="article:modified_time" content="Tue Apr 25 2023 10:36:44 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/09/KKTcondition/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/25/TCP-IP-Protocol/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/09/KKTcondition/index.html",
-    "headline": "KKTcondition",
-    "datePublished": "Sun Apr 09 2023 18:40:24 GMT+0800",
-    "dateModified": "Sun Apr 09 2023 18:41:04 GMT+0800",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/25/TCP-IP-Protocol/index.html",
+    "headline": "TCP-IP-Protocol",
+    "datePublished": "Tue Apr 25 2023 10:35:16 GMT+0800",
+    "dateModified": "Tue Apr 25 2023 10:36:44 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Gaoustcer",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.svg"
         }
     },
-    "keywords": ",Convex Optimization",
+    "keywords": ",Computer Network,CS144",
     "description": "",
 }
 </script>
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Convex-Optimization-Duality-IV%E2%80%94%E8%AE%BA%E5%AF%B9%E5%81%B6%E9%97%B4%E8%B7%9D%E4%B8%BA0%E7%9A%84%E8%8B%A5%E5%B9%B2%E6%8E%A8%E8%AE%BA%EF%BC%8CKKT%E6%9D%A1%E4%BB%B6"><span class="post-toc-number">1.</span> <span class="post-toc-text">Convex Optimization(Duality IV—论对偶间距为0的若干推论，KKT条件)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%92%E8%A1%A5%E6%9D%BE%E5%BC%9B%E6%9D%A1%E4%BB%B6-%E5%AF%B9%E4%BA%8E%E4%B8%80%E8%88%AC%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%EF%BC%8C%E5%AF%B9%E5%81%B6%E9%97%B4%E9%9A%99%E4%B8%BA0"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">互补松弛条件(对于一般优化问题，对偶间隙为0)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8E%9F%E9%97%AE%E9%A2%98%E5%8F%AF%E8%A1%8C%E6%80%A7"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">原问题可行性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AF%B9%E5%81%B6%E9%97%AE%E9%A2%98%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">对偶问题的可行性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BA%92%E8%A1%A5%E6%9D%BE%E5%BC%9B%E6%9D%A1%E4%BB%B6-%E5%AF%B9%E5%81%B6%E9%97%B4%E9%9A%99%E4%B8%BA0"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">互补松弛条件(对偶间隙为0)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%A8%B3%E5%AE%9A%E6%80%A7-%E5%87%BD%E6%95%B0%E5%8F%AF%E5%BE%AE"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">稳定性(函数可微)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9AKKT%E6%9D%A1%E4%BB%B6%E4%BD%95%E6%97%B6%E6%98%AF%E5%85%85%E8%A6%81%E6%9D%A1%E4%BB%B6%EF%BC%9F"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">问题：KKT条件何时是充要条件？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">例子</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8D%8A%E6%AD%A3%E5%AE%9A%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">半正定二次规划</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Water-filling%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">Water filling问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%AE%97%E6%B3%95%EF%BC%88%E7%81%8C%E6%B0%B4%E7%AE%97%E6%B3%95%EF%BC%89"><span class="post-toc-number">1.3.2.1.</span> <span class="post-toc-text">算法（灌水算法）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#KKT%E6%9D%A1%E4%BB%B6%E5%92%8C%E4%B8%80%E9%98%B6%E6%9C%80%E4%BC%98%E6%80%A7%E6%9D%A1%E4%BB%B6"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">KKT条件和一阶最优性条件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%87%B8%E9%97%AE%E9%A2%98%E7%AD%89%E4%BB%B7%E5%BD%A2%E5%BC%8F"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">凸问题等价形式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%8C%83%E6%95%B0"><span class="post-toc-number">1.3.4.1.</span> <span class="post-toc-text">范数</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B8%A6%E6%A1%86%E7%BA%A6%E6%9D%9F%E7%9A%84%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">带框约束的线性规划问题</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9B%BE%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%EF%BC%88TCP-IP%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B"><span class="post-toc-number">1.</span> <span class="post-toc-text">图解计算机网络（TCP&#x2F;IP网络模型)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%BD%91%E7%BB%9C%E5%88%86%E5%B1%82"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">网络分层</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">应用层</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BC%A0%E8%BE%93%E5%B1%82-%E5%86%85%E6%A0%B8"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">传输层(内核)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%88%E5%86%85%E6%A0%B8%EF%BC%8C%E8%B7%AF%E7%94%B1%E5%99%A8%EF%BC%89"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">网络层（内核，路由器）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%93%BE%E8%B7%AF%E5%B1%82"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">链路层</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#How-Linux-receive-a-Network-package"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">How Linux receive a Network package</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Receive-a-package-From-OS-perspective"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Receive  a package From OS perspective</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#From-Memory-Copy-Perspective1"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">From Memory Copy Perspective1</span></a></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -383,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                KKTcondition
+                TCP-IP-Protocol
             </p>
         </div>
 
@@ -402,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Gaoustcer</strong>
-        <span>4月 09, 2023</span>
+        <span>4月 25, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -426,7 +426,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Convex-Optimization/" rel="tag">Convex Optimization</a>
+        <a class="post_tag-none-link" href="/tags/CS144/" rel="tag">CS144</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Computer-Network/" rel="tag">Computer Network</a>
     </ul>
     
 
@@ -443,7 +443,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=KKTcondition&url=http://gaoustcer.github.io/2023/04/09/KKTcondition/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=TCP-IP-Protocol&url=http://gaoustcer.github.io/2023/04/25/TCP-IP-Protocol/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -452,7 +452,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=KKTcondition&url=http://gaoustcer.github.io/2023/04/09/KKTcondition/index.html&via=Gaoustcer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=TCP-IP-Protocol&url=http://gaoustcer.github.io/2023/04/25/TCP-IP-Protocol/index.html&via=Gaoustcer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/09/KKTcondition/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/25/TCP-IP-Protocol/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/09/KKTcondition/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/25/TCP-IP-Protocol/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,278 +495,85 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Convex-Optimization-Duality-IV—论对偶间距为0的若干推论，KKT条件"><a href="#Convex-Optimization-Duality-IV—论对偶间距为0的若干推论，KKT条件" class="headerlink" title="Convex Optimization(Duality IV—论对偶间距为0的若干推论，KKT条件)"></a>Convex Optimization(Duality IV—论对偶间距为0的若干推论，KKT条件)</h1><h2 id="互补松弛条件-对于一般优化问题，对偶间隙为0"><a href="#互补松弛条件-对于一般优化问题，对偶间隙为0" class="headerlink" title="互补松弛条件(对于一般优化问题，对偶间隙为0)"></a>互补松弛条件(对于一般优化问题，对偶间隙为0)</h2><p>考虑一般优化问题(不一定凸)</p>
-<script type="math/tex; mode=display">
-\min f_0(x)\\
-s.t \ f_i(x)\leq 0,i =1,2,\cdots,m\\
-h_i(x)=0,i=1,2,\cdots,p</script><p>对偶函数</p>
-<script type="math/tex; mode=display">
-g(\lambda,v) = \inf_x \{f_0(x)+\sum_i \lambda_i f_i(x)+\sum_i v_i h_i(x) \}</script><p>对偶问题</p>
-<script type="math/tex; mode=display">
-\max g(\lambda,v)\\
-\lambda \geq 0</script><p>做出两个假设</p>
-<ol>
-<li>对偶间隙为0</li>
-<li>假设所有函数可微</li>
+        <h1 id="图解计算机网络（TCP-IP网络模型"><a href="#图解计算机网络（TCP-IP网络模型" class="headerlink" title="图解计算机网络（TCP/IP网络模型)"></a>图解计算机网络（TCP/IP网络模型)</h1><h2 id="网络分层"><a href="#网络分层" class="headerlink" title="网络分层"></a>网络分层</h2><ol>
+<li><em><em>尽力</em></em><em><em>尽力</em></em><em><em>尽力</em></em><em><em>尽力</em></em>力**传输到对应目标的对应层</li>
+<li><em><em>抽象</em></em>抽象**的功能</li>
+<li>每层负责不同的功能，网络通信中主要问题是<ol>
+<li>差错控制：确保发送者-接收者得到相同的信息</li>
+<li>流量控制：中间节点或者端节点处理能力使得系统陷入bottleneck，导致拥塞</li>
+<li>分段/分段重组：大数据包需要拆分成不同段，每一段送到接收者顺序不一定确定</li>
+<li>复用连接，多个上层通信应用通过一个信道传输数据(信道抢占)</li>
+<li>建立/释放连接</li>
 </ol>
-<p>假设对偶问题和原问题最优解为</p>
-<script type="math/tex; mode=display">
-x^*,\lambda^*,v^*</script><p>必然是可行解，满足</p>
-<script type="math/tex; mode=display">
-f_i(x^*)\leq 0\\
-h_i(x^*) =0\\
-\lambda^*\geq 0</script><p>对偶间隙为0意味着</p>
-<script type="math/tex; mode=display">
-f_0(x^*) = g(\lambda^*,v^*) =\inf_x \{f_0(x)+\sum_i \lambda_i^* f_i(x)+\sum_i v_i^* h_i(x) \}</script><p>$\inf$满足</p>
-<script type="math/tex; mode=display">
-g(\lambda^*,v^*) \leq f_0(x^*) +\sum_i \lambda _i^* f_i(x^*)+\sum_i v_i^* h_i(x^*)\leq f_0(x^*)</script><p><em><em>对偶间距为0</em></em>0**的前提下，上述不等式全部是等式，即</p>
-<ol>
-<li><em>,\lambda^</em><em>,v^</em><em>) = g(\lambda^</em><em>,v^</em>^*)$</li>
-<li><em>,\lambda^</em><em>,v^</em><em>) = f_0(x^</em>x^*)$</li>
+</li>
+<li>网络分层<ol>
+<li>应用层</li>
+<li>运输层(TCP/UDP)</li>
+<li>网络层(IP)</li>
+<li>数据链路层</li>
+<li>物理层</li>
 </ol>
-<p>等式（2）表明对于不等式约束，必然有</p>
-<script type="math/tex; mode=display">
-\lambda_i^* f_i(x^*) = 0\to \lambda_i^* = 0 \or f_i(x^*) =0(\lambda_i^* =0)</script><p><em><em>互补松弛条件（Complementary Slackness）</em></em>s）**</p>
-<p>同时，等式（1）表明</p>
-<script type="math/tex; mode=display">
-x^* ={\arg\min}_x L(x,\lambda^*,v^*)</script><p><em><em>定义在全空间上的函数！*</em>,$x^</em><em>*,$x^</em>$x^*$是L在全空间上的全局最优</p>
-<p>根据可微条件，有</p>
-<script type="math/tex; mode=display">
-\frac{\partial L(x,\lambda^*,v^*)}{\partial x} =0</script><p>拆开看梯度</p>
-<script type="math/tex; mode=display">
-\nabla f_0(x^*) +\sum_{i=1}^m \lambda_i^* \nabla f_i(x^*) +\sum_{i=1}^p v_i^* \nabla h_i(x^*) = 0</script><p>这被称为stationary。对于得到的等式和不等式分成四类</p>
-<h3 id="原问题可行性"><a href="#原问题可行性" class="headerlink" title="原问题可行性"></a>原问题可行性</h3><script type="math/tex; mode=display">
-f_i(x^*)\leq 0\\
-h_i(x^*) = 0</script><h3 id="对偶问题的可行性"><a href="#对偶问题的可行性" class="headerlink" title="对偶问题的可行性"></a>对偶问题的可行性</h3><script type="math/tex; mode=display">
-\lambda_i^* \geq 0</script><h3 id="互补松弛条件-对偶间隙为0"><a href="#互补松弛条件-对偶间隙为0" class="headerlink" title="互补松弛条件(对偶间隙为0)"></a>互补松弛条件(对偶间隙为0)</h3><script type="math/tex; mode=display">
-\lambda_i>0\to f_i(x^*) = 0</script><h3 id="稳定性-函数可微"><a href="#稳定性-函数可微" class="headerlink" title="稳定性(函数可微)"></a>稳定性(函数可微)</h3><script type="math/tex; mode=display">
-\nabla f_0(x^*) +\sum_{i=1}^m \lambda_i^* \nabla f_i(x^*) +\sum_{i=1}^p v_i^* \nabla h_i(x^*) = 0</script><p>它们的关系是</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[原问题可行性]</span><br><span class="line">B[对偶问题可行性]</span><br><span class="line">C[互补松弛条件]</span><br><span class="line">D[稳定性]</span><br><span class="line">A--对偶间距为0--&gt;C</span><br><span class="line">B--对偶间距为0--&gt;C</span><br><span class="line">C--可微--&gt;D</span><br></pre></td></tr></table></figure>
-<p>这些条件被称为KKT条件</p>
-<h2 id="问题：KKT条件何时是充要条件？"><a href="#问题：KKT条件何时是充要条件？" class="headerlink" title="问题：KKT条件何时是充要条件？"></a>问题：KKT条件何时是充要条件？</h2><blockquote>
-<p>定理：原问题满足三个条件，KKT条件是充要条件</p>
-<ol>
-<li>凸问题</li>
-<li>函数可微</li>
-<li>对偶间隙为0</li>
+</li>
+<li>每层依赖下一层提供的接口实现本层的功能</li>
 </ol>
-</blockquote>
-<p>下面证明充分性</p>
-<blockquote>
-<p><em>,\lambda^</em><em>,v^</em><em>)$满足KKT条件$\Rightarrow,(x^</em><em>,\lambda^</em><em>,v^</em>)$为对偶问题和原问题最优解</p>
-</blockquote>
-<p>实际上只要证明</p>
-<script type="math/tex; mode=display">
-g(\lambda^*,v^*)= f_0(x^*)</script><p>（这是因为根据minmax定理，必然有$g(\lambda,v)\leq f_0(x)$），能取到等号已经是极限</p>
-<p>可行性条件可以得到</p>
-<script type="math/tex; mode=display">
-L(x,\lambda^*,v^*) = f_0(x)+\sum_i \lambda_i^* f_i(x) +\sum_i v_i h_i(x)</script><p><em>,v^</em><em>,v^</em><em>,v^</em><em>,v^</em><em>,v^</em><em>,v^</em><em>,v^</em><em>,v^</em><em>,v^</em><em>,v^</em>^*)$关于x凸</p>
-<blockquote>
-<p>凸函数一阶偏导0为全局最优</p>
-</blockquote>
-<p>因此</p>
-<script type="math/tex; mode=display">
-L(x,\lambda^*,v^*) \geq L(x^*,\lambda^*,v^*)</script><p>考虑$g(\lambda,v)$，显然</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-g(\lambda^*,v^*)& =\inf_x L(x,\lambda^*,v^*)\\
-&=L(x^*,\lambda^*,v^*)(上述证明说明x^*是L的全局最优)\\
-&=f_0(x^*) +\sum_{i=1}^m \lambda^*_i f_i(x^*)+\sum_{i=1}^p v_i^* h_i(x)
-\end{aligned}</script><p>互补松弛条件，得到</p>
-<script type="math/tex; mode=display">
-\sum_{i=1}^m \lambda_i^* f_i(x^*) = 0</script><p>因此</p>
-<script type="math/tex; mode=display">
-g(\lambda^* ,v^*) = f_i(x^*)</script><p>得证</p>
-<blockquote>
-<p>求解凸优化等价于求解KKT条件</p>
-</blockquote>
-<p>优化问题之间的关系用一下表示</p>
-<script type="math/tex; mode=display">
-A=可微优化问题\\
-B=凸并且可微优化问题,B\subseteq A\\
-C=满足p^* =d^*的可微优化问题,C\subseteq A\\
-C\bigcap B的问题KKT是充要条件</script><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="半正定二次规划"><a href="#半正定二次规划" class="headerlink" title="半正定二次规划"></a>半正定二次规划</h3><script type="math/tex; mode=display">
-\min \frac{1}{2}x^T P x+q^T x + r\\
-s.t\quad Ax = b</script><p>写出KKT条件</p>
-<script type="math/tex; mode=display">
-Ax^* = b(primal)\\
-\frac{\partial L}{\partial x^*} = P x^* +q + A{v^*}^T =0</script><p>两个线性方程，写成</p>
-<script type="math/tex; mode=display">
-\begin{pmatrix}
-P & A^T \\
-A & 0
-\end{pmatrix}
-\begin{pmatrix}
-x\\
-v^*
-\end{pmatrix} = \begin{pmatrix}
--q\\
-b
-\end{pmatrix}</script><p>等价于求解线性方程组</p>
-<p>约束改成 $Ax\geq b$，则会导致互补松弛条件极难求解</p>
-<h3 id="Water-filling问题"><a href="#Water-filling问题" class="headerlink" title="Water filling问题"></a>Water filling问题</h3><p>变量是x，$\alpha$是参数，满足$\alpha_i&gt; 0$</p>
-<script type="math/tex; mode=display">
-\min - \sum_{i=1}^n \log (\alpha_i+x_i)\\
-s.t\ x\geq 0,1^T x = 1</script><p>KKT条件(primal)</p>
-<script type="math/tex; mode=display">
-x^* \geq 0\\
-1^Tx^* =1</script><p>对偶变量$\lambda^*$约束</p>
-<script type="math/tex; mode=display">
-\lambda^* \geq 0</script><p>互补松弛</p>
-<script type="math/tex; mode=display">
-\lambda^*_i x_i^* =0</script><p>微分条件，拉格朗日函数</p>
-<script type="math/tex; mode=display">
-L(x,\lambda^*,v^*) = -\sum_{i=1}^n \log (\alpha_i+x_i)-\lambda^*{x^*}^T  +v^* (1^T x-1)</script><blockquote>
-<p><em>\in\R^n,v^</em>\in\R^n,v^*\in \R$</p>
-</blockquote>
-<p>求微分</p>
-<script type="math/tex; mode=display">
-\frac{\partial L}{\partial x_i} =- \frac{1}{\alpha_i + x_i}-\lambda^*_i+ v^*=0\\\
-v^* =\lambda_i^*+\frac{1}{\alpha_i+x_i^*}</script><p>微分条件等价为</p>
-<script type="math/tex; mode=display">
-v^*(\alpha_i+x_i^*) =\lambda_i^*(\alpha_i+x_i^*)+1\Leftrightarrow\\
-v^*(\alpha_i+x_i^*) = \lambda_i^* \alpha_i+1(\lambda_i^*x_i^*=0)\Leftrightarrow\\ 
-\lambda_i^* =\frac{v^*(\alpha_i+x_i^*)-1 }{\alpha_i}\\
-x_i^*=\frac{\lambda_i^* \alpha_i +1 -\alpha_i v^*}{\alpha_i}</script><p>$\lambda_i^*\geq 0$等价为</p>
-<script type="math/tex; mode=display">
-v^*(\alpha_i+x_i^*)-1\geq 0\to v^*\geq \frac{1}{\alpha_i +x_i^*}</script><blockquote>
-<p><em>\geq \frac{1}{\alpha_i}$，可以推导出$\lambda_i^</em><em> &gt; 0$，则可知$x_i^</em>i^* = 0$</p>
-<p><em>&lt; \frac{1}{\alpha_i}$，则可知$x_i^</em><em>&gt;0$，$x_i^</em><em> = \frac{1}{v^</em><em>}-\alpha_i$（这是因为$x_i^</em><em>&gt;0$，必然有$\lambda_i^</em>=0$）</p>
-</blockquote>
+<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>需要解决的问题</p>
 <ol>
-<li><em>\geq \frac{1}{\alpha_i}\to x_i^</em>i^*=0$</li>
-<li><em>&lt;\frac{1}{\alpha_i}\to x_i^</em><em> =\frac{1}{v^</em>^*}-\alpha_i$</li>
+<li>定义应用层数据传输的格式HTML，FTP</li>
+<li><em><em><em><em>和另一个</em></em><em>和另一个*</em>主机上的进程</em></em><em><em>主机上的进程</em></em>程**如何通信的问题</li>
 </ol>
-<h4 id="算法（灌水算法）"><a href="#算法（灌水算法）" class="headerlink" title="算法（灌水算法）"></a>算法（灌水算法）</h4><p>绘制$\alpha_i - i$图像</p>
-<p><img src="https://s2.loli.net/2023/01/07/K5v7BtgTcUEHOfb.png" alt="image-20230107175426602"></p>
-<p><em>}$，在$\frac{1}{v^</em><em>}$，在$\frac{1}{v^</em>，在$\frac{1}{v^*}$以下的区域，$x_i$取值为图上着色正方形</p>
-<blockquote>
-<p>什么时候得到最优解？</p>
-<p>提升$\frac{1}{v^*}$(提升水面高度)，使得水面以下区域高度和之和为1(primal条件)</p>
-</blockquote>
-<h3 id="KKT条件和一阶最优性条件"><a href="#KKT条件和一阶最优性条件" class="headerlink" title="KKT条件和一阶最优性条件"></a>KKT条件和一阶最优性条件</h3><p>对可微凸优化</p>
-<script type="math/tex; mode=display">
-\min f_0(x)\\
-s.t \quad x\geq 0</script><p>最优性条件等价于</p>
-<script type="math/tex; mode=display">
-x\geq 0\\
-\nabla f_0(x)\geq 0\\
-x_i \nabla f_0(x)_i =0(Complementary)</script><p>x和$\nabla f_0(x)$互补</p>
-<p>KKT条件</p>
-<script type="math/tex; mode=display">
-x^*\geq 0\\
-\lambda^*\geq 0\\
-\lambda_i^* x_i^* = 0\\
-\nabla f_0(x^*) -\lambda^* = 0</script><p>$\lambda$和$x$互补，替换$\lambda^*$</p>
-<script type="math/tex; mode=display">
-\nabla f_0(x^*)x_i^* =0\\
-\nabla f_0(x^*)\geq 0</script><h3 id="凸问题等价形式"><a href="#凸问题等价形式" class="headerlink" title="凸问题等价形式"></a>凸问题等价形式</h3><p>原问题有两种形式A,B，它们的对偶问题不一定相同</p>
-<script type="math/tex; mode=display">
-\min f_0(Ax+b)</script><p>$f_0$是凸函数</p>
-<p>对偶问题是</p>
-<script type="math/tex; mode=display">
-L(x) = f_0(Ax+b)\\
-g(\lambda,v) = \inf_x f_0(Ax+b)\\
-\max g(\lambda,v) =\inf_x f_0(Ax+b)</script><p><em>=d^</em><em>=d^</em>*$(原问题和对偶问题完全相同)</p>
-<p>现在考虑原问题的等价问题</p>
-<script type="math/tex; mode=display">
-\min f_0(y)\\
-y=Ax+b</script><p><em>_1,d^</em><em>_1,d^</em><em>_1,d^</em><em>_1,d^</em>*_1$，写出对偶问题</p>
-<script type="math/tex; mode=display">
-L(y,x,v) = f_0(y) +  v^T ( Ax+b-y) = f_0(y)- v^T y +v^T Ax+v^Tb  \\
-g(v) =\inf_{x,y} L(y,\lambda,v) \\
-\inf_y (f_0(y)-v^Ty) =-\sup_y (v^T y -f_0(y)) =-f^*(v)(函数共轭)\\
-\inf_x -v^T Ax-v^T b =-\infty(v^T A\neq 0),-v^T b(v^T A=0)</script><p>注意函数L(y,x,v)中y和x解耦，不存在约束，因此可以分别求极小</p>
-<p>得到</p>
-<script type="math/tex; mode=display">
-g(v) =\left\{
-\begin{aligned}
-& -f^*(v)-v^Tb ,v^TA =0\\
-& -\infty,v^T A\neq 0
-\end{aligned}
-\right.</script><p>对偶问题是</p>
-<script type="math/tex; mode=display">
-\max v^T b - f_0^*(v)\\
-s.t\quad v^T A =0</script><p>对偶问题1和原始对偶问题有很大的不同</p>
-<h4 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h4><script type="math/tex; mode=display">
-\min \parallel Ax-v\parallel</script><p>等价问题</p>
-<script type="math/tex; mode=display">
-\min \parallel y\parallel\\
-s.t\quad  y = Ax -b</script><p>对偶函数</p>
-<script type="math/tex; mode=display">
-L(x,y,v) =\parallel y \parallel -v^T y +v^TAx -v^Tb\\
-(引用上面讨论的结论)
-g(v) =\inf_{x,y}L(x,y,v) =\left\{
-\begin{aligned}
-&-v^T b+\parallel v\parallel_*\\
-&-\infty
-\end{aligned}
-\right.</script><p>因此对偶问题是</p>
-<script type="math/tex; mode=display">
-\max -v^T b -\parallel v\parallel_*\\
-s.t\quad v^T A=0</script><p><em><em>值</em></em><strong>值</strong>和下列问题等价</p>
-<script type="math/tex; mode=display">
-\max\ v^T b-\parallel v\parallel_*\\
-s.t\quad v^T A =0</script><blockquote>
-<p>可以理解为用w代替-v，得到</p>
-<script type="math/tex; mode=display">
-\max w ^T b -\parallel v\parallel_*\\
-s.t\quad w^T A=0</script></blockquote>
-<p>因此这两个问题的值相同</p>
-<p>对原问题还有一种变换</p>
-<script type="math/tex; mode=display">
-\min \frac{1}{2}\parallel y \parallel^2\\
-s.t\quad Ax -b = y</script><blockquote>
-<p><em><em>解</em></em><em>解*</em>是等价的，这两个问题等价本质上来自于范数的非负性，因此约束目标实际上是等价的</p>
-<script type="math/tex; mode=display">
-\min \parallel y \parallel\Leftrightarrow\min \parallel y \parallel^2</script></blockquote>
-<p>它的对偶问题写成</p>
-<script type="math/tex; mode=display">
-L(x,y,v) =\frac{1}{2}\parallel y \parallel^2 +v^T (Ax - b -y)\\
-g(v) =\inf_{x,y} L(x,y,v) =\left\{
-\begin{aligned}
-& -v^T b-\frac{1}{2}\parallel v\parallel_*^2,v^T A =0\\
-&-\infty ,v^TA \neq 0
-\end{aligned}
-\right.</script><p>对偶问题是</p>
-<script type="math/tex; mode=display">
-\max  -v^T b -\frac{1}{2}\parallel v\parallel_*^2\\
-s.t\quad v^T A=0</script><p>约束目标不同</p>
-<h3 id="带框约束的线性规划问题"><a href="#带框约束的线性规划问题" class="headerlink" title="带框约束的线性规划问题"></a>带框约束的线性规划问题</h3><p>约束是高维空间的立方体</p>
-<script type="math/tex; mode=display">
-\min c^T x\\
-s.t\quad Ax=b\\
-l\leq x\leq u</script><script type="math/tex; mode=display">
-\begin{aligned}
-L(x,\lambda_1,\lambda_2,v) &=c^T x +v^T(Ax - b)+\lambda_1^T (l-x)+\lambda_2^T (x-u)\\
-&= (c^T +v^T A-\lambda^T_1+\lambda_2^T) x-v^T b +\lambda_1^T l-\lambda_2^T u
-\end{aligned}</script><p>对偶问题</p>
-<script type="math/tex; mode=display">
-\max -b^T v+\lambda_1^T l-\lambda_2^T u\\
-s.t\quad A^T v+c^T -\lambda_1^T+\lambda_2^T =0,\lambda_1\geq 0,\lambda_2\geq 0</script><p>仍然是线性规划，对原问题做等价变换(将目标函数和框约束写成一个形式)</p>
-<script type="math/tex; mode=display">
-\min f_0(x)\\
-s.t\quad Ax = b\\
-f_0(x) =\left\{
-\begin{aligned}
-&c^T x,l\leq x\leq u\\
-&\infty ,else
-\end{aligned}
-\right.</script><p>这个问题对偶问题</p>
-<script type="math/tex; mode=display">
-L(x,v) =f_0(x)+v^T (Ax -b)\\
-g(v) =\inf_x f_0(x)+v^T (Ax - b) = \inf_{x\in [l,u]} c^T x+v^T(Ax - b)</script><p>最终还是一个框约束的线性规划</p>
-<script type="math/tex; mode=display">
-g(v) =\inf_{x\in [l,u]} (A^Tv +c)^T x-v^T b</script><p>不包含等式约束让问题变得简单，观察</p>
-<script type="math/tex; mode=display">
-A^T v+c</script><p>这是一个n维向量，记作$(w_1,w_2,\cdots,w_n)$，显然，如果</p>
+<h3 id="传输层-内核"><a href="#传输层-内核" class="headerlink" title="传输层(内核)"></a>传输层(内核)</h3><ol>
+<li>TCP采取机制保证数据包可靠传输给对方</li>
+<li>UDP只负责发送</li>
+<li>MSS：TCP最大报文段，TCP receiver需要将乱序报文段重组为完整应用层数据</li>
+<li><em><em><em><em>到</em></em>**进程</em></em>**的数据传输</li>
+</ol>
+<h3 id="网络层（内核，路由器）"><a href="#网络层（内核，路由器）" class="headerlink" title="网络层（内核，路由器）"></a>网络层（内核，路由器）</h3><ol>
+<li><em><em>端到端</em></em>到端**的传输，按照最大传输长度MTU限制划分IP报文</li>
+<li>如何区分不同端设备？$IP$地址=网络号+主机号，子网掩码标记了网络号长度</li>
+<li><em><em>路径</em></em><em><em>路径</em></em><em><em>路径</em></em>径**，路由器根据网络号转发数据包</li>
+</ol>
+<h3 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h3><ol>
+<li>IP报文基础上添加MAC Head，封装成Data Frame</li>
+<li>MAC Head包含sender和receiver的MAC地址，通过ARP获得MAC地址</li>
+</ol>
+<h2 id="How-Linux-receive-a-Network-package"><a href="#How-Linux-receive-a-Network-package" class="headerlink" title="How Linux receive a Network package"></a>How Linux receive a Network package</h2><p>同样采取分层结构，每层功能为</p>
 <ol>
-<li>$w_i\geq 0\to x_i = u$</li>
-<li>$w_i&lt;0\to x_i = l$</li>
+<li>应用层：提供应用程序(线程)</li>
+<li>传输层：提供端到端的通讯</li>
+<li>网络层：每个网络包封装、分片、路由转发</li>
+<li>网络接口：网络包在物理网络中传播(差错检测，MAC寻址)</li>
 </ol>
-<p>解记作</p>
-<script type="math/tex; mode=display">
-g(v) = -v^T v +l^T (A^T v +c)^+-u^T (A^T v+c)^-</script>
+<h3 id="Receive-a-package-From-OS-perspective"><a href="#Receive-a-package-From-OS-perspective" class="headerlink" title="Receive  a package From OS perspective"></a>Receive  a package From OS perspective</h3><ol>
+<li><p>触发中断：设备触发中断告知操作系统</p>
+</li>
+<li><p>避免中断导致的开销：NAPI机制(中断+轮询)，外设将数据包写入内存，随后触发硬件中断，调用中断处理程序</p>
+<ol>
+<li><p>网络接口层检查报文合法性，去掉head后调用对应的网络层协议处理函数</p>
+</li>
+<li><p>网络层负责判断数据包应该交给上层协议(端设备)还是转发(路由器)</p>
+</li>
+<li><p>传输层分析head，得到数据包的</p>
+<ol>
+<li>源地址</li>
+<li>源端口号</li>
+<li>目的地址</li>
+<li>目的端口号</li>
+</ol>
+<p>并找到目的端口号对应的socket线程，拷贝数据到socket缓冲区，发送给等待数据线程一个信号(将其从sleep队列中唤醒)</p>
+</li>
+<li><p>应用层将数据从socket缓冲区拷贝到应用层缓冲区</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>Send a package From OS perspective几乎和上面相反，创建socket同时内核会分配一块空间，拷贝待发送的数据到内核空间，交给传输层</p>
+<p>使用UDP和TCP区别在于，TCP中存在重传机制，导致需要实现保存内核区域的一个副本(因为其之后可能被释放)，UDP则不用</p>
+<h3 id="From-Memory-Copy-Perspective1"><a href="#From-Memory-Copy-Perspective1" class="headerlink" title="From Memory Copy Perspective1"></a>From Memory Copy Perspective1</h3><ol>
+<li>用户内存拷贝到内核内存</li>
+<li>TCP保存内核副本</li>
+<li>IP层发现数据需要分割成多个packet，将会再次拷贝为多个小的packet</li>
+</ol>
+
         
     
 
@@ -784,8 +591,8 @@ g(v) = -v^T v +l^T (A^T v +c)^+-u^T (A^T v+c)^-</script>
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://gaoustcer.github.io/2023/04/09/KKTcondition/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://gaoustcer.github.io/2023/04/09/KKTcondition/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://gaoustcer.github.io/2023/04/25/TCP-IP-Protocol/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/04/25/TCP-IP-Protocol/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -815,7 +622,7 @@ g(v) = -v^T v +l^T (A^T v +c)^+-u^T (A^T v+c)^-</script>
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/04/09/Quasi-function/" id="post_nav-newer" class="prev-content">
+        <a href="/2023/04/25/TCP-Receiver-CS144/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -829,7 +636,7 @@ g(v) = -v^T v +l^T (A^T v +c)^+-u^T (A^T v+c)^-</script>
 
     <!-- Next Nav -->
     
-        <a href="/2023/04/08/Diverse-Policy-in-RL/" id="post_nav-older" class="next-content">
+        <a href="/2023/04/18/Latent-Action-Space/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
