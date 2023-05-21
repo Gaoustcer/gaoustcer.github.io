@@ -48,7 +48,7 @@
     
     <title>
         
-            归档: 2023/4 | 
+            Objective File | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",system">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/archives/2023/04/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/05/21/Objective-File/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/archives/2023/04/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/05/21/Objective-File/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2023/4 | Hexo">
+    <meta property="og:title" content="Objective File | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="system"> 
 
+    
+        <meta property="article:published_time" content="Sun May 21 2023 15:39:51 GMT+0800">
+        <meta property="article:modified_time" content="Sun May 21 2023 15:40:46 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/archives/2023/04/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/05/21/Objective-File/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/05/21/Objective-File/index.html",
+    "headline": "Objective File",
+    "datePublished": "Sun May 21 2023 15:39:51 GMT+0800",
+    "dateModified": "Sun May 21 2023 15:40:46 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",system",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,602 +322,308 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Computer-System-Objective-File"><span class="post-toc-number">1.</span> <span class="post-toc-text">Computer System(Objective File)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#What-is-ELF-File"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">What is ELF File</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%8C%87%E4%BB%A4%E5%92%8C%E6%95%B0%E6%8D%AE"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">指令和数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%A6%E5%8F%B7"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">符号</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%A6%E5%8F%B7%E8%A1%A8"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">符号表</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%AF%E9%87%8D%E5%AE%9A%E4%BD%8D%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">可重定位目标文件格式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%AF%E6%89%A7%E8%A1%8C%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">可执行目标文件格式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Section-Header-Table"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Section Header Table</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/28/Variational-Inference/">Variational Inference</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/28/Variational-Inference/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 28, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/28/Offline-RL-TD3-BC/">Offline RL TD3+BC</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/28/Offline-RL-TD3-BC/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 28, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/25/TCP-Receiver-CS144/">TCP Receiver CS144</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/25/TCP-Receiver-CS144/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 25, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/25/TCP-IP-Protocol/">TCP-IP-Protocol</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/25/TCP-IP-Protocol/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 25, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/18/Latent-Action-Space/">Latent Action Space</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/18/Latent-Action-Space/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 18, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/18/LAPO/">LAPO</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/18/LAPO/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 18, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/18/GMM-EM-VI/">GMM EM VI</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/18/GMM-EM-VI/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 18, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/18/Batch-Constrain-Q-Learning/">Batch Constrain Q Learning</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/18/Batch-Constrain-Q-Learning/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 18, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/18/Offline-RL-Survey/">Offline RL Survey</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/18/Offline-RL-Survey/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 18, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/18/subspaceofpolicies/">subspaceofpolicies</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/18/subspaceofpolicies/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 18, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <span class="page-number current">1</span><a class="page-number" href="/archives/2023/04/page/2/">2</a><a class="page-number" href="/archives/2023/04/page/3/">3</a><a class="extend next" rel="next" href="/archives/2023/04/page/2/">&lt;button aria-label&#x3D;&quot;Next page&quot; class&#x3D;&quot;mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon&quot;&gt;&lt;i class&#x3D;&quot;material-icons&quot; role&#x3D;&quot;presentation&quot;&gt;arrow_forward&lt;&#x2F;i&gt;&lt;&#x2F;button&gt;</a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Objective File
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>5月 21, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/system/" rel="tag">system</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Objective File&url=http://gaoustcer.github.io/2023/05/21/Objective-File/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Objective File&url=http://gaoustcer.github.io/2023/05/21/Objective-File/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/05/21/Objective-File/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/05/21/Objective-File/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Computer-System-Objective-File"><a href="#Computer-System-Objective-File" class="headerlink" title="Computer System(Objective File)"></a>Computer System(<a target="_blank" rel="noopener" href="https://csstormq.github.io/blog/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87%E4%B9%8B%E9%93%BE%E6%8E%A5%EF%BC%882%EF%BC%89%EF%BC%9A%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6">Objective File</a>)</h1><p>目标文件是一个字节序列，有三种类型</p>
+<ol>
+<li>可重定位目标文件(.o file)，由汇编器生成<code>gcc -c</code></li>
+<li>可执行目标文件(a.out)，由链接器生成<code>gcc</code></li>
+<li>可共享目标文件(.so)，动态链接库文件<code>gcc -fPIC -shared</code></li>
+</ol>
+<p>ELF header包含一个字段描述目标文件类型</p>
+<h2 id="What-is-ELF-File"><a href="#What-is-ELF-File" class="headerlink" title="What is ELF File"></a>What is ELF File</h2><p>ELF保存了机器代码和对应的meta data以及链接器/加载器</p>
+<ol>
+<li>节(section)划分不同功能的二进制数据和代码</li>
+<li>段(segment)程序加载到内存的ELF文件单位，一个段包括一个以上的section，每个段具有读写/执行等属性</li>
+</ol>
+<h3 id="指令和数据"><a href="#指令和数据" class="headerlink" title="指令和数据"></a>指令和数据</h3><p>指令和数据存储在两个不同的segment，因为它们具有不同的属性，被映射到两个虚拟内存区域，同时提升程序局部性，在单程序多线程可以节省物理内存(动态链接)</p>
+<h3 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h3><p>链接的目的是找到引用符号的定义，本质上是将引用符号字符串替换为具体地址引用</p>
+<ol>
+<li>符号(变量/函数名称)</li>
+<li>符号值(地址)</li>
+</ol>
+<h3 id="符号表"><a href="#符号表" class="headerlink" title="符号表"></a>符号表</h3><p>符号的meta data存储为ELF文件的一个段<code>.symtab</code>，符号表定义了对应的符号名(name)/值(value)/类型(type)和绑定信息(bind)/大小(size)/符号所在的段(Ndx)</p>
+<p><img src="https://s2.loli.net/2023/05/21/RCvTIijrg18zDkX.png" alt="image-20230521151446651"></p>
+<p>绑定信息定义了符号的类型</p>
+<ol>
+<li>LOCAL 局部符号，对目标文件外部不可见</li>
+<li>GLOBAL 全局符号</li>
+<li>WEAK 弱引用</li>
+</ol>
+<p>如果符号定义在目标文件中，符号所在段表示段在段表中下标，对于特殊符号，它的Ndx定义为</p>
+<ol>
+<li>ABS 表示符号表示绝对的值(文件名)</li>
+<li>COM 未初始化的全局符号</li>
+<li>UND 符号未定义(外部引用)</li>
+</ol>
+<p>符号值表示函数/变量的定义(地址)，根据符号类型含义是</p>
+<ol>
+<li>目标文件中，符号不是<code>COMMON</code>类型，表示在段中偏移</li>
+<li>目标文件中，符号是<code>COMMON</code>类型，表示对齐属性</li>
+<li>可执行文件中，符号表示虚拟地址</li>
+</ol>
+<h2 id="可重定位目标文件格式"><a href="#可重定位目标文件格式" class="headerlink" title="可重定位目标文件格式"></a>可重定位目标文件格式</h2><p>可以用<code>objdump -d --section .sectionname filename</code>打印段信息/或者<code>readelf -p .sectionname filename</code></p>
+<ol>
+<li>ELF header 存储系统信息(字大小，字节顺序，目标文件类型，机器类型)</li>
+<li><code>.text</code> 编译程序的机器代码</li>
+<li><code>.rodata</code>制度数据/const全局变量/静态变量</li>
+<li><code>.data</code>已初始化且非0的静态变量和全局变量</li>
+<li><code>.bss</code>非初始化/初始化为0的全局变量和静态变量</li>
+<li><em><em>定义和引用</em></em><em><em>定义和引用</em></em><em><em>定义和引用</em></em>*的1全局变量</li>
+<li><code>.shstrtab</code>字符串表，定义所有section名称（可以看成一个大字符串，字符串中按照\0分开，Section Header Table中Name字段指定了每个段在strtab中的偏移)</li>
+</ol>
+<h2 id="可执行目标文件格式"><a href="#可执行目标文件格式" class="headerlink" title="可执行目标文件格式"></a>可执行目标文件格式</h2><p>可执行目标文件相比可重定位目标文件增加了一下段用于描述动态链接信息</p>
+<ol>
+<li><code>.interp</code>指向可执行文件需要的动态链接器的路径</li>
+<li><code>.init</code>定义<code>_init_函数，被函数初始化代码调用</code></li>
+<li>Section header table藐视目标文件所有section的位置和大小</li>
+</ol>
+<h2 id="Section-Header-Table"><a href="#Section-Header-Table" class="headerlink" title="Section Header Table"></a>Section Header Table</h2><p>Section Header Table定义在<code>/usr/include/elf.h</code>，type表明section类型，包括</p>
+<ol>
+<li>0 无效的section</li>
+<li>1 section包含程序定义的信息</li>
+<li>2 连接器符号表</li>
+<li>3 字符串表</li>
+</ol>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2023/05/21/Objective-File/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/05/21/Objective-File/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/05/21/NJU-OS-Parallel-Programming/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
