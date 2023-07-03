@@ -48,7 +48,7 @@
     
     <title>
         
-            about | 
+            Domain Adaptation RL | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Reinforcement Learning,Domain Adaptation RL">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/about/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/07/03/Domain-Adaptation-RL/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/about/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/07/03/Domain-Adaptation-RL/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="about | Hexo">
+    <meta property="og:title" content="Domain Adaptation RL | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Reinforcement Learning"> <meta property="og:article:tag" content="Domain Adaptation RL"> 
 
+    
+        <meta property="article:published_time" content="Mon Jul 03 2023 09:43:20 GMT+0800">
+        <meta property="article:modified_time" content="Mon Jul 03 2023 09:44:21 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/about/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/07/03/Domain-Adaptation-RL/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/07/03/Domain-Adaptation-RL/index.html",
+    "headline": "Domain Adaptation RL",
+    "datePublished": "Mon Jul 03 2023 09:43:20 GMT+0800",
+    "dateModified": "Mon Jul 03 2023 09:44:21 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Reinforcement Learning,Domain Adaptation RL",
+    "description": "",
+}
+</script>
 
 
     
@@ -291,6 +324,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Domain-Adaptation-RL"><span class="post-toc-number">1.</span> <span class="post-toc-text">Domain Adaptation RL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Reference"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Reference</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Domain-shift"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Domain shift</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Basic-Idea"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Basic Idea</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Online-Prototype-Alignment-for-Few-shot-Policy-Transfer"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Online Prototype Alignment for Few-shot Policy Transfer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Motivation"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">Motivation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Problem-Setting"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">Problem Setting</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%88%A4%E5%88%AB%E5%87%BD%E6%95%B0-Psi-IsUnseen"><span class="post-toc-number">1.4.2.1.</span> <span class="post-toc-text">学习判别函数$\Psi_{IsUnseen}$</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Online-Prototype-Alignment"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">Online Prototype Alignment</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Algorithm"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">Algorithm</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#OFF-DYNAMICS-REINFORCEMENT-LEARNING-TRAINING-FOR-TRANSFER-WITH-DOMAIN-CLASSIFIERS-DARC"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">OFF-DYNAMICS REINFORCEMENT LEARNING: TRAINING FOR TRANSFER WITH DOMAIN CLASSIFIERS(DARC)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Method"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">Method</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Design-of-the-reward"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">Design of the reward</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Domain-Adaptation-In-Reinforcement-Learning-Via-Latent-Unified-State-Representation-DARLA"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Domain Adaptation In Reinforcement Learning Via Latent Unified State Representation(DARLA)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Related-Work"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">Related Work</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%80%9F%E5%8A%A9Space-Embedding%E5%AE%9E%E7%8E%B0Domain-Adaptation%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B7%A5%E4%BD%9C"><span class="post-toc-number">1.6.1.1.</span> <span class="post-toc-text">借助Space Embedding实现Domain Adaptation的一些工作</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Method-LUSR"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">Method:LUSR</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AD%A6%E4%B9%A0%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%92%E5%88%86-LUSR"><span class="post-toc-number">1.6.2.1.</span> <span class="post-toc-text">学习状态空间的划分(LUSR)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#cycle-consistency"><span class="post-toc-number">1.6.2.1.1.</span> <span class="post-toc-text">cycle consistency</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%88%A9%E7%94%A8cycle-consistency%E5%AD%A6%E4%B9%A0%E5%85%B7%E6%9C%89domain-general%E7%9A%84%E7%89%B9%E5%BE%81%E8%A1%A8%E7%A4%BA"><span class="post-toc-number">1.6.2.1.2.</span> <span class="post-toc-text">利用cycle consistency学习具有domain general的特征表示</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -317,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                about
+                Domain Adaptation RL
             </p>
         </div>
 
@@ -336,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Gaoustcer</strong>
-        <span>4月 19, 2023</span>
+        <span>7月 03, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -354,6 +420,15 @@
 
     <!-- Tags (bookmark) -->
     
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Domain-Adaptation-RL/" rel="tag">Domain Adaptation RL</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a>
+    </ul>
+    
 
     <!-- Share -->
     
@@ -368,7 +443,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=about&url=http://gaoustcer.github.io/about/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Domain Adaptation RL&url=http://gaoustcer.github.io/2023/07/03/Domain-Adaptation-RL/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -377,7 +452,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=about&url=http://gaoustcer.github.io/about/index.html&via=Gaoustcer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Domain Adaptation RL&url=http://gaoustcer.github.io/2023/07/03/Domain-Adaptation-RL/index.html&via=Gaoustcer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -386,7 +461,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/07/03/Domain-Adaptation-RL/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -395,7 +470,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/07/03/Domain-Adaptation-RL/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -420,7 +495,138 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Some-Personal-Information"><a href="#Some-Personal-Information" class="headerlink" title="Some Personal Information"></a>Some Personal Information</h1><h2 id="Who-am-I"><a href="#Who-am-I" class="headerlink" title="Who am I"></a>Who am I</h2>
+        <h1 id="Domain-Adaptation-RL"><a href="#Domain-Adaptation-RL" class="headerlink" title="Domain Adaptation RL"></a>Domain Adaptation RL</h1><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://rail.eecs.berkeley.edu/deeprlcourse-fa20/static/slides/lec-21.pdf">Presentation</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/436487740">zhihu intro</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/449068529">NIPS 2023 paper</a></li>
+</ol>
+<h2 id="Domain-shift"><a href="#Domain-shift" class="headerlink" title="Domain shift"></a>Domain shift</h2><ol>
+<li>分布不一致</li>
+<li>相似数据的标签发生变化</li>
+</ol>
+<blockquote>
+<p>target domain上的标注很少，单纯在target domain上训练会导致过拟合</p>
+<blockquote>
+<p>Target Domain上的数据大多是无标注的 </p>
+</blockquote>
+</blockquote>
+<h2 id="Basic-Idea"><a href="#Basic-Idea" class="headerlink" title="Basic Idea"></a>Basic Idea</h2><p>训练Feature Extractor Network提取Source和Target中相似样本的特征，在新feature空间上训练分类器</p>
+<blockquote>
+<p>Feature Extractor+Label Predictor</p>
+</blockquote>
+<ol>
+<li>Source Domain利用标准分类器训练整个pipeline</li>
+<li>Target Domain上的样本和Source Domain映射到Feature Space上具有相似的分布(Domain Classifier)</li>
+</ol>
+<p>Domain Classifier以Feature Space上的样本作为输入，判断样本来自Source Domain还是Target Domain(类似GAN)</p>
+<p>Label Predictor需要根据Feature预测出Label，因此需要保证Feature Extractor将不同label的图片投影到不同feature(希望Domain Classifier对样本的分类尽量错误，但是个人认为应该用无法分辨更加合适)</p>
+<script type="math/tex; mode=display">
+Loss= L_{Label\ Predictor} - L_{Domain \ Classifier}</script><blockquote>
+<p>分布相似</p>
+<p><img src="https://s2.loli.net/2023/06/27/mtgVuewpzjcv4kb.png" alt="image-20230626110203644"></p>
+<p>最初的损失函数不能约束分布类似左图还是右图</p>
+</blockquote>
+<h2 id="Online-Prototype-Alignment-for-Few-shot-Policy-Transfer"><a href="#Online-Prototype-Alignment-for-Few-shot-Policy-Transfer" class="headerlink" title="Online Prototype Alignment for Few-shot Policy Transfer"></a>Online Prototype Alignment for Few-shot Policy Transfer</h2><h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>RL在进行Domain Adaptation时往往需要学习一个状态的映射函数，本文通过构造状态间的相似度函数计算状态的相似程度，以此为依据对Target Domain中未知状态进行探索。这种方法在target domain和source domain差别很大的情况下效果很好，并且需要更少的source domain中的样本</p>
+<h3 id="Problem-Setting"><a href="#Problem-Setting" class="headerlink" title="Problem Setting"></a>Problem Setting</h3><p>强化学习的状态空间由多个object的o组成，记作</p>
+<script type="math/tex; mode=display">
+S = \prod_{i=1}^N O_i</script><p>每个object有一个标签$o^c$，希望学习到object到prototype</p>
+<script type="math/tex; mode=display">
+O\to P_{seen}\in {1,2,\cdots,C}</script><p><em><em>功能</em></em><em><em>功能</em></em><em><em>功能</em></em><em><em>功能</em></em><em><em>功能</em></em><em><em>功能</em></em><em><em>功能</em></em><em><em>功能</em></em><em><em>功能</em></em>*</p>
+<p>对于Source Domain中的object，它的prototype就是$o^c$，记作</p>
+<script type="math/tex; mode=display">
+f_{proto|S(o)} = o^c</script><p>对于Target Domain中的object，如何预测不在Source Domain中的object对应的prototype标签是解决问题的关键</p>
+<h4 id="学习判别函数-Psi-IsUnseen"><a href="#学习判别函数-Psi-IsUnseen" class="headerlink" title="学习判别函数$\Psi_{IsUnseen}$"></a>学习判别函数$\Psi_{IsUnseen}$</h4><p>该算子用于判断一个object是否在Source Domain中出现，基本思想是构造一个Encoder-Decoder，用Source Domain中的object送入其中利用Reconstruction Loss训练，这样第一种object映射为</p>
+<script type="math/tex; mode=display">
+f_{ND}(o) =
+\left\{\begin{aligned}
+&f_{proto|S}(o),not\ \ \Psi_{IsUnseen}(o) \\
+&\phi(o^c),if \ \Psi_{IsUnseen}(o) 
+\end{aligned}
+\right.</script><p>为了获取位置物体的功能，函数$\phi$将物体unseen object根据它的类别标签$o^c$映射到一个新的Prototype集合中，这个Prototype集合和Seen物品中的Prototype集合不相交，记作</p>
+<script type="math/tex; mode=display">
+\phi:o^c\to \{C+1,\cdots,2C \}</script><p>无需求解真正的映射，只需知道Unseen集合中物体的Prototype需要被探索得到（Few-Shot学习的目标）</p>
+<h3 id="Online-Prototype-Alignment"><a href="#Online-Prototype-Alignment" class="headerlink" title="Online Prototype Alignment"></a>Online Prototype Alignment</h3><p>设计与Target Domain中Unseen Object交互的探索策略$\pi_{exp}$，注意这个策略在train阶段设计，因此无法和Target Domain中物体交互。在每个训练episode开始时人为设计一种映射，首先随机选择seen object中的一个子集$I\subseteq P_{seen}$，规定映射为</p>
+<script type="math/tex; mode=display">
+f_{I,\psi}(o) =\left\{
+\begin{aligned}
+&o ^p,if \ o^p\notin I\\
+& \psi(o^p),if\ o^p\in I
+\end{aligned}
+\right.</script><p>$\psi$是一个随机映射，假定将Prototype $o^p$映射为</p>
+<script type="math/tex; mode=display">
+o^p\to \{C+1,C+2,\cdots,C+|I|\}</script><p>在Source Domain中的探索策略$\pi_{exp}$由Source Domain上的交互和$f_{I,\psi}$一起训练得到，应该能通过$\pi_{exp}$域环境交互的信息推断出I中object的prototype，推断模型被记作$q_\theta$，训练的目标是最大化互信息</p>
+<p><img src="https://s2.loli.net/2023/06/27/8eLUiDaZuztsXC2.png" alt="image-20230627143425465"></p>
+<p>实际上是通过将$\frac{q_\theta(I^\prime|\tau_{:t+1})}{q_\theta(I^\prime|\tau_{:t})}$作为启发式奖励的一部分用于PPO得到的结果，这样在Source Domain上预训练得到的结果将会更好地鼓励policy探索unseen object的功能</p>
+<blockquote>
+<p>为何要选择随机映射？映射的随机性会不会对object prototype判别产生误导？这两个映射的有何区别？</p>
+<blockquote>
+<p>Answer 主要基于鲁棒性考虑</p>
+</blockquote>
+</blockquote>
+<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><p><img src="https://s2.loli.net/2023/06/28/6YOBuzGZV3jUQJS.png" alt="image-20230628101454984"></p>
+<p>算法总体上分成三步</p>
+<ol>
+<li>基于Source Domain上的在线策略学习Seen分类器</li>
+</ol>
+<h2 id="OFF-DYNAMICS-REINFORCEMENT-LEARNING-TRAINING-FOR-TRANSFER-WITH-DOMAIN-CLASSIFIERS-DARC"><a href="#OFF-DYNAMICS-REINFORCEMENT-LEARNING-TRAINING-FOR-TRANSFER-WITH-DOMAIN-CLASSIFIERS-DARC" class="headerlink" title="OFF-DYNAMICS REINFORCEMENT LEARNING: TRAINING FOR TRANSFER WITH DOMAIN CLASSIFIERS(DARC)"></a><strong>OFF-DYNAMICS REINFORCEMENT LEARNING: TRAINING FOR TRANSFER WITH DOMAIN CLASSIFIERS</strong>(DARC)</h2><p>本文通过修正奖励函数以弥补Source Domain和Target Domain上的状态迁移的差异弥补dynamic状态迁移的差异</p>
+<blockquote>
+<p>基本假设</p>
+<script type="math/tex; mode=display">
+p_{target}(s_{t+1}|s_t,a_t)>0\Rightarrow p_{source}(s_{t+1}|s_t,a_t)>0</script><p>只要在Target Domain中存在的状态转换，在Source Domain中必然可能发生</p>
+<blockquote>
+<p>这个假设的意义是什么？如果没有这个假设会出现什么情况？</p>
+</blockquote>
+</blockquote>
+<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><p>定义Target Domain上Trajectory的分布</p>
+<script type="math/tex; mode=display">
+p(\tau)\propto p_1(s_1)(\prod_t p_{target}(s_{t+1}|s_t,a_t))\exp{\sum_t r(s_t,a_t)}</script><p>Source Domain上Trajectory分布定义为</p>
+<script type="math/tex; mode=display">
+q(\tau) = p_1(s_1) \prod_t p_{source}(s_{t+1}|s_t,a_t)\pi_\theta(a_t|s_t)</script><p>核心思想是：我们希望学习到的奖励能够鼓励Source Domain上的探索策略，当产生的轨迹和Target Domain上的轨迹分布相似时给予其高奖励</p>
+<h3 id="Design-of-the-reward"><a href="#Design-of-the-reward" class="headerlink" title="Design of the reward"></a>Design of the reward</h3><p>通过最小化奖励之间的KL散度学习policy，损失函数定义为</p>
+<script type="math/tex; mode=display">
+-E_{p_{source}}[\sum_t r(s_t,a_t)+H_\pi(a_t|s_t)+\Delta r(s_{t+1},s_t,a_t)]</script><p>辅助奖励定义为</p>
+<script type="math/tex; mode=display">
+\Delta r(s_{t+1},s_t,a_t) = \log p(s_{t+1}|s_t,a_t) - \log q(s_{t+1}|s_t,a_t)</script><p>为了求解Source/Target上的状态转移概率以求出$\Delta r$，设计一个分类器，Transition发生的概率和分类器概率相关</p>
+<script type="math/tex; mode=display">
+p_{target}(s_{t+1}|s_t,a_t)\propto p(target|s_t,a_t,s_{t+1})/p(s_t,a_t|target)\\</script><blockquote>
+<p>有点类似经典的Domain Classifier思想</p>
+</blockquote>
+<p>分别用两个分类器$\theta_{SAS},\theta_{SA}$预测两个概率，最终策略在Source中探索的Dynamic近似于Target中的Dynamic</p>
+<h2 id="Domain-Adaptation-In-Reinforcement-Learning-Via-Latent-Unified-State-Representation-DARLA"><a href="#Domain-Adaptation-In-Reinforcement-Learning-Via-Latent-Unified-State-Representation-DARLA" class="headerlink" title="Domain Adaptation In Reinforcement Learning Via Latent Unified State Representation(DARLA)"></a>Domain Adaptation In Reinforcement Learning Via Latent Unified State Representation(DARLA)</h2><h3 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h3><ol>
+<li>Policy Generalization vs State Representation Generalization<ol>
+<li>前者需要多个不同的source domain</li>
+</ol>
+</li>
+<li>visual domain adaptation任务本质上的思想是采取类似于image翻译的方法将state逐像素映射到target domain上，建立这种映射的方法可以通过自编码器和对抗生成模型，但是逐个状态翻译不适用于实时任务</li>
+<li>本文将state space映射到latent space实际上是VAE的中间层embedding</li>
+</ol>
+<h4 id="借助Space-Embedding实现Domain-Adaptation的一些工作"><a href="#借助Space-Embedding实现Domain-Adaptation的一些工作" class="headerlink" title="借助Space Embedding实现Domain Adaptation的一些工作"></a>借助Space Embedding实现Domain Adaptation的一些工作</h4><ol>
+<li>DARLA 借助$\beta-VAE$将Latent Embedding和Decoder解耦，并基于DAE的重建损失训练</li>
+</ol>
+<h3 id="Method-LUSR"><a href="#Method-LUSR" class="headerlink" title="Method:LUSR"></a>Method:LUSR</h3><p>状态空间被定义为raw observation space$S^o$和Latent state space $S^z$，后者记作</p>
+<script type="math/tex; mode=display">
+S^z = (\hat{S^z},\overline{S^z})(domain\ specific/general)</script><p>对于Source/Target Domain，假定</p>
+<script type="math/tex; mode=display">
+\overline{S^z_S} = \overline {S^z_T}</script><blockquote>
+<p>这是一个insight，意味着本文尝试对latent space做一个划分，以得到领域专用和领域通用的状态表征，后者对于泛化具有更强的意义</p>
+</blockquote>
+<p>进一步假设，状态转移和奖励函数只和$\overline {S^z}$相关</p>
+<h4 id="学习状态空间的划分-LUSR"><a href="#学习状态空间的划分-LUSR" class="headerlink" title="学习状态空间的划分(LUSR)"></a>学习状态空间的划分(LUSR)</h4><p>记一个函数$\mathcal{F}$将state space映射到domain general space，先介绍一下cycle consistency</p>
+<h5 id="cycle-consistency"><a href="#cycle-consistency" class="headerlink" title="cycle consistency"></a>cycle consistency</h5><p><em><em>方向不变性</em></em><em><em>方向不变性</em></em><em><em>方向不变性</em></em><em><em>方向不变性</em></em>**，一旦训练好，encoder-decoder和decoder-encoder都能恢复编码段输入的数据，假设输入state $s$，中间状态记作$\hat s,\overline s$，则两个过程为</p>
+<script type="math/tex; mode=display">
+Dec(Enc(s)) = s^\prime\to s\approx s\\
+Enc(Dec(\hat s,\overline s)) = (\hat s^\prime,\overline s^\prime)\to \hat s\approx\hat s^\prime,\overline s\approx\overline s^\prime</script><h5 id="利用cycle-consistency学习具有domain-general的特征表示"><a href="#利用cycle-consistency学习具有domain-general的特征表示" class="headerlink" title="利用cycle consistency学习具有domain general的特征表示"></a>利用cycle consistency学习具有domain general的特征表示</h5><p><em><em>交换两个latent embedding的specific部分</em></em><em><em>交换两个latent embedding的specific部分</em></em><em><em>交换两个latent embedding的specific部分</em></em><em><em>交换两个latent embedding的specific部分</em></em><em><em>交换两个latent embedding的specific部分</em></em>specific部分**</p>
+<script type="math/tex; mode=display">
+Dec(\hat {s_2^z},\overline{s_1^z}) \approx s_1^o\\
+Dec(\hat {s_1^z} ,\overline{s_2^z})\approx  s_2^o</script><p>损失函数分成两个部分</p>
+<ol>
+<li><em>随机生成</em><em>随机生成</em><em>随机生成</em>成*Domain specific部分所得到的重构损失以及Domain general变量和先验分布之间的KL散度</li>
+<li>reverse：交换Domain specific embedding从Decoder端进行state重构带来的误差</li>
+</ol>
+<blockquote>
+<p>为什么这样就可以保证domain general被学出来（这样有些类似于仅仅采用正样本的对比学习，是否会导致学习domain  general的网络坍塌成平凡网络</p>
+</blockquote>
+
         
     
 
@@ -438,8 +644,8 @@
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://gaoustcer.github.io/about/index.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://gaoustcer.github.io/about/index.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://gaoustcer.github.io/2023/07/03/Domain-Adaptation-RL/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/07/03/Domain-Adaptation-RL/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -474,6 +680,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2023/06/19/No-negative-sample-Contrast-Learning/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -653,6 +867,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
