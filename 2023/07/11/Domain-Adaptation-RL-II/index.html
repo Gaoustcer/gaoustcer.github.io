@@ -48,7 +48,7 @@
     
     <title>
         
-            Offline RL TD3+BC | 
+            Domain Adaptation RL(II) | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Paper Reading,Offline RL">
+    <meta name="keywords" content=",Reinforcement Learning,Transfer Learning,Domain Adaptation">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/28/Offline-RL-TD3-BC/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/07/11/Domain-Adaptation-RL-II/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,16 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/28/Offline-RL-TD3-BC/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/07/11/Domain-Adaptation-RL-II/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Offline RL TD3+BC | Hexo">
+    <meta property="og:title" content="Domain Adaptation RL(II) | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Paper Reading"> <meta property="og:article:tag" content="Offline RL"> 
+    <meta property="og:article:tag" content="Reinforcement Learning"> <meta property="og:article:tag" content="Transfer Learning"> <meta property="og:article:tag" content="Domain Adaptation"> 
 
     
-        <meta property="article:published_time" content="Fri Apr 28 2023 11:50:56 GMT+0800">
-        <meta property="article:modified_time" content="Fri Apr 28 2023 11:52:06 GMT+0800">
+        <meta property="article:published_time" content="Tue Jul 11 2023 18:10:21 GMT+0800">
+        <meta property="article:modified_time" content="Tue Jul 11 2023 18:11:39 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/28/Offline-RL-TD3-BC/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/07/11/Domain-Adaptation-RL-II/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/28/Offline-RL-TD3-BC/index.html",
-    "headline": "Offline RL TD3+BC",
-    "datePublished": "Fri Apr 28 2023 11:50:56 GMT+0800",
-    "dateModified": "Fri Apr 28 2023 11:52:06 GMT+0800",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/07/11/Domain-Adaptation-RL-II/index.html",
+    "headline": "Domain Adaptation RL(II)",
+    "datePublished": "Tue Jul 11 2023 18:10:21 GMT+0800",
+    "dateModified": "Tue Jul 11 2023 18:11:39 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Gaoustcer",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.svg"
         }
     },
-    "keywords": ",Paper Reading,Offline RL",
+    "keywords": ",Reinforcement Learning,Transfer Learning,Domain Adaptation",
     "description": "",
 }
 </script>
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Offline-RL-TD3-BC"><span class="post-toc-number">1.</span> <span class="post-toc-text">Offline RL(TD3+BC)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Review-TD3"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Review(TD3)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%BB%B6%E8%BF%9F%E6%9B%B4%E6%96%B0"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">延迟更新</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#target-policy-smoothing-regularization"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">target policy smoothing regularization</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%A2%9E%E5%8A%A0Batch-Constrain"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">增加Batch Constrain</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Paper-Reading-Domain-Adaptation-in-RL-II"><span class="post-toc-number">1.</span> <span class="post-toc-text">Paper Reading(Domain Adaptation in RL,II)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RL-CycleGAN"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">RL-CycleGAN</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Idea"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Idea</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9F%BA%E4%BA%8ECycle-GAN%E8%BF%9B%E8%A1%8CQ%E5%AD%A6%E4%B9%A0"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">基于Cycle-GAN进行Q学习</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CURL-Contrastive-Unsupervised-Representations-for-RL"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">CURL(Contrastive Unsupervised Representations for RL)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Background"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Background</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#SAC"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">SAC</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Contrastive-Learning"><span class="post-toc-number">1.2.1.2.</span> <span class="post-toc-text">Contrastive Learning</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Method"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Method</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%88%BB%E7%94%BB%E5%90%91%E9%87%8F%E7%9B%B8%E5%85%B3%E6%80%A7"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">刻画向量相关性</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AE%97%E6%B3%95"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DARLA-Imporving-Zero-Shot-Transfer-in-Reinforcement-Learning"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">DARLA(Imporving Zero-Shot Transfer in Reinforcement Learning)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Solved-Problem"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Solved Problem</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%98%AF%E5%90%A6%E6%98%AF%E6%96%B0%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">是否是新问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%B9%8B%E5%89%8D%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E8%B6%B3"><span class="post-toc-number">1.4.1.1.</span> <span class="post-toc-text">之前的解决方案有什么不足</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9C%AC%E6%96%87%E9%92%88%E5%AF%B9%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%8F%90%E5%87%BA%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF"><span class="post-toc-number">1.4.1.2.</span> <span class="post-toc-text">本文针对出现的问题提出的解决思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9C%AC%E6%96%87problem-setting%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%81%87%E8%AE%BE"><span class="post-toc-number">1.4.1.3.</span> <span class="post-toc-text">本文problem setting的基本假设</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Learning-Transfer-Disentangled-Representation"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">Learning Transfer(Disentangled) Representation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BC%98%E5%8C%96%EF%BC%9ASimilarity-Loss%E4%BB%A3%E6%9B%BFLog-Likelihood"><span class="post-toc-number">1.4.2.1.</span> <span class="post-toc-text">优化：Similarity Loss代替Log Likelihood</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D%EF%BC%9A%E9%99%8D%E5%99%AA%E8%87%AA%E7%BC%96%E7%A0%81%E5%99%A8-DAE"><span class="post-toc-number">1.4.2.1.1.</span> <span class="post-toc-text">背景介绍：降噪自编码器(DAE)</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%80%9F%E5%8A%A9pretrained-DAE%E4%BF%AE%E6%94%B9%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.4.2.1.2.</span> <span class="post-toc-text">借助pretrained DAE修改损失函数</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -383,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                Offline RL TD3+BC
+                Domain Adaptation RL(II)
             </p>
         </div>
 
@@ -402,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Gaoustcer</strong>
-        <span>4月 28, 2023</span>
+        <span>7月 11, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -426,7 +426,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Offline-RL/" rel="tag">Offline RL</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Paper-Reading/" rel="tag">Paper Reading</a>
+        <a class="post_tag-none-link" href="/tags/Domain-Adaptation/" rel="tag">Domain Adaptation</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Transfer-Learning/" rel="tag">Transfer Learning</a>
     </ul>
     
 
@@ -443,7 +443,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Offline RL TD3+BC&url=http://gaoustcer.github.io/2023/04/28/Offline-RL-TD3-BC/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Domain Adaptation RL(II)&url=http://gaoustcer.github.io/2023/07/11/Domain-Adaptation-RL-II/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -452,7 +452,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Offline RL TD3+BC&url=http://gaoustcer.github.io/2023/04/28/Offline-RL-TD3-BC/index.html&via=Gaoustcer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Domain Adaptation RL(II)&url=http://gaoustcer.github.io/2023/07/11/Domain-Adaptation-RL-II/index.html&via=Gaoustcer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/28/Offline-RL-TD3-BC/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/07/11/Domain-Adaptation-RL-II/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/28/Offline-RL-TD3-BC/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/07/11/Domain-Adaptation-RL-II/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,29 +495,102 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Offline-RL-TD3-BC"><a href="#Offline-RL-TD3-BC" class="headerlink" title="Offline RL(TD3+BC)"></a>Offline RL(TD3+BC)</h1><p>基于TD3添加Batch Constrain约束项</p>
-<h2 id="Review-TD3"><a href="#Review-TD3" class="headerlink" title="Review(TD3)"></a>Review(TD3)</h2><p>解决DQN的高估问题的一个思路是引入Double DQN，用两个同构网络估计Q值并取较小者，这样实现Q值的Conservative Estimation</p>
+        <h1 id="Paper-Reading-Domain-Adaptation-in-RL-II"><a href="#Paper-Reading-Domain-Adaptation-in-RL-II" class="headerlink" title="Paper Reading(Domain Adaptation in RL,II)"></a>Paper Reading(Domain Adaptation in RL,II)</h1><h2 id="RL-CycleGAN"><a href="#RL-CycleGAN" class="headerlink" title="RL-CycleGAN"></a>RL-CycleGAN</h2><p>本文解决机器人控制中常见的SimtoReal痛点，具体来说在模拟环境中学到的policy并不能在真实环境中很好Work</p>
+<h3 id="Idea"><a href="#Idea" class="headerlink" title="Idea"></a>Idea</h3><p>借助CycleGAN实现不同Domain上image的映射</p>
 <script type="math/tex; mode=display">
-Q(s,a) = \min_{i=1,2} Q_{\theta_i}(s,a)</script><p>将这个思路引入DDPG就是TD3，这样TD3总共包括三个网络</p>
+(x_i)_{i=1}^N \in X,(y_i)_{i=1}^M \in Y</script><p>构建两个生成器</p>
+<script type="math/tex; mode=display">
+Sim2Real\ G:X\to Y\\
+Real2Sim\ F :Y\to X</script><p>两个判别器$D_X,D_Y$用于对抗学习Sim2Real</p>
+<script type="math/tex; mode=display">
+L_{GAN}(G,D_Y,X,Y) = E_{y|Y}[\log D_{Y}(y)] + E_{x|X}[\log (1 - D_Y(G(x)))]</script><p>训练Real2Sim类似，这里利用了生成网络的Cycle consistency，即Well Trained生成器应该满足</p>
+<script type="math/tex; mode=display">
+F(G(x))\approx x\\
+G(F(y))\approx y</script><p>定义Cycle Loss</p>
+<script type="math/tex; mode=display">
+L_{cyc}(G,F) = E_{x|D_{sim}}d(F(G(x),x)+E_{y|D_{real}} d(G(F(y)),y)</script><h3 id="基于Cycle-GAN进行Q学习"><a href="#基于Cycle-GAN进行Q学习" class="headerlink" title="基于Cycle-GAN进行Q学习"></a>基于Cycle-GAN进行Q学习</h3><p>对于图像任务，s是输入图像，a是采取的动作，目标是最小化TD error</p>
+<script type="math/tex; mode=display">
+d(Q(s,a),r + \gamma V(s^\prime))</script><p>构建两个Q network，$Q_{sim},Q_{real}$分别将仿真输入和真实输入作为state，这样对于6个state</p>
+<script type="math/tex; mode=display">
+x,G(x),F(G(x))\\
+y,F(y),G(F(y))</script><p>计算6个Q函数</p>
+<p><img src="https://s2.loli.net/2023/07/04/NP3caQk5bIg1FJz.png" alt="image-20230704182658475"></p>
+<p>定义RL Scene consistency(state和state变换后的Q值之差尽量小)</p>
+<p><img src="https://s2.loli.net/2023/07/04/vto5jQu6bp38Z1g.png" alt="image-20230704182903362"></p>
+<p>损失函数分成</p>
+<p><img src="https://s2.loli.net/2023/07/04/nCahucpYeHVXz79.png" alt="image-20230704183008052"></p>
 <ol>
-<li>Actor Net/Target Actor Net</li>
-<li>Critic Net/Target Critic Net(各两个)</li>
+<li>$L_{GAN}$分类器和生成器对抗生成损失函数</li>
+<li><em><em>恢复输入图片</em></em><em><em>恢复输入图片</em></em><em>恢复输入图片*</em></li>
+<li>$L_{RL-scene}$不同编码器输入sim domain和对应的real domain的结果应该相似</li>
+<li>$L_{RL}$ TD Error</li>
 </ol>
-<h3 id="延迟更新"><a href="#延迟更新" class="headerlink" title="延迟更新"></a>延迟更新</h3><p>Actor更新相比Critic延迟更新，即Critic更新若干Step后再更新Actor(避免Q值不稳定导致Actor不稳定)</p>
-<blockquote>
-<p>这个问题我之前思考过，严格意义上Q拟合的不是optimal value function而是policy value function，频繁更改policy显然会对Q值估计缠身不过影响</p>
-</blockquote>
-<h3 id="target-policy-smoothing-regularization"><a href="#target-policy-smoothing-regularization" class="headerlink" title="target policy smoothing regularization"></a>target policy smoothing regularization</h3><p>再action上增加扰动，用一个邻域而不是一个点估计Q</p>
-<h2 id="增加Batch-Constrain"><a href="#增加Batch-Constrain" class="headerlink" title="增加Batch Constrain"></a>增加Batch Constrain</h2><p>再Q值梯度上升中添加正则项</p>
+<h2 id="CURL-Contrastive-Unsupervised-Representations-for-RL"><a href="#CURL-Contrastive-Unsupervised-Representations-for-RL" class="headerlink" title="CURL(Contrastive Unsupervised Representations for RL)"></a>CURL(Contrastive Unsupervised Representations for RL)</h2><p>本文解决的问题是如何将高维图片输入作为控制信号的同时保证sample-efficiency(一般而言直接用环境的物理参数学习更加高效)，这是因为需要额外增加一个net去除pixel中和控制无关的部分</p>
+<p>本文解决sample-inefficiency是通过设置合适的代理任务提取state特征，通过在新特征上的强化学习提高sample-efficiency，目前解决这个问题主要有两种思路</p>
+<ol>
+<li>学习state的好的representation，在新的特征空间上做控制</li>
+<li>学习好的world-model，在world-model上采样避免直接和环境交互</li>
+</ol>
+<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><h4 id="SAC"><a href="#SAC" class="headerlink" title="SAC"></a>SAC</h4><p>sac在获取最大奖励的同时最大化策略熵，训练Q函数loss函数为</p>
 <script type="math/tex; mode=display">
-\arg\max_\pi E_{(s,a)\in D}[\lambda Q(s,\pi(s)) - (\pi(s) - a)^2]</script><p>类似BCQ用生成模型拟合数据集，这里为了减少OOD error使得当前策略和数据集中行为更相似</p>
-<blockquote>
-<p>如何扩展到离散动作空间？离散动作空间下Actor输出动作空间上的概率分布，这样对于k个动作上的k个分布</p>
+L(\phi_i,B) = E_{t|B}[(Q_{\phi_i}(o,a) - (r+\gamma(1-d)\Tau))]\\
+\Tau = (\min_{i=1,2} Q_{\phi_i}(o^\prime,a^\prime) -\alpha \log \pi_\psi(a^\prime|o^\prime))</script><p>Policy Iteration实际上是最大化</p>
 <script type="math/tex; mode=display">
-p_1,p_2,\cdots,p_k</script><p>计算Q值采取加权</p>
+\max L(\phi) = E_{a\in \pi}[Q^\pi(o,a) - \alpha \log \pi_\psi(a|o)]</script><h4 id="Contrastive-Learning"><a href="#Contrastive-Learning" class="headerlink" title="Contrastive Learning"></a>Contrastive Learning</h4><p>给定query q和key的集合</p>
 <script type="math/tex; mode=display">
-Q(s,a) = \sum_i p_iQ(s,a_i)</script><p>策略约束使用NLL Loss，即认为数据集是一个deterministic的策略</p>
-</blockquote>
+K = \{k_0,k_1,\cdots \}</script><p>给定K的划分</p>
+<script type="math/tex; mode=display">
+k_+,K/\ \{k_+\}</script><p>希望最小化正样本之间的距离同时最大化负样本距离</p>
+<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><p><img src="https://s2.loli.net/2023/07/05/Lecjy2ARpIS4m5z.png" alt="image-20230705172455162"></p>
+<p>通过data argumentation构建对比学习正负样本(key/query)，基于学习到的embedding构建对比损失函数和实现强化学习控制</p>
+<h4 id="刻画向量相关性"><a href="#刻画向量相关性" class="headerlink" title="刻画向量相关性"></a>刻画向量相关性</h4><p>通过内积运算刻画相似度</p>
+<script type="math/tex; mode=display">
+sim(q,k) = q^T W k</script><p>W是一个可学习矩阵</p>
+<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>给定一个batch的图片x，先通过两种方式进行数据增强</p>
+<script type="math/tex; mode=display">
+x_q = aug(x)\\
+x_k = aug(x)</script><p>通过两个网络进行特征提取</p>
+<script type="math/tex; mode=display">
+z_q = f_q(x_q)\\
+z_k = f_k(x_k)</script><p>实际上两个网络结构完全相同，$f_k$依赖于$f_q$进行动量更新，计算$z_q$和$z_k$的相似度</p>
+<script type="math/tex; mode=display">
+sim(z_q,z_k) = z_q^T W z_k</script><p>损失函数infoNCE(Cross Entropy Loss)</p>
+<script type="math/tex; mode=display">
+L_q = \log \frac{\exp{(q^T W k_+)}}{\exp(q^T W k_+) + \sum_{i=0}^{K-1}\exp{(q^T W k_i)}}</script><p>借助两阶段的训练任务(对比学习预训练+SAC强化学习)，可以显著提高基于</p>
+<h2 id="DARLA-Imporving-Zero-Shot-Transfer-in-Reinforcement-Learning"><a href="#DARLA-Imporving-Zero-Shot-Transfer-in-Reinforcement-Learning" class="headerlink" title="DARLA(Imporving Zero-Shot Transfer in Reinforcement Learning)"></a>DARLA(Imporving Zero-Shot Transfer in Reinforcement Learning)</h2><h2 id="Solved-Problem"><a href="#Solved-Problem" class="headerlink" title="Solved Problem"></a>Solved Problem</h2><p>对训练阶段没见过的Environment做zero-shot Transfer</p>
+<h3 id="是否是新问题"><a href="#是否是新问题" class="headerlink" title="是否是新问题"></a>是否是新问题</h3><p>不是，之前的解决方法是通过某种方式学习到不同domain observation的好的表示</p>
+<h4 id="之前的解决方案有什么不足"><a href="#之前的解决方案有什么不足" class="headerlink" title="之前的解决方案有什么不足"></a>之前的解决方案有什么不足</h4><p>Target Domain上的数据难以获得，如何不通过和Domain Environment做交互实现好的Policy Transfer</p>
+<h4 id="本文针对出现的问题提出的解决思路"><a href="#本文针对出现的问题提出的解决思路" class="headerlink" title="本文针对出现的问题提出的解决思路"></a>本文针对出现的问题提出的解决思路</h4><p>针对state representation学习任务无关/domain无关的表示，本文将学习分为三个步骤</p>
+<ol>
+<li>learning to see(避免学习到环境的过拟合表示)</li>
+<li>learning to act(利用过拟合表示学习robust策略)</li>
+<li>transfer(基于Target Domain直接做策略迁移)</li>
+</ol>
+<h4 id="本文problem-setting的基本假设"><a href="#本文problem-setting的基本假设" class="headerlink" title="本文problem setting的基本假设"></a>本文problem setting的基本假设</h4><p>两个MDP</p>
+<ol>
+<li>$S_S\neq S_T$状态空间相同</li>
+<li>共享动作空间，状态转移和奖励函数</li>
+</ol>
+<p>记号</p>
+<ol>
+<li>source/target domain MDP $D_S,D_T$</li>
+<li>observation space $S^o$,latent observation space $S^z$，前者根据domain的不同记作$S_i^o$</li>
+<li>unsupervised learning mapping function $\mathcal F_U$</li>
+</ol>
+<h3 id="Learning-Transfer-Disentangled-Representation"><a href="#Learning-Transfer-Disentangled-Representation" class="headerlink" title="Learning Transfer(Disentangled) Representation"></a>Learning Transfer(Disentangled) Representation</h3><p>DARLA使用$\beta-VAE$学习好的环境表征。$\beta-VAE$本质上是在VAE基础上添加了一个系数$\beta$以平衡重建误差和分布误差</p>
+<h4 id="优化：Similarity-Loss代替Log-Likelihood"><a href="#优化：Similarity-Loss代替Log-Likelihood" class="headerlink" title="优化：Similarity Loss代替Log Likelihood"></a>优化：Similarity Loss代替Log Likelihood</h4><p>很难在整个pixel空间计算重构图像的Log Likelihood</p>
+<h5 id="背景介绍：降噪自编码器-DAE"><a href="#背景介绍：降噪自编码器-DAE" class="headerlink" title="背景介绍：降噪自编码器(DAE)"></a>背景介绍：降噪自编码器(DAE)</h5><p>传统的encoder-decoder假定数据是好的，通过这种方式容易导致过拟合。DAE希望从带随机噪声的输入中学习，以期望提升模型的鲁棒性和泛化能力</p>
+<p>DAE方法可以概括为在输入数据上加噪声，噪声有两类</p>
+<ol>
+<li>满足某种随机分布的噪声</li>
+<li>随机将输入中的部分tensor置为0(dropout)</li>
+</ol>
+<h5 id="借助pretrained-DAE修改损失函数"><a href="#借助pretrained-DAE修改损失函数" class="headerlink" title="借助pretrained DAE修改损失函数"></a>借助pretrained DAE修改损失函数</h5><p>作者先pretrain一个DAE，记作</p>
+<script type="math/tex; mode=display">
+J:\R^{W\times H\times C}\to \R^N</script><p>因为DAE的特性，这个pretrain model具有一定的泛化能力，基于这个特点，作者定义重构误差</p>
+<script type="math/tex; mode=display">
+x\to z\to \hat x(reconstruct)\\
+E_{q_\phi(z|x)}\parallel J(\hat x) - J(x)\parallel_2^2</script><p>重构的图片应该和输入具有相似的Embedding(有一些对比学习的味道)</p>
 
         
     
@@ -536,8 +609,8 @@ Q(s,a) = \sum_i p_iQ(s,a_i)</script><p>策略约束使用NLL Loss，即认为数
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://gaoustcer.github.io/2023/04/28/Offline-RL-TD3-BC/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://gaoustcer.github.io/2023/04/28/Offline-RL-TD3-BC/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://gaoustcer.github.io/2023/07/11/Domain-Adaptation-RL-II/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/07/11/Domain-Adaptation-RL-II/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -567,21 +640,13 @@ Q(s,a) = \sum_i p_iQ(s,a_i)</script><p>策略约束使用NLL Loss，即认为数
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/04/28/Variational-Inference/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2023/04/25/TCP-Receiver-CS144/" id="post_nav-older" class="next-content">
+        <a href="/2023/07/03/Domain-Adaptation-RL/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
