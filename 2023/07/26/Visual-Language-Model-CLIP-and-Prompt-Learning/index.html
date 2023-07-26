@@ -48,7 +48,7 @@
     
     <title>
         
-            Offline RL Survey | 
+            Visual Language Model:CLIP and Prompt Learning | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Reinforcement Learning,Paper Reading,Survey">
+    <meta name="keywords" content=",Visual Language Model,Prompt Learning,Prompt Tuning">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,16 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Offline RL Survey | Hexo">
+    <meta property="og:title" content="Visual Language Model:CLIP and Prompt Learning | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Reinforcement Learning"> <meta property="og:article:tag" content="Paper Reading"> <meta property="og:article:tag" content="Survey"> 
+    <meta property="og:article:tag" content="Visual Language Model"> <meta property="og:article:tag" content="Prompt Learning"> <meta property="og:article:tag" content="Prompt Tuning"> 
 
     
-        <meta property="article:published_time" content="Tue Apr 18 2023 22:07:06 GMT+0800">
-        <meta property="article:modified_time" content="Tue Apr 18 2023 22:08:18 GMT+0800">
+        <meta property="article:published_time" content="Wed Jul 26 2023 09:34:51 GMT+0800">
+        <meta property="article:modified_time" content="Wed Jul 26 2023 09:36:25 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/index.html",
-    "headline": "Offline RL Survey",
-    "datePublished": "Tue Apr 18 2023 22:07:06 GMT+0800",
-    "dateModified": "Tue Apr 18 2023 22:08:18 GMT+0800",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/index.html",
+    "headline": "Visual Language Model:CLIP and Prompt Learning",
+    "datePublished": "Wed Jul 26 2023 09:34:51 GMT+0800",
+    "dateModified": "Wed Jul 26 2023 09:36:25 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Gaoustcer",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.svg"
         }
     },
-    "keywords": ",Reinforcement Learning,Paper Reading,Survey",
+    "keywords": ",Visual Language Model,Prompt Learning,Prompt Tuning",
     "description": "",
 }
 </script>
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Offline-Reinforcement-Learning"><span class="post-toc-number">1.</span> <span class="post-toc-text">Offline Reinforcement Learning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Type-and-Notion-of-Offline-RL"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Type and Notion of Offline RL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Notion-of-Offline-RL"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Notion of Offline RL</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Type-of-Offline-RL-problem"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Type of Offline RL problem</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#OPE"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">OPE</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Offline-RL-Learning"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">Offline RL Learning</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">关键问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AE%80%E5%8D%95%E7%9C%8B%E7%9C%8Bdistribution-shift%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">简单看看distribution shift问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Offline-RL-with-Q-Learning"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">Offline RL with Q Learning</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Offline-RL-with-Policy-Gradient"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">Offline RL with Policy Gradient</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Offline-value-function-estimation"><span class="post-toc-number">1.1.7.</span> <span class="post-toc-text">Offline value function estimation</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Distribution-Shift-in-RL"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Distribution Shift in RL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BA%A6%E6%9D%9F%E5%BD%93%E5%89%8D%E7%AD%96%E7%95%A5%E5%92%8C%E6%8E%A2%E7%B4%A2%E7%AD%96%E7%95%A5%E4%B9%8B%E9%97%B4%E7%9A%84%E8%B7%9D%E7%A6%BB"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">约束当前策略和探索策略之间的距离</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%98%BE%E5%BC%8F%E7%BA%A6%E6%9D%9F"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">显式约束</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%9A%90%E5%BC%8F%E7%BA%A6%E6%9D%9F"><span class="post-toc-number">1.2.1.2.</span> <span class="post-toc-text">隐式约束</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9C%A8Q%E5%87%BD%E6%95%B0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%81%BF%E5%85%8DOOD%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">在Q函数更新时避免OOD问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Implict-Q-learning"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">Implict Q-learning</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Conservative-Q-learning"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">Conservative Q-learning</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Model-Based-Offline-RL"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">Model Based Offline RL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Conservative-Model-Based-RL"><span class="post-toc-number">1.2.4.1.</span> <span class="post-toc-text">Conservative Model-Based RL</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%BD%A8%E8%BF%B9%E8%BD%AC%E5%8C%96"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">轨迹转化</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Paper-Reading-Break-the-Boundary-of-Image-and-Text-CLIP-and-some-related-work"><span class="post-toc-number">1.</span> <span class="post-toc-text">Paper Reading(Break the Boundary of Image and Text :CLIP and some related work)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CLIP-Learning-Transferable-Visual-Models-From-Natural-Language-Supervision"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">CLIP: Learning Transferable Visual Models From Natural Language Supervision</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Overview"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A%E9%A2%84%E8%AE%AD%E7%BB%83-%E5%AF%B9%E6%AF%94%E5%AD%A6%E4%B9%A0"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text">核心思想：预训练+对比学习</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9C%A8%E4%B8%8B%E6%B8%B8%E4%BB%BB%E5%8A%A1%E4%B8%8A%E5%AF%B9%E8%A7%86%E8%A7%89%E6%A8%A1%E5%9E%8B%E5%81%9Azero-shot%E8%BF%81%E7%A7%BB"><span class="post-toc-number">1.1.1.2.</span> <span class="post-toc-text">在下游任务上对视觉模型做zero-shot迁移</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Summary"><span class="post-toc-number">1.1.1.3.</span> <span class="post-toc-text">Summary</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Approach"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Approach</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">数据集生成</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%A8%A1%E5%9E%8B%E9%A2%84%E8%AE%AD%E7%BB%83"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">模型预训练</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Prompt-Template"><span class="post-toc-number">1.1.2.3.</span> <span class="post-toc-text">Prompt Template</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Prompt-Engineering-and-ensembling"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">Prompt Engineering and ensembling</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Ensemble-With-Several-Zero-Shot-Classifier"><span class="post-toc-number">1.1.3.1.</span> <span class="post-toc-text">Ensemble With Several Zero-Shot Classifier</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Experiment"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">Experiment</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96"><span class="post-toc-number">1.1.4.1.</span> <span class="post-toc-text">特征提取</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CoOp-Learning-to-Prompt-for-Vision-Language-Models"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">CoOp: Learning to Prompt for Vision Language Models</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solved-Problem"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Solved Problem</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Unified-Context"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Unified Context</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Class-Specific-Context"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">Class-Specific Context</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Learn-the-Context-Token"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">Learn the Context Token</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Context%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">Context初始化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Summay"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">Summay</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CoCoOp-Conditional-Prompt-Learning-for-Vision-Language-Models"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">CoCoOp: Conditional Prompt Learning for Vision-Language Models</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -383,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                Offline RL Survey
+                Visual Language Model:CLIP and Prompt Learning
             </p>
         </div>
 
@@ -402,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Gaoustcer</strong>
-        <span>4月 18, 2023</span>
+        <span>7月 26, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -426,7 +426,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Paper-Reading/" rel="tag">Paper Reading</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Survey/" rel="tag">Survey</a>
+        <a class="post_tag-none-link" href="/tags/Prompt-Learning/" rel="tag">Prompt Learning</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Prompt-Tuning/" rel="tag">Prompt Tuning</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Visual-Language-Model/" rel="tag">Visual Language Model</a>
     </ul>
     
 
@@ -443,7 +443,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Offline RL Survey&url=http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Visual Language Model:CLIP and Prompt Learning&url=http://gaoustcer.github.io/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -452,7 +452,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Offline RL Survey&url=http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/index.html&via=Gaoustcer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Visual Language Model:CLIP and Prompt Learning&url=http://gaoustcer.github.io/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/index.html&via=Gaoustcer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,105 +495,58 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Offline-Reinforcement-Learning"><a href="#Offline-Reinforcement-Learning" class="headerlink" title="Offline Reinforcement Learning"></a>Offline Reinforcement Learning</h1><h2 id="Type-and-Notion-of-Offline-RL"><a href="#Type-and-Notion-of-Offline-RL" class="headerlink" title="Type and Notion of Offline RL"></a>Type and Notion of Offline RL</h2><h3 id="Notion-of-Offline-RL"><a href="#Notion-of-Offline-RL" class="headerlink" title="Notion of Offline RL"></a>Notion of Offline RL</h3><p>给定数据集D</p>
-<script type="math/tex; mode=display">
-D=\{(s_i,a_i,s_i^\prime,r_i) \}</script><p>在不能与环境交互的前提下学习最佳策略</p>
-<h3 id="Type-of-Offline-RL-problem"><a href="#Type-of-Offline-RL-problem" class="headerlink" title="Type of Offline RL problem"></a>Type of Offline RL problem</h3><h4 id="OPE"><a href="#OPE" class="headerlink" title="OPE"></a>OPE</h4><p>给定数据，评估一个策略的奖励期望</p>
-<script type="math/tex; mode=display">
-J(\pi) =E_\pi[\sum_{t=1}r(s_t,a_t)]</script><h4 id="Offline-RL-Learning"><a href="#Offline-RL-Learning" class="headerlink" title="Offline RL Learning"></a>Offline RL Learning</h4><p>学习最佳策略$\pi_\theta$</p>
-<h3 id="关键问题"><a href="#关键问题" class="headerlink" title="关键问题"></a>关键问题</h3><ol>
-<li>找到数据集中有价值的经验</li>
-<li>泛化：一个状态下的好动作在另一个状态下不一定好，或者对于没有见过的初始状态同一个算法能否给出好的结果</li>
-<li>组合：将多个好动作合成为一个</li>
+        <h1 id="Paper-Reading-Break-the-Boundary-of-Image-and-Text-CLIP-and-some-related-work"><a href="#Paper-Reading-Break-the-Boundary-of-Image-and-Text-CLIP-and-some-related-work" class="headerlink" title="Paper Reading(Break the Boundary of Image and Text :CLIP and some related work)"></a>Paper Reading(Break the Boundary of Image and Text :CLIP and some related work)</h1><p>这两篇文章通过文本对图片的描述生成图片</p>
+<h2 id="CLIP-Learning-Transferable-Visual-Models-From-Natural-Language-Supervision"><a href="#CLIP-Learning-Transferable-Visual-Models-From-Natural-Language-Supervision" class="headerlink" title="CLIP: Learning Transferable Visual Models From Natural Language Supervision"></a>CLIP: Learning Transferable Visual Models From Natural Language Supervision</h2><p>本文提供了一个(图像，文本)配对数据集用于实现图像-文本的对齐表征，这样帮助视觉模型在下游任务上实现zero-shot transfer，性能和监督学习的训练结果相匹配</p>
+<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><h4 id="核心思想：预训练-对比学习"><a href="#核心思想：预训练-对比学习" class="headerlink" title="核心思想：预训练+对比学习"></a>核心思想：预训练+对比学习</h4><p>本文通过最大化文本特征和图像特征的余弦相似性对Encoder的视觉分支进行预训练</p>
+<h4 id="在下游任务上对视觉模型做zero-shot迁移"><a href="#在下游任务上对视觉模型做zero-shot迁移" class="headerlink" title="在下游任务上对视觉模型做zero-shot迁移"></a>在下游任务上对视觉模型做zero-shot迁移</h4><ol>
+<li>对于N分类任务，构建N个prompt(每个class的描述文本)</li>
+<li>计算图像和每个文本embedding的相似度，相似度最大的文本即为预测结果</li>
 </ol>
-<blockquote>
-<p>离线强化学习中必须考虑没有见过的动作和状态(out-of-distribution)，同时超越数据集中的数据</p>
-</blockquote>
-<h3 id="简单看看distribution-shift问题"><a href="#简单看看distribution-shift问题" class="headerlink" title="简单看看distribution shift问题"></a>简单看看distribution shift问题</h3><p>简单的监督回归任务</p>
-<script type="math/tex; mode=display">
-\theta \arg\min E_{x|p(x),y|p(y|x)}[(f_\theta(x)-y)^2]</script><p><em>$，是否有$f(x^</em>f(x^*)\approx E[y|x]$？这要分成两种情况考虑</p>
+<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><ol>
+<li>文本描述来自Web，本质上承担了和标签相似的功能，这弥补了数据集外标签的泛化问题</li>
+<li>后续任务可以多种多样，例如用文本指导图像生成等</li>
+</ol>
+<h3 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h3><p>作者提到同时学习文本和图像的表征可以利用文本包含的自然的语义信息用于后续任务以进行zero-shot adaptation</p>
+<h4 id="数据集生成"><a href="#数据集生成" class="headerlink" title="数据集生成"></a>数据集生成</h4><p>图片的文本藐视就是图片的title</p>
+<h4 id="模型预训练"><a href="#模型预训练" class="headerlink" title="模型预训练"></a>模型预训练</h4><ol>
+<li>最初作者采取的方法是直接利用CNN提取Image特征以预测对应的title，但是这样代价太高了</li>
+<li>无需复现Text Description的每个word，只需要保证contrastive representation上的接近</li>
+</ol>
+<h4 id="Prompt-Template"><a href="#Prompt-Template" class="headerlink" title="Prompt Template"></a>Prompt Template</h4><p>定义一个句子模板</p>
+<p><code>A Photo of xxx</code> xxx是物体，用句子是为了和训练title对齐，训练的embedding真正具有了对应文本语义（适用于不同粒度的语义信息）</p>
+<h3 id="Prompt-Engineering-and-ensembling"><a href="#Prompt-Engineering-and-ensembling" class="headerlink" title="Prompt Engineering and ensembling"></a>Prompt Engineering and ensembling</h3><p>设计prompt存在一些潜在问题</p>
 <ol>
-<li><em>|p(x^</em>x^*)$，则有大概率判断是真的</li>
-<li><em>|q(x^</em>x^*)$，则可能结论为假</li>
+<li>标签存在歧义，不同prompt对应的可能是语义上相似的物体</li>
+<li>仅仅采取一个单次作为prompt容易导致prompt和pair sentence不一致</li>
 </ol>
-<p>这启示我们如果用$f(x^*)$寻找$E[y|x]$最大值可能是不合理的</p>
-<h3 id="Offline-RL-with-Q-Learning"><a href="#Offline-RL-with-Q-Learning" class="headerlink" title="Offline RL with Q Learning"></a>Offline RL with Q Learning</h3><p>对于强化学习任务，TD error计算用到的奖励估算</p>
+<p>prompt如果能给出更详细的描述，将会提升模型性能，比如全是数字的数据集中增添描述</p>
 <script type="math/tex; mode=display">
-Q(s,a)\leftarrow r(s,a)+E_{a^\prime|\pi_{new}}[Q(s^\prime,a^\prime)]</script><p>优化目标是</p>
-<script type="math/tex; mode=display">
-\min_Q E_{(s,a)|\pi_\beta}[(Q(s,a)-y(s,a))^2]</script><h3 id="Offline-RL-with-Policy-Gradient"><a href="#Offline-RL-with-Policy-Gradient" class="headerlink" title="Offline RL with Policy Gradient"></a>Offline RL with Policy Gradient</h3><p>RL计算梯度为</p>
-<script type="math/tex; mode=display">
-\nabla_\theta J(\theta) = E_{\tau|\pi_\theta(\tau)}[\sum_{t=0}^T  \nabla_\theta \gamma^t\log \pi_\theta(a_t|s_t)Q(s_t,a_t)]</script><p>实际上是在环境上采样得到N条轨迹，代替期望，对于offpolicy policy gradient，需要importance sampling系数</p>
-<script type="math/tex; mode=display">
-\nabla_\theta J(\theta)\approx \frac{1}{N}\sum_{i=1}^N \frac{\pi_\theta(\tau_i)}{\pi_\beta(\tau_i)} \sum_{t=0}\nabla_\theta \gamma^t \log \pi_\theta(a_{t,i}|s_{t,i})Q(s_{t,i},a_{t,i})</script><p>假设轨迹$\tau = (s_0,a_0,s_1,a_1,\cdots,s_T,a_T,s_{T+1})$</p>
-<script type="math/tex; mode=display">
-\pi_\theta(\tau) = \pi(a_0|s_0)\times \pi(a_1|s_1)\times \cdots \times \pi(a_{T}|s_T)</script><p>我们记</p>
-<script type="math/tex; mode=display">
-V^{\pi_\theta}(s_t) =\sum_{t^\prime = t}^T \frac{\pi_\theta(\tau)}{\pi_\beta(\tau)} \gamma^{t^\prime - t}</script><p>最终梯度写成</p>
-<script type="math/tex; mode=display">
-\nabla_\theta = \frac{1}{N}\sum_{i=1}^N \sum_{t=0}\nabla _\theta \gamma ^t \log \pi_\theta(a_{t,i}|s_{t,i}) V^{\pi_\theta}(s_{t,i})</script><p>基本思想是importance sampling系数由$\prod_{t}\frac{\pi_\theta(a_t|s_t)}{\pi_\beta(a_t|s_t)}$，使用$w(s,a) = \frac{d^{\pi_\theta}(s,a)}{d^{\pi_\beta}(s,a)}$，于是采样方法写成</p>
-<script type="math/tex; mode=display">
-\nabla_\theta J(\theta) =\frac{1}{N}\sum_{i=1}^N \sum_{t=0}^T \nabla_\theta \gamma^t \log \pi_\theta(a_{t,i}|s_{t,i}) w(s_{t,i},a_{t,i})</script><blockquote>
-<p>$w(s,a)$具有的性质，假设$(s,a,s^\prime,a^\prime)$采样自D</p>
-<script type="math/tex; mode=display">
-d^{\pi_\beta}(s^\prime,a^\prime) w(s^\prime,a^\prime) = d^{\pi_\theta}(s,a)</script></blockquote>
-<h3 id="Offline-value-function-estimation"><a href="#Offline-value-function-estimation" class="headerlink" title="Offline value function estimation"></a>Offline value function estimation</h3><p>对于奖励存在</p>
-<h2 id="Distribution-Shift-in-RL"><a href="#Distribution-Shift-in-RL" class="headerlink" title="Distribution Shift in RL"></a>Distribution Shift in RL</h2><h3 id="约束当前策略和探索策略之间的距离"><a href="#约束当前策略和探索策略之间的距离" class="headerlink" title="约束当前策略和探索策略之间的距离"></a>约束当前策略和探索策略之间的距离</h3><h4 id="显式约束"><a href="#显式约束" class="headerlink" title="显式约束"></a>显式约束</h4><p>要求</p>
-<script type="math/tex; mode=display">
-D_{KL}(\pi\parallel \pi_\beta)\leq \epsilon</script><p>存在以下问题</p>
-<ol>
-<li>不存在$\pi_\beta$(手工获得数据)</li>
-<li>多个RL算法生成的数据</li>
-<li>过于乐观/过于消极</li>
+A \ number</script><h4 id="Ensemble-With-Several-Zero-Shot-Classifier"><a href="#Ensemble-With-Several-Zero-Shot-Classifier" class="headerlink" title="Ensemble With Several Zero-Shot Classifier"></a>Ensemble With Several Zero-Shot Classifier</h4><p>借助多种prompt template可以挖掘image更细粒度的信息</p>
+<h3 id="Experiment"><a href="#Experiment" class="headerlink" title="Experiment"></a>Experiment</h3><h4 id="特征提取"><a href="#特征提取" class="headerlink" title="特征提取"></a>特征提取</h4><ol>
+<li>image特征提取：ResNet/Vit</li>
+<li>text特征提取：Bert</li>
 </ol>
-<p>分析KL散度</p>
+<h2 id="CoOp-Learning-to-Prompt-for-Vision-Language-Models"><a href="#CoOp-Learning-to-Prompt-for-Vision-Language-Models" class="headerlink" title="CoOp: Learning to Prompt for Vision Language Models"></a>CoOp: Learning to Prompt for Vision Language Models</h2><p>CLIP采取从网络上获取包含title图片的方式解决了缺少监督数据的问题，并通过设计prompt实现zero-shot adaptation。本文主要从设计prompt角度分析了CLIP存在的缺陷，prompt往往依赖数据集的先验知识或者专家知识。本文的主要工作是从prompt engineer角度考虑，能否learn一个好的prompt</p>
+<h3 id="Solved-Problem"><a href="#Solved-Problem" class="headerlink" title="Solved Problem"></a>Solved Problem</h3><p><em><em>学习到</em></em><em><em>学习到</em></em><em><em>学习到</em></em><em><em>学习到</em></em><em><em>学习到</em></em><em><em>学习到</em></em><em><em>学习到</em></em><em><em>学习到</em></em><strong>学习到</strong>特定的Prompt</p>
+<h3 id="Unified-Context"><a href="#Unified-Context" class="headerlink" title="Unified Context"></a>Unified Context</h3><p>本质上不论样本的类别提供一个通用模板，模板包含M+1个token，形式为</p>
 <script type="math/tex; mode=display">
-D_{KL}(\pi\parallel \pi_\beta) = E_\pi[\log \pi(a|s)-\log \pi_\beta(a|s)]=-E_{\pi}[\log \pi(a|s)]+H(\pi)</script><p>reward函数写成</p>
+t = [V_1][V_2]\cdots [V_M][CLASS]\\</script><p>$[V_i]$被称为Context Token，CLIP通过计算每个class实例化的prompt嵌入和样本嵌入之间的余弦相似度进行预测</p>
+<p>$[V_i]$是相同维度的词向量嵌入，本文提出了另一个Unified Context</p>
 <script type="math/tex; mode=display">
-\overline r(s,a) = r(s,a) -D(\pi,\pi_\beta)</script><p>直接将距离加入到奖励中</p>
-<h4 id="隐式约束"><a href="#隐式约束" class="headerlink" title="隐式约束"></a>隐式约束</h4><script type="math/tex; mode=display">
-\pi_{new} (a|s) =\arg\max_{(s,a)|\pi_\beta}[\log \pi(a|s)\frac{1}{Z(s)}\exp{\frac{1}{\lambda} A^{\pi_{old}}(s,a)}]</script><p>Advantage function根据Critic方法估算得到，采样来自D</p>
-<blockquote>
-<p>Z(s)是啥？</p>
-</blockquote>
-<h3 id="在Q函数更新时避免OOD问题"><a href="#在Q函数更新时避免OOD问题" class="headerlink" title="在Q函数更新时避免OOD问题"></a>在Q函数更新时避免OOD问题</h3><p>Q函数根据如下范式更新</p>
+t = [V_1]\cdots [V_\frac{M}{2}][CLASS][V_{\frac M 2+1}]\cdots [V_M]</script><p>Unified Context要求多个class对应的prompt</p>
+<h3 id="Class-Specific-Context"><a href="#Class-Specific-Context" class="headerlink" title="Class-Specific Context"></a>Class-Specific Context</h3><p>Class-Specific情况下满足每个class的Context Embedding不相同</p>
 <script type="math/tex; mode=display">
-Q(s,a) \leftarrow r(s,a)+E_{a^\prime|\pi_{new}}[Q(s^\prime,a^\prime)]=r(s,a)+V(s^\prime)</script><p>V函数根据如下方式更新</p>
-<script type="math/tex; mode=display">
-V = \arg\min_V \frac{1}{N}\sum_{i=1}^N loss(V(s_i),Q(s_i,a_i)),a_i|\pi_\beta</script><h4 id="Implict-Q-learning"><a href="#Implict-Q-learning" class="headerlink" title="Implict Q-learning"></a>Implict Q-learning</h4><p>每一步更新写为</p>
-<script type="math/tex; mode=display">
-Q(s,a) = r(s,a)+V(s^\prime)\\
-V\leftarrow \arg\min_V \frac{1}{N}\sum_{i=1}^N l_2^\tau(V(s_i),Q(s_i,a_i))</script><h3 id="Conservative-Q-learning"><a href="#Conservative-Q-learning" class="headerlink" title="Conservative Q-learning"></a>Conservative Q-learning</h3><p>更新参数是加入正则项(TD loss)</p>
-<ol>
-<li>$E_{s\in D,a\in \mu(a|s)}[Q(s,a)]$最大化$\mu$，选择带来最大奖励的动作</li>
-<li>$E_{(s,a,s^\prime)\in D}[(Q(s,a)-(r(s,a)+E_\pi(Q(s^\prime,a^\prime))))^2]$</li>
+[V_1^i][V_2^i]\cdots [V_M^i]\neq [V_1^j][V_2^j]\cdots [V_M^j]</script><h3 id="Learn-the-Context-Token"><a href="#Learn-the-Context-Token" class="headerlink" title="Learn the Context Token"></a>Learn the Context Token</h3><p>Token实际上以token Embedding给出，学习好的Context Token Embedding需要通过优化分类损失函数反向传播优化Token Embedding</p>
+<h3 id="Context初始化"><a href="#Context初始化" class="headerlink" title="Context初始化"></a>Context初始化</h3><ol>
+<li>随机初始化</li>
+<li>用预定义的Word Embedding初始化</li>
 </ol>
-<p>选择损失函数</p>
+<p>本文需要在迁移数据集上计算Cross-Entropy Loss，因此需要和few-shot clip相比</p>
+<h3 id="Summay"><a href="#Summay" class="headerlink" title="Summay"></a>Summay</h3><p>CoOp可以说是Prompt Tuning的开篇之作，相比Finetune通过修改模型参数提升下游任务上的性能，Prompt Tuning的本质是通过设计更合适的Prompt更准确地描述下游任务</p>
+<h2 id="CoCoOp-Conditional-Prompt-Learning-for-Vision-Language-Models"><a href="#CoCoOp-Conditional-Prompt-Learning-for-Vision-Language-Models" class="headerlink" title="CoCoOp: Conditional Prompt Learning for Vision-Language Models"></a>CoCoOp: Conditional Prompt Learning for Vision-Language Models</h2><p>CoOp的泛化性，我觉得这里指的是Unified Context的泛化性能，在所有Class都共享一套Context Token Embedding，给出一组新的Class Name，CoOp并不能在新class的分类任务上取得好的结果</p>
+<p>论文中的Conditional指的是相对Image Embedding Conditional，Text Embedding写成</p>
 <script type="math/tex; mode=display">
-\alpha E_{s\in D,a\in \mu(a|s)}[Q(s,a)]-\alpha E_{s,a\in D}[Q(s,a)]+regular</script><p>regular指的是从D中抽取$(s,a,s^\prime)$计算的TD loss</p>
-<p>算法</p>
-<ol>
-<li>在D上优化$\mathcal L_{CQL}(Q^\pi)$</li>
-<li>策略函数$\pi(a|s)=\arg\max_a Q^(s,a)$</li>
-</ol>
-<p>在此基础上增加一个评估项评估动作概率的entropy</p>
-<script type="math/tex; mode=display">
-R=E_{s\in D}[H(\mu(\cdot|s))]</script><p>因为$\mu(\cdot|s)$实际上是$Q(s,a)$softmax化的结果，也可以写成</p>
-<script type="math/tex; mode=display">
-E_{a\in (a,s)} =\log \sum_a \exp(Q(s,a))</script><h3 id="Model-Based-Offline-RL"><a href="#Model-Based-Offline-RL" class="headerlink" title="Model Based Offline RL"></a>Model Based Offline RL</h3><p>有些类似reward shaping，奖励写成</p>
-<script type="math/tex; mode=display">
-\overline r(s,a) = r(s,a)-\lambda u(s,a)</script><p>$u(s,a)$称为uncertainty penalty，刻画model errror</p>
-<h4 id="Conservative-Model-Based-RL"><a href="#Conservative-Model-Based-RL" class="headerlink" title="Conservative Model-Based RL"></a>Conservative Model-Based RL</h4><p>最小化model状态-行为序列对应的Q值，同时增大其对数据集D中状态-动作序列的评估，损失函数分成三个部分</p>
-<ol>
-<li>$E_{s,a\in \rho(s,a)}[Q(s,a)]$，这里状态-动作序列由模型生成</li>
-<li>$-E_{s,a\in D}[Q(s,a)]$，这里状态-动作序列来自静态数据集</li>
-<li>$E_{s,a,s^\prime}[(Q(s,a)-\hat Q^k(s,a))^2]$，刻画TD error</li>
-</ol>
-<h3 id="轨迹转化"><a href="#轨迹转化" class="headerlink" title="轨迹转化"></a>轨迹转化</h3><ol>
-<li>训练模型预测轨迹的联合概率分布$p(\tau) =p_\beta(s_1,a_2,\cdots,s_T,a_T)$(感觉像是学习行为策略产生某一轨迹的概率)</li>
-<li>使用transformer建模序列信息</li>
-</ol>
-<p>如何利用model做控制：模拟环境下计算累计奖励，从某个状态开始采样多个路径，选择累计奖励最大的路径</p>
+v_m(x) = v_m + \pi</script><p> $\pi$根据image embedding生成</p>
 
         
     
@@ -612,8 +565,8 @@ E_{a\in (a,s)} =\log \sum_a \exp(Q(s,a))</script><h3 id="Model-Based-Offline-RL"
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://gaoustcer.github.io/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -643,21 +596,13 @@ E_{a\in (a,s)} =\log \sum_a \exp(Q(s,a))</script><h3 id="Model-Based-Offline-RL"
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/04/18/Batch-Constrain-Q-Learning/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2023/04/18/subspaceofpolicies/" id="post_nav-older" class="next-content">
+        <a href="/2023/07/21/LUSRdisentanglement/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
