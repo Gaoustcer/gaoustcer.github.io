@@ -48,7 +48,7 @@
     
     <title>
         
-            Variational Inference | 
+            KgCoOp | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Machine Learning">
+    <meta name="keywords" content=",Domain Adaptation,Visual Langauage Model(VLM)">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/28/Variational-Inference/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/07/27/KgCoOp/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,16 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/28/Variational-Inference/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/07/27/KgCoOp/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Variational Inference | Hexo">
+    <meta property="og:title" content="KgCoOp | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Machine Learning"> 
+    <meta property="og:article:tag" content="Domain Adaptation"> <meta property="og:article:tag" content="Visual Langauage Model(VLM)"> 
 
     
-        <meta property="article:published_time" content="Fri Apr 28 2023 17:21:43 GMT+0800">
-        <meta property="article:modified_time" content="Fri Apr 28 2023 17:22:33 GMT+0800">
+        <meta property="article:published_time" content="Thu Jul 27 2023 18:51:45 GMT+0800">
+        <meta property="article:modified_time" content="Thu Jul 27 2023 18:53:11 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/28/Variational-Inference/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/07/27/KgCoOp/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/28/Variational-Inference/index.html",
-    "headline": "Variational Inference",
-    "datePublished": "Fri Apr 28 2023 17:21:43 GMT+0800",
-    "dateModified": "Fri Apr 28 2023 17:22:33 GMT+0800",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/07/27/KgCoOp/index.html",
+    "headline": "KgCoOp",
+    "datePublished": "Thu Jul 27 2023 18:51:45 GMT+0800",
+    "dateModified": "Thu Jul 27 2023 18:53:11 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Gaoustcer",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.svg"
         }
     },
-    "keywords": ",Machine Learning",
+    "keywords": ",Domain Adaptation,Visual Langauage Model(VLM)",
     "description": "",
 }
 </script>
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Variational-Inference"><span class="post-toc-number">1.</span> <span class="post-toc-text">Variational Inference</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%BF%91%E4%BC%BC%E6%8E%A8%E6%96%AD"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">近似推断</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reference"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Reference</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Bayes-Inference-and-prediction"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Bayes Inference and prediction</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ELBO%E5%92%8C%E5%8F%98%E5%88%86%E6%8E%A8%E6%96%AD"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">ELBO和变分推断</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Variational-Inference-and-ELBO"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Variational Inference and ELBO</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%80%89%E6%8B%A9%E5%88%86%E5%B8%83%E6%97%8FQ"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">选择分布族Q</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B1%82%E8%A7%A3%E6%9C%80%E4%BD%B3%E5%88%86%E5%B8%83-q-theta-j-%E9%80%89%E6%8B%A9%E6%9C%80%E4%BD%B3%E5%8F%82%E6%95%B0-theta"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">求解最佳分布$q_{\theta_j}$(选择最佳参数$\theta^*$)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9D%90%E6%A0%87%E4%B8%8A%E5%8D%87%E5%8F%98%E5%88%86%E6%8E%A8%E6%96%AD"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">坐标上升变分推断</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Problems-of-Classical-Variational-Inference"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">Problems of Classical Variational Inference</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E5%8F%98%E5%88%86%E6%8E%A8%E6%96%AD-%E8%A7%A3%E5%86%B3latent-variable%E4%B8%8D%E7%8B%AC%E7%AB%8B%E7%9A%84%E6%83%85%E5%86%B5"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">随机梯度变分推断(解决latent variable不独立的情况)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%81%87%E8%AE%BE"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">假设</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B1%82%E6%A2%AF%E5%BA%A6"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">求梯度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%BF%9B%E8%A1%8CVariance-Reduction-%E9%87%8D%E5%8F%82%E6%95%B0%E5%8C%96"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">进行Variance Reduction(重参数化)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Reference-1"><span class="post-toc-number">1.4.3.1.</span> <span class="post-toc-text">Reference</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%87%8D%E5%8F%82%E6%95%B0%E5%8C%96%E6%8A%80%E5%B7%A7"><span class="post-toc-number">1.4.3.2.</span> <span class="post-toc-text">重参数化技巧</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Gumble-Max"><span class="post-toc-number">1.4.3.3.</span> <span class="post-toc-text">Gumble Max</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#KgCoOp"><span class="post-toc-number">1.</span> <span class="post-toc-text">KgCoOp</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Prompt-Learning-vs-Generalization"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Prompt Learning vs Generalization</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Method%EF%BC%88Knowledge-guided-Context-Optimization%EF%BC%89"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Method（Knowledge-guided Context Optimization）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Summary"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Summary</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -383,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                Variational Inference
+                KgCoOp
             </p>
         </div>
 
@@ -402,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Gaoustcer</strong>
-        <span>4月 28, 2023</span>
+        <span>7月 27, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -426,7 +426,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a>
+        <a class="post_tag-none-link" href="/tags/Domain-Adaptation/" rel="tag">Domain Adaptation</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Visual-Langauage-Model-VLM/" rel="tag">Visual Langauage Model(VLM)</a>
     </ul>
     
 
@@ -443,7 +443,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Variational Inference&url=http://gaoustcer.github.io/2023/04/28/Variational-Inference/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=KgCoOp&url=http://gaoustcer.github.io/2023/07/27/KgCoOp/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -452,7 +452,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Variational Inference&url=http://gaoustcer.github.io/2023/04/28/Variational-Inference/index.html&via=Gaoustcer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=KgCoOp&url=http://gaoustcer.github.io/2023/07/27/KgCoOp/index.html&via=Gaoustcer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/28/Variational-Inference/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/07/27/KgCoOp/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/28/Variational-Inference/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/07/27/KgCoOp/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,172 +495,20 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Variational-Inference"><a href="#Variational-Inference" class="headerlink" title="Variational Inference"></a>Variational Inference</h1><h2 id="近似推断"><a href="#近似推断" class="headerlink" title="近似推断"></a>近似推断</h2><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
-<li><a target="_blank" rel="noopener" href="http://cairohy.github.io/2018/02/28/vi/VI-1/">变分推断介绍</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=dHVqQDAIWts">近似推断</a></li>
-<li><a target="_blank" rel="noopener" href="https://jonathan-hui.medium.com/machine-learning-variational-inference-273d8e6480bb">Machine Learning: Variational Inference</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.datacamp.com/blog/what-is-machine-learning-inference">What is Machine Learning inference</a></li>
-</ol>
-<h3 id="Bayes-Inference-and-prediction"><a href="#Bayes-Inference-and-prediction" class="headerlink" title="Bayes Inference and prediction"></a>Bayes Inference and prediction</h3><p>Inference意在求出参数在给定样本下的后验分布</p>
-<script type="math/tex; mode=display">
-p(\theta|x) = \frac{p(x|\theta)p(\theta)}{p(x)}</script><p>prediction的目标是预测新样本$\hat x$在给定样本x下的后验分布</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-p(\hat x|x) &= \int_\theta p(\hat x,\theta|x) d\theta\\
-&= \int_\theta p(\hat x|\theta)p(\theta|x) d\theta\\
-&= E_{\theta|p(\cdot|x)} E[p(\hat x|\theta)]
-\end{aligned}</script><p>计算后验可以通过</p>
-<ol>
-<li>精确推断，得到$p(\theta|x)$的解析解</li>
-<li>近似推断</li>
-</ol>
-<h2 id="ELBO和变分推断"><a href="#ELBO和变分推断" class="headerlink" title="ELBO和变分推断"></a>ELBO和变分推断</h2><h3 id="Variational-Inference-and-ELBO"><a href="#Variational-Inference-and-ELBO" class="headerlink" title="Variational Inference and ELBO"></a>Variational Inference and ELBO</h3><p>给定观测数据$x$和隐变量z</p>
-<script type="math/tex; mode=display">
-x = (x_1,x_2,\cdots,x_n)\\
-z = (z_1,z_2,\cdots,z_m)</script><p>推断出隐变量的后验概率$p(z|x)$，写成</p>
-<script type="math/tex; mode=display">
-p(z|x) = \frac{p(z,x)}{p(x)}</script><p>计算$p(x)$需要对全空间概率分布积分</p>
-<script type="math/tex; mode=display">
-p(x )= \int p(x,z) dz</script><p>一个思路是从分布簇Q中选择一个分布$q\in Q$，使得它和后验分布$p(z|x)$差异最小</p>
-<script type="math/tex; mode=display">
-q^* =\arg\min_{q\in Q} KL(q(z)\parallel p(z|x))</script><p>用分布参数$\Theta$表示为</p>
-<script type="math/tex; mode=display">
-\theta^* = \arg\min_{\theta\in \Theta} KL(q_\theta(z)\parallel p(z|x))</script><p>KL散度写成</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-KL(q(z)\parallel p(z|x)) &= E_{z|q(\cdot)}[\log q(z)] - E_{z|q(\cdot)}[\log p(z|x)]\\
-&=E_{z|p(\cdot)}[\log q(z)] -E_{z|q(\cdot)}[\log p(z,x)]+E_{z|q(\cdot)}[\log p(x)]\\
-&=E_{z|p(\cdot)}[\log q(z)] -E_{z|q(\cdot)}[\log p(z,x)]+\log p(x)\\
-&=\log p(x)- ELBO(q)
-\end{aligned}\\
-ELBO (q) =\log p(x) - KL(q(z)\parallel p(z|x)) = E_{z|q(\cdot)}[\log p(z,x)]-E_{z|q(\cdot)}[\log q(z)]= \int_z q(z) \log p(z,x) dz-\int_z q(z)\log q(z) dz</script><p>目标变成最大化ELBO</p>
+        <h1 id="KgCoOp"><a href="#KgCoOp" class="headerlink" title="KgCoOp"></a>KgCoOp</h1><p>CoOp提出使用一个可学习到Context token获取特定下游任务的Prompt，但是学到的textual token在分类任务unseen class中并没有很好的泛化能力。本文的motivation在于如何尽量减少训练Prompt时间的同时提高Context token的泛化能力，基本思想是要求learned prompt和手工prompt尽量一致，这是通过构建对比损失实现</p>
+<h2 id="Prompt-Learning-vs-Generalization"><a href="#Prompt-Learning-vs-Generalization" class="headerlink" title="Prompt Learning vs Generalization"></a>Prompt Learning vs Generalization</h2><p>CoOp/CoCoOp希望根据downstream task设计task-specific的prompt，这类prompt通常包含task-specific knowledge。为了学习到这类knowledge，往往需要借助few-shot adaptation</p>
+<p>本文基于一个观察：CLIP利用hand-crafted prompt增加对unseen class做zero-shot adaptation效果好于基于CoOp学到的prompt做迁移得到的结果，从prompt嵌入空间的角度上看，两种prompt(hand-crafted/learnable)差异越大，泛化性能下降越明显</p>
 <blockquote>
-<p>从最大化$\log p(x)$的角度上看，由于</p>
-<script type="math/tex; mode=display">
-\log p(x) = ELBO(q) +KL(q(z)\parallel p(z|x))\geq ELBO</script><p>ELBO是观测数据的极大似然估计的下确界</p>
+<p>这里提到的Adaptation有两种类型，一种是希望Text/Image Encoder输出的结果可以在多种下游任务上Adaptation</p>
 </blockquote>
-<p>进一步分解ELBO</p>
+<h2 id="Method（Knowledge-guided-Context-Optimization）"><a href="#Method（Knowledge-guided-Context-Optimization）" class="headerlink" title="Method（Knowledge-guided Context Optimization）"></a>Method（Knowledge-guided Context Optimization）</h2><p>基本思想上Prompt Engineer得到的Prompt比较有泛化性，尽管通过Prompt Learning学到的Learned Prompt可以在训练集上获得较好的结果，但是缺乏语义信息导致不能在unseen class上泛化</p>
+<p>在一个数据集上通过Prompt Engineer和KgCoOp得到的prompt embedding被记作</p>
 <script type="math/tex; mode=display">
-EBLO(q) = E_{z|q(\cdot)}[\log p(x|z)] -KL(q(z)\parallel p(z))</script><p><em>观测数据</em><em>观测数据</em><em>观测数据</em>，$p(z)$是latent variable的先验分布，最大化ELBO实际上分解为两个目标</p>
-<ol>
-<li><em>解释</em><em>解释</em><em>解释</em><em>解释</em><em>解释</em><em>解释</em>释*)</li>
-<li>最小化隐变量分布和变分先验分布距离</li>
-</ol>
-<h3 id="选择分布族Q"><a href="#选择分布族Q" class="headerlink" title="选择分布族Q"></a>选择分布族Q</h3><p>分布族Q的复杂程度会影响优化算法的复杂度，这里假设分布族是平均场变分分布族，不需要了解详细的定义，只需要直到这种分布下满足</p>
-<blockquote>
-<p>每一个隐变量$z_j$都相互独立，由自身的参数$q_j$影响，这样多个隐变量的联合分布写成</p>
+w_i^{clip},w_i</script><p>代表第i类class的prompt描述，要求两者尽量相似</p>
 <script type="math/tex; mode=display">
-q(z) = \prod_j q_j(z_j)</script></blockquote>
-<h3 id="求解最佳分布-q-theta-j-选择最佳参数-theta"><a href="#求解最佳分布-q-theta-j-选择最佳参数-theta" class="headerlink" title="求解最佳分布$q_{\theta_j}$(选择最佳参数$\theta^*$)"></a>求解最佳分布$q_{\theta_j}$(选择最佳参数$\theta^*$)</h3><p>梯度上升最大化ELBO</p>
-<script type="math/tex; mode=display">
-ELBO(q_\theta) = E_{z|q_\theta(\cdot)}[\log p(z,x)] - E_{z|q_\theta(\cdot)}[\log q_\theta(z)]</script><p>我们采取Block Coordinate Descent的方法求解这个优化问题</p>
-<blockquote>
-<p>Block Coordinate Descent，对于包含T个变量的损失函数</p>
-<script type="math/tex; mode=display">
-J(\alpha_1,\alpha_2,\cdots,\alpha_T)</script><p>希望找到$\alpha_i^*$使得J最小，迭代优化每个变量</p>
-<script type="math/tex; mode=display">
-\alpha_t = \arg\min_{\alpha_t}J(\alpha_1,\cdots,\alpha_T)</script><p>这里$z_i$相互独立，因此可以迭代优化各个变量的分布参数</p>
-</blockquote>
-<p>利用分布的独立性拆分ELBO</p>
-<script type="math/tex; mode=display">
-A = E_{z|q(\cdot)} [\log p(z,x)],B = E_{z|q_\theta(\cdot)}[\log q_\theta(z)] \\
-\begin{aligned}
-A&=\int _z \prod_{i=1}^m q_{\theta_i} (z_i) \log p(x,z) dz_1 dz_2\cdots d z_m\\
-&=\int_{z_j} q_{j}(z_j)\prod_{i\neq j} q_i(z_i)\log p(x,z) dz_i  dz_j
-\end{aligned}</script><p>中间除去$z_j$的积分写成</p>
-<script type="math/tex; mode=display">
-\int_{z_i,i\neq j} \log p(x,z) q_i(z_i) d_i = E_{\prod_{i\neq j} q_i(z_i)}[\log p(x,z)]</script><p>$z_j$视为固定参数，$\log p(x,z)$视为m-1个随机变量的函数，因此A写成</p>
-<script type="math/tex; mode=display">
-A= \int_{z_j} q_j(z_j)E_{\prod_{i\neq j} q_i(z_i)} [\log p(x,z)] dz_j= \int_{z_j} q_j(z_j) \log P(x,z_j) d z_j</script><p>再拆分B</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-B &= \int_{z} \prod_{i=1}^m q_i(z_i) \sum_{i=1}^m  \log  q_i(z_i) dz_i\\
-&= \sum_{k=1}^m\int_z \prod_{i} q_i(z_i)\log q_{k}(z_k)\\
-&=\sum_{k=1}^m \int_{z_k}q_k(z_k) \log q_k(z_k) \\
-\end{aligned}</script><p>与特定latent variable有关的仅包含$\int_{z_j} q_j(z_j)\log q_j(z_j)$，这样ELBO中和$z_j$有关的项写成</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-ELBO(\theta_j)& = \int_{z_j} q_{\theta_j}(z_j) \log P(x,z_j) dz_j - \int _{z_j} q_{\theta_j}(z_j) \log q_{\theta_j}(z_j) dz_j\\&=\int_{z_j}q_{\theta_j}(z_j)\log \frac{P(x,z_j)}{q_{\theta_j}(z_j)} d z_j + \sum_{i\neq j}\int_{z_i} q_{\theta_i}(z_i)\log q_{\theta_i}(z_i) d z_i\\
-&=-KL (q_{\theta_j}\parallel P(x,z_j))+C
+L_{kg} = \frac{1}{N_c}\sum_{i=1}^{N_c} \parallel w_i - w_i^{clip}\parallel_2^2</script><p>和CoOp损失函数加权即可训练Prompt</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>这篇工作是Domain Specific Prompt和Learned Prompt之间的Tradeoff，提供了一种基于领域相关Domain做进一步优化的Prompt Learning范式</p>
 
-\end{aligned}</script><p>KL散度最小，必然有</p>
-<script type="math/tex; mode=display">
-q_{\theta_j}(z_j) = P(x,z_j) =\int_{z_i,i\neq j}P(x,z) q_{\theta_i}(z_i) dz_i</script><h2 id="坐标上升变分推断"><a href="#坐标上升变分推断" class="headerlink" title="坐标上升变分推断"></a>坐标上升变分推断</h2><p>变分推断目标是找到一个近似概率q，使得它和后验分布$p(z|x)$尽量相似</p>
-<script type="math/tex; mode=display">
-\min KL(q\parallel p(z|x)) \to \arg\max_{q\in Q}ELBO(q)= E_{z|q_\theta(\cdot)}[\log p(z,x)] - E_{z|q_\theta(\cdot)}[\log q_\theta(z)]</script><p>样本记作</p>
-<script type="math/tex; mode=display">
-x = x^1,x^2,\cdots,x^n\\
-z = z^1,z^2,\cdots,z^n</script><p>$z^i$是$x^i$对应的latent variable，假设$x^i$ iid</p>
-<script type="math/tex; mode=display">
-\log P_\theta(x)=\sum_{i=1}^n \log P_\theta(x^i)\Rightarrow \max \log P_\theta(x^i)</script><p> 严格意义上ELBO写成(instance wise)</p>
-<script type="math/tex; mode=display">
-\log P_\theta(x^i) =ELBO+KL(q\parallel p) \\
-ELBO(q(z) )=E_{q(z)}[\log P_\theta(x^i,z)]+H(q(z))</script><blockquote>
-<p>注意区分$z_i$和$z^i$，前者是latent variable的某个维度，后者代表一个instance对应的随机变量，基本假设$z_i$相互独立</p>
-</blockquote>
-<p>最优解满足(迭代求解)</p>
-<script type="math/tex; mode=display">
-q_{\theta_j} (z_j) = E_{\prod_{i\neq j} p_{\theta_i}(z_i)}[\log p(x,z)]</script><ol>
-<li>求解更新概率</li>
-<li>带入最新概率求解下一个variable分布</li>
-</ol>
-<script type="math/tex; mode=display">
-\hat q_1 (z_1) =\int_{q_2,\cdots,q_m} [\log P_\theta(x^i,z)] dq_1\cdots dq_m\\
-\hat q_2 (z_2) =\int_{\hat q_1,q_3,\cdots,q_m} [\log P_\theta(x^i,z)] d\hat {q_1}d q_3 \cdots d q_m</script><p>这就是坐标上升，每一个latent variable的每一维度都需要通过如下推断</p>
-<h3 id="Problems-of-Classical-Variational-Inference"><a href="#Problems-of-Classical-Variational-Inference" class="headerlink" title="Problems of Classical Variational Inference"></a>Problems of Classical Variational Inference</h3><blockquote>
-<p>latent variable每一维独立性很难保证</p>
-</blockquote>
-<p>例子：深度神经网络latent embedding不能保证独立</p>
-<blockquote>
-<p>递推本身需要求m-1维期望(intractable)</p>
-</blockquote>
-<h2 id="随机梯度变分推断-解决latent-variable不独立的情况"><a href="#随机梯度变分推断-解决latent-variable不独立的情况" class="headerlink" title="随机梯度变分推断(解决latent variable不独立的情况)"></a>随机梯度变分推断(解决latent variable不独立的情况)</h2><p>$z\to x$(generative model,Decoder) $x\to z$(inference model,Encoder) </p>
-<p>Intuition：使用随机梯度上升解决ELBO最大</p>
-<h3 id="假设"><a href="#假设" class="headerlink" title="假设"></a>假设</h3><p>待求解分布$q(z)$参数化$q_\phi(z)$，目标是找到最好的分布参数</p>
-<script type="math/tex; mode=display">
-\max L(\phi) =E_{z|q_\phi(\cdot)}[\log p_\theta(z,x)] - E_{z|q_\phi(\cdot)}[\log q_\phi(z)]</script><p>$\theta$是联合分布模型的参数</p>
-<h3 id="求梯度"><a href="#求梯度" class="headerlink" title="求梯度"></a>求梯度</h3><script type="math/tex; mode=display">
-\begin{aligned}
-\nabla _\phi L(\phi) &= \nabla_\phi E_{z|q_\phi}[\log p_\theta(z,x)-\log q_\phi(z)]\\
-&=\int_z \nabla_\phi q_\phi(z)[\log p_\theta(z,x) -\log q_\phi(z)] dz-\int_z q_\phi(z) \nabla \log q_\phi(z) dz \\
-\int_z q_\phi(z)\nabla \log  q_\phi(z) dz &= \int_z \nabla_\phi q_\phi(z)  dz \\
-&=\nabla _\phi \int_z q_\phi(z) dz = 0(constant)\\
-\int _z \nabla q_\phi(z)[\log p_\theta(z,x) - \log q_\phi(z)] dz  &=\int_z q_\phi(z)\nabla _\phi\log q_\phi(z) [\log_\theta(z,x) - \log q_\phi(z)] dz\\
-(只对q_\phi(z)求偏导，对-\log q_\phi(z)不变)&=E_{z|q_\phi(\cdot)}[\nabla _\phi \log q_\phi(z)(\log p_\theta(z,x) - \log q_\phi(z)) 
-
-\end{aligned}</script><p>这个期望可以通过蒙特卡洛获得，对于给定样本$x^1,x^2,\cdots,x^n$，采样对应的n个latent variable $z^1,z^2,\cdots,z^n$，得到期望估计是</p>
-<script type="math/tex; mode=display">
-\frac 1 n (\sum_{i=1} \nabla_\phi \log q_\phi(z^i)[\log p_\theta(z^i,x^i)-\log q_\phi(z^i)])</script><p>容易导致梯度爆炸，这是因为容易采样到$z^i$使得$q_\phi(z^i)$非常小，导致期望估计不准(方差较大)</p>
-<h3 id="进行Variance-Reduction-重参数化"><a href="#进行Variance-Reduction-重参数化" class="headerlink" title="进行Variance Reduction(重参数化)"></a>进行Variance Reduction(重参数化)</h3><h4 id="Reference-1"><a href="#Reference-1" class="headerlink" title="Reference"></a>Reference</h4><ol>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/542478018">重参数化技巧，知乎</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/365170145">变分推断，重参数化</a></li>
-<li><a target="_blank" rel="noopener" href="https://spaces.ac.cn/archives/6705">Gumble Max</a></li>
-</ol>
-<h4 id="重参数化技巧"><a href="#重参数化技巧" class="headerlink" title="重参数化技巧"></a>重参数化技巧</h4><p>最初重参数化技巧用于解决蒙特卡洛从参数分布中采样无法进行梯度传播的问题，求解给定分布下某个随机变量函数的期望等于求解如下积分</p>
-<script type="math/tex; mode=display">
-J_\theta =\int p_\theta(z) f(z) dz = E_{z|p_\theta(\cdot)}[f(z
-)]</script><p>解决方法是将从$p_\theta(z)$中采样改成从无参数分布$q(\epsilon)$中采样，随后通过变换$z = g_\theta(\epsilon)$生成z，这样生成的z携带参数</p>
-<script type="math/tex; mode=display">
-L_\theta = E_{\epsilon|q(\epsilon)} [f(g_\theta(\epsilon))]</script><blockquote>
-<p>计算正态分布$N(\mu_\theta,\sigma_\theta^2)$下积分值，可以从$\mathcal N(0,1)$中采样$\epsilon_i$，计算</p>
-<script type="math/tex; mode=display">
-z_i = \epsilon \times \sigma_\theta + \mu_\theta</script><p>随后用</p>
-<script type="math/tex; mode=display">
-\frac{\sum_i g(z_i)}{n}</script><p>作为可以梯度传播的方差</p>
-<p>离散情况直接用计算出的离散概率乘上函数值</p>
-<script type="math/tex; mode=display">
-\sum_y p_\theta(y)  f(y)</script><p>但是这种做法在类别很多的情况不适用，Gumble Max在离散分布下采样实现梯度传播</p>
-</blockquote>
-<h4 id="Gumble-Max"><a href="#Gumble-Max" class="headerlink" title="Gumble Max"></a>Gumble Max</h4><p>对于类别数为k的分布$p_1,p_2,\cdots,p_k$，从$U(0,1)$采样k个随机变量</p>
-<script type="math/tex; mode=display">
-\epsilon_i|U(0,1)</script><p>采样</p>
-<script type="math/tex; mode=display">
-\arg\max_i (\log p_i-\log(-\log (\epsilon_i)))</script><p><em><em>精确等价于按照$p_1,p_2,\cdots,p_k$</em></em>p_k$**离散采样，将<code>argmax</code>输出的结果视为0-1向量，用softmax光滑之</p>
-<p>为了解决argmax不可导的问题，用连续函数近似one-hot将其转化为平滑分布<code>Gumble_softmax</code></p>
-<script type="math/tex; mode=display">
-softmax(\frac{(\log p_i-\log(-\log \epsilon_i))}{\tau})</script><p>这个想法实际上可以写成</p>
-<script type="math/tex; mode=display">
-\arg\max(x) \approx\sum_i i softmax(x)</script>
         
     
 
@@ -678,8 +526,8 @@ softmax(\frac{(\log p_i-\log(-\log \epsilon_i))}{\tau})</script><p>这个想法�
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://gaoustcer.github.io/2023/04/28/Variational-Inference/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://gaoustcer.github.io/2023/04/28/Variational-Inference/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://gaoustcer.github.io/2023/07/27/KgCoOp/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/07/27/KgCoOp/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -709,21 +557,13 @@ softmax(\frac{(\log p_i-\log(-\log \epsilon_i))}{\tau})</script><p>这个想法�
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/05/12/Conservative-Q-Learning/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2023/04/28/Offline-RL-TD3-BC/" id="post_nav-older" class="next-content">
+        <a href="/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
