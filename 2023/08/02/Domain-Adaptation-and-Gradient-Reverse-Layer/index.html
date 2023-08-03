@@ -48,7 +48,7 @@
     
     <title>
         
-            标签: Contrast Learning | 
+            Domain Adaptation and Gradient Reverse Layer | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Domain Adaptation,GRL">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/tags/Contrast-Learning/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/tags/Contrast-Learning/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: Contrast Learning | Hexo">
+    <meta property="og:title" content="Domain Adaptation and Gradient Reverse Layer | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Domain Adaptation"> <meta property="og:article:tag" content="GRL"> 
 
+    
+        <meta property="article:published_time" content="Wed Aug 02 2023 10:00:17 GMT+0800">
+        <meta property="article:modified_time" content="Wed Aug 02 2023 10:01:43 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/tags/Contrast-Learning/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/index.html",
+    "headline": "Domain Adaptation and Gradient Reverse Layer",
+    "datePublished": "Wed Aug 02 2023 10:00:17 GMT+0800",
+    "dateModified": "Wed Aug 02 2023 10:01:43 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Domain Adaptation,GRL",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,261 +322,295 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Disentanglement-Representation-and-Gradient-Reverse-layer"><span class="post-toc-number">1.</span> <span class="post-toc-text">Disentanglement Representation and Gradient Reverse layer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#learning-Disentangled-Semantic-Representation-for-Domain-Adaptation"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">learning Disentangled Semantic Representation for Domain Adaptation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Introduction-False-Alignment-Problem"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Introduction(False Alignment Problem)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Method-Disentangled-Semantic-Representation-Model"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Method Disentangled Semantic Representation Model</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%80%9A%E8%BF%87Reconstruction%E5%AD%A6%E4%B9%A0"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">通过Reconstruction学习</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Semantic-Latent-Variables-Disentanglement"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">Semantic Latent Variables Disentanglement</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A2%AF%E5%BA%A6%E5%8F%8D%E8%BD%AC%E5%92%8CDomain-Adaptation"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">梯度反转和Domain Adaptation</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/06/19/No-negative-sample-Contrast-Learning/">No negative sample Contrast Learning</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/06/19/No-negative-sample-Contrast-Learning/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>6月 19, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/06/19/Moco/">Moco</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/06/19/Moco/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>6月 19, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/06/19/Contrast-and-Self-Supervised-Learning/">Contrast and Self-Supervised Learning</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/06/19/Contrast-and-Self-Supervised-Learning/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>6月 19, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/06/19/optimize-transport/">optimize transport</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            最优传输问...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/06/19/optimize-transport/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>6月 19, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Domain Adaptation and Gradient Reverse Layer
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>8月 02, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Domain-Adaptation/" rel="tag">Domain Adaptation</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/GRL/" rel="tag">GRL</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Domain Adaptation and Gradient Reverse Layer&url=http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Domain Adaptation and Gradient Reverse Layer&url=http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Disentanglement-Representation-and-Gradient-Reverse-layer"><a href="#Disentanglement-Representation-and-Gradient-Reverse-layer" class="headerlink" title="Disentanglement Representation and Gradient Reverse layer"></a>Disentanglement Representation and Gradient Reverse layer</h1><h2 id="learning-Disentangled-Semantic-Representation-for-Domain-Adaptation"><a href="#learning-Disentangled-Semantic-Representation-for-Domain-Adaptation" class="headerlink" title="learning Disentangled Semantic Representation for Domain Adaptation"></a>learning Disentangled Semantic Representation for Domain Adaptation</h2><h3 id="Introduction-False-Alignment-Problem"><a href="#Introduction-False-Alignment-Problem" class="headerlink" title="Introduction(False Alignment Problem)"></a>Introduction(False Alignment Problem)</h3><p>给定两个Domain的数据，一个是真实图片，一个是卡通图片，每个Domain上有两类”pig“和”hair drier”，现在希望学习到的Latent Space的语义是：纵轴代表不同class的分类(Semantic information)，纵轴代表图片属于哪个Domain(Domain information)，例如</p>
+<p><img src="https://s2.loli.net/2023/08/01/1vCTfjrPLMuakNO.png" alt="image-20230801160509338"></p>
+<p>左上角代表真实的pig图片，右下角代表卡通吹风机</p>
+<p>实际上模型学到的划分由于样本数据分布的原因并不完全耦合，从分布的角度上看domain latent variable $z_d$和semantic latent variables相互独立，导致产生的分类界如下图所示</p>
+<p><img src="https://s2.loli.net/2023/08/01/z63UQfto7yNeS1G.png" alt="image-20230801164054136"></p>
+<p>这导致卡通猪被分类到吹风机</p>
+<h3 id="Method-Disentangled-Semantic-Representation-Model"><a href="#Method-Disentangled-Semantic-Representation-Model" class="headerlink" title="Method Disentangled Semantic Representation Model"></a>Method Disentangled Semantic Representation Model</h3><p><img src="https://s2.loli.net/2023/08/01/ZhzrQTdjntElMis.png" alt="image-20230801172722118"></p>
+<p>借助classifier实现对抗学习，蓝色部分用于reconstruction，绿色部分用于实现解耦表征</p>
+<ol>
+<li>Encoder网络和参数 $H_y,\phi_y$分别对应编码Semantic latent Variable的网络和参数，$H_d,\phi_d$对应编码Domain latent Variable的网络和参数</li>
+<li>Domain Classifier和Label Classifier，前者$C_d$是一个二分类器，后者$C_y$是一个多分类器，总的想法是Semantic Latent Variable在Label Classifier上尽可能区分（特指在UDA上的数据），Domain latent Variable在Domain Classifier上尽可能区分</li>
+</ol>
+<h4 id="通过Reconstruction学习"><a href="#通过Reconstruction学习" class="headerlink" title="通过Reconstruction学习"></a>通过Reconstruction学习</h4><p>原始的ELBO中，隐变量z被分解为$z_y,z_d$，通过参数为$\phi_y,\phi_z$的神经网络编码得到，ELBO写成</p>
+<p><img src="https://s2.loli.net/2023/08/01/wM3tYNqEXHoSnG5.png" alt="image-20230801174152185"></p>
+<p>$z_y,z_d$的先验分布都是$\mathcal N(0,1)$</p>
+<h4 id="Semantic-Latent-Variables-Disentanglement"><a href="#Semantic-Latent-Variables-Disentanglement" class="headerlink" title="Semantic Latent Variables Disentanglement"></a>Semantic Latent Variables Disentanglement</h4><p>设计Domain Classifier($C_d$)和Label Classifier($C_y$)用于从输入中推断Embedding所属的Domain和对应的Label，$L_{sem}$分解为在Source Domain上的分类误差尽量小并且保证Semantic Embedding在不同Domain上不了区分，这个损失函数被设计为</p>
+<p><img src="https://s2.loli.net/2023/08/01/5yVLrDuTtf9ZXml.png" alt="left side of the model"></p>
+<p>同理针对Domain Embedding优化目标相反，不可通过其推断label，但是可以根据其推断属于哪个Domain，这里不可推断Label是希望推断出的分布熵尽量大（趋近于均匀分布）</p>
+<p><img src="https://s2.loli.net/2023/08/01/MFmKwvPdSz1OTQE.png" alt="image-20230801192043462"></p>
+<h2 id="梯度反转和Domain-Adaptation"><a href="#梯度反转和Domain-Adaptation" class="headerlink" title="梯度反转和Domain Adaptation"></a>梯度反转和Domain Adaptation</h2><p>梯度反转最初在DANN中被提出，它的模型架构是</p>
+<p><img src="https://s2.loli.net/2023/08/01/Or14zGcXK8a2bEV.png" alt="image-20230801194032867"></p>
+<p>核心思想是：好的特征提取器应该满足</p>
+<ol>
+<li>不能从输出中推断出输入属于哪个Domain $\max L_y$</li>
+<li>可以基于输出训练一个Classifier用于推断输入对应的Label $\min L_d$</li>
+</ol>
+<p>这两个目标实际上是相反的，目标记作记作</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\hat\theta_f,\hat \theta_y = \arg\min_{\theta_f,\theta_y} E(\theta_f,\theta_y,\hat\theta_d)\\
+\hat\theta_d =\arg\max_{\theta_d} E(\hat\theta_f,\hat \theta_y,\theta_d)
+\end{aligned}\\
+E(\theta_f,\theta_y,\theta_d) = L_y^i(\theta_f,\theta_y) -\lambda L_d^i(\theta_f,\theta_d)</script><p>梯度更新满足</p>
+<script type="math/tex; mode=display">
+\theta_f = \theta_f -\mu(\frac{\partial L_y^i}{\partial \theta_f} -\lambda \frac{\partial L_d^i}{\partial \theta_f})\\
+\theta_y =\theta_y -\mu \frac{\partial L_y^i}{\partial \theta_y}\\
+\theta_d = \theta_d -\mu \frac{\partial L_d^i}{\partial \theta_d}</script><p>避免分阶段训练，DANN中提出梯度反转层</p>
+<script type="math/tex; mode=display">
+R_\lambda(x) = x\\
+\frac{d R_\lambda}{dx} =-\lambda I</script><p>$\lambda$是一个随着训练不是变化的变量，记作</p>
+<script type="math/tex; mode=display">
+\lambda = \frac{2}{1 +\exp (-\gamma \cdot p)} - 1</script><p>p随着训练的进行从0变化为1，梯度反转主要有两个Motivation</p>
+<ol>
+<li>避免两阶段训练对抗网络</li>
+<li>如果采用一般的梯度更新无法在更新backbone参数时根据Domain classifier Loss在计算出的梯度处乘上系数$\lambda$</li>
+</ol>
+<p>在backbone和Domain Classifier之间添加一个梯度传播层$R_\lambda$，损失函数记作</p>
+<script type="math/tex; mode=display">
+E(\theta_f,\theta_y,\theta_d) = L_y((G_y(x_i;\theta_f);\theta_y),y_i)+L_d(G_d(R_\lambda(G_f(x_i;\theta_f));\theta_d),y_i)</script>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/07/27/KgCoOp/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -717,6 +784,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
