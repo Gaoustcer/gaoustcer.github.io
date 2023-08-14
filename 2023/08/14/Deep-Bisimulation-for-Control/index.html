@@ -48,7 +48,7 @@
     
     <title>
         
-            subspaceofpolicies | 
+            Deep Bisimulation for Control | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Reinforcement Learning,Paper Reading">
+    <meta name="keywords" content=",Reinforcement Learning,Domain Adaptation">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/18/subspaceofpolicies/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/08/14/Deep-Bisimulation-for-Control/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,16 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/18/subspaceofpolicies/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/08/14/Deep-Bisimulation-for-Control/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="subspaceofpolicies | Hexo">
+    <meta property="og:title" content="Deep Bisimulation for Control | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Reinforcement Learning"> <meta property="og:article:tag" content="Paper Reading"> 
+    <meta property="og:article:tag" content="Reinforcement Learning"> <meta property="og:article:tag" content="Domain Adaptation"> 
 
     
-        <meta property="article:published_time" content="Tue Apr 18 2023 22:04:12 GMT+0800">
-        <meta property="article:modified_time" content="Tue Apr 18 2023 22:05:37 GMT+0800">
+        <meta property="article:published_time" content="Mon Aug 14 2023 10:48:56 GMT+0800">
+        <meta property="article:modified_time" content="Mon Aug 14 2023 10:50:30 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/18/subspaceofpolicies/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/08/14/Deep-Bisimulation-for-Control/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/18/subspaceofpolicies/index.html",
-    "headline": "subspaceofpolicies",
-    "datePublished": "Tue Apr 18 2023 22:04:12 GMT+0800",
-    "dateModified": "Tue Apr 18 2023 22:05:37 GMT+0800",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/08/14/Deep-Bisimulation-for-Control/index.html",
+    "headline": "Deep Bisimulation for Control",
+    "datePublished": "Mon Aug 14 2023 10:48:56 GMT+0800",
+    "dateModified": "Mon Aug 14 2023 10:50:30 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Gaoustcer",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.svg"
         }
     },
-    "keywords": ",Reinforcement Learning,Paper Reading",
+    "keywords": ",Reinforcement Learning,Domain Adaptation",
     "description": "",
 }
 </script>
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Paper-Reading%E2%80%94%E2%80%94Learning-A-Subspace-of-Policies-for-Online-Adaptation-in-Reinforcement-Learning"><span class="post-toc-number">1.</span> <span class="post-toc-text">Paper Reading——Learning A Subspace of Policies for Online Adaptation in Reinforcement Learning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Few-shot-Adaptation"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Few shot Adaptation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98%E8%83%8C%E6%99%AF"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">问题背景</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Problem-Setting-Online-Adaptation"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Problem Setting(Online Adaptation)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#k-shot-adaptation-setting"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">k-shot adaptation setting</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Learning-Subspaces-of-Policies"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Learning Subspaces of Policies</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Motivations"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">Motivations</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Subspace-of-Policy"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">Subspace of Policy</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Learning-Algorithm"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">Learning Algorithm</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Subspace-collapse"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">Subspace collapse</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Line-of-Policies-LoP"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">Line of Policies(LoP)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AE%97%E6%B3%95-%E4%B8%A4%E4%B8%AA%E7%AD%96%E7%95%A5"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">算法(两个策略)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">实验</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#baseline"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">baseline</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PPO-LoP"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">PPO-LoP</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E8%A1%A8%E7%A4%BA%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86%E8%BE%93%E5%85%A5%E4%BF%A1%E5%8F%B7%E4%B8%AD%E4%B8%8D%E9%87%8D%E8%A6%81%E7%9A%84%E9%83%A8%E5%88%86"><span class="post-toc-number">1.</span> <span class="post-toc-text">表示学习：如何区分输入信号中不重要的部分</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">背景介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9F%BA%E4%BA%8E%E9%87%8D%E5%BB%BA%E8%AF%AF%E5%B7%AE%E7%9A%84%E7%89%B9%E5%BE%81%E8%A1%A8%E5%BE%81"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">基于重建误差的特征表征</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BD%95%E4%B8%BA%E7%9B%B8%E4%BC%BC%E7%8A%B6%E6%80%81%EF%BC%9F"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">何为相似状态？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%9B%B8%E5%85%B3%E5%B7%A5%E4%BD%9C%EF%BC%9ARepresentation-Learning-in-Reinforcement-Learning"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">相关工作：Representation Learning in Reinforcement Learning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reconstruction-Based-Representation"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Reconstruction Based Representation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Contrastive-Based-Representation"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Contrastive Based Representation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Bisimulation"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">Bisimulation</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Method-DBC-Deep-Bisimulation-for-Control"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Method(DBC,Deep Bisimulation for Control)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%A1%A8%E7%A4%BA%E5%AD%A6%E4%B9%A0%E9%83%A8%E5%88%86"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">表示学习部分</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%95%B0%E5%AD%A6%E4%B8%8A%E8%AF%81%E6%98%8E%E6%B3%9B%E5%8C%96%E8%83%BD%E5%8A%9B"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">数学上证明泛化能力</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Pseudometric"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">Pseudometric</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="post-toc-number">1.4.1.1.</span> <span class="post-toc-text">例子</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Wasserstein-Distance"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Wasserstein Distance</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">定义</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Learn-More"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Learn More</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SmoothL1-Loss"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">SmoothL1 Loss</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%9A%84%E5%B7%A5%E4%BD%9C"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">什么是一个好的工作</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -383,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                subspaceofpolicies
+                Deep Bisimulation for Control
             </p>
         </div>
 
@@ -402,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Gaoustcer</strong>
-        <span>4月 18, 2023</span>
+        <span>8月 14, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -426,7 +426,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Paper-Reading/" rel="tag">Paper Reading</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a>
+        <a class="post_tag-none-link" href="/tags/Domain-Adaptation/" rel="tag">Domain Adaptation</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a>
     </ul>
     
 
@@ -443,7 +443,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=subspaceofpolicies&url=http://gaoustcer.github.io/2023/04/18/subspaceofpolicies/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Deep Bisimulation for Control&url=http://gaoustcer.github.io/2023/08/14/Deep-Bisimulation-for-Control/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -452,7 +452,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=subspaceofpolicies&url=http://gaoustcer.github.io/2023/04/18/subspaceofpolicies/index.html&via=Gaoustcer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Deep Bisimulation for Control&url=http://gaoustcer.github.io/2023/08/14/Deep-Bisimulation-for-Control/index.html&via=Gaoustcer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/18/subspaceofpolicies/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/08/14/Deep-Bisimulation-for-Control/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/18/subspaceofpolicies/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/08/14/Deep-Bisimulation-for-Control/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,77 +495,68 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Paper-Reading——Learning-A-Subspace-of-Policies-for-Online-Adaptation-in-Reinforcement-Learning"><a href="#Paper-Reading——Learning-A-Subspace-of-Policies-for-Online-Adaptation-in-Reinforcement-Learning" class="headerlink" title="Paper Reading——Learning A Subspace of Policies for Online Adaptation in Reinforcement Learning"></a>Paper Reading——Learning A Subspace of Policies for Online Adaptation in Reinforcement Learning</h1><h2 id="Few-shot-Adaptation"><a href="#Few-shot-Adaptation" class="headerlink" title="Few shot Adaptation"></a>Few shot Adaptation</h2><p>小样本学习基于有少量有监督数据和大量无监督数据的场景</p>
-<h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>学习环境和测试环境存在区别，本文讨论一种算法能够在多种环境上进行泛化。</p>
+        <h1 id="表示学习：如何区分输入信号中不重要的部分"><a href="#表示学习：如何区分输入信号中不重要的部分" class="headerlink" title="表示学习：如何区分输入信号中不重要的部分"></a>表示学习：如何区分输入信号中不重要的部分</h1><h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><h3 id="基于重建误差的特征表征"><a href="#基于重建误差的特征表征" class="headerlink" title="基于重建误差的特征表征"></a>基于重建误差的特征表征</h3><p>传统的表示学习通过Encoder-Decoder架构，损失函数为重建误差，提取中间层表征作为数据特征，这样必然导致环境过拟合，<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2006.10742">本文</a>提出了一种表征方法克服这一缺点</p>
+<h3 id="何为相似状态？"><a href="#何为相似状态？" class="headerlink" title="何为相似状态？"></a>何为相似状态？</h3><p>两个不同MDP的状态是相似的当且仅当</p>
 <ol>
-<li>提到参数空间下策略的一个子集<ol>
-<li>参数空间应该指的是环境的参数，应该是将环境作为一种变量送给RL算法学习到environment adaptation policy</li>
+<li>状态执行同一个action的奖励是相似的(Reward距离)</li>
+<li>下一个状态的距离(Dynamic距离)</li>
 </ol>
-</li>
-<li>一种方式将环境特征/信息作为meta data送给学习器训练，但是对于只有一种环境的情况容易产生过拟合</li>
-</ol>
-<p><img src="https://s2.loli.net/2022/12/02/EVQ4KLGfq9vw1oM.png" alt="image-20221202203149499"></p>
+<script type="math/tex; mode=display">
+d(s_i,s_j) = \max_{a\in \mathcal A}(1 - c)|R_{s_1}^a -R_{s_j}^a | +c W_1 (P_{s_i}^a ,P_{s_j}^a;d)\label{bmatric}</script><p>状态转移实际上是概率，这里用的是Wassertein距离</p>
+<p><em><em>特征空间上的距离$\parallel z_1-z_2\parallel_2$正比于原始输入空间中的Reward距离+Dynamic距离</em></em>间上的距离$\parallel z_1-z_2\parallel_2$正比于原始输入空间中的Reward距离+Dynamic距离**</p>
+<h2 id="相关工作：Representation-Learning-in-Reinforcement-Learning"><a href="#相关工作：Representation-Learning-in-Reinforcement-Learning" class="headerlink" title="相关工作：Representation Learning in Reinforcement Learning"></a>相关工作：Representation Learning in Reinforcement Learning</h2><h3 id="Reconstruction-Based-Representation"><a href="#Reconstruction-Based-Representation" class="headerlink" title="Reconstruction Based Representation"></a>Reconstruction Based Representation</h3><p>基于重建误差的缺点之前已经描述，一切工作同时训练Encoder和环境模型，这些方法很难准确预测长期的环境变化</p>
+<h3 id="Contrastive-Based-Representation"><a href="#Contrastive-Based-Representation" class="headerlink" title="Contrastive Based Representation"></a>Contrastive Based Representation</h3><p>对比学习中的特征提取器仍然需要获得图像的全部信息</p>
+<h3 id="Bisimulation"><a href="#Bisimulation" class="headerlink" title="Bisimulation"></a>Bisimulation</h3><p><em><em>状态在动作空间的等价性</em></em><em><em>状态在动作空间的等价性</em></em><em><em>状态在动作空间的等价性</em></em>*</p>
+<script type="math/tex; mode=display">
+R(s_i,a)= R(s_j,a),\forall a\in A\\
+P(G|s_i,a) = P(G|s_j,a)\forall a\in A,\forall G\in S_B</script><p><em><em>行为相关性</em></em><em><em>行为相关性</em></em><em><em>行为相关性</em></em><em><em>行为相关性</em></em><em><em>行为相关性</em></em><em><em>行为相关性</em></em><em><em>行为相关性</em></em><em><em>行为相关性</em></em><em><em>行为相关性</em></em><em><em>行为相关性</em></em>关性**，这个函数的定义参见$\ref{bmatric}$</p>
+<h2 id="Method-DBC-Deep-Bisimulation-for-Control"><a href="#Method-DBC-Deep-Bisimulation-for-Control" class="headerlink" title="Method(DBC,Deep Bisimulation for Control)"></a>Method(DBC,Deep Bisimulation for Control)</h2><h3 id="表示学习部分"><a href="#表示学习部分" class="headerlink" title="表示学习部分"></a>表示学习部分</h3><p><img src="https://s2.loli.net/2023/07/12/waZLESVoKzejitk.png" alt="image-20230712143549900"></p>
+<p>Encoder记作$\phi$，之前损失函数$\ref{bmatric}$中取max的操作导致其很难应用于高维空间，本文提出直接在Encoder的输出空间上构造损失函数</p>
+<script type="math/tex; mode=display">
+J(\phi) = (\parallel z_i - z_j\parallel_1 - |r_i-r_j| -\gamma W_2(P(\cdot|\overline{z_i},a_i)\parallel P(\cdot|\overline{z_j},a_j)))</script><p>计算reward distance和dynamic distance实际上都是stop gradient的，$P$是一个probabilistic dynamic model，根据latent embedding输出高斯分布</p>
+<p><img src="https://s2.loli.net/2023/07/12/n2AF8VkqlMu5tcO.png" alt="image-20230712145032288"></p>
+<p>本文的第二个贡献是将两阶段训练融合在一起，Dynamic的训练需要根据next timestep的状态得到$z_{t+1}$，它实际上在Latent Space上对下一个状态的分布做预测</p>
+<p>强化学习训练</p>
+<p><img src="https://s2.loli.net/2023/07/12/cDGVW86Mi7ZUwgA.png" alt="image-20230712232007575"></p>
+<p>Q函数和策略都是基于Encoder产生的Latent Encoder所生成</p>
+<h2 id="数学上证明泛化能力"><a href="#数学上证明泛化能力" class="headerlink" title="数学上证明泛化能力"></a>数学上证明泛化能力</h2><h3 id="Pseudometric"><a href="#Pseudometric" class="headerlink" title="Pseudometric"></a>Pseudometric</h3><p>定义Pseudo Metric空间(X,d)，X是一个set，d是一个函数</p>
+<script type="math/tex; mode=display">
+d:X\times X\to R_{\geq 0}</script><p>d是pseudometric，当且仅当满足三条性质</p>
 <ol>
-<li>红色/蓝色分别代表在training/testing环境下好的策略</li>
-<li>仅仅学习一个策略，可能导致繁华效果较差(红点或蓝点)</li>
-<li>学习一个策略凸集，被anchor point约束(⭐顶点)</li>
+<li>$d(x,x) =0$</li>
+<li>$d(x,y)= d(y,x)$</li>
+<li>$d(x,z)\leq d(x,y) + d(y,z)$</li>
 </ol>
-<h3 id="Problem-Setting-Online-Adaptation"><a href="#Problem-Setting-Online-Adaptation" class="headerlink" title="Problem Setting(Online Adaptation)"></a>Problem Setting(Online Adaptation)</h3><p>在$\mathcal M$上训练，在$\overline{\mathcal M}$上泛化，两个环境状态-动作空间相同，但是状态转换和奖励函数不同，训练时不知道测试环境的metadata</p>
-<h4 id="k-shot-adaptation-setting"><a href="#k-shot-adaptation-setting" class="headerlink" title="k-shot adaptation setting"></a>k-shot adaptation setting</h4><p>将test phase分成两个阶段</p>
-<ol>
-<li>模型在新环境上微调</li>
-<li>模型在新环境上交互</li>
-</ol>
-<h2 id="Learning-Subspaces-of-Policies"><a href="#Learning-Subspaces-of-Policies" class="headerlink" title="Learning Subspaces of Policies"></a>Learning Subspaces of Policies</h2><h3 id="Motivations"><a href="#Motivations" class="headerlink" title="Motivations"></a>Motivations</h3><p>环境特征中包含冗余和相关的特征，这样可以舍弃一些特征作为动作选择的输入，传统的rl方法可能会过度依赖noise feature$\to$选择不同的feature subset都可以学到策略</p>
-<p>不仅基于冗余环境学习最优策略$\pi_\theta$，也在此基础上学习次优策略$\pi_{\theta^*}$。两种策略之所以不同是因为选择了不同的feature subset。在真实环境上测试选择较好的策略</p>
-<h3 id="Subspace-of-Policy"><a href="#Subspace-of-Policy" class="headerlink" title="Subspace of Policy"></a>Subspace of Policy</h3><p>$\Theta$代表参数集合，选择一个子集$\overline \Theta \subset \Theta$和基于特定参数集合的策略集合$\overline \Pi = \{ \pi_\theta| \theta\in \overline \Theta\}$，假定$\overline\Theta$是$\Theta$的一个多面体，定义N个anchor参数$\overline \theta _1,\overline \theta_2,\cdots,\overline \theta_N$，任何参数中的点可以表示为anchor参数的仿射组合</p>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><p>给定空间$\mathcal F(X)$为所有实数函数组成的空间$f:X\to \R$，对于X中给定的一点$x_0\in X$，定义两个函数之间的距离</p>
 <script type="math/tex; mode=display">
-\overline \Theta = \{\sum_{i=1}^N z_i \overline \theta_i|\sum_{i=1}^N z_i = 1 \}</script><ol>
-<li>N代表参数空间的自由度</li>
-<li>任何在$\overline \Theta$中的策略都是锚节点的仿射组合，可以认为两个不同的策略share parameters，这样做的好处是可以经验服用</li>
-</ol>
-<h3 id="Learning-Algorithm"><a href="#Learning-Algorithm" class="headerlink" title="Learning Algorithm"></a>Learning Algorithm</h3><p>Loss function over the parameter subspace记作</p>
+d(f,g) = |f(x_0) - g(x_0)|</script><h2 id="Wasserstein-Distance"><a href="#Wasserstein-Distance" class="headerlink" title="Wasserstein Distance"></a>Wasserstein Distance</h2><p>reference <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/58506295">Wasserstein Distance</a></p>
+<p>这是一种刻画概率分布的方式，先回顾一些现有的概率度量(概率度量应该满足对称性，因此KL散度被排除)</p>
 <script type="math/tex; mode=display">
-\mathcal L(\overline \Theta) = \int_{\theta \in \overline\Theta } E_{\tau|\pi_\theta}[R(\tau)] d\theta</script><p>多边形，因此可以选择各个顶点代替期望</p>
+Hellinger:\sqrt{\int (\sqrt p - \sqrt q)^2}\\
+L_2:\int (p-q)^2</script><p>不能刻画分布几何特征的相似性</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>W-距离定义了两个分布之间转化的代价，对于两组离散分布P,Q</p>
 <script type="math/tex; mode=display">
-\mathcal L(\overline\theta_1,\cdots,\overline \theta_N) = E_{z|p(z)}[E_{\tau|\pi_\theta}[R(\tau)]],\theta是\overline \theta_i的仿射组合</script><p>代表在每个顶点处随机采样</p>
-<p>希望最大化这个loss</p>
-<h3 id="Subspace-collapse"><a href="#Subspace-collapse" class="headerlink" title="Subspace collapse"></a>Subspace collapse</h3><p>避免所有策略被映射到参数空间上的同一点(鼓励策略的多样性)，定义clusterloss</p>
+P = P_1,P_2,\cdots,P_n\\
+Q = Q_1,Q_2,\cdots,Q_n</script><p>约定第0 step开销$\delta_i = 0$，第i step的开销为</p>
 <script type="math/tex; mode=display">
-C(\overline \theta_1,\overline \theta_2,\cdots,\overline \theta_N) = \sum_{i\neq j} \cos^2 (\theta_i,\theta_j)</script><p>定义总的loss，在奖励尽量大的情况下差异尽量大</p>
-<p><img src="https://s2.loli.net/2022/12/03/5HCBsKfkvubNeS8.png" alt="image-20221202235848547"></p>
-<h3 id="Line-of-Policies-LoP"><a href="#Line-of-Policies-LoP" class="headerlink" title="Line of Policies(LoP)"></a>Line of Policies(LoP)</h3><p>考虑两个策略的线性组合，给定锚点$\overline \theta_1,\overline \theta_2$，定义它们的线性组合为</p>
+\delta_i = \delta_i + P_i- Q_i</script><p>总代价为</p>
 <script type="math/tex; mode=display">
-\theta = z\overline \theta_1+(1-z)\overline \theta_2</script><p>z随机采样自$[0,1]$，这样损失函数为</p>
-<p><img src="https://s2.loli.net/2022/12/03/3kvXAGyM4g6ZdcV.png" alt="image-20221203000054908"></p>
-<blockquote>
-<p>本质上还是鼓励策略的多样性</p>
-</blockquote>
-<h3 id="算法-两个策略"><a href="#算法-两个策略" class="headerlink" title="算法(两个策略)"></a>算法(两个策略)</h3><p><img src="https://s2.loli.net/2022/12/03/NFZmWJSqzx1jbUG.png" alt="image-20221203180046921"></p>
-<p>$\overline\theta_1,\overline \theta_2$对应test environment上的两个策略网络</p>
-<ol>
-<li>选择n个策略加权组合$(z_i,1-z_i)$</li>
-<li>计算每个策略加权$\theta_{z_i} = z_i \overline \theta_1+(1-z_i)\overline \theta_2$</li>
-<li>基于策略收集若干轨迹，更新策略(policy loss和策略差异)</li>
-<li>更新critic(TD loss)</li>
-</ol>
-<h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><p>在一个环境上训练在50个环境上泛化，在简单的控制任务上选择不同的物理参数作为环境的泛化</p>
-<h3 id="baseline"><a href="#baseline" class="headerlink" title="baseline"></a>baseline</h3><ol>
-<li>在训练环境上训练单个策略，在测试环境上评估(Single)</li>
-<li>在训练环境上训练多个策略，根据DIAYN和task reward设置策略参数(DIAYN+r)</li>
-</ol>
-<h3 id="PPO-LoP"><a href="#PPO-LoP" class="headerlink" title="PPO-LoP"></a>PPO-LoP</h3><p>PPO为了减少分布偏移的影响，基于旧策略$\pi_{old}$生成的数据集评估新策略$\pi_\theta$上的性能</p>
+W = \sum|\delta_i|</script><p>对于连续情况，我们定义Coupling of two distributions $(\mu,v)$，它是一个二维分布，分布的边缘分布等于$\mu,v$</p>
 <script type="math/tex; mode=display">
-J(\theta) = E_{s_t,a_t|\pi_\theta}[\sum_t R_t] = E_{s_t,a_t|\pi_\theta}[Q(s_t,a_t)]=\sum_{a_t}\pi(a_t|s_t)Q(s_t,a_t)</script><p>目标是</p>
+\gamma\in \Tau(\mu,v)\\
+\int \gamma(x,y) dy = \mu,\int \gamma(x,y) dx  = v</script><p>连续分布的Wasserstein距离定义为分布族上的优化问题，需要找到分布上期望的下确界</p>
 <script type="math/tex; mode=display">
-\max_\theta E[\frac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{old}}(a_t|s_t)}A(a_t,s_t)],A(a_t,s_t)= Q(a_t,s_t) - V(s_t)</script><p>同时约束新旧策略差异</p>
+W_p(u,v) = (\inf_{\gamma \in \Tau (\mu,v)} E_{(x,y)\in \gamma} d(x,y)^p)^{\frac 1 p}</script><h2 id="Learn-More"><a href="#Learn-More" class="headerlink" title="Learn More"></a>Learn More</h2><h3 id="SmoothL1-Loss"><a href="#SmoothL1-Loss" class="headerlink" title="SmoothL1 Loss"></a>SmoothL1 Loss</h3><p>连续的损失函数</p>
 <script type="math/tex; mode=display">
-KL(\pi_{old}(\cdot|s_t),\pi_\theta(\cdot|s_t))\leq \delta</script><p>将其引入最大化目标中</p>
-<script type="math/tex; mode=display">
-\max_\theta E_t [\frac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{old}}(a_t|s_t)}A_t(s_t,a_t),-\beta KL]</script><p>实际应用中有两种策略</p>
-<ol>
-<li>根据两次策略不同更新$\beta$，差异不大增大$\beta$，否则减少$\beta$</li>
-<li>做截断，对于importance系数差异过大的部分舍去</li>
+Smooth_{L1}(x,y) =\left\{
+\begin{aligned}
+& 0.5(x_i-y_i)^2,if\ |x_i-y_i|<1\\
+& |x_i -y _i| - 0.5
+\end{aligned}
+\right.</script><h2 id="什么是一个好的工作"><a href="#什么是一个好的工作" class="headerlink" title="什么是一个好的工作"></a>什么是一个好的工作</h2><ol>
+<li>有新意</li>
+<li>有效(有所提升)</li>
+<li>研究问题(尝试可能会失败)/工程问题(尝试一般是有效的)</li>
 </ol>
 
         
@@ -585,8 +576,8 @@ KL(\pi_{old}(\cdot|s_t),\pi_\theta(\cdot|s_t))\leq \delta</script><p>将其引�
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://gaoustcer.github.io/2023/04/18/subspaceofpolicies/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://gaoustcer.github.io/2023/04/18/subspaceofpolicies/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://gaoustcer.github.io/2023/08/14/Deep-Bisimulation-for-Control/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/08/14/Deep-Bisimulation-for-Control/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -616,21 +607,13 @@ KL(\pi_{old}(\cdot|s_t),\pi_\theta(\cdot|s_t))\leq \delta</script><p>将其引�
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/04/18/Offline-RL-Survey/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2023/04/09/optimizatio-method/" id="post_nav-older" class="next-content">
+        <a href="/2023/08/14/Domain-Adaptation-via-Prompt-Learning/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
