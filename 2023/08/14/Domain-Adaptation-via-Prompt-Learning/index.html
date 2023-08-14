@@ -48,7 +48,7 @@
     
     <title>
         
-            标签: system | 
+            Domain Adaptation via Prompt Learning | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Domain Adaptation,Prompt Learning">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/tags/system/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/08/14/Domain-Adaptation-via-Prompt-Learning/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/tags/system/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/08/14/Domain-Adaptation-via-Prompt-Learning/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: system | Hexo">
+    <meta property="og:title" content="Domain Adaptation via Prompt Learning | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Domain Adaptation"> <meta property="og:article:tag" content="Prompt Learning"> 
 
+    
+        <meta property="article:published_time" content="Mon Aug 14 2023 10:21:43 GMT+0800">
+        <meta property="article:modified_time" content="Mon Aug 14 2023 10:22:49 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/tags/system/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/08/14/Domain-Adaptation-via-Prompt-Learning/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/08/14/Domain-Adaptation-via-Prompt-Learning/index.html",
+    "headline": "Domain Adaptation via Prompt Learning",
+    "datePublished": "Mon Aug 14 2023 10:21:43 GMT+0800",
+    "dateModified": "Mon Aug 14 2023 10:22:49 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Domain Adaptation,Prompt Learning",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,205 +322,282 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Domain-Adaptation-Via-Prompt-Learning"><span class="post-toc-number">1.</span> <span class="post-toc-text">Domain Adaptation Via Prompt Learning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Intro-amp-amp-Abstract"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Intro &amp;&amp; Abstract</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Method-DAPL"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Method(DAPL)</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/05/21/Objective-File/">Objective File</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/05/21/Objective-File/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>5月 21, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/05/21/NJU-OS-Parallel-Programming/">NJU OS Parallel Programming</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/05/21/NJU-OS-Parallel-Programming/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>5月 21, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/05/21/NJU-OS-mutex/">NJU OS mutex</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/05/21/NJU-OS-mutex/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>5月 21, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Domain Adaptation via Prompt Learning
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>8月 14, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Domain-Adaptation/" rel="tag">Domain Adaptation</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Prompt-Learning/" rel="tag">Prompt Learning</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Domain Adaptation via Prompt Learning&url=http://gaoustcer.github.io/2023/08/14/Domain-Adaptation-via-Prompt-Learning/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Domain Adaptation via Prompt Learning&url=http://gaoustcer.github.io/2023/08/14/Domain-Adaptation-via-Prompt-Learning/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/08/14/Domain-Adaptation-via-Prompt-Learning/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/08/14/Domain-Adaptation-via-Prompt-Learning/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Domain-Adaptation-Via-Prompt-Learning"><a href="#Domain-Adaptation-Via-Prompt-Learning" class="headerlink" title="Domain Adaptation Via Prompt Learning"></a>Domain Adaptation Via Prompt Learning</h1><h2 id="Intro-amp-amp-Abstract"><a href="#Intro-amp-amp-Abstract" class="headerlink" title="Intro &amp;&amp; Abstract"></a>Intro &amp;&amp; Abstract</h2><p>Abstract中提出现有解决UDA问题的方法是基于Feature Space采用对抗训练，但是对抗训练容易导致语义信息和标签的丢失（考虑一个极端情况，无论哪个Domain的哪个Image被映射到同一点）</p>
+<p>本文的想法是借助Vision Language Model提供的强大泛化能力，将Domain信息嵌入到Prompt中</p>
+<h2 id="Method-DAPL"><a href="#Method-DAPL" class="headerlink" title="Method(DAPL)"></a>Method(DAPL)</h2><p>原本Context Embedding包含$M_1$个Context Embedding</p>
+<script type="math/tex; mode=display">
+t_k = [v]_1[v]_2\cdots [v]_{M_1} [CLASS]_k</script><p>本文借助Domain-Specific Context获取每个Domain上多个Image共享的特征，将Prompt分成DS和DG部分，分别记作</p>
+<script type="math/tex; mode=display">
+[d]_{m_2}^d ,m_2 = 1,2,\cdots,M_2</script><p>为Domain-Specific token，DS token被一个Domain中的所有Class Prompt共享，不同Domain中Token Embedding不相同</p>
+<script type="math/tex; mode=display">
+[d]_i^s\neq d[j]^u</script><p>Domain General Token记作</p>
+<script type="math/tex; mode=display">
+[v]_1[v]_2\cdots [v]_{M_1}</script><p>每个Class General Token Embeding不同，这种情况下Domain d中第k个Class的Prompt记作</p>
+<script type="math/tex; mode=display">
+t_k^d = [v]_1^k [v]_2^k \cdots [v]_{M_1}^k [d]_1^d[d]_2^d \cdots [d]_{M_2}^d [CLASS]_k</script><p>给定Source Domain的一个Mini-batch</p>
+<script type="math/tex; mode=display">
+\{x_i^s,y_i^s \}_{i=1}^{N_s}</script><p>样本$x_i^s$属于第k个Category的概率为</p>
+<script type="math/tex; mode=display">
+P(\hat {y_i}^s = k|x_i) = \frac{\exp{\frac{\lang g(t_k^s),f(x_i^s)}{T}}}{\sum_{d\in \{s,u\}}\sum_{j=1}^K \exp{\frac{\exp{\lang g(t_j^d),f(x_i^s)\rang}}{T}}}</script><p>为了泛化到Unseen Target Domain，给定无标签训练数据$x^u$（来自Target Domain），预测其伪标签</p>
+<script type="math/tex; mode=display">
+y^u = \arg\max_k P(\hat y^u = k|x^u)</script><p>我们希望Unseen Target Domain上数据对应伪标签对应的概率尽量大(Target Domain Prompt应该尽量清晰)</p>
+<script type="math/tex; mode=display">
+\max \log P(\hat y^u = y^u|x^u)</script><p>损失函数包括两项</p>
+<ol>
+<li>第一项：借助Supervised Source Domain计算分类损失，记作$\mathcal L_s(\mathcal D^s)$</li>
+<li>第二项：在Unlabelled Target Domain上计算伪标签，其概率尽量大，记作$\mathcal L_u(D^u) $</li>
+</ol>
+<script type="math/tex; mode=display">
+\mathcal L_u = \frac{1}{N_u}\sum_{i=1}^{N_u}I(P(\hat y_i^u|x_i^u)\geq \tau)\log P(\hat y_i^u = y_i|x_i^u)</script><p>和传统表示学习方法不同的是，本文通过两个Prompt$t_k^u,t_k^u$计算标签在原始输入上的条件分布$P(y|x^s),P(y|x^u)$</p>
+<blockquote>
+<p>两个损失函数的本质都是对比学习的Info-nce loss，数据和对应的标签结合实际上构成了一组正样本。Prompt的设计包含Domain General(v)/Specifc(d)部分，同样也可以将Image Encoder分为两个部分，Domain information/DOmain Class Information</p>
+</blockquote>
+<p>论文中给定了一个例子，对于Image $I_1$和两个Prompt $P_1,P_2$，$\lang I_1,P_1\rang$构成正样本而$\lang I_1,P_2\rang$构成负样本，优化对比损失可以让$g(P_1)\approx f(I_1)$，同时扩大$g(P_2),f(I_1)$距离，对于类$(dog,cat)$和domain $(photo,sketch)$，作者生成dog representation和photo/sketch解耦，我认为这是因为作者将其它Domain的相同Class描述prompt也作为负样本</p>
+<p><img src="https://s2.loli.net/2023/08/14/lYJgpEcuiWNqHF2.png" alt="image-20230814101732654"></p>
+<blockquote>
+<p>本文给出的例子，因为$P_2,I_1$之间互为负样本，这实际上区分了Sketch和Dog的表征（Disentangle between Domain and Class）</p>
+</blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2023/08/14/Domain-Adaptation-via-Prompt-Learning/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/08/14/Domain-Adaptation-via-Prompt-Learning/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/08/08/Domain-Generalization-Review-Methodology-and-Theory/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -661,6 +771,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
