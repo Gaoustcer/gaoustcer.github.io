@@ -48,7 +48,7 @@
     
     <title>
         
-            Domain Adaptation and Gradient Reverse Layer | 
+            Soft Actor Critic | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Domain Adaptation,GRL">
+    <meta name="keywords" content=",Reinforcement Learning">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/08/18/Soft-Actor-Critic/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,16 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/08/18/Soft-Actor-Critic/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Domain Adaptation and Gradient Reverse Layer | Hexo">
+    <meta property="og:title" content="Soft Actor Critic | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Domain Adaptation"> <meta property="og:article:tag" content="GRL"> 
+    <meta property="og:article:tag" content="Reinforcement Learning"> 
 
     
-        <meta property="article:published_time" content="Wed Aug 02 2023 10:00:17 GMT+0800">
-        <meta property="article:modified_time" content="Wed Aug 02 2023 10:01:43 GMT+0800">
+        <meta property="article:published_time" content="Fri Aug 18 2023 20:25:30 GMT+0800">
+        <meta property="article:modified_time" content="Fri Aug 18 2023 20:26:05 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/08/18/Soft-Actor-Critic/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/index.html",
-    "headline": "Domain Adaptation and Gradient Reverse Layer",
-    "datePublished": "Wed Aug 02 2023 10:00:17 GMT+0800",
-    "dateModified": "Wed Aug 02 2023 10:01:43 GMT+0800",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/08/18/Soft-Actor-Critic/index.html",
+    "headline": "Soft Actor Critic",
+    "datePublished": "Fri Aug 18 2023 20:25:30 GMT+0800",
+    "dateModified": "Fri Aug 18 2023 20:26:05 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Gaoustcer",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.svg"
         }
     },
-    "keywords": ",Domain Adaptation,GRL",
+    "keywords": ",Reinforcement Learning",
     "description": "",
 }
 </script>
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Disentanglement-Representation-and-Gradient-Reverse-layer"><span class="post-toc-number">1.</span> <span class="post-toc-text">Disentanglement Representation and Gradient Reverse layer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#learning-Disentangled-Semantic-Representation-for-Domain-Adaptation"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">learning Disentangled Semantic Representation for Domain Adaptation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Introduction-False-Alignment-Problem"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Introduction(False Alignment Problem)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Method-Disentangled-Semantic-Representation-Model"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Method Disentangled Semantic Representation Model</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%80%9A%E8%BF%87Reconstruction%E5%AD%A6%E4%B9%A0"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">通过Reconstruction学习</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Semantic-Latent-Variables-Disentanglement"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">Semantic Latent Variables Disentanglement</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A2%AF%E5%BA%A6%E5%8F%8D%E8%BD%AC%E5%92%8CDomain-Adaptation"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">梯度反转和Domain Adaptation</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Soft-Actor-Critic-Max-Entropy-RL-to-encourage-explore"><span class="post-toc-number">1.</span> <span class="post-toc-text">Soft-Actor Critic(Max Entropy RL to encourage explore)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Reference"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Reference</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Annotations-and-Definitions"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Annotations and Definitions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Definition-object-of-RL-based-on-Entropy"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Definition: object of RL based on Entropy</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Definition-State-Value-and-State-Action-Value"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Definition: State Value and State-Action Value</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Policy-Evaluation-Improvement-and-Iteration"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Policy Evaluation&#x2F;Improvement and Iteration</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Soft-Policy-Evaluation"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">Soft Policy Evaluation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Soft-Policy-Improvement"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">Soft Policy Improvement</span></a></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -383,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                Domain Adaptation and Gradient Reverse Layer
+                Soft Actor Critic
             </p>
         </div>
 
@@ -402,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Gaoustcer</strong>
-        <span>8月 02, 2023</span>
+        <span>8月 18, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -426,7 +426,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Domain-Adaptation/" rel="tag">Domain Adaptation</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/GRL/" rel="tag">GRL</a>
+        <a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a>
     </ul>
     
 
@@ -443,7 +443,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Domain Adaptation and Gradient Reverse Layer&url=http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Soft Actor Critic&url=http://gaoustcer.github.io/2023/08/18/Soft-Actor-Critic/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -452,7 +452,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Domain Adaptation and Gradient Reverse Layer&url=http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/index.html&via=Gaoustcer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Soft Actor Critic&url=http://gaoustcer.github.io/2023/08/18/Soft-Actor-Critic/index.html&via=Gaoustcer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/08/18/Soft-Actor-Critic/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/08/18/Soft-Actor-Critic/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,55 +495,58 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Disentanglement-Representation-and-Gradient-Reverse-layer"><a href="#Disentanglement-Representation-and-Gradient-Reverse-layer" class="headerlink" title="Disentanglement Representation and Gradient Reverse layer"></a>Disentanglement Representation and Gradient Reverse layer</h1><h2 id="learning-Disentangled-Semantic-Representation-for-Domain-Adaptation"><a href="#learning-Disentangled-Semantic-Representation-for-Domain-Adaptation" class="headerlink" title="learning Disentangled Semantic Representation for Domain Adaptation"></a>learning Disentangled Semantic Representation for Domain Adaptation</h2><h3 id="Introduction-False-Alignment-Problem"><a href="#Introduction-False-Alignment-Problem" class="headerlink" title="Introduction(False Alignment Problem)"></a>Introduction(False Alignment Problem)</h3><p>给定两个Domain的数据，一个是真实图片，一个是卡通图片，每个Domain上有两类”pig“和”hair drier”，现在希望学习到的Latent Space的语义是：纵轴代表不同class的分类(Semantic information)，纵轴代表图片属于哪个Domain(Domain information)，例如</p>
-<p><img src="https://s2.loli.net/2023/08/01/1vCTfjrPLMuakNO.png" alt="image-20230801160509338"></p>
-<p>左上角代表真实的pig图片，右下角代表卡通吹风机</p>
-<p>实际上模型学到的划分由于样本数据分布的原因并不完全耦合，从分布的角度上看domain latent variable $z_d$和semantic latent variables相互独立，导致产生的分类界如下图所示</p>
-<p><img src="https://s2.loli.net/2023/08/01/z63UQfto7yNeS1G.png" alt="image-20230801164054136"></p>
-<p>这导致卡通猪被分类到吹风机</p>
-<h3 id="Method-Disentangled-Semantic-Representation-Model"><a href="#Method-Disentangled-Semantic-Representation-Model" class="headerlink" title="Method Disentangled Semantic Representation Model"></a>Method Disentangled Semantic Representation Model</h3><p><img src="https://s2.loli.net/2023/08/01/ZhzrQTdjntElMis.png" alt="image-20230801172722118"></p>
-<p>借助classifier实现对抗学习，蓝色部分用于reconstruction，绿色部分用于实现解耦表征</p>
-<ol>
-<li>Encoder网络和参数 $H_y,\phi_y$分别对应编码Semantic latent Variable的网络和参数，$H_d,\phi_d$对应编码Domain latent Variable的网络和参数</li>
-<li>Domain Classifier和Label Classifier，前者$C_d$是一个二分类器，后者$C_y$是一个多分类器，总的想法是Semantic Latent Variable在Label Classifier上尽可能区分（特指在UDA上的数据），Domain latent Variable在Domain Classifier上尽可能区分</li>
+        <h1 id="Soft-Actor-Critic-Max-Entropy-RL-to-encourage-explore"><a href="#Soft-Actor-Critic-Max-Entropy-RL-to-encourage-explore" class="headerlink" title="Soft-Actor Critic(Max Entropy RL to encourage explore)"></a>Soft-Actor Critic(Max Entropy RL to encourage explore)</h1><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1702.08165">Reinforcement Learning with Deep Energy-Based Policies</a></li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1801.01290.pdf">Soft Actor-Critic</a></li>
 </ol>
-<h4 id="通过Reconstruction学习"><a href="#通过Reconstruction学习" class="headerlink" title="通过Reconstruction学习"></a>通过Reconstruction学习</h4><p>原始的ELBO中，隐变量z被分解为$z_y,z_d$，通过参数为$\phi_y,\phi_z$的神经网络编码得到，ELBO写成</p>
-<p><img src="https://s2.loli.net/2023/08/01/wM3tYNqEXHoSnG5.png" alt="image-20230801174152185"></p>
-<p>$z_y,z_d$的先验分布都是$\mathcal N(0,1)$</p>
-<h4 id="Semantic-Latent-Variables-Disentanglement"><a href="#Semantic-Latent-Variables-Disentanglement" class="headerlink" title="Semantic Latent Variables Disentanglement"></a>Semantic Latent Variables Disentanglement</h4><p>设计Domain Classifier($C_d$)和Label Classifier($C_y$)用于从输入中推断Embedding所属的Domain和对应的Label，$L_{sem}$分解为在Source Domain上的分类误差尽量小并且保证Semantic Embedding在不同Domain上不了区分，这个损失函数被设计为</p>
-<p><img src="https://s2.loli.net/2023/08/01/5yVLrDuTtf9ZXml.png" alt="left side of the model"></p>
-<p>同理针对Domain Embedding优化目标相反，不可通过其推断label，但是可以根据其推断属于哪个Domain，这里不可推断Label是希望推断出的分布熵尽量大（趋近于均匀分布）</p>
-<p><img src="https://s2.loli.net/2023/08/01/MFmKwvPdSz1OTQE.png" alt="image-20230801192043462"></p>
-<h2 id="梯度反转和Domain-Adaptation"><a href="#梯度反转和Domain-Adaptation" class="headerlink" title="梯度反转和Domain Adaptation"></a>梯度反转和Domain Adaptation</h2><p>梯度反转最初在DANN中被提出，它的模型架构是</p>
-<p><img src="https://s2.loli.net/2023/08/01/Or14zGcXK8a2bEV.png" alt="image-20230801194032867"></p>
-<p>核心思想是：好的特征提取器应该满足</p>
-<ol>
-<li>不能从输出中推断出输入属于哪个Domain $\max L_y$</li>
-<li>可以基于输出训练一个Classifier用于推断输入对应的Label $\min L_d$</li>
+<h2 id="Annotations-and-Definitions"><a href="#Annotations-and-Definitions" class="headerlink" title="Annotations and Definitions"></a>Annotations and Definitions</h2><p>Entropy用于刻画分布的离散程度，Entropy越大分布集中程度越低，传统的RL算法(Actor-Critic及其变体)仅仅关注最大化累计奖励，这样的一个潜在问题是算法可能收敛于次优策略（不充分探索），为了解决这个问题，我们将每个state对应的策略Entropy作为奖励函数的一部分以鼓励探索</p>
+<h3 id="Definition-object-of-RL-based-on-Entropy"><a href="#Definition-object-of-RL-based-on-Entropy" class="headerlink" title="Definition: object of RL based on Entropy"></a>Definition: object of RL based on Entropy</h3><script type="math/tex; mode=display">
+J(\pi) = \sum_t E_{(s_t,a_T)|\rho_\pi}[r(s_t,a_t) + \alpha \mathcal H(\pi(\cdot|s_t))]</script><blockquote>
+<p>本质上是将原始来自环境的奖励$r(s_t,a_t)$增添了一项</p>
+</blockquote>
+<h3 id="Definition-State-Value-and-State-Action-Value"><a href="#Definition-State-Value-and-State-Action-Value" class="headerlink" title="Definition: State Value and State-Action Value"></a>Definition: State Value and State-Action Value</h3><script type="math/tex; mode=display">
+V_\pi(s_0) = E_{\tau |\pi}[\sum_{t=0}^\infty \gamma ^{t} (r(s_t,a_t)+\alpha \mathcal H^\pi(s_t))]\Rightarrow V^\pi(s_t) = E_{a_t|\pi}[Q^\pi(s_t,a_t) -\alpha \log \pi(a_t|s_t)] \\
+Q^\pi(s_0,a_0) = E_{\tau |\pi}[r(s_t,a_t) + \sum_{t=1}^\infty \gamma^t (r(s_t,a_t) +\alpha  \mathcal H^\pi(s_t))]\Rightarrow Q^{\pi}(s_t,a_t) = r(s_t,a_t) + \gamma E_{s_{t+1}|\rho}[V^\pi(s_{t+1})]</script><blockquote>
+</blockquote>
+<h2 id="Policy-Evaluation-Improvement-and-Iteration"><a href="#Policy-Evaluation-Improvement-and-Iteration" class="headerlink" title="Policy Evaluation/Improvement and Iteration"></a>Policy Evaluation/Improvement and Iteration</h2><ol>
+<li>Policy Evaluation 给定策略（state到分布的映射），计算V值（Temporal Difference,Single/Multi Steps）</li>
+<li>Policy Improvement 将计算出的V值视为策略的函数，优化策略提升V值</li>
+<li>Policy Iteration=Policy Evaluation Policy Improvement迭代进行若干次</li>
 </ol>
-<p>这两个目标实际上是相反的，目标记作记作</p>
+<p>Q学习借助TD Error进行Policy Evaluation，借助最大化Q值或最小化TD Error进行Improvement</p>
+<h3 id="Soft-Policy-Evaluation"><a href="#Soft-Policy-Evaluation" class="headerlink" title="Soft Policy Evaluation"></a>Soft Policy Evaluation</h3><p>Entropy框架实现Soft Policy Evaluation的思路和Q Learning相似</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\hat\theta_f,\hat \theta_y = \arg\min_{\theta_f,\theta_y} E(\theta_f,\theta_y,\hat\theta_d)\\
-\hat\theta_d =\arg\max_{\theta_d} E(\hat\theta_f,\hat \theta_y,\theta_d)
-\end{aligned}\\
-E(\theta_f,\theta_y,\theta_d) = L_y^i(\theta_f,\theta_y) -\lambda L_d^i(\theta_f,\theta_d)</script><p>梯度更新满足</p>
+Q^\pi(s_t,a_t) &= r(s_t,a_t) +\gamma E_{s_{t+1}|\rho}[V^\pi(s_{t+1})]\\
+&=r(s_t,a_t) + \gamma E_{s_{t+1}|\rho}[Q^\pi(s_{t+1},a_{t+1}) -\alpha \log \pi(a_{t+1}|s_{t+1})]\\
+&=r(s_t,a_t) + \gamma  E_{s_{t+1}|\rho}(\alpha \mathcal H(s_{t+1}) + E_{s_{t+1}|\rho,a_{t+1}|\pi}[Q^\pi(s_{t+1},a_{t+1})]
+\end{aligned}</script><h3 id="Soft-Policy-Improvement"><a href="#Soft-Policy-Improvement" class="headerlink" title="Soft Policy Improvement"></a>Soft Policy Improvement</h3><p>如果使用Max Q Value选择Action，算法可能退化为确定性算法</p>
 <script type="math/tex; mode=display">
-\theta_f = \theta_f -\mu(\frac{\partial L_y^i}{\partial \theta_f} -\lambda \frac{\partial L_d^i}{\partial \theta_f})\\
-\theta_y =\theta_y -\mu \frac{\partial L_y^i}{\partial \theta_y}\\
-\theta_d = \theta_d -\mu \frac{\partial L_d^i}{\partial \theta_d}</script><p>避免分阶段训练，DANN中提出梯度反转层</p>
+\pi^\prime(s_t) =\arg\max_{a_t}Q^\pi(s_t,a_t)\label{PI}\tag{Policy Improvement}</script><p>Max-Entropy RL的最大改变在添加Entropy到RL框架后，最优策略退化为正比于Q值指数的概率分布，可以证明采取$\ref{PI}$并添加Entropy到Q函数中则Policy Improvement的结果变为</p>
 <script type="math/tex; mode=display">
-R_\lambda(x) = x\\
-\frac{d R_\lambda}{dx} =-\lambda I</script><p>$\lambda$是一个随着训练不是变化的变量，记作</p>
+\pi^\prime(a_t|s_t)=\frac{\exp{Q^\pi(s_t,a_t)}/\alpha}{Z_t}\\
+Z_t= \sum_{a}\exp{\frac{Q^\pi(s_t,a_t)}{\alpha }}</script><p>并且按照这种方式进行策略更新Q函数满足</p>
 <script type="math/tex; mode=display">
-\lambda = \frac{2}{1 +\exp (-\gamma \cdot p)} - 1</script><p>p随着训练的进行从0变化为1，梯度反转主要有两个Motivation</p>
-<ol>
-<li>避免两阶段训练对抗网络</li>
-<li>如果采用一般的梯度更新无法在更新backbone参数时根据Domain classifier Loss在计算出的梯度处乘上系数$\lambda$</li>
-</ol>
-<p>在backbone和Domain Classifier之间添加一个梯度传播层$R_\lambda$，损失函数记作</p>
+Q^\pi(s,a) \leq Q^{\pi^\prime}(s,a)</script><p>证明的关键是将$Q^\pi$拆分为当前策略$\pi$和最优策略$\pi^\prime$之间的KL Divergence</p>
 <script type="math/tex; mode=display">
-E(\theta_f,\theta_y,\theta_d) = L_y((G_y(x_i;\theta_f);\theta_y),y_i)+L_d(G_d(R_\lambda(G_f(x_i;\theta_f));\theta_d),y_i)</script>
+\begin{aligned}
+V^\pi(s)& = E_{a|\pi}[Q^\pi(s,a) - \alpha \log \pi(a|s)]\\
+&=-E_{a|\pi}[\alpha \log \pi(a|s) -\alpha  \log \exp \frac{Q^\pi(s,a)}{\alpha} +\alpha\log Z] +\alpha \log  Z\\
+&=-E_{a|\pi}[\alpha \log \pi(a|s) -\alpha \log \pi^\prime(a|s)]+\alpha \log Z\\
+&=-\alpha D_{KL}(\pi(\cdot|s)\parallel \pi^\prime(\cdot|s)) +\alpha \log Z
+\end{aligned}</script><blockquote>
+<p>进行policy update时Q视为常数，因此$\pi =\pi^\prime$时完成一轮Policy Improvement</p>
+</blockquote>
+<p>显然Maximize $V^\pi(s)$的策略满足</p>
+<script type="math/tex; mode=display">
+\pi =\pi^\prime</script><p>此时</p>
+<script type="math/tex; mode=display">
+V^\pi(s)\leq V^{\pi^\prime}(s)=E_{a|\pi^\prime}[Q^\pi(s,a) - \log \pi^\prime(a|s)] = \mathcal H^{\pi^\prime}(s) +E_{a|\pi^\prime}[Q^\pi(s,a)]</script><p>进一步借助Q-V关系</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+Q^\pi(s,a) & = E_{s_1|\rho}[r_0+\gamma V^\pi(s_1)]\\
+&\leq r(s,a) + \gamma E_{s_1\in \rho}[\mathcal H^{\pi^\prime}(s_1) + E_{a|\pi^\prime}[Q^\pi(s,a)]]\leq \cdots \leq Q^{\pi^\prime}(s,a)
+\end{aligned}</script>
         
     
 
@@ -561,8 +564,8 @@ E(\theta_f,\theta_y,\theta_d) = L_y((G_y(x_i;\theta_f);\theta_y),y_i)+L_d(G_d(R_
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://gaoustcer.github.io/2023/08/02/Domain-Adaptation-and-Gradient-Reverse-Layer/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://gaoustcer.github.io/2023/08/18/Soft-Actor-Critic/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/08/18/Soft-Actor-Critic/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -592,21 +595,13 @@ E(\theta_f,\theta_y,\theta_d) = L_y((G_y(x_i;\theta_f);\theta_y),y_i)+L_d(G_d(R_
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/08/08/Domain-Generalization-Review-Methodology-and-Theory/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2023/07/27/KgCoOp/" id="post_nav-older" class="next-content">
+        <a href="/2023/08/14/Deep-Bisimulation-for-Control/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
