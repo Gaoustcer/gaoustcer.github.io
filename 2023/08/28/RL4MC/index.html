@@ -48,7 +48,7 @@
     
     <title>
         
-            标签: Prompt Tuning | 
+            RL4MC | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Reinforcement Learning,Vision Language Model">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/tags/Prompt-Tuning/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/08/28/RL4MC/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/tags/Prompt-Tuning/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/08/28/RL4MC/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: Prompt Tuning | Hexo">
+    <meta property="og:title" content="RL4MC | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Reinforcement Learning"> <meta property="og:article:tag" content="Vision Language Model"> 
 
+    
+        <meta property="article:published_time" content="Mon Aug 28 2023 15:44:43 GMT+0800">
+        <meta property="article:modified_time" content="Mon Aug 28 2023 15:46:08 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/tags/Prompt-Tuning/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/08/28/RL4MC/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/08/28/RL4MC/index.html",
+    "headline": "RL4MC",
+    "datePublished": "Mon Aug 28 2023 15:44:43 GMT+0800",
+    "dateModified": "Mon Aug 28 2023 15:46:08 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Reinforcement Learning,Vision Language Model",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,93 +322,338 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#RL4MC-Train-An-Agent-in-Minecraft-via-Vision-Language-Model-and-RL-Method"><span class="post-toc-number">1.</span> <span class="post-toc-text">RL4MC:Train An Agent in Minecraft via Vision Language Model and RL Method</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MineCLIP"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">MineCLIP</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%BB%E8%A6%81%E8%B4%A1%E7%8C%AE"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">主要贡献</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task-Subset"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Task Subset</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Programmatic-Task"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">Programmatic Task</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Creative-Task"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">Creative Task</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Pretrain-Contrast-Model-in-Large-Scale-Video"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">Pretrain Contrast Model in Large-Scale Video</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#RL-with-Pretrain-Model"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">RL with Pretrain Model</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Experiment"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">Experiment</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90"><span class="post-toc-number">1.1.5.1.</span> <span class="post-toc-text">数据集生成</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%9B%86%E6%88%90%E6%A8%A1%E4%BB%BF%E5%AD%A6%E4%B9%A0%E5%92%8CPPO"><span class="post-toc-number">1.1.5.2.</span> <span class="post-toc-text">集成模仿学习和PPO</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CLIP4MC"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">CLIP4MC</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solved-Problem"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Solved Problem</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Background"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Background</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%A7%86%E9%A2%91-%E6%96%87%E6%9C%AC%E6%A3%80%E7%B4%A2"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">视频-文本检索</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Minecraft-dataset"><span class="post-toc-number">1.2.2.2.</span> <span class="post-toc-text">Minecraft dataset</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Partial-Observable-MDP"><span class="post-toc-number">1.2.2.3.</span> <span class="post-toc-text">Partial Observable MDP</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E9%A2%84%E5%A4%84%E7%90%86"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">数据集预处理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Content-filtering"><span class="post-toc-number">1.2.3.1.</span> <span class="post-toc-text">Content filtering</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Correlation-filtering"><span class="post-toc-number">1.2.3.2.</span> <span class="post-toc-text">Correlation filtering</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Motion-Encoder"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Motion Encoder</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/">Visual Language Model:CLIP and Prompt Learning</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>7月 26, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                RL4MC
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>8月 28, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Vision-Language-Model/" rel="tag">Vision Language Model</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=RL4MC&url=http://gaoustcer.github.io/2023/08/28/RL4MC/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=RL4MC&url=http://gaoustcer.github.io/2023/08/28/RL4MC/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/08/28/RL4MC/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/08/28/RL4MC/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="RL4MC-Train-An-Agent-in-Minecraft-via-Vision-Language-Model-and-RL-Method"><a href="#RL4MC-Train-An-Agent-in-Minecraft-via-Vision-Language-Model-and-RL-Method" class="headerlink" title="RL4MC:Train An Agent in Minecraft via Vision Language Model and RL Method"></a>RL4MC:Train An Agent in Minecraft via Vision Language Model and RL Method</h1><h2 id="MineCLIP"><a href="#MineCLIP" class="headerlink" title="MineCLIP"></a>MineCLIP</h2><h3 id="主要贡献"><a href="#主要贡献" class="headerlink" title="主要贡献"></a>主要贡献</h3><ol>
+<li>Minecraft上的开放式任务：此类任务的终止状态不能用程序评估，本文借助基于Mine craft预训练的视觉语言模型评估任务完成的质量，这种评估方式和人类评估结果具有较强的一致性</li>
+<li>多模态数据集</li>
+<li>借助多模态数据集训练Video-Text模型</li>
+</ol>
+<h3 id="Task-Subset"><a href="#Task-Subset" class="headerlink" title="Task Subset"></a>Task Subset</h3><h4 id="Programmatic-Task"><a href="#Programmatic-Task" class="headerlink" title="Programmatic Task"></a>Programmatic Task</h4><p>给定</p>
+<ol>
+<li>任务目标的自然语言描述G</li>
+<li>任务提示（借助GPT3获得）$\mathcal G$</li>
+<li>初始条件 $\mathcal T$</li>
+<li>判断任务是否完成  $f_s :s_t\to \{0,1\}$</li>
+<li>奖励函数(可选) $f_R:s_t\to \R$</li>
+</ol>
+<h4 id="Creative-Task"><a href="#Creative-Task" class="headerlink" title="Creative Task"></a>Creative Task</h4><p>只包含任务自然语言描述、任务提示、初始条件，通过人工设计得到了216个Creative Task并将其扩展</p>
+<ol>
+<li>从Youtube上挖掘任务</li>
+<li>借助GPT-3生成创新任务</li>
+</ol>
+<h3 id="Pretrain-Contrast-Model-in-Large-Scale-Video"><a href="#Pretrain-Contrast-Model-in-Large-Scale-Video" class="headerlink" title="Pretrain Contrast Model in Large-Scale Video"></a>Pretrain Contrast Model in Large-Scale Video</h3><p>希望文本描述和视频被映射为一个实数，作为当前的reward function</p>
+<h3 id="RL-with-Pretrain-Model"><a href="#RL-with-Pretrain-Model" class="headerlink" title="RL with Pretrain Model"></a>RL with Pretrain Model</h3><p>给定任务目标的语言描述作为Text Encoder输入，避免多次query VLM导致的开销，作者采取如下策略加速RL训练</p>
+<ol>
+<li>目标在训练过程中固定，只需要计算一次Text Embedding</li>
+<li>Agent对图像的编码器复用MINECLIP的Video Encoder部分并在训练过程中冻结</li>
+<li>Video Frame Cache：Video Encoder被分成Image Encoder和Aggregator两个部分，对于重叠的Sequence无需重新计算整个Sequence Embedding</li>
+<li>存储具有高MINECLIP奖励的轨迹并采用类似模仿学习的方式进行学习</li>
+</ol>
+<h3 id="Experiment"><a href="#Experiment" class="headerlink" title="Experiment"></a>Experiment</h3><h4 id="数据集生成"><a href="#数据集生成" class="headerlink" title="数据集生成"></a>数据集生成</h4><ol>
+<li>定义实体和关键字集合</li>
+<li>文本匹配获得对应的text segment，将其扩展为16-77 token</li>
+<li>在对应的transcript中采样video clip并将其增广到一定时间</li>
+</ol>
+<h4 id="集成模仿学习和PPO"><a href="#集成模仿学习和PPO" class="headerlink" title="集成模仿学习和PPO"></a>集成模仿学习和PPO</h4><p>维护一个轨迹Buffer $D_{SI}$存储成功/奖励高于某个Threshold的轨迹，在这个数据集上应用模仿学习（PPO Phase and SI Phase）</p>
+<h2 id="CLIP4MC"><a href="#CLIP4MC" class="headerlink" title="CLIP4MC"></a>CLIP4MC</h2><h3 id="Solved-Problem"><a href="#Solved-Problem" class="headerlink" title="Solved Problem"></a>Solved Problem</h3><p>训练一个Agent，能够完成开放世界中的多种任务。</p>
+<blockquote>
+<p>难点在于无法根据任务不同从环境中提取Task-Relevant Reward</p>
+</blockquote>
+<p>本文希望学习一个VLM，并将其作为Open-Ended Task的奖励函数</p>
+<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><h4 id="视频-文本检索"><a href="#视频-文本检索" class="headerlink" title="视频-文本检索"></a>视频-文本检索</h4><p>Fusion Model：融合模型，相当于构建一个神经网络用于计算Text Embedding和Video Embedding之间的相似度</p>
+<p>相关工作：CLIP4CLIP</p>
+<ol>
+<li>Video Encoder: 输入多帧图像，输出多帧的图像特征、</li>
+<li>Text Encoder: 直接对文本进行特征提取</li>
+<li>Similarity Calculator（关键）刻画多帧嵌入和文本嵌入之间的相似度模块</li>
+</ol>
+<p>给定视频表示$z_i = \{z_i^1,z_i^2,\cdots,z_i^{|v_i|}\}$和问Bern表示$w_j$，计算两者相似度的Similarity Calculator模块如下图所示</p>
+<p><img src="https://s2.loli.net/2023/08/27/P8V6f7qjhztrMnA.png" alt="image-20230827174353534"></p>
+<p><img src="https://s2.loli.net/2023/08/27/aqMQGEBYceujC8s.png" alt="image-20230827174436038"></p>
+<ol>
+<li>取均值</li>
+<li>采用Text Representation+ Frame Representation + Position Embedding提取特征</li>
+<li>Text Representation也加上Position Embedding</li>
+</ol>
+<h4 id="Minecraft-dataset"><a href="#Minecraft-dataset" class="headerlink" title="Minecraft dataset"></a>Minecraft dataset</h4><p>主要难点</p>
+<ol>
+<li>缺少对数据集的标注<ol>
+<li>对每个frame标注是不可能的</li>
+<li>很难定义frame完成的具体任务</li>
+</ol>
+</li>
+<li>action作为Frame的标签，尝试学习一个打标签模型给Internet-scale数据打标签</li>
+</ol>
+<p>MineDojo定义了一些Task，将其分为两类</p>
+<ol>
+<li>Programmatic task，存在一些ground truth结果用于判断任务是否被完成</li>
+<li>Creative task，无法定义任务呗很好地完成</li>
+</ol>
+<p>本文中更关心前者，MineDojo中直接通过强化学习学习完成某个任务的策略是不可行的（奖励过于稀疏，动作空间很大），因此需要基于Human Demonstration进行学习（Internet Dataset），数据集的格式为</p>
+<p><img src="https://s2.loli.net/2023/08/27/nG5Wcjyr8BhYeKv.png" alt="image-20230827232600271"></p>
+<h4 id="Partial-Observable-MDP"><a href="#Partial-Observable-MDP" class="headerlink" title="Partial Observable MDP"></a>Partial Observable MDP</h4><p>给定</p>
+<ol>
+<li>部分可观测状态 $o_t$</li>
+<li>global state $s_t$</li>
+<li>Language Prompt $G$</li>
+</ol>
+<p>策略仅仅依赖于部分可观测状态，奖励函数来自过去若干Frame组成的Observation以及Prompt</p>
+<script type="math/tex; mode=display">
+\pi(a_t|o_t)\\
+r_t = \Phi(V_t,G)</script><h3 id="数据集预处理"><a href="#数据集预处理" class="headerlink" title="数据集预处理"></a>数据集预处理</h3><h4 id="Content-filtering"><a href="#Content-filtering" class="headerlink" title="Content filtering"></a>Content filtering</h4><ol>
+<li>定义实体名称列表</li>
+<li>选择长度为L的滑动窗口，作用于Transcript中，希望包含尽可能多的keyword</li>
+</ol>
+<blockquote>
+<p>去除Text描述中的无关特征</p>
+</blockquote>
+<h4 id="Correlation-filtering"><a href="#Correlation-filtering" class="headerlink" title="Correlation filtering"></a>Correlation filtering</h4><blockquote>
+<p>要求文本描述和视频内容尽可能一致</p>
+</blockquote>
+<p>本文认为避免不一致的策略是选择合适的视频采样方式，解决这个问题的最终方案是借助预训练的MIneCLIP提取视频CLIP特征和文本特征，要求两者尽量一致（top k%）</p>
+<h2 id="Motion-Encoder"><a href="#Motion-Encoder" class="headerlink" title="Motion Encoder"></a>Motion Encoder</h2><p>将相隔若干Interval的state作为一个state pair</p>
+<script type="math/tex; mode=display">
+(s_1,s_{1+\delta}),(s_2,s_{2+\delta}),\cdots,(s_{T-\delta},s_T)</script><p>编码成长度为$T-\delta$的Sequence序列，送入一个fusion model编码为Motion Embedding</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2023/08/28/RL4MC/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/08/28/RL4MC/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/08/23/Object-Detection-via-Prompt-Learning/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -549,6 +827,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
