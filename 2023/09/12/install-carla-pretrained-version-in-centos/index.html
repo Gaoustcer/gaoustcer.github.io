@@ -48,7 +48,7 @@
     
     <title>
         
-            Diverse Policy in RL | 
+            install carla pretrained version in centos | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Reinforcement Learning">
+    <meta name="keywords" content=",Reinforcement Learning,Carla">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/08/Diverse-Policy-in-RL/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/09/12/install-carla-pretrained-version-in-centos/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,16 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/08/Diverse-Policy-in-RL/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/09/12/install-carla-pretrained-version-in-centos/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Diverse Policy in RL | Hexo">
+    <meta property="og:title" content="install carla pretrained version in centos | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Reinforcement Learning"> 
+    <meta property="og:article:tag" content="Reinforcement Learning"> <meta property="og:article:tag" content="Carla"> 
 
     
-        <meta property="article:published_time" content="Sat Apr 08 2023 16:49:04 GMT+0800">
-        <meta property="article:modified_time" content="Sat Apr 08 2023 16:49:31 GMT+0800">
+        <meta property="article:published_time" content="Tue Sep 12 2023 20:23:26 GMT+0800">
+        <meta property="article:modified_time" content="Tue Sep 12 2023 20:24:18 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/08/Diverse-Policy-in-RL/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/09/12/install-carla-pretrained-version-in-centos/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/08/Diverse-Policy-in-RL/index.html",
-    "headline": "Diverse Policy in RL",
-    "datePublished": "Sat Apr 08 2023 16:49:04 GMT+0800",
-    "dateModified": "Sat Apr 08 2023 16:49:31 GMT+0800",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/09/12/install-carla-pretrained-version-in-centos/index.html",
+    "headline": "install carla pretrained version in centos",
+    "datePublished": "Tue Sep 12 2023 20:23:26 GMT+0800",
+    "dateModified": "Tue Sep 12 2023 20:24:18 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Gaoustcer",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.svg"
         }
     },
-    "keywords": ",Reinforcement Learning",
+    "keywords": ",Reinforcement Learning,Carla",
     "description": "",
 }
 </script>
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Paper-Overview-generate-Diversity-for-a-RL-Task"><span class="post-toc-number">1.</span> <span class="post-toc-text">Paper Overview(generate Diversity for a RL Task)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DGPO"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">DGPO</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%80%E4%BA%9B%E5%89%8D%E5%BA%8F%E5%B7%A5%E4%BD%9C"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">一些前序工作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Related-Work"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Related Work</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%BB%BA%E6%A8%A1%E4%B8%BA%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8B"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">强化学习建模为概率图模型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Diversity-in-RL"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">Diversity in RL</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Preliminary"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">Preliminary</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Method"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">Method</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Diversity-Guided-Policy-Optimization"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">Diversity-Guided Policy Optimization</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AE%97%E6%B3%95"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="post-toc-number">1.1.6.1.</span> <span class="post-toc-text">初始化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%95%B0%E6%8D%AE%E6%94%B6%E9%9B%86"><span class="post-toc-number">1.1.6.2.</span> <span class="post-toc-text">数据收集</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AE%AD%E7%BB%83"><span class="post-toc-number">1.1.6.3.</span> <span class="post-toc-text">训练</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Diversity-is-all-you-need"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Diversity is all you need</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">实验结果</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Discovering-Diverse-Solutions-in-DRL"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Discovering Diverse Solutions in DRL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Latent-Policies-For-Learning-Multiple-Solutions"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">Latent Policies For Learning Multiple Solutions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Latent-Representations-of-Policies"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">Latent Representations of Policies</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Based-on-importance-sampling"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">Based on importance sampling</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Algorithm"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">Algorithm</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">问题</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Install-Carla-Precompile-Version-in-Centos"><span class="post-toc-number">1.</span> <span class="post-toc-text">Install Carla Precompile Version in Centos</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">软件版本&#x2F;操作系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85Server%E7%AB%AF"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">安装Server端</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85Client%E7%AB%AF"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">安装Client端</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%BF%9B%E4%B8%80%E6%AD%A5%E5%B0%81%E8%A3%85carla%E5%BA%93"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">进一步封装carla库</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -383,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                Diverse Policy in RL
+                install carla pretrained version in centos
             </p>
         </div>
 
@@ -402,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Gaoustcer</strong>
-        <span>4月 08, 2023</span>
+        <span>9月 12, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -426,7 +426,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a>
+        <a class="post_tag-none-link" href="/tags/Carla/" rel="tag">Carla</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a>
     </ul>
     
 
@@ -443,7 +443,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Diverse Policy in RL&url=http://gaoustcer.github.io/2023/04/08/Diverse-Policy-in-RL/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=install carla pretrained version in centos&url=http://gaoustcer.github.io/2023/09/12/install-carla-pretrained-version-in-centos/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -452,7 +452,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Diverse Policy in RL&url=http://gaoustcer.github.io/2023/04/08/Diverse-Policy-in-RL/index.html&via=Gaoustcer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=install carla pretrained version in centos&url=http://gaoustcer.github.io/2023/09/12/install-carla-pretrained-version-in-centos/index.html&via=Gaoustcer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/08/Diverse-Policy-in-RL/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/09/12/install-carla-pretrained-version-in-centos/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/08/Diverse-Policy-in-RL/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/09/12/install-carla-pretrained-version-in-centos/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,126 +495,36 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Paper-Overview-generate-Diversity-for-a-RL-Task"><a href="#Paper-Overview-generate-Diversity-for-a-RL-Task" class="headerlink" title="Paper Overview(generate Diversity for a RL Task)"></a>Paper Overview(generate Diversity for a RL Task)</h1><h2 id="DGPO"><a href="#DGPO" class="headerlink" title="DGPO"></a>DGPO</h2><p>提出了一种基于差异的策略优化方法，意在在一个RL Task上获得多种Strategies</p>
-<p>在Intro部分，作者提到对话系统意在生成不同风格的回答以提升用户体验，并提出了两种生成diverse rule的方式</p>
-<ol>
-<li>生成一系列次优策略</li>
-<li>对于maze环境，存在多个解</li>
+        <h1 id="Install-Carla-Precompile-Version-in-Centos"><a href="#Install-Carla-Precompile-Version-in-Centos" class="headerlink" title="Install Carla Precompile Version in Centos"></a>Install Carla Precompile Version in Centos</h1><h2 id="软件版本-操作系统"><a href="#软件版本-操作系统" class="headerlink" title="软件版本/操作系统"></a>软件版本/操作系统</h2><ol>
+<li>centos</li>
+<li>CARLA-0.9.6，如果使用0.14以上的版本需要<ol>
+<li>重新安装glibc（容易导致系统崩溃）</li>
+<li>安装libomp</li>
 </ol>
-<p>生成diverse solutions的方法应该关注四个方面</p>
-<ol>
-<li>深度学习系统应该获得策略的representation，即一种策略应该可以被一个deep model表示</li>
-<li>评估策略差异</li>
-<li><em><em>探索</em></em><em><em>探索</em></em><em><em>探索</em></em><em>探索*</em>得到Diverse Policies</li>
-<li>Sample Efficiency，同时训练多个策略，通过神经网络共享训练的只是</li>
+</li>
 </ol>
-<h3 id="一些前序工作"><a href="#一些前序工作" class="headerlink" title="一些前序工作"></a>一些前序工作</h3><ol>
-<li>RSPO</li>
-<li>RPG</li>
+<h2 id="安装Server端"><a href="#安装Server端" class="headerlink" title="安装Server端"></a>安装Server端</h2><ol>
+<li>下载CARLA 0.9.6安装包 <a target="_blank" rel="noopener" href="http://carla-assets-internal.s3.amazonaws.com/Releases/Linux/CARLA_0.9.6.tar.gz">CARLA 0.9.6</a></li>
+<li>下载地图 <a target="_blank" rel="noopener" href="http://carla-assets-internal.s3.amazonaws.com/Releases/Linux/Town06_0.9.6.tar.gz">Town 06</a></li>
+<li>下载地图 <a target="_blank" rel="noopener" href="http://carla-assets-internal.s3.amazonaws.com/Releases/Linux/Town07_0.9.6.tar.gz">Town 07</a></li>
 </ol>
-<h3 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h3><h4 id="强化学习建模为概率图模型"><a href="#强化学习建模为概率图模型" class="headerlink" title="强化学习建模为概率图模型"></a>强化学习建模为概率图模型</h4><p>强化学习一组transition $(s_t,a_t,s_{t+1})$可以建模为概率图</p>
-<h4 id="Diversity-in-RL"><a href="#Diversity-in-RL" class="headerlink" title="Diversity in RL"></a>Diversity in RL</h4><p>训练一个基于latent variable的策略，通过修改条件latent variable可以获得diverse policies</p>
-<h3 id="Preliminary"><a href="#Preliminary" class="headerlink" title="Preliminary"></a>Preliminary</h3><p>定义Latent Conditional Policy，每个策略$\pi$都condition with latent variable z，定义latent conditional policy/critic</p>
-<script type="math/tex; mode=display">
-\pi(a|s,z),V^\pi(s,z)</script><p>定义disscounted state occupancy </p>
-<script type="math/tex; mode=display">
-\rho^\pi(s) = (1-\gamma)\sum_{t=0}^\infty \gamma^t P_t^\pi(s)</script><p>$P^\pi_t(s)$是策略$\pi$在t时刻到达状态s的概率</p>
-<p>将RL建模为概率图模型</p>
-<p><img src="https://s2.loli.net/2023/04/08/2WkSrewOHfCg4ob.png" alt="image-20230403105435291"></p>
-<p>$O_t$表示动作是否是状态$s_t$下的最优动作，应该最大化</p>
-<script type="math/tex; mode=display">
-\log p(O_{1:t})</script><p>根据ELBO，有</p>
-<script type="math/tex; mode=display">
-\log P(O_{1:T})\geq E_{\tau|D_\pi}[\log P(O_{1:T}|a_{1:T},s_{1:T},z) + \log p(z|a_{1:T},s_{1:T}) - \log \pi(a_t|s_t,z)]</script><p>基本思想是最大化lower bound实现最大化对数概率</p>
-<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><p>状态s和隐变量z的互信息写成</p>
-<script type="math/tex; mode=display">
-I(s;z) = E_{z|\rho(z),s|\rho^\pi(s)}[\log p(z|s) -\log p(z)]</script><p>学习一个神经网络$q_\phi(z|s)\approx p(z|s)$，互信息只能衡量分布在$\rho(z)$上的一组隐变量带来的diversity，在此基础上定义pairwise distance</p>
-<script type="math/tex; mode=display">
-DIV(\pi_\theta) = E_{z|p(z)}[\min_{z^\prime\neq z} D_{KL}(\rho^{\pi_\theta}(s|z)\parallel \rho^{\pi_\theta}(s|z^\prime))] \geq E_{z|p(z),s|\rho^\pi(s)}[\min_{z^\prime\neq z}\log \frac{p(z|s)}{p(z|s) + p(z^\prime|s)}]</script><p>定义基于discriminator $q_\phi(z|s)$的intrinsic reward</p>
-<script type="math/tex; mode=display">
-r_t^{in} =\min_{z^\prime\neq z}\log \frac{q_\phi(z|s_t)}{q_\phi(z|s_t)+q_\phi(z^\prime|s_t)}</script><blockquote>
-</blockquote>
-<p>训练一个diversity object</p>
-<script type="math/tex; mode=display">
-J_{Div}(\theta) = E_{z|p(z),s|\rho^\pi(s),a|\pi(\cdot|s,z)}[\sum_t \gamma^t r_{t}^{in}]</script><h3 id="Diversity-Guided-Policy-Optimization"><a href="#Diversity-Guided-Policy-Optimization" class="headerlink" title="Diversity-Guided Policy Optimization"></a>Diversity-Guided Policy Optimization</h3><p>Critic分成两个部分</p>
-<script type="math/tex; mode=display">
-V_{\psi_{ex}}^\pi,V_{\psi_{in}}^\pi</script><p>同时训练discriminator $q_\phi(z|s_t)$,discriminator通过supervised方法训练，计算$r_t^{total}$</p>
-<script type="math/tex; mode=display">
-r_t^{total} = 1[DIV(\pi_\theta)\geq \delta]r(s_t,a_t) + (1-1[DIV(\pi_\theta)\geq \delta+\alpha J_{const}(\pi_\theta)])r_t^{in}</script><h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><ol>
-<li>discriminator $\phi(z|s):S\to \R^{|Z|}$</li>
-<li>intrinsic critic network $\phi_{\psi_{in}}$</li>
-<li>extrinsic critic network $\phi_{\psi_{ex}}$</li>
-</ol>
-<h4 id="数据收集"><a href="#数据收集" class="headerlink" title="数据收集"></a>数据收集</h4><p>保存五元组$(s_t,a_t,r_t^{in},r_t^{ex} = r(s_t,a_t),s_{t+1},z)$到replay buffer中</p>
-<script type="math/tex; mode=display">
-r_t^{in} = \min_{z^\prime = z} \frac{q_\phi(z|s_t)}{q_\phi(z|s_t)+q_\phi(z^\prime|s_t)} = r_t^{in}(s_t,z)</script><h4 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h4><p>计算$r_t^{total}$</p>
-<script type="math/tex; mode=display">
-r_t^{total} = 1[DIV(\pi_\theta)\geq \delta] r^{ex}_t+[(1-1[DIV(\pi_\theta)\geq \delta])+\alpha J_{const}(\pi_\theta)]r_t^{in}</script><p>$DIV(\pi_\theta)$是对在latent variable z上分布的一组状态簇的分散程度的刻画</p>
-<script type="math/tex; mode=display">
-DIV(\pi_\theta) = E_{z|p(z)}  [\min_{z^\prime \neq z} D_KL(\rho^{\pi_\theta}(s|z)\parallel \rho^\pi(s|z^\prime))]\geq E_{z|p(z),s|\rho^\pi(s)}[\min_{z^\prime\neq z}\log \frac{p(z|s)}{p(z|s)+p(z^\prime|s)}]</script><p>进一步借助intrinstic reward写成</p>
-<script type="math/tex; mode=display">
-DIV(\pi_\theta) \geq E_{z|p(z),s|\rho^\pi(s)}[r_t^{in}(s_t,z)]</script><p>进一步计算$R_{exp}^{total/in /ex}$，基于总的loss训练actor，基于$R_{exp}^{in},R_{exp}^{ex}$更新$\phi_{\psi_{in}},\phi_{\psi_{ex}}$</p>
-<p>更新discriminator</p>
-<script type="math/tex; mode=display">
-E_{s_t,a_t,z\in D_\pi}[CE(q_\phi(s_t),z)]</script><h2 id="Diversity-is-all-you-need"><a href="#Diversity-is-all-you-need" class="headerlink" title="Diversity is all you need"></a>Diversity is all you need</h2><p>去除强化学习过程中的reward，作者提到这样做的好处有</p>
-<ol>
-<li>稀疏奖励</li>
-<li>reward function很难设计(reward视为一种监督信号，打标签是昂贵的)</li>
-</ol>
-<p><img src="https://s2.loli.net/2023/04/05/ZJ2kCaxtQ1S6vGM.png" alt="image-20230405180438350"></p>
-<p>最重要的部分是加入了skill reward作为辅助奖励</p>
-<script type="math/tex; mode=display">
-r_z(s,a) = \log q_\phi(z|s) - \log p(z)</script><p>论文开头引入skill的概念，记作在latent variable z下的条件策略，基本思想是最大化skill核状态的互信息</p>
-<h3 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h3><p>unsupervised method被用作预训练，预训练的SAC在包含真实reward的环境上performance优于随机初始化</p>
+<p>解压CARLA 0.9.6 <code>tar -zxvf</code>，解压之后目录为</p>
+<p><img src="https://s2.loli.net/2023/09/04/JYqvmB85EDMywei.png" alt="image-20230904175427824"></p>
+<p>将Town06/07解压至Import下，运行ImportAssets.sh自动解压地图文件</p>
+<p>运行Server</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./CarlaUE4.sh -NoRenderScreen</span><br></pre></td></tr></table></figure>
+<h2 id="安装Client端"><a href="#安装Client端" class="headerlink" title="安装Client端"></a>安装Client端</h2><p>直接进入<code>“PythonAPI/examples”</code>，尝试运行·</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python dynamic_weather.py</span><br></pre></td></tr></table></figure>
+<p>改变天气</p>
 <blockquote>
-<p>和learn from stretch的区别，实验证明pseudo reward对于best skill接近真实奖励</p>
-</blockquote>
-<p>本文只是一种预训练模式，能否生成multi-policies？感觉很难</p>
-<h2 id="Discovering-Diverse-Solutions-in-DRL"><a href="#Discovering-Diverse-Solutions-in-DRL" class="headerlink" title="Discovering Diverse Solutions in DRL"></a>Discovering Diverse Solutions in DRL</h2><h3 id="Latent-Policies-For-Learning-Multiple-Solutions"><a href="#Latent-Policies-For-Learning-Multiple-Solutions" class="headerlink" title="Latent Policies For Learning Multiple Solutions"></a>Latent Policies For Learning Multiple Solutions</h3><p>Policies conditioned on a latent variable</p>
-<script type="math/tex; mode=display">
-\pi(a|s) =\int_z \pi(a|s,z) p(z) dz</script><p> Trajectory distribution under the latent variable定义为</p>
-<script type="math/tex; mode=display">
-p(\tau|z) = d(s_0)\prod_{t=0}^T \pi(a_t|s_t,z)p(s_{t+1}|s_t,a_t)</script><p>Q-function conditioned on latent variable定义为</p>
-<script type="math/tex; mode=display">
-Q^\pi(s,a,z) = r(s,a) + \gamma E_{s^\prime|p(s^\prime|s,a),a^\prime\in \pi(a^\prime|s^\prime,z)}[Q^\pi(s^\prime,a^\prime,z)]</script><p>本文希望使用diverse policies提升Agent在few shot泛化上的表现</p>
-<h3 id="Latent-Representations-of-Policies"><a href="#Latent-Representations-of-Policies" class="headerlink" title="Latent Representations of Policies"></a>Latent Representations of Policies</h3><p>reward包含两项</p>
 <ol>
-<li>environment reward</li>
-<li>mutual information between latent variable and state-action variable</li>
+<li>client和server版本需要保持一致</li>
+<li><em>不要</em>pip install carla，安装的是0.9.5版本，链接server容易出现rpc error</li>
 </ol>
-<p>目标写成</p>
-<script type="math/tex; mode=display">
-\max_\pi E[R_0|\pi]+\alpha I_\pi(s,a;z)</script><p>互信息定义为</p>
-<script type="math/tex; mode=display">
-I_\pi(s,a;z) =\int p_\pi(s,a,z)\log \frac{p_\pi(s,a,z)}{p_\pi(s,a)p(z)} ds da dz = H(s,a) -H(a|s,z)-H(s|z)</script><ol>
-<li>$H(s,a)$，联合熵</li>
-<li>$H(a|s,z),H(s|z)$，条件熵</li>
-</ol>
-<p>本文证明了Mutual information的lower bound</p>
-<script type="math/tex; mode=display">
-I_\pi(s,a,z) \geq E_{s,a,z|p_\pi}[\log q_\phi(z|s,a)]+H(z)</script><p>训练一个classifier q，最大化预测精度，最终RL目标写成</p>
-<script type="math/tex; mode=display">
-\max_{\pi,\phi}[E_\pi[R]+E[\log q_\phi(z|s,a)]]</script><h3 id="Based-on-importance-sampling"><a href="#Based-on-importance-sampling" class="headerlink" title="Based on importance sampling"></a>Based on importance sampling</h3><p>本节讨论了如何仅仅通过优化Mutual information return得到diverse并且reward尽量高的轨迹，基本思想是只对reward和最优策略接近的策略做优化</p>
-<p><img src="https://s2.loli.net/2023/04/06/EWziogIBfLrTdqN.png" alt="image-20230406151807672"></p>
-<p>这种方法是sample-inefficient的(因为会丢弃不好轨迹中的所有策略)，定义importance weight</p>
-<p>目标是不同z采样得到的trajectory reward尽量接近，定义Boltzmann distribution</p>
-<script type="math/tex; mode=display">
-f(s,a,z) =\frac{\exp {Q(s,a,z)}}{Z}\to W(s,a,z)</script><p>Z是分布的归一化系数，Boltzmann distribution作为随机均匀采样的修正，解决了采样得到Q值较低Transition产生不好策略的可能性，将其加入Mutual information return，得到</p>
-<script type="math/tex; mode=display">
-J_{info}(\pi,\phi) = E_{(s,a,z)|D}[W(s,a,z) \log q_{\phi}(z|s,a)]</script><p>实际的normalize weight是在一个mini-batch上计算得到的，记作</p>
-<script type="math/tex; mode=display">
-W(s,a,z) = \frac{\exp {Q(s,a,z)}}{\sum_{s^\prime,a^\prime,z^\prime\in D}\exp{Q(s^\prime,a^\prime,z^\prime)}}</script><p>借鉴PPO，本文还对Weight做了clip</p>
-<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><p>实际的</p>
-<p><img src="https://s2.loli.net/2023/04/06/x7tHRDFYPBMnzkW.png" alt="image-20230406152848048"></p>
-<p>更新Q值估计</p>
-<script type="math/tex; mode=display">
-L_{critic}(w_i) = E_{(s,a,s^\prime,r,z)\in D}[(Q_{w_i}(s,a,z)-y)^2]</script><p>y来自conservative estimation of target network</p>
-<script type="math/tex; mode=display">
-y =  r+\gamma \min_i Q_{w^\prime}(s^\prime,a^\prime,z),a^\prime = \mu_\theta(s,z) + \epsilon</script><p>$J_{info}$和discriminator loss有关，基于Q值计算resampling系数，policy被训练为</p>
-<script type="math/tex; mode=display">
-J_Q(\theta)= E_{(s,a)|\beta}[Q_{w_1}(s,\mu_\theta(s,z),z)]</script><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
-<li>max $I(s,z)/I(s,a,z)$</li>
-</ol>
+</blockquote>
+<h2 id="进一步封装carla库"><a href="#进一步封装carla库" class="headerlink" title="进一步封装carla库"></a>进一步封装carla库</h2><p>原先import carla需要通过</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    sys.path.append(glob.glob(<span class="string">&#x27;../carla/dist/carla-*%d.%d-%s.egg&#x27;</span> % (</span><br><span class="line">        sys.version_info.major,</span><br><span class="line">        sys.version_info.minor,</span><br><span class="line">        <span class="string">&#x27;win-amd64&#x27;</span> <span class="keyword">if</span> os.name == <span class="string">&#x27;nt&#x27;</span> <span class="keyword">else</span> <span class="string">&#x27;linux-x86_64&#x27;</span>))[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">except</span> IndexError:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/wohu1104/article/details/125710603">封装</a>进行操作</p>
 
         
     
@@ -633,8 +543,8 @@ J_Q(\theta)= E_{(s,a)|\beta}[Q_{w_1}(s,\mu_\theta(s,z),z)]</script><h3 id="问�
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://gaoustcer.github.io/2023/04/08/Diverse-Policy-in-RL/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://gaoustcer.github.io/2023/04/08/Diverse-Policy-in-RL/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://gaoustcer.github.io/2023/09/12/install-carla-pretrained-version-in-centos/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/09/12/install-carla-pretrained-version-in-centos/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -664,21 +574,13 @@ J_Q(\theta)= E_{(s,a)|\beta}[Q_{w_1}(s,\mu_\theta(s,z),z)]</script><h3 id="问�
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/04/09/KKTcondition/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2023/04/06/hello-world/" id="post_nav-older" class="next-content">
+        <a href="/2023/08/28/RL4MC/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
