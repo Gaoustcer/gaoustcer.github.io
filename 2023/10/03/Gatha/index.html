@@ -48,7 +48,7 @@
     
     <title>
         
-            标签: Cycle Self Training | 
+            Gatha | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Visual Language Model,Text-Guided Vision Generation">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/tags/Cycle-Self-Training/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/10/03/Gatha/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/tags/Cycle-Self-Training/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/10/03/Gatha/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: Cycle Self Training | Hexo">
+    <meta property="og:title" content="Gatha | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Visual Language Model"> <meta property="og:article:tag" content="Text-Guided Vision Generation"> 
 
+    
+        <meta property="article:published_time" content="Tue Oct 03 2023 19:04:20 GMT+0800">
+        <meta property="article:modified_time" content="Tue Oct 03 2023 19:05:04 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/tags/Cycle-Self-Training/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/10/03/Gatha/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/10/03/Gatha/index.html",
+    "headline": "Gatha",
+    "datePublished": "Tue Oct 03 2023 19:04:20 GMT+0800",
+    "dateModified": "Tue Oct 03 2023 19:05:04 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Visual Language Model,Text-Guided Vision Generation",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,93 +322,292 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Paper-Reading-Gatha-Relational-Loss-for-enhancing-text-based-style-transfer"><span class="post-toc-number">1.</span> <span class="post-toc-text">Paper Reading: Gatha Relational Loss for enhancing text-based style transfer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Introduction"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Introduction</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Preliminary-of-Loss-Function"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Preliminary of Loss Function</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Method"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Method</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%AE%AD%E7%BB%83Style-Senser"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">训练Style Senser</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Relational-Loss-L-gatha"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">Relational Loss $L_{gatha}$</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%80%BB%E7%BB%93"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">总结</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/08/21/Cycle-Self-Training/">Cycle Self-Training</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/08/21/Cycle-Self-Training/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>8月 21, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Gatha
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>10月 03, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Text-Guided-Vision-Generation/" rel="tag">Text-Guided Vision Generation</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Visual-Language-Model/" rel="tag">Visual Language Model</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Gatha&url=http://gaoustcer.github.io/2023/10/03/Gatha/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Gatha&url=http://gaoustcer.github.io/2023/10/03/Gatha/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/10/03/Gatha/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/10/03/Gatha/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Paper-Reading-Gatha-Relational-Loss-for-enhancing-text-based-style-transfer"><a href="#Paper-Reading-Gatha-Relational-Loss-for-enhancing-text-based-style-transfer" class="headerlink" title="Paper Reading: Gatha Relational Loss for enhancing text-based style transfer"></a>Paper Reading: Gatha Relational Loss for enhancing text-based style transfer</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>现有的基于VLM的文本图片生成方法主要基于图片和文本向量方向上的对齐，作者认为这种思路存在两个问题</p>
+<ol>
+<li>不能解决文本描述和风格出现偏移的情况</li>
+<li>不能解决风格密爱深度额语义特性</li>
+</ol>
+<p>作者提出的方法称为Gatha，具体而言是选择一系列风格模板，目标是</p>
+<ol>
+<li>Source Style Description文本描述和风格化图片应该一致</li>
+<li>风格化图片和Target Style Description文本描述应该一致</li>
+</ol>
+<h2 id="Preliminary-of-Loss-Function"><a href="#Preliminary-of-Loss-Function" class="headerlink" title="Preliminary of Loss Function"></a>Preliminary of Loss Function</h2><p>一般的Text-based风格转换目标是</p>
+<script type="math/tex; mode=display">
+\min_{\theta_f} [L_{dir}(\theta_f,\theta_C) + L_{content}(\theta_f,\theta_C)]</script><ol>
+<li>f style transfer net</li>
+<li>C CLIP Model</li>
+</ol>
+<p>dir loss目标是Align图片和文本，content loss目标是保证图像语义在转换前后不变</p>
+<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><p><img src="https://s2.loli.net/2023/10/03/brCf7Qo49SwmKtG.png" alt="Overview of Method"></p>
+<h3 id="训练Style-Senser"><a href="#训练Style-Senser" class="headerlink" title="训练Style Senser"></a>训练Style Senser</h3><p>收集261个表示Style的转换词(Polaroid,Rustic)，将其填入疑问句模板中</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Is the Style &lt;STYLE&gt;?</span><br></pre></td></tr></table></figure>
+<p>生成一个Style Tensor S，记作</p>
+<script type="math/tex; mode=display">
+S = C_T(T_{style})\in \R^{N\times 512}</script><p>N是转换词的数量</p>
+<h3 id="Relational-Loss-L-gatha"><a href="#Relational-Loss-L-gatha" class="headerlink" title="Relational Loss $L_{gatha}$"></a>Relational Loss $L_{gatha}$</h3><p>给定</p>
+<ol>
+<li>输入图片</li>
+<li>目标文本描述</li>
+</ol>
+<p>Style Net输出Stylized Image，希望对齐</p>
+<ol>
+<li>目标文本描述$T_{tar}$和Style Senser的关系 $T_{rel}$</li>
+<li>Stylized Image和Style Senser的关系</li>
+</ol>
+<p>Relationship的计算采用向量内积，例如</p>
+<script type="math/tex; mode=display">
+T_{rel} = matmul(S,C_T(T_{tar})^T)</script><p>计算图片-Style Senser关系采用Image Embedding和Style Senser计算内积(采用数据增强+图片分割对输入图进行预处理)</p>
+<script type="math/tex; mode=display">
+I_{rel}^i = matmul(S,C_I(aug(I_{out}^i))^T)</script><p>希望两个相关度矩阵差别尽量小</p>
+<script type="math/tex; mode=display">
+L_{gatha} = \frac 1 M \sum_{i=1}^M \parallel I_{rel}^i - T_{rel}\parallel</script><p>M是划分patch的数量</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本文的创新点主要有两个</p>
+<ol>
+<li>收集了一个以疑问句为模板的prompt全集，之前的prompt主要是陈述句</li>
+<li>基于1中收集的prompt全集作为中介，对齐图片-style prompt表示</li>
+</ol>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2023/10/03/Gatha/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/10/03/Gatha/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/09/28/PytorchNLLloss/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -549,6 +781,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
