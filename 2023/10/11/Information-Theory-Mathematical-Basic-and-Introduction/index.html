@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://.disqus.com"/>
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Information Theory:Mathematical Basic and Introduction | 
+        
+        Hexo
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.svg">
+    <link rel="icon" href="/img/favicon.svg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",Information Theory,Random Process and Probability Theory">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Hexo">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/10/11/Information-Theory-Mathematical-Basic-and-Introduction/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.svg">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/10/11/Information-Theory-Mathematical-Basic-and-Introduction/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Information Theory:Mathematical Basic and Introduction | Hexo">
+    <meta property="og:image" content="/img/favicon.svg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="Information Theory"> <meta property="og:article:tag" content="Random Process and Probability Theory"> 
+
+    
+        <meta property="article:published_time" content="Wed Oct 11 2023 00:23:15 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 11 2023 00:24:09 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/10/11/Information-Theory-Mathematical-Basic-and-Introduction/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/10/11/Information-Theory-Mathematical-Basic-and-Introduction/index.html",
+    "headline": "Information Theory:Mathematical Basic and Introduction",
+    "datePublished": "Wed Oct 11 2023 00:23:15 GMT+0800",
+    "dateModified": "Wed Oct 11 2023 00:24:09 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Information Theory,Random Process and Probability Theory",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Information-Theory-Introduction-and-Math-Basics"><span class="post-toc-number">1.</span> <span class="post-toc-text">Information Theory(Introduction and Math Basics)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Introduction"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Introduction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Compactness-of-Code"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Compactness of Code</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Three-Assumptions-of-information"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Three Assumptions of information</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Other-Assumption"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">Other Assumption</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Data-Transmission-over-noisy-channel"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">Data Transmission over noisy channel</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Information-Transmission-System"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">Information Transmission System</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Source-Encode"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">Source Encode</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Channel-Encode"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">Channel Encode</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Arbitrary-Small-Error-Probability"><span class="post-toc-number">1.1.6.1.</span> <span class="post-toc-text">Arbitrary Small Error Probability</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Channel-Capacity"><span class="post-toc-number">1.1.6.2.</span> <span class="post-toc-text">Channel Capacity</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Mutual-Sender-and-Receiver-Information"><span class="post-toc-number">1.1.7.</span> <span class="post-toc-text">Mutual(Sender and Receiver) Information</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview-of-Suprema-and-Limits"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Overview of Suprema and Limits</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Properties-of-Suprema"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Properties of Suprema</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Suprema-and-Maximum"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Suprema and Maximum</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Supremum-of-a-set-and-Channel-Coding-Theorem"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">Supremum of a set and Channel Coding Theorem</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Boundedness-and-Suprema-Operation"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Boundedness and Suprema Operation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Set-Operations"><span class="post-toc-number">1.3.0.1.</span> <span class="post-toc-text">Set Operations</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Supremum-Infimum-for-monotone-functions"><span class="post-toc-number">1.3.0.2.</span> <span class="post-toc-text">Supremum&#x2F;Infimum for monotone functions</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Probability-and-Random-Process"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Probability and Random Process</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Probability-Space"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">Probability Space</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Borel-sigma-Field"><span class="post-toc-number">1.4.1.1.</span> <span class="post-toc-text">Borel $\sigma-Field$</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Random-Variable"><span class="post-toc-number">1.4.1.2.</span> <span class="post-toc-text">Random Variable</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Random-Process"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">Random Process</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#T-Invariant%EF%BC%88%E6%97%B6%E9%97%B4%E8%A7%92%E5%BA%A6%E5%88%BB%E7%94%BB%E7%A6%BB%E6%95%A3%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E7%9A%84%E6%80%A7%E8%B4%A8%EF%BC%89"><span class="post-toc-number">1.4.2.1.</span> <span class="post-toc-text">T-Invariant（时间角度刻画离散随机过程的性质）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Ergodic"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">Ergodic</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Point-wise-ergodic-theorem"><span class="post-toc-number">1.4.3.1.</span> <span class="post-toc-text">Point-wise ergodic theorem</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Stationary-ergodic-random-source"><span class="post-toc-number">1.4.3.2.</span> <span class="post-toc-text">Stationary ergodic random source</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Markov-Chain"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">Markov Chain</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Irreducible"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">Irreducible</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Time-invariant"><span class="post-toc-number">1.4.6.</span> <span class="post-toc-text">Time-invariant</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Aperiodic"><span class="post-toc-number">1.4.7.</span> <span class="post-toc-text">Aperiodic</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Stationary"><span class="post-toc-number">1.4.8.</span> <span class="post-toc-text">Stationary</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Information Theory:Mathematical Basic and Introduction
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>10月 11, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Information-Theory/" rel="tag">Information Theory</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Random-Process-and-Probability-Theory/" rel="tag">Random Process and Probability Theory</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Information Theory:Mathematical Basic and Introduction&url=http://gaoustcer.github.io/2023/10/11/Information-Theory-Mathematical-Basic-and-Introduction/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Information Theory:Mathematical Basic and Introduction&url=http://gaoustcer.github.io/2023/10/11/Information-Theory-Mathematical-Basic-and-Introduction/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/10/11/Information-Theory-Mathematical-Basic-and-Introduction/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/10/11/Information-Theory-Mathematical-Basic-and-Introduction/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Information-Theory-Introduction-and-Math-Basics"><a href="#Information-Theory-Introduction-and-Math-Basics" class="headerlink" title="Information Theory(Introduction and Math Basics)"></a>Information Theory(Introduction and Math Basics)</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ol>
+<li>Define:信息可以消除Uncertainty of Receiver</li>
+<li>Representation of Information for store and convey<ol>
+<li>language and 0-1 code</li>
+</ol>
+</li>
+<li>Codebook/Dictionary代表信息编码的规则（编码和解码的依据）</li>
+</ol>
+<h3 id="Compactness-of-Code"><a href="#Compactness-of-Code" class="headerlink" title="Compactness of Code"></a>Compactness of Code</h3><p>如何用尽量少的代价编码相同的信息(Best Design of Codebook,compactness)</p>
+<p><em><em>按照概率编码代价最低</em></em><em><em>按照概率编码代价最低</em></em><em><em>按照概率编码代价最低</em></em><em><em>按照概率编码代价最低</em></em><em><em>按照概率编码代价最低</em></em>代价最低**</p>
+<blockquote>
+<p>能否在不知道最优设计的前提下计算最低编码代价（measure of information）</p>
+</blockquote>
+<h3 id="Three-Assumptions-of-information"><a href="#Three-Assumptions-of-information" class="headerlink" title="Three Assumptions of information"></a>Three Assumptions of information</h3><ol>
+<li>Monotonicity in event probability，一个随机事件发生的概率越大，那么这件事真正发生所包含的信息价值越小；相反一个概率上不太可能的事件真正发生才能引起人们的注意(surprise)</li>
+<li>Additivity：两个独立事件信息量直接相加</li>
+<li>Continuity：信息是概率的连续函数</li>
+</ol>
+<blockquote>
+<p>唯一满足这种定义的数学形式是概率倒数取log $\log_2\frac 1 p$</p>
+</blockquote>
+<p>给定4个event(A,B,C,D)，发生概率分别为$\frac 1 2,\frac 1 4,\frac 1 8,\frac 1 8$，对应的entropy为$1,2,3,3$，平均编码长度为</p>
+<script type="math/tex; mode=display">
+\frac 1 2 * 1 + \frac 1 4 * 2 +\frac 1 8 * 3 + \frac 1 8 * 3 = \frac 7 4</script><p>给定编码方案</p>
+<script type="math/tex; mode=display">
+A = 0\\
+B=10\\
+C=110\\
+D=111 \label{optim。，}</script><p>是否存在歧义？</p>
+<h4 id="Other-Assumption"><a href="#Other-Assumption" class="headerlink" title="Other Assumption"></a>Other Assumption</h4><p>编码成本和编码长度的2次方成正比</p>
+<script type="math/tex; mode=display">
+L(t) =\sum_{z\in Event} Pr(z) 2^{t\times l(z)}\Leftrightarrow \min\log_2 \sum_{z}Pr(z)2^{t\times l(z)}</script><p>t是常数</p>
+<blockquote>
+<p>Renyi Entropy</p>
+</blockquote>
+<h3 id="Data-Transmission-over-noisy-channel"><a href="#Data-Transmission-over-noisy-channel" class="headerlink" title="Data Transmission over noisy channel"></a>Data Transmission over noisy channel</h3><p>传送一段信息，有一定概率receiver收到的信息发生错误，物理层传送一个bit时间固定。</p>
+<p>为了避免传送一个bit数据出现错误，需要在物理层重复传递数据若干次(Channel Code Bit)，例如</p>
+<script type="math/tex; mode=display">
+1\to 111\\
+0\to 000</script><p>接收端物理层接收三个物理bit，根据大数法则(2个1则判断逻辑层传送1)判断逻辑上传送的bit，用三次Channel Code Bit代替One Information bit</p>
+<blockquote>
+<p>传送一个Information Bit需要三个传输Channel Code Bit时间($\frac 1 3 $ code rate)</p>
+</blockquote>
+<p>Shannon在论文中用Transmission efficiency(Channel Code rate)指代这种现象(1/3 zero-one information symbol per channel usage)</p>
+<h3 id="Information-Transmission-System"><a href="#Information-Transmission-System" class="headerlink" title="Information Transmission System"></a>Information Transmission System</h3><p>给定事件z，Shannon在论文中将Transmission过程抽象为若干函数</p>
+<p><img src="https://s2.loli.net/2023/08/14/TXStqrB1IbxdzVP.png" alt="image-20230814141358267"></p>
+<ol>
+<li>                                                       bit}$</li>
+<li>Channel Encoder编码u为Channel Codewords $x = g(u)$,redundancy code</li>
+</ol>
+<blockquote>
+<p>map event to Channel Codeword $x = g(f(z)) = h(z)$,joint source channel coding</p>
+</blockquote>
+<h3 id="Source-Encode"><a href="#Source-Encode" class="headerlink" title="Source Encode"></a>Source Encode</h3><p>设计最好的Source Encoder和Channel Encoder</p>
+<blockquote>
+<p>最好的压缩方法Source Entropy为1，每个bit而言出现0，1概率均为$\frac 1 2$，每个Bit携带的Entropy为1</p>
+</blockquote>
+<p>反之输出的$\{U\}\in \{0,1\}$并不能保证每个bit都是Uniformly distributed，它德Entropy</p>
+<script type="math/tex; mode=display">
+H(U) = p\log_2 \frac 1 p+(1-p)\log_2 \frac{1}{1-p}</script><p>$P(U=0) = p$</p>
+<p>代表现在编码方式每个bit携带的信息量</p>
+<h3 id="Channel-Encode"><a href="#Channel-Encode" class="headerlink" title="Channel Encode"></a>Channel Encode</h3><p>定义错误率，假定Source Encoder输出包含k个bit，假设序列$u_1u_2\cdots u_K$被送入Channel Encoder中，根据对Optimal Source Encoder的讨论，输入包含$2^K$种可能性，每种可能性出现的概率是uniform的，定义error</p>
+<script type="math/tex; mode=display">
+error =\frac{1}{2^K}\sum_{u_1u_2\cdots u_K}Pr(error|u_1u_2\cdots u_K)</script><h4 id="Arbitrary-Small-Error-Probability"><a href="#Arbitrary-Small-Error-Probability" class="headerlink" title="Arbitrary Small Error Probability"></a>Arbitrary Small Error Probability</h4><p>在固定Code Rate的情况下，要求Information Transmission Error足够小(Arbitrary Small Error Probability)</p>
+<blockquote>
+<p>这种设计不考虑编码的复杂性，实际上Error越小编码长度越高</p>
+</blockquote>
+<h4 id="Channel-Capacity"><a href="#Channel-Capacity" class="headerlink" title="Channel Capacity"></a>Channel Capacity</h4><p>有杂讯的管道存在一个Channel Capacity，这个值的含义是传输信息的速度大于这个值出错的概率可以Arbitrary Small，大于这个值错误率必然为1</p>
+<blockquote>
+<p>Maximum Reliable Transmission Code Rate，这仅仅和杂讯分布相关</p>
+</blockquote>
+<h3 id="Mutual-Sender-and-Receiver-Information"><a href="#Mutual-Sender-and-Receiver-Information" class="headerlink" title="Mutual(Sender and Receiver) Information"></a>Mutual(Sender and Receiver) Information</h3><ol>
+<li>好的Channel Code能够increase certainty of channel output to channel inputs</li>
+<li>Shannon借助Entropy衡量Uncertainty，Input Uncertainty和Output Uncertainty之差被定义为Mutual Information（Consensus of Sender and Receiver）</li>
+</ol>
+<p>A Toy Example</p>
+<p><img src="https://s2.loli.net/2023/08/15/6bfQrcX8Fj3ZqtL.png" alt="image-20230815192136374"></p>
+<p>输入信息U经过编码生成X，杂讯相当于一个自然先验，假定Noisy Channel的输入</p>
+<script type="math/tex; mode=display">
+X\in \{(a,a),(a,b),(b,a),(b,b) \}</script><p>Noisy Channel output满足，对于输入$X = (V_1,V_2)$，保持$V_1$不变，$V_2\to b$</p>
+<ol>
+<li>Input Uncertainty，计算输入的Entropy(离散4分布随机变量)</li>
+<li>Output Uncertainty，第二维度始终为b，因此Uncertainty仅仅来自$V_1$</li>
+</ol>
+<blockquote>
+<p>Shared Uncertainty $V_1$</p>
+</blockquote>
+<p> 给定四个事件$E_i,i=1,2,3,4$，最好的Source Encoder一定为</p>
+<script type="math/tex; mode=display">
+E_1:aa\\
+E_2:ab\\
+E_3:ba\\
+E_4:bb</script><p><em><em>篡改</em></em><em><em>篡改</em></em><em><em>篡改</em></em><em><em>篡改</em></em><em><em>篡改</em></em><em><em>篡改</em></em><em><em>篡改</em></em><em><em>篡改</em></em><em><em>篡改</em></em><em><em>篡改</em></em>**为b，导致$E_1/E_2，E_3/E_4$无法区分，将其映射为</p>
+<script type="math/tex; mode=display">
+E_1:(a,d),(a,d)\\
+E_2:(a,d),(b,d)\\
+E_3 : (b,d),(a,d)\\
+E_4 : (b,d),(b,d)</script><h2 id="Overview-of-Suprema-and-Limits"><a href="#Overview-of-Suprema-and-Limits" class="headerlink" title="Overview of Suprema and Limits"></a>Overview of Suprema and Limits</h2><ol>
+<li>实数集合有上界则存在最小上界</li>
+<li>上界有则唯一</li>
+<li>extend real number(包含$\infty$和$-\infty$)</li>
+</ol>
+<h3 id="Properties-of-Suprema"><a href="#Properties-of-Suprema" class="headerlink" title="Properties of Suprema"></a>Properties of Suprema</h3><ol>
+<li>Suprema扩展(extend real system)</li>
+</ol>
+<script type="math/tex; mode=display">
+\sup A =\left\{
+\begin{aligned}
+&-\infty ,A=\phi\\
+&\infty,A\ not\ bounded
+\end{aligned}
+\right.\Rightarrow \forall a\in A,a\leq \leq A</script><ol>
+<li>Suprema定义(Arbitrary Small)</li>
+</ol>
+<script type="math/tex; mode=display">
+-\infty <\sup A< \infty\to \forall \epsilon >0,\exists a_0 \in A,s.t \ a_0 \geq \sup A -\epsilon</script><p>实数集合中的值可以和上确界任意逼近</p>
+<h3 id="Suprema-and-Maximum"><a href="#Suprema-and-Maximum" class="headerlink" title="Suprema and Maximum"></a>Suprema and Maximum</h3><blockquote>
+<p>$\sup A\in A\to \max A = \sup A$</p>
+</blockquote>
+<h4 id="Supremum-of-a-set-and-Channel-Coding-Theorem"><a href="#Supremum-of-a-set-and-Channel-Coding-Theorem" class="headerlink" title="Supremum of a set and Channel Coding Theorem"></a>Supremum of a set and Channel Coding Theorem</h4><p>为了证明$\alpha$是Set A的Supremum</p>
+<ol>
+<li>Forward/Direct Part $\alpha -\epsilon$对于A是可达的$\Rightarrow \forall \epsilon&gt;0,\exists a_0\in A,a_0&gt; a-\epsilon$</li>
+<li>Converse Part $\alpha$可以bound住A中所有元素 $\forall a\in A\to a\leq \alpha$</li>
+</ol>
+<blockquote>
+<p>如果$\alpha$是Maximum，只需要证明</p>
+<ol>
+<li>$\alpha$在A中可达</li>
+<li>$\alpha$ bound了A所有元素</li>
+</ol>
+</blockquote>
+<h2 id="Boundedness-and-Suprema-Operation"><a href="#Boundedness-and-Suprema-Operation" class="headerlink" title="Boundedness and Suprema Operation"></a>Boundedness and Suprema Operation</h2><ol>
+<li>Bounded :是否存在上界和下界</li>
+<li>Bounded集合需要满足 $\exist k,\forall a\in A,|a|\leq k$</li>
+<li>Monotone Property 子集/全集Sup/Inf的关系</li>
+</ol>
+<h4 id="Set-Operations"><a href="#Set-Operations" class="headerlink" title="Set Operations"></a>Set Operations</h4><p>Addition of A and B </p>
+<script type="math/tex; mode=display">
+A+B = \{c\in \R:c = a+b,\forall a\in A,\forall b\in B\}</script><p>Scaler of A</p>
+<script type="math/tex; mode=display">
+k\cdot A = \{\forall c\in R,c = k\cdot a\forall a\in A\}</script><p>Product of A and B</p>
+<script type="math/tex; mode=display">
+A \cdot B = \{c,c=ab\forall a\in A,b\in B\}\\
+\sup(a\cdot B)\leq \sup A \cdot \sup B</script><h4 id="Supremum-Infimum-for-monotone-functions"><a href="#Supremum-Infimum-for-monotone-functions" class="headerlink" title="Supremum/Infimum for monotone functions"></a>Supremum/Infimum for monotone functions</h4><p>non-decreasing function f</p>
+<script type="math/tex; mode=display">
+\sup\{x\in R,f(x) < \epsilon\} = \inf\{x\in \R:f(x)\geq \epsilon\}\\
+\sup(x\in \R,f(x)\leq \epsilon) = \inf(x\in \R:f(x)>\epsilon)</script><p><img src="https://s2.loli.net/2023/08/27/n1edgY6cOJFP43R.png" alt="image-20230827154626791"></p>
+<p>但是不能保证</p>
+<script type="math/tex; mode=display">
+\sup\{x\in \R:f(x)\leq \epsilon\} = \sup\{x\in \R:f(x)<\epsilon\}</script><h2 id="Probability-and-Random-Process"><a href="#Probability-and-Random-Process" class="headerlink" title="Probability and Random Process"></a>Probability and Random Process</h2><h3 id="Probability-Space"><a href="#Probability-Space" class="headerlink" title="Probability Space"></a>Probability Space</h3><blockquote>
+<p>$\sigma-Field$定义$\mathcal F$为一个非空集合$\Omega$子集组成的集合，定义$\mathcal F$为$\alpha-Field$如果满足如下三条性质（$\sigma-Field$是对集合的操作）</p>
+<ol>
+<li>$\Omega\in F$</li>
+<li>F对于补集操作是封闭的 $A\in \mathcal F\to A^c \in \mathcal F,A^c = \{w\in \Omega,w\notin A\}$（事件和反事件）</li>
+<li>F对可数个集合的并集操作是封闭的，对于若干给定可数集合$A_i\in \mathcal F,\bigcup_{i=1}^\infty A_i\in F$（事件$A_i$中至少发生一个）</li>
+</ol>
+<p>简单地说$\sigma-Field$定义了全集上可以计算概率的子集集合</p>
+</blockquote>
+<p>给定一个集合$\Omega$，最小的$\sigma-Field$为$(\Omega,\phi)$，最大的$\sigma-Field$为$\Omega$所有子集组成的集合</p>
+<blockquote>
+<p>Probability space定义关注于一个tuple $(\Omega,\mathcal F,P)$，P是一个set到实数的映射</p>
+<p>Probability Space Probability被定义为$(\Omega,\mathcal F,P)$组成的tuple($\Omega$：全集，$\mathcal F:\alpha-Field$，P子集映射为[0,1]实数的量度)$\to$概率公设</p>
+<ol>
+<li><p>$P(A) \in [0,1]$</p>
+</li>
+<li><p>$P(\Omega) = 1$</p>
+</li>
+<li><p>不相交的可数集合$A_i$概率满足</p>
+<script type="math/tex; mode=display">
+P(\bigcup_{k=1}^\infty A_k) = \sum_{k=1}^\infty P(A_k )</script></li>
+</ol>
+</blockquote>
+<p>如何在连续样本空间找到满足Kolmogorov公设的概率函数$P$（<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/33991971">Borel集合在概率论上的意义</a>)</p>
+<blockquote>
+<p>给定$\R$的子集能否计算概率，答案是否定的，例如下面的例子</p>
+<p><strong>等价关系</strong>用于建立对象之间的关系，需要满足1.$x=x$ 2. $x=y\Rightarrow y=x$ 3. $x=y,y=z\Rightarrow x =z$，由此延伸出等价类的概念</p>
+<p>不同等价类之间只可能有两种关系</p>
+<ol>
+<li>相等</li>
+<li>完全不相交</li>
+</ol>
+<p>将[0,1]区间划分为等价类并集</p>
+<script type="math/tex; mode=display">
+[0,1] = \cup_{\alpha}\epsilon_\alpha</script><p>等价类定义为</p>
+<script type="math/tex; mode=display">
+\forall x,y\in [0,1],x-y\in k,k\in Q,x  = y</script><p>两者相差为有理数，显然这是等价关系（只要两个数差为有理数）</p>
+<p>等价类定义为</p>
+<script type="math/tex; mode=display">
+[x] = \{y|y-x\in Q\}</script><p>显然可以将实数区间划分为无数个不相交的等价类（两个无理数的差可能是无理数，也可能是有理数）</p>
+<script type="math/tex; mode=display">
+R = \bigcup_{\alpha}[\alpha]</script><blockquote>
+<p>有理数单独构成一个等价类，无理数划分为多个等价类</p>
+</blockquote>
+<p>每个等价类中选择落在[0,1]的一个元素构成Vitali集合，这个集合是不可测的</p>
+<blockquote>
+<p>定义[-1,1]上的有理数集合为(这一定是可数的)</p>
+<script type="math/tex; mode=display">
+q_1,q_2,\cdots,</script><p>定义Vitali集合的偏移</p>
+<script type="math/tex; mode=display">
+V_k = V+ q_k</script><p>因为$\forall v\in V,v\in [0,1]$，因此</p>
+<script type="math/tex; mode=display">
+\forall v_k \in V_k,v_k\in [-1,2]</script><p>必然有</p>
+<script type="math/tex; mode=display">
+[0,1]\subset \bigcup_k V_k \subset [-1,2]</script><p>因此$\bigcup_k V_k$的测度应该落在[1,3]区间内</p>
+<blockquote>
+<p>无穷个不相交测度相等集合并集测度要么为0，要么为$\infty$，不成立</p>
+</blockquote>
+</blockquote>
+<p><em><em>可以定义概率的集合</em></em><em><em>可以定义概率的集合</em></em><em><em>可以定义概率的集合</em></em><em><em>可以定义概率的集合</em></em>集合**，这个集合中每个事件都是可以用概率刻画的，满足</p>
+<ol>
+<li>全集/空集在事件集合中</li>
+<li>某个事件在是概率可测的，那么这个事件的补集也是概率可测的</li>
+<li>可数事件是概率可测的，这些事件同时发生(交集)，至少有一个发生(并集)也是可测的</li>
+</ol>
+<p>对于离散事件定义概率上可测的事件是比较容易的，因为可以遍历其幂集合，对于连续空间，比如说定义在[0,1]上的随机变量，是否任意取[0,1]的一个子集都能找到其对应的概率呢？答案是否定的</p>
+<p>上述讨论的整体脉络是</p>
+<ol>
+<li>给定全事件集合A</li>
+<li>给定A的Sigma-Field，表明哪些A的子集是可测的</li>
+<li>对于可测A子集，定义概率映射F将其映射到实数（测度）</li>
+</ol>
+</blockquote>
+<p>在利用分布函数在$\R$上定义概率，分布函数$F:\R\to [0,1]$满足</p>
+<ol>
+<li>$\forall a\leq b \Rightarrow F(a)\leq F(b)$</li>
+<li>$\lim_{x\to x_o^+} F(x) = F(x_0)$（为什么只约束了右连续）</li>
+<li>$F(-\infty) = 0,F(\infty)=1$</li>
+</ol>
+<h4 id="Borel-sigma-Field"><a href="#Borel-sigma-Field" class="headerlink" title="Borel $\sigma-Field$"></a>Borel $\sigma-Field$</h4><p>定义实数子集组成的集合，其中每个子集都是概率可度量的 </p>
+<blockquote>
+<p>包含所有开闭区间</p>
+</blockquote>
+<h4 id="Random-Variable"><a href="#Random-Variable" class="headerlink" title="Random Variable"></a>Random Variable</h4><p>随机变量被视为事件全集$\Omega$子集到实数[0,1]的映射 $X:\Omega\to \R$</p>
+<h3 id="Random-Process"><a href="#Random-Process" class="headerlink" title="Random Process"></a>Random Process</h3><ol>
+<li><p>若干Random Variable</p>
+</li>
+<li><p>所有Random Variable定义在同一个random space上</p>
+<ol>
+<li>基于同一套Event Space</li>
+</ol>
+<script type="math/tex; mode=display">
+P(X_1\leq t_1,X_2\leq t_2) = P(\{w|X_1(w)\leq t_1\} \bigcap \{w|X_2(w)\leq t_2\} )</script><ol>
+<li>可度量集合基于$\sigma-Field$定义，因此它们的交集也是可测的</li>
+</ol>
+</li>
+</ol>
+<script type="math/tex; mode=display">
+\{x_t,t\in I\}</script><h4 id="T-Invariant（时间角度刻画离散随机过程的性质）"><a href="#T-Invariant（时间角度刻画离散随机过程的性质）" class="headerlink" title="T-Invariant（时间角度刻画离散随机过程的性质）"></a>T-Invariant（时间角度刻画离散随机过程的性质）</h4><p>给定事件E和操作T，如果E是T-invariant，则应该满足</p>
+<script type="math/tex; mode=display">
+TE \subseteq E\\
+TE = \{Tx,x\in E \},Tx = T(x_1,x_2,\cdots,) = (x_2,x_3,\cdots)</script><p><em><em>时序平移</em></em><em><em>时序平移</em></em>*，Time Invariant的事件具有时间不变性（无论从什么时候开始观测都得到同样的结果）</p>
+<blockquote>
+<p>给定事件</p>
+<script type="math/tex; mode=display">
+E = \{1111\cdots,0111\cdots,0011\cdots\}</script><blockquote>
+<p>关心的事件：多次随机试验所有硬币均为正面，第一次为反面其余均为正面，前两次为反面其余均为正面</p>
+</blockquote>
+<p>一定有$TE\subseteq E$，这样E被称为T-invariant</p>
+<blockquote>
+<ol>
+<li>通过T操作集合E越来越小了（收敛于1111…）</li>
+<li>如何延拓不T-invariant的集合使之称为T-invariant集合</li>
+<li>in-decomposable，经过无限次T操作得到的最小集合中的所有元素，我们希望关注不随着时间变化的事件集合，事件全集被划分成若干等价集合</li>
+</ol>
+</blockquote>
+</blockquote>
+<p><em><em>等价状态</em></em><em><em>等价状态</em></em><em><em>等价状态</em></em><em><em>等价状态</em></em>*，即我们不能删除group中的任何一个元素，否则将会破坏其T-invariant的特性</p>
+<h3 id="Ergodic"><a href="#Ergodic" class="headerlink" title="Ergodic"></a>Ergodic</h3><p>定义切割的反函数</p>
+<script type="math/tex; mode=display">
+T^{-1}E = \{x\in X^\infty:Tx\in E  \}</script><blockquote>
+<p>$X^\infty$指的是长度为无限的事件序列，例如010101…</p>
+</blockquote>
+<p> 例如</p>
+<script type="math/tex; mode=display">
+E = \{0101\cdots,1111\cdots\}\\
+T^{-1}E = \{1010\cdots,1111\cdots \}</script><p>注意到，如果$E = \{0101\cdots,1010\cdots\}$，则有$T^{-1} E = E$，这种情况我们称为E是Ergodic set</p>
+<p><em><em>时序不变性</em></em><em><em>时序不变性</em></em>变性**，满足</p>
+<script type="math/tex; mode=display">
+T^{-1} E = E</script><p>的集合，这种情况下</p>
+<script type="math/tex; mode=display">
+TE = T(T^{-1}E ) = E,T^\lambda E = E</script><p>对于two-sided random process(Reindex)</p>
+<script type="math/tex; mode=display">
+\cdots X_{-2}X_{-1}X_0X_1X_2\cdots\to TE = X_{-2} \to X_{-1}</script><p>对于one-side random process</p>
+<script type="math/tex; mode=display">
+X= \{X_1,X_2,\cdots\}</script><ol>
+<li>Memoryless(无记忆性) 随即过程每个随机变量都是iid的，无需记住历史上时序信息</li>
+<li>stationary(稳态) 任意选择一个事件集合，在任意时刻选择随机变量X，落在集合上的概率完全相同</li>
+<li>ergodicity(遍历性) 随机过程的时间均值等于空间均值（关心的Event在时间上具有周期性）<ol>
+<li>对随机过程 $x_1,x_2,\cdots$，统计第j个变量的均值，需要进行多次实验得到$x_j^1,x_j^2,\cdots$计算其平均</li>
+<li>同样一次实验计算计算一个轨迹上的均值$mean(x_1,x_2,\cdots,x_n)$，两者相等</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>Ergodicity实际上是来自热力学的概念，为了统计某个容器内物体的平均运动速率，有两种做法</p>
+<ol>
+<li>对于单个分子，在不同时间点测量其速率，计算平均值</li>
+<li>某个时间点采样容器内若干分子计算其平均值</li>
+</ol>
+<p>两种算法得到的期望是相同的</p>
+<p><em><em>不可切分</em></em><em><em>不可切分</em></em><strong>不可切分</strong>的事件集合，一般是时间平移的收敛结果</p>
+</blockquote>
+<p>给定两个集合，集合A</p>
+<script type="math/tex; mode=display">
+101010\cdots\\
+010101\cdots</script><p>显然满足时间不变性，并且有</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} \frac{\sum_i^n x_i}{n } = \frac 1 2</script><p>集合B</p>
+<script type="math/tex; mode=display">
+10010010\cdots\\
+0010010\cdots\\
+010010\cdots</script><p>满足时间不变性，并且</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty}\frac{\sum_i^n x_i}{n} =\frac 1 3</script><p>$A\bigcap B=\phi$，这是一个封闭体系</p>
+<p>同样，对于无线序列组成的随机过程</p>
+<script type="math/tex; mode=display">
+X= (x_1,x_2,\cdots)</script><p>定义事件</p>
+<script type="math/tex; mode=display">
+A =\{(x_1,x_2,\cdots)|  \lim_{n\to \infty}\frac{\sum_i x_i}{n}= 0.1\}\\
+B =\{(x_1,x_2,\cdots)|  \lim_{n\to \infty}\frac{\sum_i x_i}{n}= 0.1\}</script><p>两个Set必然不相交</p>
+<blockquote>
+<p>考虑连续随机过程$X(t)$，遍历性意味着任意取时间点$t_1$，并且取时间点$t_2,\cdots,t_n$，必然满足</p>
+<script type="math/tex; mode=display">
+\frac{\sum_i E[X(t_i)]}{n}收敛</script><p>这并不意味着$E[X_{t_1}] = E[X_{t_2}]=\cdots =E[X_{t_n}]$</p>
+<p>随机过程的教科书上所说的平稳过程指的是随机过程随机变量的某些特性不随时间变化</p>
+<ol>
+<li>期望E[X(t)]为常数，协方差Cov[X(s),X(t)]是t-s的函数（宽平稳）</li>
+<li><em><em>任意有限维随机过程中向量的的分布均相同</em></em>分布均相同**，则随机过程为严平稳过程</li>
+</ol>
+<script type="math/tex; mode=display">
+pdf(X_{t_1+\tau},\cdots,X_{t_n+\tau})= pdf(X_{t_1},\cdots,X_{t_n})</script><blockquote>
+<p>Y是一个随机变量，随机过程$X_t$满足</p>
+<script type="math/tex; mode=display">
+X_{t} = \cos(t+Y)</script><ol>
+<li>如果$Y=U [0,2k\pi]$，那么$X_t$显然是Stationary的</li>
+<li>对于其它非均匀分布，$X_t$不是Stationary的</li>
+</ol>
+</blockquote>
+<p>遍历性涉及另一个概念：随机过程的时间平均，对于离散随机过程和一次观测，定义n个观测时间的平均</p>
+<script type="math/tex; mode=display">
+\overline X_n = \frac {\sum_{i=1}^n x_i}{n}</script><p><em><em>均方收敛于</em></em><em><em>均方收敛于</em></em><strong>均方收敛于</strong>$\tau$，即</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty}E(\overline X_n - \tau)^n = 0</script><p>同理提出ensemble average的概念，个人觉得是多条轨迹取平均，一个Wiki上的例子，给定两枚硬币</p>
+<ol>
+<li>正反两面概率相等</li>
+<li>只有正面</li>
+</ol>
+<p>随机选择一枚硬币，投掷硬币，显然ensemble average为</p>
+<script type="math/tex; mode=display">
+\frac 1 2 \times \frac 1 2+ \frac 1 2\times 1 = \frac 3 4</script><p>对于单个实验，测量的time average为$\frac 1 2$或1，但是这个随机过程显然是stationary的</p>
+</blockquote>
+<h4 id="Point-wise-ergodic-theorem"><a href="#Point-wise-ergodic-theorem" class="headerlink" title="Point-wise ergodic theorem"></a>Point-wise ergodic theorem</h4><p>给定静态随机过程$X_n$，给定实数函数$f(\cdot)$，满足</p>
+<script type="math/tex; mode=display">
+E[f(X_n)] < \infty</script><p><em><em>随机变量Y</em></em>**，使得</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} \sum_{k=1}^n f(X_k)</script><p>和Y分布相同（均值可能不是常数而是随机变量）</p>
+<p>对于Ergodic过程，一定有</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} \frac 1 n \sum_{k=1}^n f(X_k) = E[f(X_1)]</script><blockquote>
+<p>Ergodic过程时间均值一定会收敛于某个常数</p>
+</blockquote>
+<h4 id="Stationary-ergodic-random-source"><a href="#Stationary-ergodic-random-source" class="headerlink" title="Stationary ergodic random source"></a>Stationary ergodic random source</h4><p><em><em>测量</em></em><em><em>测量</em></em><em><em>测量</em></em><strong>测量</strong>每个随机变量的概率分布</p>
+<h3 id="Markov-Chain"><a href="#Markov-Chain" class="headerlink" title="Markov Chain"></a>Markov Chain</h3><p>贝叶斯公式揭示了联合概率分布和条件概率分布的关系</p>
+<script type="math/tex; mode=display">
+P_{X,Y,Z}(x,y,z) = P_X(x) \cdot P_{Y|X}(y|x) \cdot P_{Z|X,Y}(z|y,x)</script><p>马尔科夫性简化了条件概率之间的变量依赖</p>
+<script type="math/tex; mode=display">
+P_{X,Y,Z}(x,y,z) = P_X(x) \cdot P_{Y|X}(y|x) \cdot P_{Z|Y}(z|y)</script><p>一个重要的结论是</p>
+<blockquote>
+<p>当Y已知时，X和Z相对于Y条件独立，即</p>
+<script type="math/tex; mode=display">
+P(x,z|y) = P(x|y)P(z|y)</script><p>因此$X\to Y\to Z$和$Z\to Y\to X$本质上没什么不同</p>
+</blockquote>
+<h3 id="Irreducible"><a href="#Irreducible" class="headerlink" title="Irreducible"></a>Irreducible</h3><p>对于任意状态$x^k,y^k\in X^k$，存在重复周期j，使得</p>
+<script type="math/tex; mode=display">
+Pr(x_j^{k+j-1}=x^k|x_j^k = y_^k)>0</script><h3 id="Time-invariant"><a href="#Time-invariant" class="headerlink" title="Time-invariant"></a>Time-invariant</h3><p>状态转移的概率不随时间改变</p>
+<script type="math/tex; mode=display">
+Pr(x_2=x|x_1=x^\prime) = Pr(x_3=x|x_2=x^\prime)</script><h3 id="Aperiodic"><a href="#Aperiodic" class="headerlink" title="Aperiodic"></a>Aperiodic</h3><p>对于同一状态x，定义状态周期</p>
+<script type="math/tex; mode=display">
+d(x)= gcd(n|Pr(x_{n+1}=x|X_1=x)>0)</script><p>特殊情况</p>
+<script type="math/tex; mode=display">
+\forall n,Pr(x_{n+1}=x|x_n= x)=0,d(x)=\infty</script><ol>
+<li>                  d(x)=1$</li>
+<li>Markov Chain是aperiodic等价于所有状态都是aperiodic的</li>
+</ol>
+<h3 id="Stationary"><a href="#Stationary" class="headerlink" title="Stationary"></a>Stationary</h3><p><em><em>自回归性</em></em><em><em>自回归性</em></em><em><em>自回归性</em></em><em><em>自回归性</em></em><em><em>自回归性</em></em>**</p>
+<script type="math/tex; mode=display">
+\pi(y) = \sum_x \pi(x)Pr(x_{n+1}=x|x_n=1)</script><p>Irreducible的Markov Chain一定存在唯一的$\pi$</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2023/10/11/Information-Theory-Mathematical-Basic-and-Introduction/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/10/11/Information-Theory-Mathematical-Basic-and-Introduction/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/10/10/StyleTransferforRobustRL/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Gaoustcer's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        kd193104@mail.ustc.edu.cn
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2023/10/">十月 2023<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/09/">九月 2023<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/08/">八月 2023<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/07/">七月 2023<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/06/">六月 2023<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/05/">五月 2023<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/04/">四月 2023<span class="sidebar_archives-count">23</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/papers" title="papers">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                papers
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">52</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/bollnh/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Hexo
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+    for (var i = 0; i < all.length; ++i)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+
+</body>
+    
+</html>
