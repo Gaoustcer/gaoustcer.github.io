@@ -48,7 +48,7 @@
     
     <title>
         
-            标签: Prompt Tuning | 
+            paper_share(23-12) | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",team meeting share,embodied ai">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/tags/Prompt-Tuning/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/12/04/paper-share-23-12/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/tags/Prompt-Tuning/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2023/12/04/paper-share-23-12/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: Prompt Tuning | Hexo">
+    <meta property="og:title" content="paper_share(23-12) | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="team meeting share"> <meta property="og:article:tag" content="embodied ai"> 
 
+    
+        <meta property="article:published_time" content="Mon Dec 04 2023 18:48:07 GMT+0800">
+        <meta property="article:modified_time" content="Mon Dec 04 2023 18:48:44 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/tags/Prompt-Tuning/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2023/12/04/paper-share-23-12/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2023/12/04/paper-share-23-12/index.html",
+    "headline": "paper_share(23-12)",
+    "datePublished": "Mon Dec 04 2023 18:48:07 GMT+0800",
+    "dateModified": "Mon Dec 04 2023 18:48:44 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",team meeting share,embodied ai",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,93 +322,331 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%BB%84%E4%BC%9A%E8%AE%BA%E6%96%87%E5%88%86%E4%BA%AB"><span class="post-toc-number">1.</span> <span class="post-toc-text">组会论文分享</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LLM-Implement-Policy-Iteration"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">LLM Implement Policy Iteration</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#motivation"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">motivation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Methods"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Methods</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Methods-Overview"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">Methods Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AE%A1%E7%AE%97%E5%A5%96%E5%8A%B1%E4%BC%B0%E8%AE%A1"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">计算奖励估计</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Policy-Iteration"><span class="post-toc-number">1.1.2.3.</span> <span class="post-toc-text">Policy Iteration</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">实验</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Chain-of-Thought-Brief-Introduction"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">Chain of Thought(Brief Introduction)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%88%A9%E7%94%A8%E5%B0%91%E9%87%8F%E6%95%B0%E6%8D%AE%E6%8F%90%E5%8D%87%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%8E%A8%E7%90%86%E8%83%BD%E5%8A%9B"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">利用少量数据提升大模型的推理能力</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Chain-of-Thought"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">Chain of Thought</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Zero-Shot-COT"><span class="post-toc-number">1.1.6.1.</span> <span class="post-toc-text">Zero-Shot COT</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Motif"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Motif</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Motivation"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Motivation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Difficulties"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Difficulties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Method"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">Method</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%87%E6%B3%A8"><span class="post-toc-number">1.2.3.1.</span> <span class="post-toc-text">数据集标注</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AE%AD%E7%BB%83reward-function"><span class="post-toc-number">1.2.3.2.</span> <span class="post-toc-text">训练reward function</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C-1"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">实验</span></a></li></ol></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/">Visual Language Model:CLIP and Prompt Learning</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/07/26/Visual-Language-Model-CLIP-and-Prompt-Learning/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>7月 26, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                paper_share(23-12)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>12月 04, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/embodied-ai/" rel="tag">embodied ai</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/team-meeting-share/" rel="tag">team meeting share</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=paper_share(23-12)&url=http://gaoustcer.github.io/2023/12/04/paper-share-23-12/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=paper_share(23-12)&url=http://gaoustcer.github.io/2023/12/04/paper-share-23-12/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/12/04/paper-share-23-12/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/12/04/paper-share-23-12/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="组会论文分享"><a href="#组会论文分享" class="headerlink" title="组会论文分享"></a>组会论文分享</h1><h2 id="LLM-Implement-Policy-Iteration"><a href="#LLM-Implement-Policy-Iteration" class="headerlink" title="LLM Implement Policy Iteration"></a>LLM Implement Policy Iteration</h2><h3 id="motivation"><a href="#motivation" class="headerlink" title="motivation"></a>motivation</h3><p>基于RNN或Transfromer设计RL model可以显著提高模型的性能，作者认为其原因在于这些模型有存储上下文的能力（in-context learning，语言模型中给出一些输入-输出示例，自动迁移到下游任务）</p>
+<p>借助语言模型的in-context learning的能力，如何将其应用到RL下游任务中？现在主要基于</p>
+<ol>
+<li>收集专家数据（human or domain-specific RL agents）</li>
+<li>借助梯度下降对生成模型进行fine-tune或训练一个Adaptive Layer</li>
+</ol>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><h4 id="Methods-Overview"><a href="#Methods-Overview" class="headerlink" title="Methods Overview"></a>Methods Overview</h4><p><img src="https://s2.loli.net/2023/12/03/WJI5vwFE42qNsz1.png" alt="image-20231203161144805"></p>
+<p>包含两个模块</p>
+<ol>
+<li>Q函数，用于Greedy生成动作</li>
+<li>LLM：根据输入状态和Q函数预测的动作，从预先收集的数据集D中生成下一个状态和奖励的预测</li>
+</ol>
+<h4 id="计算奖励估计"><a href="#计算奖励估计" class="headerlink" title="计算奖励估计"></a>计算奖励估计</h4><p>将Agent和环境交互的信息存储在D中，从中采样一个状态/动作/奖励对$(o_t,a,r)\in D$，并从LLM采样随后的T组状态-动作对</p>
+<script type="math/tex; mode=display">
+(o^1,a^1,r^1),(o^2,a^2,r^2),\cdots,(o^T,a^T)</script><p>上述状态/动作/奖励 采样自LLM</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+reward: r^u &= LLM(D_r,o^u,a^u)(2)\\
+terminal: b^u &= LLM(D_b,o^u,a^u)(1)\\
+next\ observation: o^{u+1} &= LLM(D_o,o^u,a^u)(3)\\
+action: a^u&= LLM(o^{u+1},D_a)(4)
+\end{aligned}</script><p>直到terminal为True，相当于借助LLM构建了一个World Model，关于用到的四个数据集</p>
+<ol>
+<li>$D_b= (o_k,a_k,b_k)$，其中$a_k = a^u$</li>
+<li>$D_r = (o_k,a_k,r_k),a_k = a^u,b_k = b^k$</li>
+<li>$D_o$仅仅在当前步骤执行$o^u,a^u$预测的terminal不为True的情况下进行（预测终止步无需对下一个状态进行预测）</li>
+</ol>
+<p>具体来说如何使用轨迹</p>
+<ol>
+<li>给出环境的文本描述（状态，动作，终止和奖励），一般是python语句</li>
+<li>数据集采样最近的c条轨迹</li>
+</ol>
+<blockquote>
+<p>这一部分有关动作价值函数$Q_\pi(s,a)$的估计</p>
+</blockquote>
+<h4 id="Policy-Iteration"><a href="#Policy-Iteration" class="headerlink" title="Policy Iteration"></a>Policy Iteration</h4><p>选择Q值最大的动作</p>
+<blockquote>
+<p>这里的动作选择和LLM的动作选择的区别在于：后者更像是拟合策略函数</p>
+</blockquote>
+<h3 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h3><p>Chain</p>
+<p><img src="https://s2.loli.net/2023/12/04/qUmSNuAT8XnVo26.png" alt="image-20231204144715685"></p>
+<h3 id="Chain-of-Thought-Brief-Introduction"><a href="#Chain-of-Thought-Brief-Introduction" class="headerlink" title="Chain of Thought(Brief Introduction)"></a>Chain of Thought(Brief Introduction)</h3><h3 id="利用少量数据提升大模型的推理能力"><a href="#利用少量数据提升大模型的推理能力" class="headerlink" title="利用少量数据提升大模型的推理能力"></a>利用少量数据提升大模型的推理能力</h3><p>大模型包含大量的知识，为了将蕴含在大模型中的知识挖掘出来，有三种in-context learning的方式</p>
+<ol>
+<li>few-shot 给定若干上下文（实例输入-输出）</li>
+<li>one-shot 只允许给定一个上下文</li>
+<li>zero-shot 仅仅给出对目标任务的自然语言描述，但是可能存在歧义</li>
+</ol>
+<p>few-shot的方法不能解决复杂的推理问题，因此提出Chain of Thought</p>
+<h3 id="Chain-of-Thought"><a href="#Chain-of-Thought" class="headerlink" title="Chain of Thought"></a>Chain of Thought</h3><p><em><em>不仅简单描述输入-输出，还需要描述输入-输出之间如何得到的因果关系</em></em><em><em>不仅简单描述输入-输出，还需要描述输入-输出之间如何得到的因果关系</em></em>得到的因果关系**</p>
+<h4 id="Zero-Shot-COT"><a href="#Zero-Shot-COT" class="headerlink" title="Zero-Shot COT"></a>Zero-Shot COT</h4><p><em><em>Let’s think step by step</em></em>by step**</p>
+<h2 id="Motif"><a href="#Motif" class="headerlink" title="Motif"></a>Motif</h2><h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>理解奖励从何而来对智能体的训练，尤其是在离散奖励环境上的训练极其重要。不像人类可以通过尝试判断当前的行为对最终目标的影响，智能体需要对环境进行反复探索以判断动作的好坏。</p>
+<blockquote>
+<p>如何利用high-level knowledge帮助模型决策</p>
+</blockquote>
+<h3 id="Difficulties"><a href="#Difficulties" class="headerlink" title="Difficulties"></a>Difficulties</h3><ol>
+<li>如何利用非结构化的语言知识（大语言模型）</li>
+<li>如何弥补语言知识的high-level abstraction和agent所需知识的low-level abstraction之间的gap（intrinsic reward function from LLM，提取两个observation的自然语言描述并根据描述得到奖励）</li>
+</ol>
+<blockquote>
+<p>贡献：</p>
+<ol>
+<li>描述动作$\to$描述场景</li>
+<li>利用high-level web knowledge</li>
+</ol>
+</blockquote>
+<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><p><img src="https://s2.loli.net/2023/12/04/vsyI9MP5bxwST6k.png" alt="image-20231204141628942"></p>
+<h4 id="数据集标注"><a href="#数据集标注" class="headerlink" title="数据集标注"></a>数据集标注</h4><p>对于Caption文本组成的空间C，定义一个三分类映射</p>
+<script type="math/tex; mode=display">
+C\times C\to Y,Y\in \{1,2,\phi\},f(o_1,o_2)\in\{1,2,\phi\}</script><p><em><em>偏好</em></em><em><em>偏好</em></em><em><em>偏好</em></em>*，偏好实际上代表我们的Agent应该处于哪一个环境</p>
+<ol>
+<li>$Y=1$，代表prefer $o_1$</li>
+<li>$Y=2$，代表prefer $o_2$</li>
+<li>$Y=\phi$，代表两者preference程度差不多</li>
+</ol>
+<p>标注通过LLM实现</p>
+<blockquote>
+<p>看出本文的另一个贡献是对Caption之间的偏好代替对observation之间的偏好</p>
+</blockquote>
+<h4 id="训练reward-function"><a href="#训练reward-function" class="headerlink" title="训练reward function"></a>训练reward function</h4><p>训练intrinsic reward model $r_\phi(o)$，采用preference rl</p>
+<p><img src="https://s2.loli.net/2023/12/04/f6l5REoJMbuTxLI.png" alt="image-20231204120426004"></p>
+<p>$Pr[o_1&gt;o_2]$记作</p>
+<script type="math/tex; mode=display">
+Pr [o_1>o_2]=\frac{e^{r_\phi(o_1)}}{e^{r_\phi(o_1)}+ e^{r_\phi(o_2)}}</script><h3 id="实验-1"><a href="#实验-1" class="headerlink" title="实验"></a>实验</h3><p>NetHack在屏幕上时不时出现文字提示，表明正在发生的事件（positive/negative），利用这些文字提示作为Caption</p>
+<p><img src="https://s2.loli.net/2023/12/04/bBHWpmT3gl6Zo9f.png" alt="image-20231204144921902"></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2023/12/04/paper-share-23-12/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2023/12/04/paper-share-23-12/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/12/02/Singularity-Intro/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -549,6 +820,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
