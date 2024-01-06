@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://.disqus.com"/>
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            ALBEF and BLIP | 
+        
+        Hexo
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.svg">
+    <link rel="icon" href="/img/favicon.svg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",Multi-modal pretrain,Important Paper">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Hexo">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2024/01/06/ALBEF-and-BLIP/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.svg">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://gaoustcer.github.io/2024/01/06/ALBEF-and-BLIP/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="ALBEF and BLIP | Hexo">
+    <meta property="og:image" content="/img/favicon.svg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="Multi-modal pretrain"> <meta property="og:article:tag" content="Important Paper"> 
+
+    
+        <meta property="article:published_time" content="Sat Jan 06 2024 22:24:14 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jan 06 2024 22:25:35 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://gaoustcer.github.io/2024/01/06/ALBEF-and-BLIP/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2024/01/06/ALBEF-and-BLIP/index.html",
+    "headline": "ALBEF and BLIP",
+    "datePublished": "Sat Jan 06 2024 22:24:14 GMT+0800",
+    "dateModified": "Sat Jan 06 2024 22:25:35 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Multi-modal pretrain,Important Paper",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ALBEF-and-BLIP"><span class="post-toc-number">1.</span> <span class="post-toc-text">ALBEF and BLIP</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#BLIP%EF%BC%88%E8%87%AA%E4%B8%BE%E5%BC%8F%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F-%E6%96%87%E6%9C%AC%E5%AF%B9%E6%95%B0%E6%8D%AE%E4%BB%A5%E9%A2%84%E8%AE%AD%E7%BB%83%E6%9B%B4%E5%A5%BD%E7%9A%84%E8%A7%86%E8%A7%89%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%89"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">BLIP（自举式生成图像-文本对数据以预训练更好的视觉语言模型）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%8E%B0%E6%9C%89%E8%A7%86%E8%A7%89-%E8%AF%AD%E8%A8%80%E9%A2%84%E8%AE%AD%E7%BB%83%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">现有视觉-语言预训练任务的局限性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Background"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Background</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Method"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">Method</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Overview"><span class="post-toc-number">1.1.3.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%B8%89%E4%B8%AA%E5%AD%90%E4%BB%BB%E5%8A%A1"><span class="post-toc-number">1.1.3.2.</span> <span class="post-toc-text">三个子任务</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%B8%89%E4%B8%AA%E6%A8%A1%E5%9E%8B"><span class="post-toc-number">1.1.3.3.</span> <span class="post-toc-text">三个模型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Capfilter"><span class="post-toc-number">1.1.3.4.</span> <span class="post-toc-text">Capfilter</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">实验</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CapFilt%E5%AF%B9%E5%AE%9E%E9%AA%8C%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="post-toc-number">1.1.4.1.</span> <span class="post-toc-text">CapFilt对实验的影响</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Caption-Diversity%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="post-toc-number">1.1.4.2.</span> <span class="post-toc-text">Caption Diversity的影响</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8F%82%E6%95%B0%E5%85%B1%E4%BA%AB"><span class="post-toc-number">1.1.4.3.</span> <span class="post-toc-text">参数共享</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9C%A8%E5%A4%9A%E4%B8%AA%E4%B8%8B%E6%B8%B8%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%AE%9E%E9%AA%8C"><span class="post-toc-number">1.1.4.4.</span> <span class="post-toc-text">在多个下游任务的实验</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%9B%BE%E7%89%87-%E6%96%87%E6%9C%AC-%E6%A3%80%E7%B4%A2"><span class="post-toc-number">1.1.4.4.1.</span> <span class="post-toc-text">图片-文本 检索</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#BLIP%E5%89%8D%E5%BA%8F%E5%B7%A5%E4%BD%9C%E2%80%94%E2%80%94ALBEF%EF%BC%8C%E9%80%9A%E8%BF%87%E5%A4%9A%E6%A8%A1%E6%80%81Cross-Attention%E5%AE%9E%E7%8E%B0%E5%A4%9A%E6%A8%A1%E6%80%81%E6%95%B0%E6%8D%AE%E8%A1%A8%E5%BE%81"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">BLIP前序工作——ALBEF，通过多模态Cross Attention实现多模态数据表征</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Motivation"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Motivation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Model"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Model</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Train"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">Train</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8D%95%E6%A8%A1%E6%80%81%E5%9B%BE%E7%89%87-%E6%96%87%E6%9C%AC%E5%AF%B9%E6%AF%94%E5%AD%A6%E4%B9%A0"><span class="post-toc-number">1.2.3.1.</span> <span class="post-toc-text">单模态图片-文本对比学习</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Mask-Language-Model"><span class="post-toc-number">1.2.3.2.</span> <span class="post-toc-text">Mask Language Model</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Image-Text-Matching"><span class="post-toc-number">1.2.3.3.</span> <span class="post-toc-text">Image-Text Matching</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8A%A8%E9%87%8F%E7%BC%96%E7%A0%81%E5%99%A8"><span class="post-toc-number">1.2.3.4.</span> <span class="post-toc-text">动量编码器</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Notes"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Notes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MLM-vs-CLM"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">MLM vs CLM</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Reference"><span class="post-toc-number">1.3.1.1.</span> <span class="post-toc-text">Reference</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Nucleus-sampling-vs-beam-search"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">Nucleus sampling vs beam search</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Reference-1"><span class="post-toc-number">1.3.2.1.</span> <span class="post-toc-text">Reference</span></a></li></ol></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                ALBEF and BLIP
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>1月 06, 2024</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Important-Paper/" rel="tag">Important Paper</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Multi-modal-pretrain/" rel="tag">Multi-modal pretrain</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ALBEF and BLIP&url=http://gaoustcer.github.io/2024/01/06/ALBEF-and-BLIP/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=ALBEF and BLIP&url=http://gaoustcer.github.io/2024/01/06/ALBEF-and-BLIP/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2024/01/06/ALBEF-and-BLIP/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2024/01/06/ALBEF-and-BLIP/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="ALBEF-and-BLIP"><a href="#ALBEF-and-BLIP" class="headerlink" title="ALBEF and BLIP"></a>ALBEF and BLIP</h1><h2 id="BLIP（自举式生成图像-文本对数据以预训练更好的视觉语言模型）"><a href="#BLIP（自举式生成图像-文本对数据以预训练更好的视觉语言模型）" class="headerlink" title="BLIP（自举式生成图像-文本对数据以预训练更好的视觉语言模型）"></a>BLIP（自举式生成图像-文本对数据以预训练更好的视觉语言模型）</h2><h3 id="现有视觉-语言预训练任务的局限性"><a href="#现有视觉-语言预训练任务的局限性" class="headerlink" title="现有视觉-语言预训练任务的局限性"></a>现有视觉-语言预训练任务的局限性</h3><ol>
+<li>无法统一图像理解和图像生成</li>
+<li>基于包含大量噪音的数据集训练</li>
+</ol>
+<p>本文提出caption generator解决问题2，利用filter过滤掉噪音文本，利用这种方式生成的文本相当于对原始数据集进行筛选</p>
+<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>作者将VLM从模型和数据的角度进行了分类</p>
+<ol>
+<li>model perspective：Encoder based(投影到同一表示空间进行对齐)很难完成图片文本标注任务，Encoder-Decoder based</li>
+<li>Data perspective：借助充斥着高度噪声的Web数据集进行训练</li>
+</ol>
+<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p><img src="https://s2.loli.net/2024/01/02/YIeTjyRr51k3J8n.png" alt="Caption Tuning"></p>
+<p><img src="https://s2.loli.net/2024/01/02/79VPWOSDfutF4Js.png" alt="Language Vision Train"></p>
+<h4 id="三个子任务"><a href="#三个子任务" class="headerlink" title="三个子任务"></a>三个子任务</h4><ol>
+<li>ITC：视觉-语言表征对齐</li>
+<li>ITM：构建Image-grounded text encoder，将visual编码的sequence和language编码出的sequence计算cross attention，输出的latent representation用于判别image-text pair属于positive/negative pair（二分类任务），选择相似度高的负样本作为negative pair以提升pair表示中包含的信息量</li>
+<li>LM：基于图片的文本生成用于生成描述图像的文本，自回归地进行训练</li>
+</ol>
+<blockquote>
+<p>问题：ITC和ITM的区别在哪里</p>
+</blockquote>
+<h4 id="三个模型"><a href="#三个模型" class="headerlink" title="三个模型"></a>三个模型</h4><ol>
+<li>Unimodel Encoder：单模态编码器，例如Bert/Vit</li>
+<li>Image-grounded text encoder：接收来自另一模态编码得到的序列计算cross-attention，用于编码整个image-text pair，输入的text加上token Encoder</li>
+<li>image-ground text decoder：结构和Encoder相同，区别在于输入text加上token Decoder，以及输入采用Casual Self-Attention进行编码，目的是用上文预测下文</li>
+</ol>
+<h4 id="Capfilter"><a href="#Capfilter" class="headerlink" title="Capfilter"></a>Capfilter</h4><p>解决缺乏高质量人工图片文本标注数据集的问题，CapFilt包含</p>
+<ol>
+<li>captioner：是一个Image-ground text decoder，基于图片生成对应的文本描述，根据LM目标进行训练</li>
+<li>filter：是一个Image-ground text decoder，基于生成文本和生成文本判断是否为noisy text（判断生成文本和原始文本谁更匹配）</li>
+</ol>
+<blockquote>
+<p>问题：filter的训练依赖一个ground truth文本caption和图片，但是如果直接采用web数据集训练，是否无法避免数据集噪音</p>
+<blockquote>
+<p>capFilt的训练基于一个较小的包含14M图片的文本-图片数据集（但是这种级别的标注数据貌似也很难获得。。）</p>
+</blockquote>
+</blockquote>
+<h3 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h3><h4 id="CapFilt对实验的影响"><a href="#CapFilt对实验的影响" class="headerlink" title="CapFilt对实验的影响"></a>CapFilt对实验的影响</h4><ol>
+<li>添加Captioner/Filter将会提升性能</li>
+<li>基于更大的数据集训练CapFilt能够提升性能</li>
+</ol>
+<h4 id="Caption-Diversity的影响"><a href="#Caption-Diversity的影响" class="headerlink" title="Caption Diversity的影响"></a>Caption Diversity的影响</h4><p>Nucleaus sampling相比beam search生成多样性更高的caption，包含更多的信息</p>
+<h4 id="参数共享"><a href="#参数共享" class="headerlink" title="参数共享"></a>参数共享</h4><p>text encoder/decoder结构基本相同，预训练中它们共享除了self-attention层之外的参数</p>
+<h4 id="在多个下游任务的实验"><a href="#在多个下游任务的实验" class="headerlink" title="在多个下游任务的实验"></a>在多个下游任务的实验</h4><h5 id="图片-文本-检索"><a href="#图片-文本-检索" class="headerlink" title="图片-文本 检索"></a>图片-文本 检索</h5><h2 id="BLIP前序工作——ALBEF，通过多模态Cross-Attention实现多模态数据表征"><a href="#BLIP前序工作——ALBEF，通过多模态Cross-Attention实现多模态数据表征" class="headerlink" title="BLIP前序工作——ALBEF，通过多模态Cross Attention实现多模态数据表征"></a>BLIP前序工作——ALBEF，通过多模态Cross Attention实现多模态数据表征</h2><h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><ol>
+<li>不同模态的数据使用单独的网络编码，无法体现了两者的连续</li>
+<li>通过cross-attention融合不同模态信息</li>
+<li>希望不通过高精度的标注数据，而是通过网络噪声数据集进行学习</li>
+</ol>
+<h3 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h3><p><img src="https://s2.loli.net/2024/01/04/TfxrHYRJ5ySBvza.png" alt="image-20240104143730288"></p>
+<p>Momentum Model作为一个相较于当前模型较为陈旧的模型用于动量更新，这里使用两个单模态模型提取图片和文本的表征，并使用一个Cross Attention做特征融合</p>
+<h3 id="Train"><a href="#Train" class="headerlink" title="Train"></a>Train</h3><p>图片和文本被编码为序列</p>
+<script type="math/tex; mode=display">
+I\to \{v_{cls},v_1,\cdots,v_N\}\\
+T\to \{w_{cls},w_1,\cdots,w_N\}</script><p>CLS标记一个Sequence的起始Token</p>
+<h4 id="单模态图片-文本对比学习"><a href="#单模态图片-文本对比学习" class="headerlink" title="单模态图片-文本对比学习"></a>单模态图片-文本对比学习</h4><p>输入一个batch的图片-文本对</p>
+<script type="math/tex; mode=display">
+(I_1,T_1),\cdots,(I_n,T_n)</script><p>采取类似CLIP的方法计算Similarity</p>
+<script type="math/tex; mode=display">
+P_m^{i2t}(I_k) = \frac{s(g_v(I_k),g_w(T_k))/\tau}{\sum_{j=1}^n s(g_v(I_j),g_w^(T_j))/\tau}\\
+P_m^{t2i}(I_k) = \frac{s(g_v(I_k),g_w(T_k))/\tau}{\sum_{j=1}^n s(g_v^(I_j),g_w(T_j))/\tau}\\</script><h4 id="Mask-Language-Model"><a href="#Mask-Language-Model" class="headerlink" title="Mask Language Model"></a>Mask Language Model</h4><p>类似Bert，随机Mask 15%的Token，希望Text Encoder可以预测出Mask的Token是什么</p>
+<h4 id="Image-Text-Matching"><a href="#Image-Text-Matching" class="headerlink" title="Image-Text Matching"></a>Image-Text Matching</h4><p>对于图片-文本对的描述设计二分类任务，这里需要给ITM选择负样本，理想的负样本应该满足</p>
+<ol>
+<li>文本-图片共享类似的语义信息</li>
+<li>在细节上存在差异</li>
+</ol>
+<p>本文利用单模态对比学习的对比相似度从一个batch中选择满足上述两个条件的负样本，即选择一个batch中不匹配但是对比相似度较高的图片-文本对</p>
+<h4 id="动量编码器"><a href="#动量编码器" class="headerlink" title="动量编码器"></a>动量编码器</h4><p>动量编码器为了解决两个问题：</p>
+<ol>
+<li><em><em>弱匹配</em></em><em><em>弱匹配</em></em>配**的问题，即文本不太能很好地描述图片语义信息</li>
+<li>所有负样本被一视同仁地在InfoNCE中被惩罚，换言之负样本描述对应图片的能力不同</li>
+</ol>
+<p>动量编码器生成数据的伪标签，包括</p>
+<ol>
+<li>判断一个batch中文本和图片的匹配程度，对应是一个batch size大小的概率分布，用它代替计算单模态对比损失中ground truth对应的one hot</li>
+<li>对应MLM任务，生成预测Mask token上的分布</li>
+</ol>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><h3 id="MLM-vs-CLM"><a href="#MLM-vs-CLM" class="headerlink" title="MLM vs CLM"></a>MLM vs CLM</h3><h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><ol>
+<li><a target="_blank" rel="noopener" href="https://towardsdatascience.com/understanding-masked-language-models-mlm-and-causal-language-models-clm-in-nlp-194c15f56a5">understanding MLM and CLM in NLP</a></li>
+<li><a target="_blank" rel="noopener" href="https://medium.com/@tom_21755/understanding-causal-llms-masked-llm-s-and-seq2seq-a-guide-to-language-model-training-d4457bbd07fa">A guide line to Language Model Training</a></li>
+</ol>
+<p>两种利用无监督语料训练语言模型的思路</p>
+<ol>
+<li>MLM要求模型根据上下文预测被mask掉的token（理解一段话的含义）</li>
+<li>CLM要求预测下一个token，导致无法感知未来信息（生成模型）</li>
+<li>Seq2Seq是一个Encoder-Decoder架构模型，Encoder编码输入序列，获得中间表示后送给Decoder输出</li>
+</ol>
+<h3 id="Nucleus-sampling-vs-beam-search"><a href="#Nucleus-sampling-vs-beam-search" class="headerlink" title="Nucleus sampling vs beam search"></a>Nucleus sampling vs beam search</h3><h4 id="Reference-1"><a href="#Reference-1" class="headerlink" title="Reference"></a>Reference</h4><ol>
+<li><a target="_blank" rel="noopener" href="https://towardsdatascience.com/decoding-strategies-that-you-need-to-know-for-response-generation-ba95ee0faadc">Sampling Strategies</a></li>
+</ol>
+<p>NLP生成下一个token的采样思路，对于CLM而言选择下一个token对于之后生成的token极为重要，一般token预测会生成和词表大小一样的离散概率分布，从中采样得到下一个token</p>
+<ol>
+<li>Greedy Approach：直接选择概率最高的token</li>
+<li>Beam Search：对于词表长度为10000的长度为10的句子，存在$10000^{10}$种可能性，Beam search每一步选择B个得分最高的token作为候选，选择第二个token是采取同样的策略，即在10000 * B的所有可能性中选择可能性最高的B个next token</li>
+<li>Random Sampling，基于随机概率采样$p_i= \frac{\exp u_i}{\sum_j \exp u_j}$<ol>
+<li>Random Sampling With Temperature，引入温度系数t计算带温度系数的概率$p_i = \frac{\exp u_i/t}{\sum_j \exp u_j/t}$</li>
+</ol>
+</li>
+<li>Top-K sampling 避免选到概率值较低的token，具体做法是仅在概率最高的K个Token中做选择</li>
+<li>Nucleus Sampling：选择下一个token时，希望选择最小的token集合$V(p)$，使得这个集合中token的概率之和大于p $\sum_{x\in V(p)}P(x|x_{1:i-1})\geq p$<ol>
+<li>Nucleus Sampling实际上解决了不同概率分布下，K如何进行不同选择的问题</li>
+<li>这种做法对应真实概率分布，即分布主要集中于少数词汇</li>
+</ol>
+</li>
+</ol>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2024/01/06/ALBEF-and-BLIP/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2024/01/06/ALBEF-and-BLIP/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/12/30/Financial-Intro/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Gaoustcer's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        kd193104@mail.ustc.edu.cn
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2024/01/">一月 2024<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/12/">十二月 2023<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/10/">十月 2023<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/09/">九月 2023<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/08/">八月 2023<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/07/">七月 2023<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/06/">六月 2023<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/05/">五月 2023<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/04/">四月 2023<span class="sidebar_archives-count">23</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/papers" title="papers">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                papers
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">62</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/bollnh/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Hexo
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+    for (var i = 0; i < all.length; ++i)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+
+</body>
+    
+</html>
