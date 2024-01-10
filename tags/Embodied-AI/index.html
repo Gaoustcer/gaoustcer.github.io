@@ -48,7 +48,7 @@
     
     <title>
         
-            Offline RL Survey | 
+            标签: Embodied AI | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Reinforcement Learning,Paper Reading,Survey">
+    <meta name="keywords" content="">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/tags/Embodied-AI/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,16 +235,13 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/">
+    <meta property="og:url" content="http://gaoustcer.github.io/tags/Embodied-AI/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Offline RL Survey | Hexo">
+    <meta property="og:title" content="标签: Embodied AI | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Reinforcement Learning"> <meta property="og:article:tag" content="Paper Reading"> <meta property="og:article:tag" content="Survey"> 
-
     
-        <meta property="article:published_time" content="Tue Apr 18 2023 22:07:06 GMT+0800">
-        <meta property="article:modified_time" content="Tue Apr 18 2023 22:08:18 GMT+0800">
+
     
 
     <!-- The Twitter Card protocol -->
@@ -252,43 +249,13 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/tags/Embodied-AI/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/index.html",
-    "headline": "Offline RL Survey",
-    "datePublished": "Tue Apr 18 2023 22:07:06 GMT+0800",
-    "dateModified": "Tue Apr 18 2023 22:08:18 GMT+0800",
-    "author": {
-        "@type": "Person",
-        "name": "Gaoustcer",
-        "image": {
-            "@type": "ImageObject",
-            "url": "/img/avatar.png"
-        },
-        "description": "Hi, nice to meet you"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "Hexo",
-        "logo": {
-            "@type":"ImageObject",
-            "url": "/img/favicon.svg"
-        }
-    },
-    "keywords": ",Reinforcement Learning,Paper Reading,Survey",
-    "description": "",
-}
-</script>
 
 
     
@@ -322,354 +289,93 @@
                         </button>
                     
 
-                    <!-- Post TOC -->
-
+                    <!-- Index Module -->
+<div class="material-index mdl-grid">
     
-    <!-- Back Button -->
-    <!--
-    <div class="material-back" id="backhome-div" tabindex="0">
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-           href="#" onclick="window.history.back();return false;"
-           target="_self"
-           role="button"
-           data-upgraded=",MaterialButton,MaterialRipple">
-            <i class="material-icons" role="presentation">arrow_back</i>
-            <span class="mdl-button__ripple-container">
-                <span class="mdl-ripple"></span>
-            </span>
-        </a>
-    </div>
-    -->
+    <div class="locate-thumbnail-symbol"></div>
 
-
-    <!-- Left aligned menu below button -->
-    
-    
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Offline-Reinforcement-Learning"><span class="post-toc-number">1.</span> <span class="post-toc-text">Offline Reinforcement Learning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Type-and-Notion-of-Offline-RL"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Type and Notion of Offline RL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Notion-of-Offline-RL"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Notion of Offline RL</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Type-of-Offline-RL-problem"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Type of Offline RL problem</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#OPE"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">OPE</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Offline-RL-Learning"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">Offline RL Learning</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">关键问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AE%80%E5%8D%95%E7%9C%8B%E7%9C%8Bdistribution-shift%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">简单看看distribution shift问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Offline-RL-with-Q-Learning"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">Offline RL with Q Learning</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Offline-RL-with-Policy-Gradient"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">Offline RL with Policy Gradient</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Offline-value-function-estimation"><span class="post-toc-number">1.1.7.</span> <span class="post-toc-text">Offline value function estimation</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Distribution-Shift-in-RL"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Distribution Shift in RL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BA%A6%E6%9D%9F%E5%BD%93%E5%89%8D%E7%AD%96%E7%95%A5%E5%92%8C%E6%8E%A2%E7%B4%A2%E7%AD%96%E7%95%A5%E4%B9%8B%E9%97%B4%E7%9A%84%E8%B7%9D%E7%A6%BB"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">约束当前策略和探索策略之间的距离</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%98%BE%E5%BC%8F%E7%BA%A6%E6%9D%9F"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">显式约束</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%9A%90%E5%BC%8F%E7%BA%A6%E6%9D%9F"><span class="post-toc-number">1.2.1.2.</span> <span class="post-toc-text">隐式约束</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9C%A8Q%E5%87%BD%E6%95%B0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%81%BF%E5%85%8DOOD%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">在Q函数更新时避免OOD问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Implict-Q-learning"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">Implict Q-learning</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Conservative-Q-learning"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">Conservative Q-learning</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Model-Based-Offline-RL"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">Model Based Offline RL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Conservative-Model-Based-RL"><span class="post-toc-number">1.2.4.1.</span> <span class="post-toc-text">Conservative Model-Based RL</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%BD%A8%E8%BF%B9%E8%BD%AC%E5%8C%96"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">轨迹转化</span></a></li></ol></li></ol></li></ol>
-    </ul>
+    <!-- Pin on top -->
     
 
-
-
-
-<!-- Layouts -->
-
-    <!-- Post Module -->
-    <div class="material-post_container">
-
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-
-                <!-- Post Header(Thumbnail & Title) -->
-                
-    <!-- Paradox Post Header -->
+    <!-- Normal Post -->
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
-        
-    
-            <p class="article-headline-p">
-                Offline RL Survey
-            </p>
-        </div>
-
-
-
-
-
-                
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>Gaoustcer</strong>
-        <span>4月 18, 2023</span>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-
-    <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Paper-Reading/" rel="tag">Paper Reading</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Survey/" rel="tag">Survey</a>
-    </ul>
-    
-
-    <!-- Share -->
-    
-        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    
-
-    
-
-    <!-- Share Weibo -->
-    
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Offline RL Survey&url=http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
-            <li class="mdl-menu__item">
-                分享到微博
-            </li>
-        </a>
-    
-
-    <!-- Share Twitter -->
-    
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Offline RL Survey&url=http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/index.html&via=Gaoustcer" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Twitter
-            </li>
-        </a>
-    
-
-    <!-- Share Facebook -->
-    
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Facebook
-            </li>
-        </a>
-    
-
-    <!-- Share Google+ -->
-    
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Google+
-            </li>
-        </a>
-    
-
-    <!-- Share LinkedIn -->
-    
-
-    <!-- Share QQ -->
-    
-
-    <!-- Share Telegram -->
-    
-</ul>
-
-    
-</div>
-
-                
-
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-    
-        <h1 id="Offline-Reinforcement-Learning"><a href="#Offline-Reinforcement-Learning" class="headerlink" title="Offline Reinforcement Learning"></a>Offline Reinforcement Learning</h1><h2 id="Type-and-Notion-of-Offline-RL"><a href="#Type-and-Notion-of-Offline-RL" class="headerlink" title="Type and Notion of Offline RL"></a>Type and Notion of Offline RL</h2><h3 id="Notion-of-Offline-RL"><a href="#Notion-of-Offline-RL" class="headerlink" title="Notion of Offline RL"></a>Notion of Offline RL</h3><p>给定数据集D</p>
-<script type="math/tex; mode=display">
-D=\{(s_i,a_i,s_i^\prime,r_i) \}</script><p>在不能与环境交互的前提下学习最佳策略</p>
-<h3 id="Type-of-Offline-RL-problem"><a href="#Type-of-Offline-RL-problem" class="headerlink" title="Type of Offline RL problem"></a>Type of Offline RL problem</h3><h4 id="OPE"><a href="#OPE" class="headerlink" title="OPE"></a>OPE</h4><p>给定数据，评估一个策略的奖励期望</p>
-<script type="math/tex; mode=display">
-J(\pi) =E_\pi[\sum_{t=1}r(s_t,a_t)]</script><h4 id="Offline-RL-Learning"><a href="#Offline-RL-Learning" class="headerlink" title="Offline RL Learning"></a>Offline RL Learning</h4><p>学习最佳策略$\pi_\theta$</p>
-<h3 id="关键问题"><a href="#关键问题" class="headerlink" title="关键问题"></a>关键问题</h3><ol>
-<li>找到数据集中有价值的经验</li>
-<li>泛化：一个状态下的好动作在另一个状态下不一定好，或者对于没有见过的初始状态同一个算法能否给出好的结果</li>
-<li>组合：将多个好动作合成为一个</li>
-</ol>
-<blockquote>
-<p>离线强化学习中必须考虑没有见过的动作和状态(out-of-distribution)，同时超越数据集中的数据</p>
-</blockquote>
-<h3 id="简单看看distribution-shift问题"><a href="#简单看看distribution-shift问题" class="headerlink" title="简单看看distribution shift问题"></a>简单看看distribution shift问题</h3><p>简单的监督回归任务</p>
-<script type="math/tex; mode=display">
-\theta \arg\min E_{x|p(x),y|p(y|x)}[(f_\theta(x)-y)^2]</script><p><em>$，是否有$f(x^</em>f(x^*)\approx E[y|x]$？这要分成两种情况考虑</p>
-<ol>
-<li><em>|p(x^</em>x^*)$，则有大概率判断是真的</li>
-<li><em>|q(x^</em>x^*)$，则可能结论为假</li>
-</ol>
-<p>这启示我们如果用$f(x^*)$寻找$E[y|x]$最大值可能是不合理的</p>
-<h3 id="Offline-RL-with-Q-Learning"><a href="#Offline-RL-with-Q-Learning" class="headerlink" title="Offline RL with Q Learning"></a>Offline RL with Q Learning</h3><p>对于强化学习任务，TD error计算用到的奖励估算</p>
-<script type="math/tex; mode=display">
-Q(s,a)\leftarrow r(s,a)+E_{a^\prime|\pi_{new}}[Q(s^\prime,a^\prime)]</script><p>优化目标是</p>
-<script type="math/tex; mode=display">
-\min_Q E_{(s,a)|\pi_\beta}[(Q(s,a)-y(s,a))^2]</script><h3 id="Offline-RL-with-Policy-Gradient"><a href="#Offline-RL-with-Policy-Gradient" class="headerlink" title="Offline RL with Policy Gradient"></a>Offline RL with Policy Gradient</h3><p>RL计算梯度为</p>
-<script type="math/tex; mode=display">
-\nabla_\theta J(\theta) = E_{\tau|\pi_\theta(\tau)}[\sum_{t=0}^T  \nabla_\theta \gamma^t\log \pi_\theta(a_t|s_t)Q(s_t,a_t)]</script><p>实际上是在环境上采样得到N条轨迹，代替期望，对于offpolicy policy gradient，需要importance sampling系数</p>
-<script type="math/tex; mode=display">
-\nabla_\theta J(\theta)\approx \frac{1}{N}\sum_{i=1}^N \frac{\pi_\theta(\tau_i)}{\pi_\beta(\tau_i)} \sum_{t=0}\nabla_\theta \gamma^t \log \pi_\theta(a_{t,i}|s_{t,i})Q(s_{t,i},a_{t,i})</script><p>假设轨迹$\tau = (s_0,a_0,s_1,a_1,\cdots,s_T,a_T,s_{T+1})$</p>
-<script type="math/tex; mode=display">
-\pi_\theta(\tau) = \pi(a_0|s_0)\times \pi(a_1|s_1)\times \cdots \times \pi(a_{T}|s_T)</script><p>我们记</p>
-<script type="math/tex; mode=display">
-V^{\pi_\theta}(s_t) =\sum_{t^\prime = t}^T \frac{\pi_\theta(\tau)}{\pi_\beta(\tau)} \gamma^{t^\prime - t}</script><p>最终梯度写成</p>
-<script type="math/tex; mode=display">
-\nabla_\theta = \frac{1}{N}\sum_{i=1}^N \sum_{t=0}\nabla _\theta \gamma ^t \log \pi_\theta(a_{t,i}|s_{t,i}) V^{\pi_\theta}(s_{t,i})</script><p>基本思想是importance sampling系数由$\prod_{t}\frac{\pi_\theta(a_t|s_t)}{\pi_\beta(a_t|s_t)}$，使用$w(s,a) = \frac{d^{\pi_\theta}(s,a)}{d^{\pi_\beta}(s,a)}$，于是采样方法写成</p>
-<script type="math/tex; mode=display">
-\nabla_\theta J(\theta) =\frac{1}{N}\sum_{i=1}^N \sum_{t=0}^T \nabla_\theta \gamma^t \log \pi_\theta(a_{t,i}|s_{t,i}) w(s_{t,i},a_{t,i})</script><blockquote>
-<p>$w(s,a)$具有的性质，假设$(s,a,s^\prime,a^\prime)$采样自D</p>
-<script type="math/tex; mode=display">
-d^{\pi_\beta}(s^\prime,a^\prime) w(s^\prime,a^\prime) = d^{\pi_\theta}(s,a)</script></blockquote>
-<h3 id="Offline-value-function-estimation"><a href="#Offline-value-function-estimation" class="headerlink" title="Offline value function estimation"></a>Offline value function estimation</h3><p>对于奖励存在</p>
-<h2 id="Distribution-Shift-in-RL"><a href="#Distribution-Shift-in-RL" class="headerlink" title="Distribution Shift in RL"></a>Distribution Shift in RL</h2><h3 id="约束当前策略和探索策略之间的距离"><a href="#约束当前策略和探索策略之间的距离" class="headerlink" title="约束当前策略和探索策略之间的距离"></a>约束当前策略和探索策略之间的距离</h3><h4 id="显式约束"><a href="#显式约束" class="headerlink" title="显式约束"></a>显式约束</h4><p>要求</p>
-<script type="math/tex; mode=display">
-D_{KL}(\pi\parallel \pi_\beta)\leq \epsilon</script><p>存在以下问题</p>
-<ol>
-<li>不存在$\pi_\beta$(手工获得数据)</li>
-<li>多个RL算法生成的数据</li>
-<li>过于乐观/过于消极</li>
-</ol>
-<p>分析KL散度</p>
-<script type="math/tex; mode=display">
-D_{KL}(\pi\parallel \pi_\beta) = E_\pi[\log \pi(a|s)-\log \pi_\beta(a|s)]=-E_{\pi}[\log \pi(a|s)]+H(\pi)</script><p>reward函数写成</p>
-<script type="math/tex; mode=display">
-\overline r(s,a) = r(s,a) -D(\pi,\pi_\beta)</script><p>直接将距离加入到奖励中</p>
-<h4 id="隐式约束"><a href="#隐式约束" class="headerlink" title="隐式约束"></a>隐式约束</h4><script type="math/tex; mode=display">
-\pi_{new} (a|s) =\arg\max_{(s,a)|\pi_\beta}[\log \pi(a|s)\frac{1}{Z(s)}\exp{\frac{1}{\lambda} A^{\pi_{old}}(s,a)}]</script><p>Advantage function根据Critic方法估算得到，采样来自D</p>
-<blockquote>
-<p>Z(s)是啥？</p>
-</blockquote>
-<h3 id="在Q函数更新时避免OOD问题"><a href="#在Q函数更新时避免OOD问题" class="headerlink" title="在Q函数更新时避免OOD问题"></a>在Q函数更新时避免OOD问题</h3><p>Q函数根据如下范式更新</p>
-<script type="math/tex; mode=display">
-Q(s,a) \leftarrow r(s,a)+E_{a^\prime|\pi_{new}}[Q(s^\prime,a^\prime)]=r(s,a)+V(s^\prime)</script><p>V函数根据如下方式更新</p>
-<script type="math/tex; mode=display">
-V = \arg\min_V \frac{1}{N}\sum_{i=1}^N loss(V(s_i),Q(s_i,a_i)),a_i|\pi_\beta</script><h4 id="Implict-Q-learning"><a href="#Implict-Q-learning" class="headerlink" title="Implict Q-learning"></a>Implict Q-learning</h4><p>每一步更新写为</p>
-<script type="math/tex; mode=display">
-Q(s,a) = r(s,a)+V(s^\prime)\\
-V\leftarrow \arg\min_V \frac{1}{N}\sum_{i=1}^N l_2^\tau(V(s_i),Q(s_i,a_i))</script><h3 id="Conservative-Q-learning"><a href="#Conservative-Q-learning" class="headerlink" title="Conservative Q-learning"></a>Conservative Q-learning</h3><p>更新参数是加入正则项(TD loss)</p>
-<ol>
-<li>$E_{s\in D,a\in \mu(a|s)}[Q(s,a)]$最大化$\mu$，选择带来最大奖励的动作</li>
-<li>$E_{(s,a,s^\prime)\in D}[(Q(s,a)-(r(s,a)+E_\pi(Q(s^\prime,a^\prime))))^2]$</li>
-</ol>
-<p>选择损失函数</p>
-<script type="math/tex; mode=display">
-\alpha E_{s\in D,a\in \mu(a|s)}[Q(s,a)]-\alpha E_{s,a\in D}[Q(s,a)]+regular</script><p>regular指的是从D中抽取$(s,a,s^\prime)$计算的TD loss</p>
-<p>算法</p>
-<ol>
-<li>在D上优化$\mathcal L_{CQL}(Q^\pi)$</li>
-<li>策略函数$\pi(a|s)=\arg\max_a Q^(s,a)$</li>
-</ol>
-<p>在此基础上增加一个评估项评估动作概率的entropy</p>
-<script type="math/tex; mode=display">
-R=E_{s\in D}[H(\mu(\cdot|s))]</script><p>因为$\mu(\cdot|s)$实际上是$Q(s,a)$softmax化的结果，也可以写成</p>
-<script type="math/tex; mode=display">
-E_{a\in (a,s)} =\log \sum_a \exp(Q(s,a))</script><h3 id="Model-Based-Offline-RL"><a href="#Model-Based-Offline-RL" class="headerlink" title="Model Based Offline RL"></a>Model Based Offline RL</h3><p>有些类似reward shaping，奖励写成</p>
-<script type="math/tex; mode=display">
-\overline r(s,a) = r(s,a)-\lambda u(s,a)</script><p>$u(s,a)$称为uncertainty penalty，刻画model errror</p>
-<h4 id="Conservative-Model-Based-RL"><a href="#Conservative-Model-Based-RL" class="headerlink" title="Conservative Model-Based RL"></a>Conservative Model-Based RL</h4><p>最小化model状态-行为序列对应的Q值，同时增大其对数据集D中状态-动作序列的评估，损失函数分成三个部分</p>
-<ol>
-<li>$E_{s,a\in \rho(s,a)}[Q(s,a)]$，这里状态-动作序列由模型生成</li>
-<li>$-E_{s,a\in D}[Q(s,a)]$，这里状态-动作序列来自静态数据集</li>
-<li>$E_{s,a,s^\prime}[(Q(s,a)-\hat Q^k(s,a))^2]$，刻画TD error</li>
-</ol>
-<h3 id="轨迹转化"><a href="#轨迹转化" class="headerlink" title="轨迹转化"></a>轨迹转化</h3><ol>
-<li>训练模型预测轨迹的联合概率分布$p(\tau) =p_\beta(s_1,a_2,\cdots,s_T,a_T)$(感觉像是学习行为策略产生某一轨迹的概率)</li>
-<li>使用transformer建模序列信息</li>
-</ol>
-<p>如何利用model做控制：模拟环境下计算累计奖励，从某个状态开始采样多个路径，选择累计奖励最大的路径</p>
-
         
     
 
-    
-</div>
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2024/01/10/CLIP4EmbodiedAI/">CLIP4EmbodiedAI</a></p>
+    </div>
 
-
-                
-
-                <!-- Post Comments -->
-                
-                    
-    <!-- 使用 DISQUS -->
-<div id="disqus-comment">
-    <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_config = function () {
-        this.page.url = 'http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://gaoustcer.github.io/2023/04/18/Offline-RL-Survey/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-</script>
-<script type="text/ls-javascript" id="disqus-thread-script">
-    queue.offer(function() {
-            (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document;
-                var s = d.createElement('script');
-                s.src = '//.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', + new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        });
-</script>
-
-</div>
-<style>
-    #disqus-comment{
-        background-color: #eee;
-        padding: 2pc;
-    }
-</style>
-
-                
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2024/01/10/CLIP4EmbodiedAI/" target="_self">阅读全文</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
             </div>
+            <div>
+                <strong>Gaoustcer</strong>
+                <span>1月 10, 2024</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
 
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
-    
-        <a href="/2023/04/18/Batch-Constrain-Q-Learning/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
+            
 
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
+            
 
-    <!-- Next Nav -->
-    
-        <a href="/2023/04/18/subspaceofpolicies/" id="post_nav-older" class="next-content">
-            旧篇
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
-    
-</nav>
-
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
         </div>
     </div>
+</div>
 
+            
+            
+        
+    
+
+    
+
+    
+        <script type="text/ls-javascript" id="thumbnail-script">
+    var randomNum;
+
+    var locatePost = $('.locate-thumbnail-symbol').next();
+    for(var i = 0; i < 10; i++) {
+        randomNum = Math.floor(Math.random() * 19 + 1);
+
+        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
+        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+
+        locatePost = locatePost.next();
+    }
+</script>
+
+    
+</div>
 
 
                     
@@ -843,14 +549,6 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
-
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
 
                     
 
