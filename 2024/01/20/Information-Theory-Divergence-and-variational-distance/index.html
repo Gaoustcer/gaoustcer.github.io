@@ -48,7 +48,7 @@
     
     <title>
         
-            标签: Prompt Learn | 
+            Information Theory(Divergence and variational distance) | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Information Theory">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/tags/Prompt-Learn/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2024/01/20/Information-Theory-Divergence-and-variational-distance/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/tags/Prompt-Learn/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2024/01/20/Information-Theory-Divergence-and-variational-distance/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: Prompt Learn | Hexo">
+    <meta property="og:title" content="Information Theory(Divergence and variational distance) | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Information Theory"> 
 
+    
+        <meta property="article:published_time" content="Sat Jan 20 2024 23:53:12 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jan 20 2024 23:54:05 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/tags/Prompt-Learn/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2024/01/20/Information-Theory-Divergence-and-variational-distance/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2024/01/20/Information-Theory-Divergence-and-variational-distance/index.html",
+    "headline": "Information Theory(Divergence and variational distance)",
+    "datePublished": "Sat Jan 20 2024 23:53:12 GMT+0800",
+    "dateModified": "Sat Jan 20 2024 23:54:05 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Information Theory",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,93 +322,315 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Information-Theory-Divergence-and-variational-distance"><span class="post-toc-number">1.</span> <span class="post-toc-text">Information Theory(Divergence and variational distance)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Divergence-and-Variational-distance"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Divergence and Variational distance</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">性质</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Refinement-of-Distribution"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Refinement of Distribution</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variational-Distance"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Variational Distance</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Pinsker%E2%80%99s-inequality"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Pinsker’s inequality</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Conditional-Divergence"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Conditional Divergence</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Chain-Rule-for-Divergence"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">Chain Rule for Divergence</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Condition-will-not-Decrease-Divergence"><span class="post-toc-number">1.2.2.2.</span> <span class="post-toc-text">Condition will not Decrease Divergence</span></a></li></ol></li></ol></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/08/23/Object-Detection-via-Prompt-Learning/">Object Detection via Prompt Learning</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/08/23/Object-Detection-via-Prompt-Learning/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>8月 23, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Information Theory(Divergence and variational distance)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>1月 20, 2024</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Information-Theory/" rel="tag">Information Theory</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Information Theory(Divergence and variational distance)&url=http://gaoustcer.github.io/2024/01/20/Information-Theory-Divergence-and-variational-distance/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Information Theory(Divergence and variational distance)&url=http://gaoustcer.github.io/2024/01/20/Information-Theory-Divergence-and-variational-distance/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2024/01/20/Information-Theory-Divergence-and-variational-distance/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2024/01/20/Information-Theory-Divergence-and-variational-distance/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Information-Theory-Divergence-and-variational-distance"><a href="#Information-Theory-Divergence-and-variational-distance" class="headerlink" title="Information Theory(Divergence and variational distance)"></a>Information Theory(Divergence and variational distance)</h1><h2 id="Divergence-and-Variational-distance"><a href="#Divergence-and-Variational-distance" class="headerlink" title="Divergence and Variational distance"></a>Divergence and Variational distance</h2><p>Divergence(Relative entropy/discrimination) of X and Y定义为</p>
+<script type="math/tex; mode=display">
+D(X\parallel Y) = \sum_x p(x)\log \frac{p(x)}{q(x)}</script><blockquote>
+<p>Relative Entropy：之前提到过对某个随机事件的最小压缩长度记作</p>
+<script type="math/tex; mode=display">
+H(X) = \sum_x p(x)\log \frac{1}{p(x)}</script><p>概率越小编码长度越大，平均编码长度最短</p>
+<p>考虑数据传输模型，输入$X$输出Y，按照Y的概率对输入编码得到编码长度为</p>
+<script type="math/tex; mode=display">
+\log \frac {1}{q(Y)}</script><p>此时编码长度为</p>
+<script type="math/tex; mode=display">
+\sum_x p(x)\log \frac{1}{q(x)}</script><p>p/q对应输入/输出端在全概率空间的分布，和最优编码$\sum_x p(x)\log \frac{1}{p(x)}$之差为$D(p\parallel q)$</p>
+</blockquote>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><script type="math/tex; mode=display">
+D(p\parallel q)\geq 0</script><p>错误的数据传输将会导致压缩效率下降</p>
+<p>Mutual Information被定义为联合概率和边缘概率乘积之间的Divergence</p>
+<script type="math/tex; mode=display">
+I(X;Y) = D(P(X,Y)\parallel P(X)P(Y))</script><p>之间的差异本质上反映了Y在多少程度上受到X影响</p>
+<h3 id="Refinement-of-Distribution"><a href="#Refinement-of-Distribution" class="headerlink" title="Refinement of Distribution"></a>Refinement of Distribution</h3><p>给定概率空间$\mathcal X$，在上面切分出k个不相交的子集$\mathcal U_i,i=1,2,\cdots,k$</p>
+<script type="math/tex; mode=display">
+\mathcal X = \bigcup_i^k \mathcal U_i</script><p>定义$U_i$上的几率(Refinement)</p>
+<script type="math/tex; mode=display">
+P_U(i) = \sum_{x\in \mathcal U_i}P_X(x)</script><p>划分是针对全概率空间而言的，下面的结论揭示了划分会让Divergence降低</p>
+<script type="math/tex; mode=display">
+D(p\parallel q) \geq D(p_U\parallel q_U)</script><p>$p_u/q_u$对应的是在划分空间上的离散分布，定义为</p>
+<script type="math/tex; mode=display">
+D(p_U\parallel q_U) =\sum_{i=1}^k \sum_{x\in \mathcal U_i} P(x)\log _2\frac{\sum_{x\in \mathcal U_i}P_X(x)}{\sum_{x\in U_i}Q_X(x)}</script><p>对应LHS写成</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^k \sum_{x\in U_i}P(x)\log_2\frac{P(x)}{Q(x)}</script><p>基于</p>
+<script type="math/tex; mode=display">
+\sum_i a_i \log \frac{a_i}{b_i}\geq a\log \frac a b,\sum_i a_i =a,\sum_i b_i = b</script><blockquote>
+<p>这是基于$f(x) = x\log x$是凹函数，即</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\sum_i a_i \log \frac{a_i}{b_i} &=\sum_i b_i f(\frac{a_i}{b_i})\\
+&=b\sum_i\frac {b_i}{b}f(\frac{a_i}{b_i})\\
+&\geq b f(\sum_i \frac{b_i}{b} \frac{a_i}{b_i})\\
+&=bf(\frac a b)
+\end{aligned}</script><p>Q.E.D</p>
+</blockquote>
+<p>这不满足数学上对distance的定义（不满足三角不等式/对称性）</p>
+<h2 id="Variational-Distance"><a href="#Variational-Distance" class="headerlink" title="Variational Distance"></a>Variational Distance</h2><p>提出更符合数学直觉的概率距离定义</p>
+<script type="math/tex; mode=display">
+\parallel P_X - P_Y\parallel= \sum_{x\in \mathcal X}|P_X(x) - P_Y(x)|</script><p>满足</p>
+<script type="math/tex; mode=display">
+\parallel P_X - P_Y\parallel = 2\sum_{x\in \mathcal X,P_X(x)>P_Y(x)}|P_X(x) - P_Y(x)| = 2\sup_{E\subset \mathcal X}|P_X(E) - P_Y(E)|</script><p>实际上 $\sup E$满足</p>
+<script type="math/tex; mode=display">
+\forall x\in E,P_X(x) \geq P_Y(x),\forall x\notin E,P_X(x) < P_Y(x)</script><h3 id="Pinsker’s-inequality"><a href="#Pinsker’s-inequality" class="headerlink" title="Pinsker’s inequality"></a>Pinsker’s inequality</h3><p>揭示了Divergence和Variational distance之间的差别</p>
+<script type="math/tex; mode=display">
+D(X\parallel Y)\geq  \frac{\log_2 e}{2}\parallel P_X - P_Y\parallel^2</script><p>按照Variational Distance定义切割</p>
+<script type="math/tex; mode=display">
+U = \{x\in \mathcal X|P_X(x)\geq P_Y(x)\}</script><p>一定有</p>
+<script type="math/tex; mode=display">
+D(X\parallel Y)\geq D(P_X(U)\parallel P_Y(U))</script><p>希望证明</p>
+<script type="math/tex; mode=display">
+D(P_X(U)\parallel P_Y(U)) \geq 2\log_2 e |P_X(U) - P_Y(U)|^2</script><p>定义$P_X(U) = p,P_Y(U) = q$，写成</p>
+<script type="math/tex; mode=display">
+p\ln \frac p q + (1 -p )\ln \frac {1- p}{1-q} \geq 2 (p-1)</script><p>得证</p>
+<h3 id="Conditional-Divergence"><a href="#Conditional-Divergence" class="headerlink" title="Conditional Divergence"></a>Conditional Divergence</h3><p>给定条件z，是否会帮助减少两者的Divergence</p>
+<script type="math/tex; mode=display">
+D(X\parallel Y|Z) = \sum_z P_Z(z) D(X|z\parallel Y|z)</script><p>定义Conditional Mutual Information</p>
+<script type="math/tex; mode=display">
+I(X;Y|Z) = \sum_z P_Z(z) I(X|z;Y|z) = \sum_z P_Z(z) D(P(X,Y|z)\parallel P(X|z)P(Y|z))</script><p>给定conditional，能否帮助减少两个分布之间的差异</p>
+<h4 id="Chain-Rule-for-Divergence"><a href="#Chain-Rule-for-Divergence" class="headerlink" title="Chain Rule for Divergence"></a>Chain Rule for Divergence</h4><p>对于两个二维分布$P(X_1,X_2),Q(X_1,X_2)$以及对应的边缘分布$P(X_1),Q(X_1)$</p>
+<script type="math/tex; mode=display">
+D(P_{X_1,X_2}\parallel Q_{X_1,X_2}) = D(P_{X_1}\parallel Q_{X_1}) + D(P_{X_2|X_1}\parallel Q_{X_2|X_1}|P_{X_1})</script><p>先看第一维的分布差异，再看条件分布的差异</p>
+<h4 id="Condition-will-not-Decrease-Divergence"><a href="#Condition-will-not-Decrease-Divergence" class="headerlink" title="Condition will not Decrease Divergence"></a>Condition will not Decrease Divergence</h4><p>给定先验条件不会让两个分布之间的距离变小（注意和条件熵的区别，条件熵只会让信息量减小）</p>
+<script type="math/tex; mode=display">
+D(P_{X|Z}\parallel P_{Y|Z}|P_Z) \geq D(P_X\parallel P_Y)</script><p>如果Z和X/Y相互独立，则取等号</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2024/01/20/Information-Theory-Divergence-and-variational-distance/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2024/01/20/Information-Theory-Divergence-and-variational-distance/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2024/01/10/CLIP4EmbodiedAI/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -549,6 +804,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
