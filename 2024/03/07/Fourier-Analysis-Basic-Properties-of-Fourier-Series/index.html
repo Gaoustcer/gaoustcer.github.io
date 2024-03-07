@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://.disqus.com"/>
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Fourier Analysis(Basic Properties of Fourier Series) | 
+        
+        Hexo
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.svg">
+    <link rel="icon" href="/img/favicon.svg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",math,Fourier Analysis">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Hexo">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2024/03/07/Fourier-Analysis-Basic-Properties-of-Fourier-Series/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.svg">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://gaoustcer.github.io/2024/03/07/Fourier-Analysis-Basic-Properties-of-Fourier-Series/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Fourier Analysis(Basic Properties of Fourier Series) | Hexo">
+    <meta property="og:image" content="/img/favicon.svg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="math"> <meta property="og:article:tag" content="Fourier Analysis"> 
+
+    
+        <meta property="article:published_time" content="Thu Mar 07 2024 15:27:33 GMT+0800">
+        <meta property="article:modified_time" content="Thu Mar 07 2024 15:31:13 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://gaoustcer.github.io/2024/03/07/Fourier-Analysis-Basic-Properties-of-Fourier-Series/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2024/03/07/Fourier-Analysis-Basic-Properties-of-Fourier-Series/index.html",
+    "headline": "Fourier Analysis(Basic Properties of Fourier Series)",
+    "datePublished": "Thu Mar 07 2024 15:27:33 GMT+0800",
+    "dateModified": "Thu Mar 07 2024 15:31:13 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",math,Fourier Analysis",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Fourier-Analysis-Chapter-2-Basic-Properties-of-Fourier-Series"><span class="post-toc-number">1.</span> <span class="post-toc-text">Fourier Analysis(Chapter 2: Basic Properties of Fourier Series)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Definition"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Definition</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Fourier-Coefficient"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Fourier Coefficient</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Functions-in-a-circle"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text">Functions in a circle</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E7%9A%84%E6%94%B6%E6%95%9B%E6%80%A7"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">傅里叶级数的收敛性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Uniqueness-of-Fourier-Series"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">Uniqueness of Fourier Series</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%80%E8%87%B4%E6%94%B6%E6%95%9B%E6%80%A7"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">一致收敛性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Smoothness-and-Decay"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">Smoothness and Decay</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%B7%E7%A7%AF"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">卷积</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Fourier Analysis(Basic Properties of Fourier Series)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>3月 07, 2024</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Fourier-Analysis/" rel="tag">Fourier Analysis</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/math/" rel="tag">math</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Fourier Analysis(Basic Properties of Fourier Series)&url=http://gaoustcer.github.io/2024/03/07/Fourier-Analysis-Basic-Properties-of-Fourier-Series/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Fourier Analysis(Basic Properties of Fourier Series)&url=http://gaoustcer.github.io/2024/03/07/Fourier-Analysis-Basic-Properties-of-Fourier-Series/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2024/03/07/Fourier-Analysis-Basic-Properties-of-Fourier-Series/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2024/03/07/Fourier-Analysis-Basic-Properties-of-Fourier-Series/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Fourier-Analysis-Chapter-2-Basic-Properties-of-Fourier-Series"><a href="#Fourier-Analysis-Chapter-2-Basic-Properties-of-Fourier-Series" class="headerlink" title="Fourier Analysis(Chapter 2: Basic Properties of Fourier Series)"></a>Fourier Analysis(Chapter 2: Basic Properties of Fourier Series)</h1><h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><h3 id="Fourier-Coefficient"><a href="#Fourier-Coefficient" class="headerlink" title="Fourier Coefficient"></a>Fourier Coefficient</h3><p>形如</p>
+<script type="math/tex; mode=display">
+a_n =\frac 1 L \int_0^L f(x) e^{-2\pi i n x/L } dx</script><p>的系数称为傅里叶系数，这是因为</p>
+<script type="math/tex; mode=display">
+f(x) = \sum_{n=-\infty}^\infty a_n e^{2\pi i n x/L} dx</script><p>对于$\forall m\neq n\in N$，有</p>
+<script type="math/tex; mode=display">
+\int_0^L e^{\frac{2\pi i x(m - n)}{L}} dx  = \int_0^L \cos \frac{2\pi x(m-n)}{L} dL  + i\int _0^L \sin \frac{2\pi x(m-n)}{L} dx = 0</script><p>这里$f:\R\to \C$，f需要在$[0,L]$中黎曼可积</p>
+<p>更一般地，一个函数的傅里叶级数写成</p>
+<script type="math/tex; mode=display">
+\sum_{n=-\infty}^\infty \hat f(n) e^{2\pi n i x/L},\hat f( n) =\frac 1 L \int_a^b f(x)e ^{-2\pi i x/L} dx</script><h4 id="Functions-in-a-circle"><a href="#Functions-in-a-circle" class="headerlink" title="Functions in a circle"></a>Functions in a circle</h4><p>周期为$2\pi$的函数$f(x)$，满足</p>
+<script type="math/tex; mode=display">
+\int_a^b f(x) dx =\int_{a+2\pi}^{b+2\pi} f(x) dx  = 0</script><p>傅里叶系数选择无需考虑区间选择</p>
+<p>$\sum_{-\infty}^\infty c_n e^{2\pi i n x/L}$被定义为三角级数</p>
+<h3 id="傅里叶级数的收敛性"><a href="#傅里叶级数的收敛性" class="headerlink" title="傅里叶级数的收敛性"></a>傅里叶级数的收敛性</h3><p>讨论partial sum</p>
+<script type="math/tex; mode=display">
+S_N =\sum_{n=-\infty}^N c_n e^{i2\pi n x/L}</script><p>考虑Dirichlet kernel</p>
+<script type="math/tex; mode=display">
+D_N (x) = \sum_{n=-N}^N e^{inx}</script><p>拆分为</p>
+<script type="math/tex; mode=display">
+\sum_{n=0}^N w^n+\sum_{n=-N}^{-1} w^{-n} = \frac{1 - w^{N+1}}{1 - w}+ \frac{w^{-N} - 1}{1 - w}\\
+=\frac{\sin(N+\frac 1 2)x}{\sin \frac x 2}
+\\w=e^{ix}</script><p>对于Poisson kernel</p>
+<script type="math/tex; mode=display">
+P_r(\theta) =\sum_{n=-\infty}^{\infty} r^{|n|} e^{in \theta},\theta\in [-\pi,\pi]</script><p>对于$\forall r\in [0,1]$一致收敛，这是因为其可以拆分为</p>
+<script type="math/tex; mode=display">
+\sum_{-\infty}^{-1} r^{-n} e^{in\theta} +\sum_{i=0}^\infty r^n e^{in\theta}=\lim_{N\to \infty}\sum_{-N}^{-1} (\frac{e^{i\theta}}{r})^n+\lim_{N\to \infty} \sum_{0}^N{(e^{i\theta}r)}^n=\frac{1-|w|^2}{|1-w|^2},w = re^{i\theta}</script><p>得到</p>
+<script type="math/tex; mode=display">
+P_r(\theta) =\frac{1 - r^2}{(1 - r\cos\theta)^2  + (r\sin\theta)^2} = \frac{1 -r^2}{1 + r^2 - 2r\cos\theta}</script><blockquote>
+<p>一致收敛的函数级数可以进行换序，写成</p>
+<script type="math/tex; mode=display">
+\int \sum_i f_i = \sum_i \int f_i</script><p><em><em>所有在定义域中的x</em></em><em><em>所有在定义域中的x</em></em><em><em>所有在定义域中的x</em></em><em><em>所有在定义域中的x</em></em><em><em>所有在定义域中的x</em></em><em><em>所有在定义域中的x</em></em>所有在定义域中的x**都有$|f_n (x) - f(x)|&lt;\epsilon$。后者要求对$\forall x$都有$\lim_{n\to \infty} f_n(x) = f(x)$，不同x对应的$\epsilon$是不同的，一致收敛又被记作</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty}\sup \{|f_n(x) - f(x)|,x\in I\} = 0</script></blockquote>
+<h3 id="Uniqueness-of-Fourier-Series"><a href="#Uniqueness-of-Fourier-Series" class="headerlink" title="Uniqueness of Fourier Series"></a>Uniqueness of Fourier Series</h3><p>两个函数$f(x),g(x)$傅里叶家属相同$\hat f(n )= \hat g(n)$是否一定能够得到$f(x)\neq g(x)$</p>
+<blockquote>
+<p>不一定，在某一点不连续并不会影响积分值</p>
+</blockquote>
+<p>给定以下条件，满足</p>
+<blockquote>
+<p>假设$f$是一个在$2\pi$上可积的函数，并且$\hat f(n) = 0$，如果$f$在$\theta_0$处连续，则有</p>
+<script type="math/tex; mode=display">
+f(\theta_0) = 0</script><p>证明，根据傅里叶系数得到</p>
+<script type="math/tex; mode=display">
+\hat f(n) = 0\Rightarrow \int_{-\pi}^\pi f(\theta) e^{-in \theta} d\theta = 0</script><p>得到其线性组合（系数为$c_n$）也是0</p>
+<script type="math/tex; mode=display">
+\int_{-\pi}^\pi f(\theta)\sum_n c_n e^{-in \theta} d\theta = 0</script><p>记求和号内的三角多项式为$P_k(\theta)$，得到</p>
+<script type="math/tex; mode=display">
+\int_{-\pi}^\pi f(\theta)P_k (\theta) d\theta  = 0,P_k(\theta) =\sum_{n=-\infty}^k c_n e^{-in\theta}</script><p>不妨设$\theta_0= 0,f(0)&gt;0$，由连续的</p>
+<script type="math/tex; mode=display">
+\exists \delta,s.t \forall |x|\leq \delta,f(x) >\frac{f(0)}{2}</script><p>令</p>
+<script type="math/tex; mode=display">
+p(\theta) = \epsilon + \cos \theta</script><p>选择一个足够小的$\epsilon &gt;0$，使得，考虑$\delta \leq \theta\leq \pi$这个区间，显然有</p>
+<script type="math/tex; mode=display">
+|p(\theta)|\leq 1 - \frac\epsilon 2</script><p>另外必然$\exist \eta &gt; 0,\eta &lt; \delta$，满足</p>
+<script type="math/tex; mode=display">
+p(\theta) \geq 1 + \frac \epsilon 2 ,\forall |\theta|<\eta</script><p>构造一个级数函数</p>
+<script type="math/tex; mode=display">
+p_k(\theta) = [p(\theta)^k]= (\epsilon +\cos\theta)^k</script><p>这里$\epsilon$不是无穷小，因此$\lim_{k\to \infty} p_k(0) = \infty$</p>
+<p>傅里叶系数为0得到</p>
+<script type="math/tex; mode=display">
+\hat f(n) = 0\Leftrightarrow \int_{-\pi}^{\pi}f(\theta)\cos\theta d \theta = 0,\int_{-\pi}^\pi f(\theta) \sin\theta d \theta = 0</script><p>因此有</p>
+<script type="math/tex; mode=display">
+\int_{-\pi}^\pi f(\theta) p_k(\theta) d\theta = 0\label{int}</script><blockquote>
+<p>这是因为$p_k(\theta)$本身可以拆分为三角级数的线性组合</p>
+</blockquote>
+<p>这里对$\ref{int}$进行估计，首先根据连续得到函数有界，即</p>
+<script type="math/tex; mode=display">
+|f(\theta)|\leq B,\forall B\in [-\pi,\pi]</script><p>因此对于$|\theta| \geq \delta$，有如下bound</p>
+<script type="math/tex; mode=display">
+|\int_{\delta\leq|\theta|} f(\theta)p_k(\theta) d\theta|\leq 2\pi B (1- \frac \epsilon 2)^k(对f(\theta)和p_k(\theta)进行放缩),\forall k</script><p>对$|\theta|\leq \delta $进行估计，有</p>
+<script type="math/tex; mode=display">
+\int_{\eta\leq |\theta|< \delta} f(\theta)p_k(\theta) d\theta \geq 0（均为非负）</script><p>同时</p>
+<script type="math/tex; mode=display">
+\int_{|\theta|<\eta}f(\theta)p_k(\theta) d\theta \geq 2 \eta \frac{f(0)}{2}(1 +\frac \epsilon 2)^k</script><p>显然$(1 +\frac\epsilon 2)^k - (1 -\frac{\epsilon}{2})^k$在$k\to \infty$是趋向于$\infty$，得到和$\ref{int}$矛盾的结论</p>
+</blockquote>
+<h3 id="一致收敛性"><a href="#一致收敛性" class="headerlink" title="一致收敛性"></a>一致收敛性</h3><p>对于定义在圆上的函数$f$，并且$\sum_{n =\infty}^{\infty} |\hat f(n)|&lt;\infty$，此时它的傅里叶级数一致收敛到$f(\theta)$，即</p>
+<script type="math/tex; mode=display">
+\lim_{N\to \infty}S_N(f) = f(\theta),S_N(f) = \sum_{n=-\infty}^N \hat f(n) e^{in\theta},\forall \theta \in [-\pi,\pi]</script><blockquote>
+<p>$|\sum_{n=-\infty}^\infty \hat f(n) e^{in\theta}| \leq \sum_{n=-\infty}^\infty |\hat f(n)|&lt;\infty$，因此$S_N(f)$一致收敛，下面证明收敛到$f(\theta)$，定义$g(\theta)$</p>
+<script type="math/tex; mode=display">
+g(\theta) = \lim_{N\to \infty}\sum_{n =-N}^N \hat f(n) e^{in\theta}</script><p>显然两个函数的傅里叶级数相等，得到$f = g$(一致收敛求和积分可以换顺序)</p>
+</blockquote>
+<h3 id="Smoothness-and-Decay"><a href="#Smoothness-and-Decay" class="headerlink" title="Smoothness and Decay"></a>Smoothness and Decay</h3><p>考虑傅里叶系数的阶，对于定义在circle上的二阶可微函数$f$</p>
+<script type="math/tex; mode=display">
+\hat f(n) = O(\frac {1}{|n|^2})\Rightarrow |\hat f(n)|\leq \frac{C}{|n|^2}</script><blockquote>
+<p>$n\neq 0$，有</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+2\pi \hat f(n)& = \int_0^{2\pi} f(\theta )e^{-in \theta }  d\theta\\
+&=\int_0^{2\pi} f(\theta) d {(-\frac{1}{in}e^{-in\theta})} \\
+&=-{\frac{f(\theta) e^{-in\theta}}{in}}|_0^{2\pi} - \int _0^{2\pi} f^\prime(\theta)\frac{1}{in} e^{-in\theta} d\theta\\
+&=-\frac{1}{in}\int_0^{2\pi} f^\prime (\theta) e^{-in \theta} d \theta \\
+&=\frac{1}{(in)^2} \int_0^{2\pi} f^{\prime\prime}(\theta) e^{-in \theta} d\theta
+\end{aligned}</script><p>再用二阶微分上界bound积分</p>
+</blockquote>
+<p>$f(\theta)$和$f^\prime(\theta)$的傅里叶系数满足</p>
+<script type="math/tex; mode=display">
+\hat f(n) = -\frac{1}{in}\hat f^\prime(n)</script><p>同理推导到$C^k$，因此得到</p>
+<p>再circle上的函数只要是k阶可微的$k\geq 2$，则其傅里叶级数一致收敛</p>
+<h2 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h2><p>显然，根据积分的可加性，有</p>
+<script type="math/tex; mode=display">
+\hat f(n) + \hat g(n) = \hat{f+g}(n)</script><p>考虑两个函数的乘积</p>
+<script type="math/tex; mode=display">
+\hat{fg}(n) = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(\theta)g(\theta) e^{-in\theta} d\theta</script><p>定义$f/g$的卷积</p>
+<script type="math/tex; mode=display">
+f*g(x) = \frac{1}{2\pi}\int_{-\pi}^\pi f(y)g(x-y) dy=\frac{1}{2\pi}\int_{x-\pi}^{x+\pi} f(x-z) g(z) d z(z=  x-y)</script><p>$f(x- z) g(z)$也是关于$2\pi$的函数，因此</p>
+<script type="math/tex; mode=display">
+f* g(x) =\frac{1}{2\pi} \int_{-\pi}^{\pi} f(x- y) g(y)   dy= g*f(x)</script><p>卷积满足可交换性（对于周期函数），给定$g= 1$，得到</p>
+<script type="math/tex; mode=display">
+f*g(x) = \frac{1}{2\pi}\int_{-\pi}^\pi f(y)d y</script><p>傅里叶级数的partial sum满足</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+S_N(f)(x)&=\sum_{n=-N}^N \frac{1}{2\pi}\int_{-\pi}^\pi f(y) e^{-iny} dy  e^{inx}\\
+&=\frac{1}{2\pi}\int_{-\pi}^\pi f(y)\sum_{n=-N}^N e^{in(x-y) } dy\\
+&=\frac{1}{2\pi}\int_{-\pi}^\pi f(y) g_N(x-y) dy,g_N(z) = \sum_{n=-N}^N e^{inz}\\
+&=f * g_N
+\end{aligned}</script><p>卷积的一个很好的性质是</p>
+<script type="math/tex; mode=display">
+\hat{f * g}(n) = \hat {f(n)} \hat {g(n)}</script><p>卷积的傅里叶级数等于两个函数对应的傅里叶级数乘积，证明如下</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\hat {f * g}(x) &=\frac{1}{2\pi}\int_{-\pi}^\pi f(x-y) g(y) d y\\ 
+LHS &= (\frac{1}{2\pi})^2 \int_{-\pi}^{\pi}\int _{-\pi}^{\pi} f(x-y) g(y) dy  e^{-inx} dx \\
+&=(\frac{1}{2\pi})^2\int_{\Omega = (x,y)\in (-\pi,\pi)^2}f(x-y) e^{-in(x-y)} g(y) e^{-iny} d x dy \\
+&{=}(\frac{1}{2\pi})^2\int _{\Eta}f(u) e^{-inu} g(v)e^{-inv} d u dv,H对应二维空间上的菱形区域,u = x-y,v = y\\
+&=(\frac{1}{2\pi})^2\int_{-\pi}^\pi g(v )e ^{-inv} \int_{-\pi -v}^{\pi -v} f(u)e ^{-in u} d u  dv 
+\end{aligned}</script><p>再根据周期函数定积分性质易得</p>
+<p>接下来我们将会证明，如果$f/g$是连续的则它们的卷积是连续的，即估算</p>
+<script type="math/tex; mode=display">
+\forall x_1,x_2,|f*g (x_1)  - f* g(x_2)|\label{abs_cov},|x_1-x_2|\leq \delta</script><p>根据卷积交换性，$\ref{abs_cov}$写成</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{1}{2\pi}|\int_{-\pi}^\pi  f(y)  [g(x_1- y)- g(x_2-y) dy]|&\leq\frac{\epsilon}{2\pi} \int_{-\pi}^\pi |f(y)| dy,g(x_1-y)-g(x_2-y)\leq \epsilon\\
+&\leq \epsilon B,f(y)被bound住
+\end{aligned}</script><p><em><em>仅仅要求$f/g$可积</em></em><em>仅仅要求$f/g$可积*</em>，并不要求连续或者一阶可导之类更强的条件，证明此结论需要借助下列引理</p>
+<blockquote>
+<p>$f$说可积函数并且被B bound住，则存在连续函数序列$\{f_k\}_{k=1}^\infty$满足</p>
+<script type="math/tex; mode=display">
+\sup_{x\in [-\pi,\pi]} |f_k(x)|\leq B</script><p>并且</p>
+<script type="math/tex; mode=display">
+\int _{-\pi}^\pi |f(x) - f_k(x)|dx \to 0</script><p>这提供了一种用函数列积分估算可微周期函数积分的方式</p>
+</blockquote>
+<p>此时可以构造$\{f_k\},\{g_k\}$两个函数列在黎曼积分上逼近$f,g$，此时</p>
+<script type="math/tex; mode=display">
+f* g - f_k * g_k = (f-f_k) g + f_k* (g - g_k),(f_k * g = g * f_k)</script><p>这两部分都可以被容易地bound住</p>
+<script type="math/tex; mode=display">
+|(f - f_k)  * g| = \frac{1}{2\pi} \int_{-\pi}^\pi |f(x-y) - f_k (x- y)||g(y)| dy\\
+\leq \frac{1}{2\pi}\sup_y |g(y)| \int_{-\pi}^\pi |f(y) - f_k (y)| dy \to 0</script><p>考虑到$f_k/g_k$是连续的，结论可证</p>
+<blockquote>
+<p>利用另一个序列逼近要证明函数，并且另一个序列连续</p>
+</blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2024/03/07/Fourier-Analysis-Basic-Properties-of-Fourier-Series/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2024/03/07/Fourier-Analysis-Basic-Properties-of-Fourier-Series/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2024/03/07/CMU15445-24-lab0/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2024/03/05/DALLE/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Gaoustcer's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        kd193104@mail.ustc.edu.cn
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2024/03/">三月 2024<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2024/02/">二月 2024<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2024/01/">一月 2024<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/12/">十二月 2023<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/10/">十月 2023<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/09/">九月 2023<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/08/">八月 2023<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/07/">七月 2023<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/06/">六月 2023<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/05/">五月 2023<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/04/">四月 2023<span class="sidebar_archives-count">23</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/papers" title="papers">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                papers
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">71</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/bollnh/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<span id="busuanzi_container_site_uv">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Hexo
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+    for (var i = 0; i < all.length; ++i)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+
+</body>
+    
+</html>
