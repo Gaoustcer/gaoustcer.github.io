@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://.disqus.com"/>
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            3d Reconstruction for Embodied Grasp Task | 
+        
+        Hexo
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.svg">
+    <link rel="icon" href="/img/favicon.svg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",Embodied AI,3D Computer Vision,Computer Graphics">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Hexo">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2024/04/21/3d-Reconstruction-for-Embodied-Grasp-Task/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.svg">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://gaoustcer.github.io/2024/04/21/3d-Reconstruction-for-Embodied-Grasp-Task/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="3d Reconstruction for Embodied Grasp Task | Hexo">
+    <meta property="og:image" content="/img/favicon.svg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="Embodied AI"> <meta property="og:article:tag" content="3D Computer Vision"> <meta property="og:article:tag" content="Computer Graphics"> 
+
+    
+        <meta property="article:published_time" content="Sun Apr 21 2024 11:53:25 GMT+0800">
+        <meta property="article:modified_time" content="Sun Apr 21 2024 11:54:41 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://gaoustcer.github.io/2024/04/21/3d-Reconstruction-for-Embodied-Grasp-Task/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2024/04/21/3d-Reconstruction-for-Embodied-Grasp-Task/index.html",
+    "headline": "3d Reconstruction for Embodied Grasp Task",
+    "datePublished": "Sun Apr 21 2024 11:53:25 GMT+0800",
+    "dateModified": "Sun Apr 21 2024 11:54:41 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Embodied AI,3D Computer Vision,Computer Graphics",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%80%9F%E5%8A%A93d%E8%A7%86%E8%A7%89%E9%87%8D%E5%BB%BA%E6%9E%84%E5%BB%BA%E6%B3%9B%E5%8C%96%E8%83%BD%E5%8A%9B%E6%9B%B4%E5%BC%BA%E7%9A%84%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BDAgent"><span class="post-toc-number">1.</span> <span class="post-toc-text">借助3d视觉重建构建泛化能力更强的具身智能Agent</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Words"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Words</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Distilled-Feature-Fields-Enable-Few-Shot-Language-Guided-Manipulation"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TL-DR"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">TL;DR</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BB%BB%E5%8A%A1"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">任务</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Method"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">Method</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Overview"><span class="post-toc-number">1.2.3.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#FFD"><span class="post-toc-number">1.2.3.2.</span> <span class="post-toc-text">FFD</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E8%AE%AD%E7%BB%83%EF%BC%9A%E7%89%B9%E5%BE%81%E8%92%B8%E9%A6%8F"><span class="post-toc-number">1.2.3.2.1.</span> <span class="post-toc-text">训练：特征蒸馏</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Extracting-Dense-Visual-Features-from-CLIP"><span class="post-toc-number">1.2.3.2.2.</span> <span class="post-toc-text">Extracting Dense Visual Features from CLIP</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Representing-6-DOF-Poses-with-Feature-Fields"><span class="post-toc-number">1.2.3.3.</span> <span class="post-toc-text">Representing 6-DOF Poses with Feature Fields</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Open-Text-Language-Guided-Manipulation"><span class="post-toc-number">1.2.3.4.</span> <span class="post-toc-text">Open-Text Language-Guided Manipulation</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Gaussian-Grasper-3D-language-Gaussian-Splatting-for-Open-vocabulary-Robotic-Grasping"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Gaussian Grasper: 3D language Gaussian Splatting for Open-vocabulary Robotic Grasping</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Words-1"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">Words</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Motivation"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">Motivation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Review-of-Previous-Work"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">Review of Previous Work</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Overview-of-the-Framework"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">Overview of the Framework</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Feature-Distillation"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">Feature Distillation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Language-guided-Robotic-Manipulation"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">Language-guided Robotic Manipulation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reference"><span class="post-toc-number">1.3.7.</span> <span class="post-toc-text">Reference</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                3d Reconstruction for Embodied Grasp Task
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>4月 21, 2024</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/3D-Computer-Vision/" rel="tag">3D Computer Vision</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Computer-Graphics/" rel="tag">Computer Graphics</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Embodied-AI/" rel="tag">Embodied AI</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=3d Reconstruction for Embodied Grasp Task&url=http://gaoustcer.github.io/2024/04/21/3d-Reconstruction-for-Embodied-Grasp-Task/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=3d Reconstruction for Embodied Grasp Task&url=http://gaoustcer.github.io/2024/04/21/3d-Reconstruction-for-Embodied-Grasp-Task/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2024/04/21/3d-Reconstruction-for-Embodied-Grasp-Task/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2024/04/21/3d-Reconstruction-for-Embodied-Grasp-Task/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="借助3d视觉重建构建泛化能力更强的具身智能Agent"><a href="#借助3d视觉重建构建泛化能力更强的具身智能Agent" class="headerlink" title="借助3d视觉重建构建泛化能力更强的具身智能Agent"></a>借助3d视觉重建构建泛化能力更强的具身智能Agent</h1><h2 id="Words"><a href="#Words" class="headerlink" title="Words"></a>Words</h2><ol>
+<li>manifest 表明，货单  The experiment results manifest</li>
+<li>designate 指派，指定</li>
+<li>undertake 承担</li>
+<li>underscore 强调</li>
+<li>jumbled 混乱的</li>
+<li>harness 控制，利用 attempts to harness the sun light</li>
+<li>canonical 典型的</li>
+<li>accommodate 适应，顺应</li>
+</ol>
+<h2 id="Distilled-Feature-Fields-Enable-Few-Shot-Language-Guided-Manipulation"><a href="#Distilled-Feature-Fields-Enable-Few-Shot-Language-Guided-Manipulation" class="headerlink" title="Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation"></a>Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation</h2><h3 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h3><p>借助蒸馏特正常去集合精确的3D信息和2D生成模型的几何信息，实现了开放世界物体的6自由度自动抓取和放置任务。作者认为在一个开放世界物体抓取任务中需要关注两类信息</p>
+<ol>
+<li>几何信息，用于控制抓取的具体位置和姿态</li>
+<li>语义信息，用于物体识别</li>
+</ol>
+<h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><p>给定一些demonstration和文本描述，抓取novel object（基于预训练图像模型和大规模互联网数据实现泛化）</p>
+<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><p>采用类似的方法，渲染Distilled Feature Field，借助DFF实现开放场景下物体操作任务的泛化</p>
+<blockquote>
+<p>建议读读<a target="_blank" rel="noopener" href="https://pfnet-research.github.io/distilled-feature-fields/">Feature Field Distillation</a>，提供了一种可编辑的Nerf范式</p>
+</blockquote>
+<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p><img src="https://s2.loli.net/2024/04/19/38TLWlwjtVK4ngU.png" alt="image-20240419161145656"></p>
+<ol>
+<li>机器人借助自拍杆获得环境场景的RGB图像（场景扫描）</li>
+<li>对patch层次的图片基于预训练模型获取2D representation，将其用于训练Feature Fied</li>
+<li>基于新的视角获取feature map，基于CLIP计算哪些patch和我们关心的novel object相关（query with text embedding）</li>
+</ol>
+<h4 id="FFD"><a href="#FFD" class="headerlink" title="FFD"></a>FFD</h4><p>Nerf的渲染实际上在求解积分</p>
+<script type="math/tex; mode=display">
+F(r) = \int_{t_n}^{t_f} T(t)\sigma(r(t))c(r(t),d) dt</script><p>其中$T(t)$是$[t_n,t]$区间的累计不透明度，这里我们的目标是渲染颜色，FFD相比Nerf的区别是希望构建线性模型从$(x,d)$预测$(c,\sigma)$修改为预测视觉feature vector $f(x)$，这里feature vector是视角无关的，这种情况下积分写成</p>
+<script type="math/tex; mode=display">
+F(r) =\int_{t_n}^{t_f} T(r) \sigma(r_t) f(r_t) dt</script><p>$r_t$代表光线</p>
+<h5 id="训练：特征蒸馏"><a href="#训练：特征蒸馏" class="headerlink" title="训练：特征蒸馏"></a>训练：特征蒸馏</h5><p>给定N张多角度RGB图片的Feature Map $I_i^f = f_{vis}(I_i)$，希望优化$F_r$到$I_i^f$之间的距离</p>
+<h5 id="Extracting-Dense-Visual-Features-from-CLIP"><a href="#Extracting-Dense-Visual-Features-from-CLIP" class="headerlink" title="Extracting Dense Visual Features from CLIP"></a>Extracting Dense Visual Features from CLIP</h5><p>希望做一个Language-guide的Agent，因此选择CLIP视觉分支输出的Embedding避免在后续过程中需要显示和Text对齐带来的视觉开销，作者做了两点改动以适应我们的任务</p>
+<ol>
+<li>Mask CLIP一张图获取多个Representation（CLIP直接对整张图做表征）</li>
+<li>Interpolate position encoding适应更大的图（CLIP训练将图片划分为的patch数量过少）</li>
+</ol>
+<h4 id="Representing-6-DOF-Poses-with-Feature-Fields"><a href="#Representing-6-DOF-Poses-with-Feature-Fields" class="headerlink" title="Representing 6-DOF Poses with Feature Fields"></a>Representing 6-DOF Poses with Feature Fields</h4><blockquote>
+<p>基于若干Demonstration，获取对应任务的task embedding，并根据其对6-DOF进行优化</p>
+</blockquote>
+<p><img src="https://s2.loli.net/2024/04/20/maPIpstec5yFoqK.png" alt="image-20240420170933594"></p>
+<p>随机在空间中采样$N_q$个离散点作为query $\mathcal X = \{x\in R^3\},|\mathcal X| = N_q$，根据特征蒸馏场获取其特征</p>
+<ol>
+<li>获取几何特征：作者任务Nerf渲染出的$\sigma$代表空间是否存在物体，将其和feature相乘得到$\alpha-$feature<script type="math/tex; mode=display">
+f_\alpha(x) = \alpha(x) \cdot f(x),\alpha(x) = 1 - \exp(-\sigma(x)\cdot \delta)</script></li>
+</ol>
+<p>基于这些feature获取task embedding $Z_M \in \R^{N_q\times |f|}$，对于每个task我们获取一系列demonstration，记作</p>
+<ol>
+<li>基于task embedding的优化，对于当前的pose T，我们获取上述的task embedding $z_T$，优化目标是<script type="math/tex; mode=display">
+\cos (z_T,Z_M)</script></li>
+</ol>
+<h4 id="Open-Text-Language-Guided-Manipulation"><a href="#Open-Text-Language-Guided-Manipulation" class="headerlink" title="Open-Text Language-Guided Manipulation"></a>Open-Text Language-Guided Manipulation</h4><p>引入文本做open-world控制任务，引入自然语言表明需要操作的物体，这一步需要从已有的demonstration中选择和我们任务相似的demonstration，具体而言是通过计算demonstration的 average feature $F_d$，希望其和text embedding尽量相似</p>
+<ol>
+<li>初始化姿态：基于text对feature field做query，过滤掉一些和操作物体无关的区域，给定若干negative queries $L_i^-,i=1,2,\cdots,n$和一个positive query $L^+$，计算采样的voxel feature和negative/positive query之间的相似度，拒绝和negative query相关度大于50%的voxel</li>
+<li>基于文本优化Grasp Pose：基于retrieve的两个demonstration计算task embedding和pose embedding之间的相似度，得到$\mathcal L_{pose}(T) = -\cos(z_T,Z_M)$<ol>
+<li>同时希望我们在空间中得到的采样点集合$\mathcal X$尽可能和language query q相似，计算$q\odot f_\alpha(x)$并在空间所有离散点上做average $C_q = mean_{x\in T\mathcal X}[\cos{(q,f_\alpha(x))}]$</li>
+<li>损失函数是Weight和Pose Loss乘积</li>
+</ol>
+</li>
+</ol>
+<h2 id="Gaussian-Grasper-3D-language-Gaussian-Splatting-for-Open-vocabulary-Robotic-Grasping"><a href="#Gaussian-Grasper-3D-language-Gaussian-Splatting-for-Open-vocabulary-Robotic-Grasping" class="headerlink" title="Gaussian Grasper: 3D language Gaussian Splatting for Open-vocabulary Robotic Grasping"></a>Gaussian Grasper: 3D language Gaussian Splatting for Open-vocabulary Robotic Grasping</h2><h3 id="Words-1"><a href="#Words-1" class="headerlink" title="Words"></a>Words</h3><ol>
+<li>accommodate 适应，顺应</li>
+<li>pivotal 核心的</li>
+<li>pursuit 追求</li>
+<li>superfluous 多余的</li>
+<li>impose 强加于 Impose unpaid leave on staff</li>
+<li>feasible 可行的 (unfeasible 不可行的)</li>
+<li>canonical 典型的</li>
+<li>exhibit 展示 prohibit 禁止</li>
+</ol>
+<h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><ol>
+<li>3d Q-A任务（给定文本基于3D模型找到对应物体）有助于帮助Agent完成基于语言的物体操作任务</li>
+<li>采用空间的隐式表征（Nerf）需要多角度推理图片，推理过程需要多次采样因此效率低</li>
+<li>本文借助3D Gaussian获得空间的显式表征，构建空间的feature field(Feature Distillation)，对生成模型对语言的编码做蒸馏</li>
+</ol>
+<h3 id="Review-of-Previous-Work"><a href="#Review-of-Previous-Work" class="headerlink" title="Review of Previous Work"></a>Review of Previous Work</h3><ol>
+<li>获取机器人操作任务中准确的3D位置<ol>
+<li>直接融合2D语义到3D点云或体素（多角度图像语义不一致）</li>
+<li>借助3D模型和有监督范式学习</li>
+<li>借助Distilled Feature Fields<ol>
+<li>只能获取patch-level的语义信息，导致不能准确定位</li>
+<li>需要大量多角度图像用于训练</li>
+<li>推理速度慢</li>
+<li>无法处理场景变换</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="Overview-of-the-Framework"><a href="#Overview-of-the-Framework" class="headerlink" title="Overview of the Framework"></a>Overview of the Framework</h3><ol>
+<li><p>利用多角度RGBD图像初始化3D Gaussian</p>
+<p><img src="https://s2.loli.net/2024/04/20/VYDQTHGeuiCoIfZ.png" alt="image-20240420210513568"></p>
+</li>
+<li><p>学习Gaussian Field(Feature/Depth/Normal Field)</p>
+<p><img src="https://s2.loli.net/2024/04/20/mLjVH35bUMeEyAO.png" alt="image-20240420212009229"></p>
+</li>
+<li><p>基于自然语言完成定位+抓取操作（Grasping Model）需要和重建的Gaussian Model进行交互</p>
+<p><img src="https://s2.loli.net/2024/04/20/oJasYvu3HhkBLS7.png" alt="image-20240420212053600"></p>
+</li>
+</ol>
+<h3 id="Feature-Distillation"><a href="#Feature-Distillation" class="headerlink" title="Feature Distillation"></a>Feature Distillation</h3><ol>
+<li><p>SAM+CLIP获取open vocabulary的物体描述</p>
+</li>
+<li><p>直接让3D Gaussian预测CLIP Embedding维度太大了不容易，希望模型预测Low-dimension latent space feature，渲染feature采用3D Gaussian类似的方法</p>
+<script type="math/tex; mode=display">
+L(u) = \sum_i l_i \alpha_i \prod_{j=1}^{i-1} (1-\alpha_j)</script><p>其中$l_i$是一个低维的open-vocabulary feature embedding，作为Gaussian预测的一部分，需要将其恢复到原始Feature的dimension，这样会带来很大的计算和显存开销，本文基于对比学习做蒸馏，基本思想是一个SAM mask下的所有pixel对应的feature应该是一致的，因此计算的loss也是一致的，这种情况下将属于一个mask的两个pixel视为正样本</p>
+</li>
+</ol>
+<h3 id="Language-guided-Robotic-Manipulation"><a href="#Language-guided-Robotic-Manipulation" class="headerlink" title="Language-guided Robotic Manipulation"></a>Language-guided Robotic Manipulation</h3><ol>
+<li><p>基于language对3D表征做Query，定位目标物体</p>
+<p>参考LERF，生成一个heatmap，对应每个像素和文本描述的相关程度，借助预先选择threshold进行filter</p>
+</li>
+<li><p>渲染深度和法线图，获取物体几何信息描述，法线图用于排除不可行的操作</p>
+<ol>
+<li>渲染深度图：采用类似于3dgs的方法，采用一条射线和多个3Dgs相交，判断光线路径上相交多个Gaussian的距离并进行$\alpha-$blending，和Ground Truth比较</li>
+<li>渲染法线图：选择3D Gaussian最短的轴方向作为物体表面发现方向，同理采取$\alpha-$blending进行渲染，渲染出pixel space上每个点在robot base空间上的法线方向，借助深度图生成的法线方向做监督</li>
+</ol>
+</li>
+<li><p>生成feasible grasp pose</p>
+</li>
+</ol>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li>Lerf : Language embedded radiance felds  </li>
+<li>Decomposing NeRF for Editing via Feature Field Distillation  </li>
+<li>Anygrasp: Robust and effcient grasp perception in spatial and temporal domains  </li>
+</ol>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2024/04/21/3d-Reconstruction-for-Embodied-Grasp-Task/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2024/04/21/3d-Reconstruction-for-Embodied-Grasp-Task/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2024/04/18/Fourier-Analysis-Chapter-2-Overview/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Gaoustcer's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        kd193104@mail.ustc.edu.cn
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2024/04/">四月 2024<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2024/03/">三月 2024<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2024/02/">二月 2024<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2024/01/">一月 2024<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/12/">十二月 2023<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/10/">十月 2023<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/09/">九月 2023<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/08/">八月 2023<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/07/">七月 2023<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/06/">六月 2023<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/05/">五月 2023<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/04/">四月 2023<span class="sidebar_archives-count">23</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/papers" title="papers">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                papers
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">76</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/bollnh/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<span id="busuanzi_container_site_uv">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Hexo
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+    for (var i = 0; i < all.length; ++i)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+
+</body>
+    
+</html>
