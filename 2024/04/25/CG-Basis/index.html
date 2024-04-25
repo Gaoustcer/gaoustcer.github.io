@@ -48,7 +48,7 @@
     
     <title>
         
-            标签: Offline RL | 
+            CS Basics | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Computer Graphics">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/tags/Offline-RL/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2024/04/25/CG-Basis/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/tags/Offline-RL/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2024/04/25/CG-Basis/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: Offline RL | Hexo">
+    <meta property="og:title" content="CS Basics | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Computer Graphics"> 
 
+    
+        <meta property="article:published_time" content="Thu Apr 25 2024 15:12:22 GMT+0800">
+        <meta property="article:modified_time" content="Thu Apr 25 2024 15:13:50 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/tags/Offline-RL/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2024/04/25/CG-Basis/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2024/04/25/CG-Basis/index.html",
+    "headline": "CS Basics",
+    "datePublished": "Thu Apr 25 2024 15:12:22 GMT+0800",
+    "dateModified": "Thu Apr 25 2024 15:13:50 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Gaoustcer",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.svg"
+        }
+    },
+    "keywords": ",Computer Graphics",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,149 +322,330 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%9F%BA%E7%A1%80"><span class="post-toc-number">1.</span> <span class="post-toc-text">计算机图形学基础</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%A7%86%E8%A7%92-view-%E5%92%8C%E6%8A%95%E5%BD%B1-projection-%E5%8F%98%E6%8D%A2"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">视角(view)和投影(projection)变换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reference"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Reference</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%9B%B8%E6%9C%BA%E5%8F%98%E6%8D%A2"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">相机变换</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#alpha-blending"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">alpha-blending</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B7%B1%E5%BA%A6%E7%BC%93%E5%86%B2-%E7%89%A9%E4%BD%93%E4%B9%8B%E9%97%B4%E5%AE%8C%E5%85%A8%E9%81%AE%E6%8C%A1%EF%BC%8C%E4%B8%8D%E8%80%83%E8%99%91%E7%89%A9%E4%BD%93%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">深度缓冲(物体之间完全遮挡，不考虑物体的透明度)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%80%8F%E6%98%8E%E5%BA%A6%E6%B7%B7%E5%90%88%EF%BC%9A%E5%AD%98%E5%9C%A8%E9%80%8F%E6%98%8E%E7%89%A9%E4%BD%93%E8%BF%9B%E8%A1%8C%E6%B8%B2%E6%9F%93"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">透明度混合：存在透明物体进行渲染</span></a></li></ol></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/06/10/heterogenous-offline-rl/">heterogenous offline rl</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/06/10/heterogenous-offline-rl/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>6月 10, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2023/04/28/Offline-RL-TD3-BC/">Offline RL TD3+BC</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2023/04/28/Offline-RL-TD3-BC/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Gaoustcer's avatar">
-            </div>
-            <div>
-                <strong>Gaoustcer</strong>
-                <span>4月 28, 2023</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                CS Basics
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Gaoustcer</strong>
+        <span>4月 25, 2024</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Computer-Graphics/" rel="tag">Computer Graphics</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CS Basics&url=http://gaoustcer.github.io/2024/04/25/CG-Basis/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=CS Basics&url=http://gaoustcer.github.io/2024/04/25/CG-Basis/index.html&via=Gaoustcer" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2024/04/25/CG-Basis/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2024/04/25/CG-Basis/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="计算机图形学基础"><a href="#计算机图形学基础" class="headerlink" title="计算机图形学基础"></a>计算机图形学基础</h1><h2 id="视角-view-和投影-projection-变换"><a href="#视角-view-和投影-projection-变换" class="headerlink" title="视角(view)和投影(projection)变换"></a>视角(view)和投影(projection)变换</h2><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li><a href="四元数">https://krasjet.github.io/quaternion/quaternion.pdf</a></li>
+<li><a href="[视图变换和投影变换矩阵的原理及推导，以及OpenGL，DirectX和Unity的对应矩阵 - 知乎 (zhihu.com">视角和投影变换</a>](<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/362713511">https://zhuanlan.zhihu.com/p/362713511</a>))</li>
+</ol>
+<h3 id="相机变换"><a href="#相机变换" class="headerlink" title="相机变换"></a>相机变换</h3><p>变换的目的是将三维图形投影到二维平面上，通过光栅化获得像素的离散表征，给定相机的位置$e$，look at方向$g$（相机朝向），up方向$t$，获得一个新坐标轴，原点在e，y轴方向和t相同，z轴方向和g相反，视角变换矩阵$M_{view}$拆分成旋转$R_{view}$和平移$T_{view}$两项</p>
+<script type="math/tex; mode=display">
+M_{view} = R_{view}T_{view},M,R,T\in \R^4</script><blockquote>
+<p>考虑三维空间中的旋转，v分解为平行和垂直分量</p>
+<script type="math/tex; mode=display">
+v = v_\parallel + v_\perp\\
+v_\parallel = (u\cdot v) u\\
+v_\perp = v - (u\cdot v) u</script><p>仅仅旋转$v_\perp$，增加一个轴，记作</p>
+<script type="math/tex; mode=display">
+w = u \times v_{\perp}\\
+\parallel w \parallel  = \parallel u \parallel \parallel v_\perp\parallel = \parallel v_\perp \parallel</script><p>将变换后的$v_\perp^\prime$分解到w和$v_\perp$方向，得到</p>
+<script type="math/tex; mode=display">
+v_\perp^\prime  = v_v^\prime + v_w^\prime =\cos \theta v_\perp  + \sin \theta (u\times v_\perp)</script><p>它们的关系是</p>
+<p><img src="https://s2.loli.net/2024/04/23/jFJTCP3DdrLvhcn.png" alt="image-20240423233028735"></p>
+<p>因此新的旋转结果记作</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+v^\prime  &= v_\parallel + \cos\theta v_\perp  +\sin\theta(u\times v_\perp)\\& = (u\cdot v)u +\cos\theta (v - (u\cdot v)u) + \sin\theta(u\times v) \\&= \cos\theta v + (1 -\cos\theta)(u\cdot v) u +\sin\theta(u\times v)
+\end{aligned}\label{rotate_eq}</script><p>旋转轴是一个单位向量</p>
+</blockquote>
+<p>为了进一步讨论三维空间中的旋转，我们引入四元数，在这种情况下空间中任何一个点表示为</p>
+<script type="math/tex; mode=display">
+(x,y,z) \to q = w+ i x+ j y + kz=s+v</script><p>对应的共轭四元数为$s - v$，定义</p>
+<script type="math/tex; mode=display">
+ij = k,jk = i,ki = j,i^2 = j^2 = k^2 = -1</script><p>两个四元数相乘记作</p>
+<script type="math/tex; mode=display">
+q_1 q_2 =s_1 s_2 - v_1 \cdot v_2 +s_1 v_2 + s_2 v_1 + v_1 \times v_2</script><p>写成矩阵形式</p>
+<p><img src="https://s2.loli.net/2024/04/23/EYiKmsnhl47eZub.png" alt="image-20240423234104826"></p>
+<p>一对互逆的四元数满足</p>
+<script type="math/tex; mode=display">
+q q^{-1} = 1</script><p>共轭四元数指的是</p>
+<script type="math/tex; mode=display">
+q = w + v\\
+\overline q = w -v\\
+q \overline q = \parallel q\parallel ^2 = w^2 + \parallel v\parallel ^2</script><p>我们将$\ref{rotate_eq}$中的向量视为纯四元数</p>
+<script type="math/tex; mode=display">
+v = [0,v],v_\perp = [0,v_\perp],v_\parallel  = [0,v_\parallel],v = v_\perp + v_\parallel</script><p>考虑垂直分量，写成纯四元数的形式</p>
+<script type="math/tex; mode=display">
+v_\perp^\prime = \cos\theta v_\perp + \sin\theta(u\times v_\perp)=\cos\theta v_\perp +\sin\theta (uv_\perp) = (\cos\theta +\sin\theta u)v_\perp = qv_\perp\\
+q = (\cos\theta,\sin\theta u)</script><p>这是垂直向量的旋转公式，因此旋转被记作</p>
+<script type="math/tex; mode=display">
+v^\prime = v_\parallel + qv_\perp</script><blockquote>
+<p>对于单位向量u以及$q = [\cos\theta ,\sin\theta u]$，有$q^2 = qq = [\cos2\theta,\sin 2\theta u]$，并且q也是单位四元数，此时若$p =[\cos\frac \theta 2,\sin \frac \theta 2u]$，有$p^2 = q,p^{-1} = [\cos\frac{\theta}2 ,- \sin\frac\theta 2u]=p^*$</p>
+</blockquote>
+<p>进一步写出</p>
+<script type="math/tex; mode=display">
+v^\prime = v_\parallel +qv_\perp = pp^{-1}v_\parallel+ pp v_{\perp} =pp^*v_\parallel +pp v_\perp</script><p>简化这个公式，介绍两个引理</p>
+<p><img src="https://s2.loli.net/2024/04/24/oMmv2cVASJjGQRl.png" alt="image-20240424001049867"></p>
+<p><img src="https://s2.loli.net/2024/04/24/CiNQj2Khfgn9tr5.png" alt="image-20240424001108272"></p>
+<p>$v^\prime$进一步优化为</p>
+<script type="math/tex; mode=display">
+v^\prime = p(v_\parallel + v_\perp)p^* = pv p^* = pvp^{-1},p^2 = q = (\cos\theta,\sin\theta u)</script><blockquote>
+<p>这个公式表明对$v_\perp$做了正反两次旋转</p>
+</blockquote>
+<p>最终写成终极形式，左乘四元数$a + bi +cj +dk$等价于乘以</p>
+<p><img src="https://s2.loli.net/2024/04/24/nHubKF8kg9RoeGT.png" alt="image-20240424001358950"></p>
+<p>右乘等价于乘以矩阵</p>
+<p><img src="https://s2.loli.net/2024/04/24/GTCpvtMPkhDXr1U.png" alt="image-20240424001456714"></p>
+<p>最终写成</p>
+<script type="math/tex; mode=display">
+qv q^* = L(q) R(q^*)v</script><p>最终旋转定理写成</p>
+<p><img src="https://s2.loli.net/2024/04/24/6IYCRchLa7ABjky.png" alt="image-20240424001541332"></p>
+<p>v最后一维是0，因此取上三角</p>
+<p><img src="https://s2.loli.net/2024/04/24/dBLfF5uSRKeO82H.png" alt="image-20240424001605722"></p>
+<h2 id="alpha-blending"><a href="#alpha-blending" class="headerlink" title="alpha-blending"></a>alpha-blending</h2><p>渲染过程中引入透明度的概念，考虑光线可以经过面元的情况，对于渲染管线，引入$\alpha$参数描述图层的透明度</p>
+<h3 id="深度缓冲-物体之间完全遮挡，不考虑物体的透明度"><a href="#深度缓冲-物体之间完全遮挡，不考虑物体的透明度" class="headerlink" title="深度缓冲(物体之间完全遮挡，不考虑物体的透明度)"></a>深度缓冲(物体之间完全遮挡，不考虑物体的透明度)</h3><p>为每个像素构建如下缓冲</p>
+<ol>
+<li>深度缓冲，记录距离相机最近的面元深度</li>
+<li>帧缓冲，记录像素点颜色</li>
+</ol>
+<p>渲染对于每个面元先进行深度测试，舍去比Z-buffer更远的面元，深度写入更新Z-buffer</p>
+<h3 id="透明度混合：存在透明物体进行渲染"><a href="#透明度混合：存在透明物体进行渲染" class="headerlink" title="透明度混合：存在透明物体进行渲染"></a>透明度混合：存在透明物体进行渲染</h3><p><em><em>不透明</em></em><em><em>不透明</em></em><em><em>不透明</em></em><em><em>不透明</em></em><em><em>不透明</em></em>*片元的深度值，渲染透明片元仍然应该进行深度测试，避免不透明物体在透明物体之前的情况</p>
+<blockquote>
+<p>先渲染透明片元，在渲染不透明片元，因为透明片元不写到Z-buffer中，如何判断两者的深度，这里提供两条原则</p>
+<ol>
+<li>透明片元按照深度逐个渲染</li>
+<li>不透明片元优先于透明片元进行渲染（深度测试不为空）</li>
+</ol>
+</blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://gaoustcer.github.io/2024/04/25/CG-Basis/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2024/04/25/CG-Basis/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2024/04/22/Information-Theory-AEP/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -605,6 +819,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
