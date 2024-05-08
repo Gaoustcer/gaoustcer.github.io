@@ -48,7 +48,7 @@
     
     <title>
         
-            LAPO | 
+            Fourier Analysis Chapter 3 Convergence | 
         
         Hexo
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Reinforcement Learning,Paper Reading">
+    <meta name="keywords" content=",Fourier Analysis,Math">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2023/04/18/LAPO/">
+    <meta name="msapplication-starturl" content="http://gaoustcer.github.io/2024/05/08/Fourier-Analysis-Chapter-3-Convergence/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -235,16 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://gaoustcer.github.io/2023/04/18/LAPO/">
+    <meta property="og:url" content="http://gaoustcer.github.io/2024/05/08/Fourier-Analysis-Chapter-3-Convergence/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="LAPO | Hexo">
+    <meta property="og:title" content="Fourier Analysis Chapter 3 Convergence | Hexo">
     <meta property="og:image" content="/img/favicon.svg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Reinforcement Learning"> <meta property="og:article:tag" content="Paper Reading"> 
+    <meta property="og:article:tag" content="Fourier Analysis"> <meta property="og:article:tag" content="Math"> 
 
     
-        <meta property="article:published_time" content="Tue Apr 18 2023 22:14:44 GMT+0800">
-        <meta property="article:modified_time" content="Tue Apr 18 2023 22:15:55 GMT+0800">
+        <meta property="article:published_time" content="Wed May 08 2024 10:49:52 GMT+0800">
+        <meta property="article:modified_time" content="Wed May 08 2024 10:51:12 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://gaoustcer.github.io/2023/04/18/LAPO/index.html" />
+        <link rel="canonical" href="http://gaoustcer.github.io/2024/05/08/Fourier-Analysis-Chapter-3-Convergence/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://gaoustcer.github.io/2023/04/18/LAPO/index.html",
-    "headline": "LAPO",
-    "datePublished": "Tue Apr 18 2023 22:14:44 GMT+0800",
-    "dateModified": "Tue Apr 18 2023 22:15:55 GMT+0800",
+    "mainEntityOfPage": "http://gaoustcer.github.io/2024/05/08/Fourier-Analysis-Chapter-3-Convergence/index.html",
+    "headline": "Fourier Analysis Chapter 3 Convergence",
+    "datePublished": "Wed May 08 2024 10:49:52 GMT+0800",
+    "dateModified": "Wed May 08 2024 10:51:12 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Gaoustcer",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.svg"
         }
     },
-    "keywords": ",Reinforcement Learning,Paper Reading",
+    "keywords": ",Fourier Analysis,Math",
     "description": "",
 }
 </script>
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Paper-Reading%E2%80%94%E2%80%94Latent-Variable-Advantage-Weight-Policy-Optimization-for-Offline-RL"><span class="post-toc-number">1.</span> <span class="post-toc-text">Paper Reading——Latent-Variable Advantage-Weight Policy Optimization for Offline RL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">概述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Intro"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Intro</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">例子</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%AE%B0%E5%8F%B7"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">记号</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%A6%BB%E7%BA%BF%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">离线强化学习</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#KL%E6%95%A3%E5%BA%A6%E8%BF%9B%E8%A1%8C%E9%9A%90%E5%BC%8F%E7%AD%96%E7%95%A5%E9%99%90%E5%88%B6"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">KL散度进行隐式策略限制</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Latent-Variable-Advantage-Weighted-Policy-Optimization"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Latent-Variable Advantage-Weighted Policy Optimization</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%BB%E8%A6%81%E7%9A%84%E6%8C%91%E6%88%98"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">主要的挑战</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#LAPO%E4%B8%BB%E8%A6%81%E6%80%9D%E6%83%B3"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">LAPO主要思想</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9B%B4%E6%96%B0%E7%AD%96%E7%95%A5"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">更新策略</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AD%96%E7%95%A5%E8%AF%84%E4%BC%B0"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">策略评估</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AD%96%E7%95%A5%E6%8F%90%E5%8D%87"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">策略提升</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Fourier-Analysis-Chapter-3-Convergence"><span class="post-toc-number">1.</span> <span class="post-toc-text">Fourier Analysis(Chapter 3, Convergence)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Review-of-Chapter-2"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Review of Chapter 2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview-of-Chapter-3"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Overview of Chapter 3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Mean-square-convergence-of-Fourier-Series"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Mean-square convergence of Fourier Series</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%90%91%E9%87%8F%E5%92%8C%E5%86%85%E7%A7%AF%E7%A9%BA%E9%97%B4"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">向量和内积空间</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BE%8B%E5%AD%901%EF%BC%9A%E6%97%A0%E9%99%90%E7%BB%B4%E5%BA%A6%E7%9A%84%E5%A4%8D%E6%95%B0%E7%A9%BA%E9%97%B4"><span class="post-toc-number">1.3.1.1.</span> <span class="post-toc-text">例子1：无限维度的复数空间</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BE%8B%E5%AD%902%EF%BC%9A%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4"><span class="post-toc-number">1.3.1.2.</span> <span class="post-toc-text">例子2：函数空间</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%AF%81%E6%98%8E%E5%9D%87%E6%96%B9%E6%94%B6%E6%95%9B"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">证明均方收敛</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Parseval-Identity"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">Parseval Identity</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Pointwise-Convergence"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Pointwise Convergence</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Local-Result"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">Local  Result</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Diverging-Fourier-Series"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">Diverging Fourier Series</span></a></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -383,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                LAPO
+                Fourier Analysis Chapter 3 Convergence
             </p>
         </div>
 
@@ -402,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Gaoustcer</strong>
-        <span>4月 18, 2023</span>
+        <span>5月 08, 2024</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -426,7 +426,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Paper-Reading/" rel="tag">Paper Reading</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Reinforcement-Learning/" rel="tag">Reinforcement Learning</a>
+        <a class="post_tag-none-link" href="/tags/Fourier-Analysis/" rel="tag">Fourier Analysis</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Math/" rel="tag">Math</a>
     </ul>
     
 
@@ -443,7 +443,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=LAPO&url=http://gaoustcer.github.io/2023/04/18/LAPO/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Fourier Analysis Chapter 3 Convergence&url=http://gaoustcer.github.io/2024/05/08/Fourier-Analysis-Chapter-3-Convergence/index.html&pic=http://gaoustcer.github.io/img/favicon.svg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -452,7 +452,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=LAPO&url=http://gaoustcer.github.io/2023/04/18/LAPO/index.html&via=Gaoustcer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Fourier Analysis Chapter 3 Convergence&url=http://gaoustcer.github.io/2024/05/08/Fourier-Analysis-Chapter-3-Convergence/index.html&via=Gaoustcer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2023/04/18/LAPO/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://gaoustcer.github.io/2024/05/08/Fourier-Analysis-Chapter-3-Convergence/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2023/04/18/LAPO/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://gaoustcer.github.io/2024/05/08/Fourier-Analysis-Chapter-3-Convergence/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,52 +495,197 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Paper-Reading——Latent-Variable-Advantage-Weight-Policy-Optimization-for-Offline-RL"><a href="#Paper-Reading——Latent-Variable-Advantage-Weight-Policy-Optimization-for-Offline-RL" class="headerlink" title="Paper Reading——Latent-Variable Advantage-Weight Policy Optimization for Offline RL"></a>Paper Reading——Latent-Variable Advantage-Weight Policy Optimization for Offline RL</h1><p>[TOC]</p>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ol>
-<li>强化学习数据集异构——来自多个数据收集者<ol>
-<li>强化概率偏移</li>
-</ol>
-</li>
-<li>隐变量策略代表更广阔的策略分布</li>
-</ol>
-<h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>存在不同状态下多个动作都可以带来高奖励。获取隐空间下的高优势动作采样</p>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>多模态数据集：训练数据来自三个任务（1）推物品（2）抓东西（3）打开盒子，现在学习的任务是将一个物品移动到指定地点，通过（1），（2）可以实现。直接在动作空间上学习可能采样到OOD的动作。LAPO建立状态空间的隐变量将产生高奖励的动作映射到一个聚类中心附近，这样保证在聚类中心附近采样可以得到较好的动作。(原始动作空间中产生好奖励的动作可能不在一起)</p>
-<h2 id="记号"><a href="#记号" class="headerlink" title="记号"></a>记号</h2><h3 id="离线强化学习"><a href="#离线强化学习" class="headerlink" title="离线强化学习"></a>离线强化学习</h3><p>Q学习目的是最小化TDerror</p>
+        <h1 id="Fourier-Analysis-Chapter-3-Convergence"><a href="#Fourier-Analysis-Chapter-3-Convergence" class="headerlink" title="Fourier Analysis(Chapter 3, Convergence)"></a>Fourier Analysis(Chapter 3, Convergence)</h1><h2 id="Review-of-Chapter-2"><a href="#Review-of-Chapter-2" class="headerlink" title="Review of Chapter 2"></a>Review of Chapter 2</h2><p>第二章中，我们讨论了定义在circle上的函数的傅里叶级数</p>
 <script type="math/tex; mode=display">
-\arg\min_{Q_\phi}E_{\mathcal D}[(r(s_t,a_t)+\gamma V(s_{t+1})-Q_\phi(s_t,a_t))^2]</script><p>价值函数$V(s)=E_{\pi_\theta(a|s)}[Q_\phi(s,a)]$，可以从Q函数中按照策略采样若干动作得到</p>
-<h3 id="KL散度进行隐式策略限制"><a href="#KL散度进行隐式策略限制" class="headerlink" title="KL散度进行隐式策略限制"></a>KL散度进行隐式策略限制</h3><p>避免经验策略和探索策略相差太多(前提是收集策略足够好)</p>
-<script type="math/tex; mode=display">
-\arg\max_\pi E_{s|\mathcal D}E_{\pi(a|s)}[A(s,a)]\\
-s.t E_{s\in \mathcal D}[D(\pi_\theta(a|s),\pi_\beta(a|s))]< \epsilon</script><p>现实中$\pi_\beta$是位置的，最优策略写成</p>
-<script type="math/tex; mode=display">
-\pi^*(a|s) \approx \pi_\beta(a|s)\exp{\frac{A(s,a)}{\lambda}}</script><p><em><em>最大容忍策略差*</em>的常数，将$\pi^</em><em>的常数，将$\pi^</em>$视为无参数的策略，优化目标变成</p>
-<script type="math/tex; mode=display">
-\arg\min_\theta E_{\mathcal D}[D_{KL}(\pi^*(a|s)\parallel \pi_\theta(a|s))]</script><p>期望用MC计算</p>
-<h2 id="Latent-Variable-Advantage-Weighted-Policy-Optimization"><a href="#Latent-Variable-Advantage-Weighted-Policy-Optimization" class="headerlink" title="Latent-Variable Advantage-Weighted Policy Optimization"></a>Latent-Variable Advantage-Weighted Policy Optimization</h2><p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20221002214155524.png" alt="image-20221002214155524"></p>
+S_N(f)(\theta) = \sum_{n=-N}^N \hat f(n) e^{in\theta} = D_N * f(\theta),D_N(\theta) = \sum_{n=-N}^N e^{in\theta}</script><p>的一些基本性质，例如</p>
 <blockquote>
-<p>左图：蓝色表明离线数据中实际的动作分布，显然来自两种不同的动作范式，空色表明AWAC从Offline RL中学习到的动作。</p>
-<p>右图：黄色是一种生成强化学习方法生成的动作分布，绿线是LAPO生成的动作分布</p>
+<p>可积函数的傅里叶系数如果处处为0，则其在连续点处为0（Uniqueness）</p>
 </blockquote>
-<h3 id="主要的挑战"><a href="#主要的挑战" class="headerlink" title="主要的挑战"></a>主要的挑战</h3><p>如何刻画不同action mode生成的动作分布</p>
-<h3 id="LAPO主要思想"><a href="#LAPO主要思想" class="headerlink" title="LAPO主要思想"></a>LAPO主要思想</h3><ol>
-<li>学习的策略函数基于隐变量和状态的先验分布，记作$\pi_\theta(a|s,z)$</li>
-<li>学习隐策略$\pi_{\psi}(z|s)$</li>
-</ol>
-<h3 id="更新策略"><a href="#更新策略" class="headerlink" title="更新策略"></a>更新策略</h3><ol>
-<li>估算每个动作的优势</li>
-<li>在数据集上针对动作进行回归</li>
-</ol>
-<p>动作策略学习通过最大化动作数据的带权对数似然，在此基础上添加</p>
+<p>另外引入了一种函数算子—卷积，定义为</p>
 <script type="math/tex; mode=display">
-\max_{\pi_\theta,q_\psi}[\omega \log (\pi_\theta(a|s,z))-\beta D_{KL}[q_\psi(z|s,a)\parallel p(z)]]</script><ol>
-<li>$\pi_\theta(a|s,z)$代表动作策略，基于状态和latent variable的后验分布</li>
-<li>$q_\psi(z|s,a)$称为均摊变分分布，用于估算状态、动作下隐变量的条件分布</li>
-<li>$p(z)$是先验分布</li>
-</ol>
-<h3 id="策略评估"><a href="#策略评估" class="headerlink" title="策略评估"></a>策略评估</h3><p>估算$A(s,a)$，在整个策略上采样动作</p>
+f*g(\theta) = \frac 1 {2\pi}\int_{-\pi}^\pi f(\phi) g(\theta - \phi)d\phi</script><p>卷积的一个很好的性质是能仅仅从可积推出连续，卷积函数的傅里叶系数等于两个函数的乘积，我们希望得到一组函数族$\{K_n(\theta)\}$，使得</p>
 <script type="math/tex; mode=display">
-V(s) = E_{a|\pi_\theta(\cdot|s,z),z|\pi_\eta(\cdot|s)}[Q_{\phi^\prime}(s,a)]</script><h3 id="策略提升"><a href="#策略提升" class="headerlink" title="策略提升"></a>策略提升</h3><script type="math/tex; mode=display">
-\arg\max_{\pi_\eta}E_{a|\pi_\theta(\cdot|s,z),z|\pi_\eta(\cdot|s),s|\mathcal D}[Q(s,a)]</script><p>需要将z限制在一个范围内</p>
+\lim_{n\to \infty} K_n * f(\theta )= f(\theta)</script><p>满足上述规则的kernel称为good kernel，这里收敛指的是逐点收敛</p>
+<script type="math/tex; mode=display">
+\forall \theta,\epsilon >0,\exist N_\theta^\epsilon,s.t\ \forall n > N_\theta^\epsilon, |K_n * f(\theta ) - f(\theta)|<\epsilon</script><p>但是很不幸的是$D_N$并不是一个Good Kernel，因此我们需要对函数收敛的定义进行延拓，这里引入Cesaro means(引入一个来自Dirichlet kernel的good kernel)</p>
+<script type="math/tex; mode=display">
+\sigma_N =\frac{\sum_{i=0}^{n-1}s_i}{n},s_i = \sum_{j=0}^{i} c_i</script><p>$\sigma_N$被称为$N^{th}$ Casaro mean of sequence $\{s_k\}$，如果$\sigma_N \to \sigma$则称$\sum c_n$是Cesaro summable to $\sigma$</p>
+<p>对于Fourier Series，定义Fejer Kernel</p>
+<script type="math/tex; mode=display">
+F_N(x) = \frac{\sum_{i=0}^{N-1}D_i(x)}{N} =\frac 1 N \frac{\sin^2 (Nx/2)}{\sin^2 (x/2)}</script><p>对应</p>
+<script type="math/tex; mode=display">
+f*F_N(x) = \sigma_N(f)(x) = \frac{\sum_{i=0}^{N-1}S_i(f)(x)}{N}</script><p>在这种情况下存在逐点收敛</p>
+<script type="math/tex; mode=display">
+\lim_{N\to \infty} F_N * f(\theta) = f(\theta)</script><p>这种情况下，对于circle上连续函数一定存在三角多项式$\frac{\sum_{i=0}^{N-1}S_i(f)(x)}{N}$逼近之</p>
+<p>这个good kernel表明</p>
+<blockquote>
+<p>对于circle上的可积函数$f$，则一定有f的Fourier级数$\sum_{|n|\leq N} a_n e^{in\theta}$在任何一个连续处$\theta$都Cesaro summable to f的</p>
+</blockquote>
+<p>这种情况下自然得到</p>
+<ol>
+<li>$\hat f(n)=0\to f=0$</li>
+<li>可以借助三角多项式满足驻点收敛 $\lim_{n\to \infty} |f(x) - P_n(x)| = 0$</li>
+</ol>
+<p>将这种情况推广到连续场景，定义序列$c_1,c_2,\cdots,c_n$的Abel sum</p>
+<script type="math/tex; mode=display">
+A(r) = \sum_{k=0}^\infty c_k r^k</script><p>如果$A(r)$对于$\forall r\in [0,1)$均收敛且$\lim_{r\to 1} A(r) = s$，则称$A(r)$为Abel means，提出这个是为了解决圆盘上的收敛问题，对于$c_k(\theta)  = a_k e^{ik\theta}$，其Abel means写成</p>
+<script type="math/tex; mode=display">
+A_r(f)(\theta) = \sum_{n=-\infty}^\infty r^{|n|} a_n e^{in\theta} = P_r * f(\theta)\\
+P_r(\theta) =\sum_{n=-\infty}^\infty r^{|n|} e^{in\theta} = \frac{1 - r^2}{1 - 2r\cos\theta + r^2}</script><p>Poisson Kernel是一个good kernel，这意味着$\forall \delta &gt;0,\lim_{r\to 1}\int_{\delta \leq |\theta|\leq \pi} P_r(\theta)d \theta\to 1$，同时根据good kernel的性质得到</p>
+<script type="math/tex; mode=display">
+\lim_{r\to 1} P_r * f(\theta)  = f(\theta),\forall \theta\in [-\pi,\pi]</script><p>引入Poisson Kernel是因为其对应圆盘上传热问题的分离变量解$u(r,\theta) = A_r(f)(\theta)$，这里$f$对应的是边界条件</p>
+<p>本章的最后一个定理证明$u(r,\theta)$是满足偏微分方程$\Delta u = 0$和边界条件的唯一解，这里利用了傅里叶系数的唯一性</p>
+<h2 id="Overview-of-Chapter-3"><a href="#Overview-of-Chapter-3" class="headerlink" title="Overview of Chapter 3"></a>Overview of Chapter 3</h2><p>上一章中，因为Dirichlet Kernel并不是good kernel，因此我们需要其它工具以证明</p>
+<script type="math/tex; mode=display">
+S_N(f)\to f</script><h2 id="Mean-square-convergence-of-Fourier-Series"><a href="#Mean-square-convergence-of-Fourier-Series" class="headerlink" title="Mean-square convergence of Fourier Series"></a>Mean-square convergence of Fourier Series</h2><p>给定circle上的可积函数$f$，一定有</p>
+<script type="math/tex; mode=display">
+\lim_{N\to \infty} \frac 1{2\pi} \int_0^{2\pi}|f(\theta) - S_N(f)(\theta)|^2 d\theta \to 0</script><h3 id="向量和内积空间"><a href="#向量和内积空间" class="headerlink" title="向量和内积空间"></a>向量和内积空间</h3><h4 id="例子1：无限维度的复数空间"><a href="#例子1：无限维度的复数空间" class="headerlink" title="例子1：无限维度的复数空间"></a>例子1：无限维度的复数空间</h4><p>定义复数C上的向量空间$l^2(\Z)$，是一个双向无限序列</p>
+<script type="math/tex; mode=display">
+(\cdots,a_{-n},\cdots,a_{-1},a_0,a_1,\cdots,a_n,\cdots)</script><p>满足</p>
+<script type="math/tex; mode=display">
+\sum_{n\in \Z} |a_n|^2<\infty</script><p>基于此定义内积为</p>
+<script type="math/tex; mode=display">
+(A,B) =\sum_{n\in \Z} a_n\overline{b_n}</script><p>定义A的norm为</p>
+<script type="math/tex; mode=display">
+\parallel A\parallel = (\sum_{n\in \Z}|a_n|^2)^{1/2}</script><p>一个例子是$A_N$，即对于$|n|&gt;N,a_n=0$</p>
+<script type="math/tex; mode=display">
+A_N = (\cdots,0,0,a_{-N},\cdots,a_{-1},a_0,a_1,\cdots,a_{N},0,0,\cdots)</script><p>内积满足两个条件的空间被定义为希尔伯特空间</p>
+<ol>
+<li>严格半正定 $\parallel X\parallel = 0\Leftrightarrow X = 0$</li>
+<li>完备的向量空间，任何柯西列都能收敛于本身</li>
+</ol>
+<h4 id="例子2：函数空间"><a href="#例子2：函数空间" class="headerlink" title="例子2：函数空间"></a>例子2：函数空间</h4><p>对于$[0,2\pi]$上可积的函数组成的空间$\mathcal R$和上面的两个函数f/g，定义函数加法</p>
+<script type="math/tex; mode=display">
+(f+g)(\theta) = f(\theta) + g(\theta)</script><p>定义内积</p>
+<script type="math/tex; mode=display">
+(f,g) = \frac 1 {2\pi}\int_0^{2\pi} f(\theta)\overline g(\theta) d\theta</script><p>对应函数的模为</p>
+<script type="math/tex; mode=display">
+(\frac 1 {2\pi} \int_{0}^{2\pi} |f(\theta)|^2 d\theta)^{1/2}</script><p>这种情况下也一定有Cauchy-Schwarz不等式成立，即</p>
+<script type="math/tex; mode=display">
+|(f,g)| \leq \parallel f\parallel \parallel g\parallel</script><p><em><em>测度为0</em></em><em><em>测度为0</em></em><em><em>测度为0</em></em><em><em>测度为0</em></em><em><em>测度为0</em></em><em><em>测度为0</em></em><em><em>测度为0</em></em><em><em>测度为0</em></em><em><em>测度为0</em></em><em><em>测度为0</em></em><em>测度为0*</em></p>
+<p>同时函数空间$\mathcal R$不是完备的，对于函数</p>
+<script type="math/tex; mode=display">
+f(\theta) =
+\left\{
+\begin{aligned}
+& 0,\theta  = 0\\
+& \log (\frac 1 \theta),0<\theta\leq 2\pi
+\end{aligned}
+\right.</script><p>定义函数序列</p>
+<script type="math/tex; mode=display">
+f_n(\theta) = \left\{
+\begin{aligned}
+& 0,0\leq \theta \leq \frac 1 n\\
+& f(\theta), \frac 1 n \leq \theta \leq 2\pi
+\end{aligned}
+\right.</script><p>$f$在区间上是unbounded的，因此不属于$R$</p>
+<h3 id="证明均方收敛"><a href="#证明均方收敛" class="headerlink" title="证明均方收敛"></a>证明均方收敛</h3><p>继续讨论circle上的可积函数空间$\mathcal R$，我们希望证明</p>
+<script type="math/tex; mode=display">
+d(f,S_N(f)) \to 0,N\to \infty</script><p>定义$e_n(\theta) = e^{in\theta}$，满足(orthonormal)</p>
+<script type="math/tex; mode=display">
+(e_n,e_m) = 1,n=m</script><p>计算$f$和$e_n$的内积</p>
+<script type="math/tex; mode=display">
+(f,e_n) = \frac 1 {2\pi}\int_0^{2\pi }f(\theta) e^{-in\theta} d\theta  = a_n</script><p>显然</p>
+<script type="math/tex; mode=display">
+S_N (f) = \sum_{|n|\leq N} a_n e_n = \sum_{|n|\leq N} (f,e_n) e_n</script><p>对于$f - S_N(f)$有如下结论</p>
+<script type="math/tex; mode=display">
+(f - \sum_{|n|\leq N} a_n e_n)\perp \sum_{|n|\leq N} b_n e_n</script><blockquote>
+<p>这是因为</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+(f - S_N(f),S_N(f))& = \sum_{|n|\leq N} b_n (f,e_n) - \sum_{|n|\leq N} a_n b_n \\
+& =\sum_{|n|\leq N} a_n b_n  - \sum_{|n|\leq N} a_n b_n = 0
+\end{aligned}</script><p>得证</p>
+</blockquote>
+<p>进一步，有</p>
+<script type="math/tex; mode=display">
+f = f-\sum_{|n|\leq N} a_n e_n  + \sum_{|n|\leq N}a_n e_n\\
+\parallel f\parallel^2  = \parallel f - \sum_{|n|\leq N} a_n e_n \parallel^2  + \parallel \sum_{|n|\leq N} a_n e_n\parallel^2\\
+\parallel \sum_{|n|\leq N} a_n e_n \parallel ^2 = \sum_{|n|\leq N} |a_n|^2</script><p>接下来我们证明$f - S_N(f)$是最好的三角多项式，使得$\parallel f - \sum_{|n|\leq N} c_n e_n\parallel$最小</p>
+<script type="math/tex; mode=display">
+\parallel f - S_N(f)\parallel \leq \parallel f - \sum_{|n|\leq N} c_n e_n \parallel</script><p>还是借助正交证明</p>
+<p>通过证明三角多项式的一致收敛定理，我们得到在circle上的路i案续汉书存在三角多项式$P(x)$在整个circle上对其一致收敛，即</p>
+<script type="math/tex; mode=display">
+\forall \epsilon > 0,|f(x) - P(x) |<\epsilon,\forall -\pi \leq x\leq \pi</script><p>这个P(x)可以是Fejer kernel和f的卷积，根据最小逼近原理可得</p>
+<script type="math/tex; mode=display">
+\parallel f - S_N(f)\parallel \leq \parallel f(x)-P(x)\parallel \leq \epsilon</script><p>随后我们将条件放松到仅仅是可积函数f的情况，之前我们提到过一个函数近似的引理</p>
+<blockquote>
+<p>对于定义在circle上的可积函数f，并且f被B bound住，此时存在函数列$\{f_k\}_{k=1}^\infty$，满足</p>
+<script type="math/tex; mode=display">
+\sup_{x\in [-\pi,\pi]} |f_k(x)|\leq B</script><p>此时存在极限</p>
+<script type="math/tex; mode=display">
+\int_{-\pi}^\pi |f(x) - f_k(x) | dx \to 0,k\to \infty</script></blockquote>
+<p>这种情况下，可以选择同样被B bound住的连续函数g，满足</p>
+<script type="math/tex; mode=display">
+\int_0 ^{2\pi} |f(\theta) - g(\theta)| d\theta \leq \epsilon</script><p>这种情况在用三角多项式P逼近f即可，得到</p>
+<script type="math/tex; mode=display">
+\parallel f- P\parallel \leq C \epsilon</script><p>再借助best estimation逼近LHS</p>
+<h3 id="Parseval-Identity"><a href="#Parseval-Identity" class="headerlink" title="Parseval Identity"></a>Parseval Identity</h3><p>对于可积函数f，则有Parseval Identity</p>
+<script type="math/tex; mode=display">
+\sum_{n= -\infty}^\infty |a_n|^2 = \parallel f\parallel^2 = \frac 1 {2\pi} \int_0^{2\pi} f(\theta)^2  d\theta</script><blockquote>
+<p>对于任何在circle上正交的函数族$\{e_n\}$，定义$a_n = (f,e_n)$，则我们有(Bessel’s inequality)</p>
+<script type="math/tex; mode=display">
+\sum_{n = -\infty}^{\infty}|a_n|^2 \leq \parallel f\parallel^2</script><p>等号成立当且仅当$\sum a_n e_n \to f$</p>
+<p>可以借助一组正交基将函数f投影到无限维空间$\mathcal l^2(\Z)$中，即构建</p>
+<script type="math/tex; mode=display">
+f \to (\cdots,a_{-2},a_{-1},a_0,a_1,a_2,\cdots)</script><p>的映射，这个空间加上约束条件$\sum_n |a_n|^2 &lt;\infty$相比可积函数空间$\mathcal R$的好处是后者是完备的，这和$\mathcal R$不完备矛盾(因为必然被$\parallel f\parallel^2$ bound住)，这种情况下必然存在一种情况</p>
+<blockquote>
+<p>对于$l^2(\Z)$空间上的一个sequence  $a_n,n\in \Z$，必然存在一种情况，即不存在一个$\mathcal R$上的函数f使得每个对应的Fourier Coefficient和$a_n$相对应</p>
+</blockquote>
+</blockquote>
+<p>由Coefficient的收敛我们得到</p>
+<blockquote>
+<p>对于circle上的可积函数f，必然有$\hat f(n)\to 0$ as $n\to \infty$</p>
+</blockquote>
+<p>进一步我们有，对于两个可积函数和对应的Fourier Series</p>
+<script type="math/tex; mode=display">
+F\quad \sum a_n e^{in \theta}\\
+G\quad \sum b_n e^{in\theta}</script><p>利用正交性，得到</p>
+<script type="math/tex; mode=display">
+(F,G) = \sum a_n \overline b_n</script><h2 id="Pointwise-Convergence"><a href="#Pointwise-Convergence" class="headerlink" title="Pointwise Convergence"></a>Pointwise Convergence</h2><p>mean-square并不能推出point-wise convergence，反之亦然，之前我们证明了存在三角多项式获得circle上的universal近似，这是建立在函数在整个circle上连续的条件上的。本节只希望讨论函数在局部$\theta_0$的性质，先给出一个local的结论（本节并不要求全局连续）</p>
+<h3 id="Local-Result"><a href="#Local-Result" class="headerlink" title="Local  Result"></a>Local  Result</h3><p>给定在circle上可积的函数f，在$\theta_0$处可微，则</p>
+<script type="math/tex; mode=display">
+S_N(f) (\theta_0) \to f(\theta_0)</script><p>这表明傅里叶级数在某一点处的收敛性仅仅取决于函数在这一点附近的性质</p>
+<h3 id="Diverging-Fourier-Series"><a href="#Diverging-Fourier-Series" class="headerlink" title="Diverging Fourier Series"></a>Diverging Fourier Series</h3><blockquote>
+<p>希望构造一个连续函数，使得其傅里叶级数$S_N(\theta) = \sum_{n=-N}^N a_n e^{in\theta}$在某一点$\theta_0$处发散</p>
+</blockquote>
+<p>对于偶锯齿函数$f(\theta) = i(\pi -\theta),0&lt;\theta &lt;\pi$，我们有</p>
+<script type="math/tex; mode=display">
+S_N(f)= \sum_{n\neq 0,n=-N}^N \frac{e^{in\theta}}{n}</script><p>分割为两个部分（破坏对称性）</p>
+<script type="math/tex; mode=display">
+\overline f_N(\theta) = \sum_{n=-N}^{-1} \frac{e^{in\theta}}{n},f_N(\theta ) = \sum_{1\leq |n|\leq N}\frac{e^{in\theta}}{n}</script><p>对应$\overline f_N(\theta)$不是一个可积函数的傅里叶级数</p>
+<blockquote>
+<p>证明，假设$\overline  f_N(\theta)$是一个函数$\overline f$的傅里叶系数，对应的Abel Sum写成</p>
+<script type="math/tex; mode=display">
+|A_r(\overline f)(\theta) | = |\sum_{n=-\infty} ^{-1} r^{|n|} \frac{e^{in\theta}}{n}|</script><p>带入0，得到</p>
+<script type="math/tex; mode=display">
+|A_r(\overline f(0))| = \sum_{n=1}^\infty\frac{r^n}{n}</script><p>后者趋向于无穷$r \to 1^{-1}$，但是写成卷积形式</p>
+<script type="math/tex; mode=display">
+|A_r(\overline f)(0)| \leq \frac 1 {2\pi}\int_{-\pi}^\pi |\overline f(\theta)|P_r(\theta)d\theta\leq\frac 1 {2\pi} \max_\theta |\overline f(\theta)| \int_{-\pi}^\pi P_r(\theta) d\theta</script><p>显然被bound住</p>
+</blockquote>
+<p>显然有</p>
+<ol>
+<li>$|\overline f_N(0)| \geq c\log N$(积分面积)</li>
+<li>$f_N(\theta)$ is uniformly bounded in N and $\theta$（一致有界）</li>
+</ol>
+<p>下面证明一个引理，有关Abel means的性质(Abel Sum被bound，并且系数满足某种特定递减的性质，则r=1时收敛)</p>
+<blockquote>
+<p>这种Abel means只考虑$n\geq 0$的情况</p>
+<p>对于序列$\sum_{n=1}^\infty c_n$的Abel means $A_r  =\sum_{n=1}^\infty r^n c_n,r\in (0,1)$，假定在$r\to 1$时$A_r$被bound住，如果$c_n = O(\frac 1 n)$，则$S_N = \sum_{n=1}^N c_n$被bound</p>
+</blockquote>
+<p>将这个结论应用于序列</p>
+<script type="math/tex; mode=display">
+\sum_{n\neq 0}\frac {e^{in\theta}}n,c_n = \frac{e^{in\theta}}{n} + \frac{e^{-in\theta}}{-n}</script><p>并且$|A_r(f)(\theta)| \leq \frac 1 {2\pi} \int_{-\pi}^\pi f(\theta -\phi)P_r(\phi) d\phi \leq \sup_\theta f$</p>
+<p>得到$f_N(\theta)$被N和$\theta$ bound住</p>
+<p>进一步定义$P_N,\overline P_N$</p>
+<script type="math/tex; mode=display">
+P_N(\theta) = e^{i2N\theta}f_N(\theta) = e^{i2N\theta}\sum_{1\leq |n|\leq N} \frac{e^{in\theta}}{n}，[N,2N-1]\bigcup[2N+1,3N] \\
+\overline P_N(\theta) = e^{i2N\theta}\overline f_N(\theta)=e^{i2N\theta}\sum_{-N\leq n\leq -1}\frac{e^{in\theta}}{n},[N,2N-1] \\
+\overline f_N(\theta) = \sum_{n=-N}^{-1} \frac{e^{in\theta}}{n},f_N(\theta ) = \sum_{1\leq |n|\leq N}\frac{e^{in\theta}}{n}</script><p>$f_N,\overline f_N$在N=0时没有定义，因此$P_N$在2N处三角多项式为空，对于这样的三角多项式定义其部分和</p>
+<script type="math/tex; mode=display">
+S_M(P_N)</script><blockquote>
+<p>TBD</p>
+</blockquote>
 
         
     
@@ -559,8 +704,8 @@ V(s) = E_{a|\pi_\theta(\cdot|s,z),z|\pi_\eta(\cdot|s)}[Q_{\phi^\prime}(s,a)]</sc
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://gaoustcer.github.io/2023/04/18/LAPO/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://gaoustcer.github.io/2023/04/18/LAPO/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://gaoustcer.github.io/2024/05/08/Fourier-Analysis-Chapter-3-Convergence/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://gaoustcer.github.io/2024/05/08/Fourier-Analysis-Chapter-3-Convergence/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -590,21 +735,13 @@ V(s) = E_{a|\pi_\theta(\cdot|s,z),z|\pi_\eta(\cdot|s)}[Q_{\phi^\prime}(s,a)]</sc
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/04/18/Latent-Action-Space/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2023/04/18/GMM-EM-VI/" id="post_nav-older" class="next-content">
+        <a href="/2024/05/06/SayCAN/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
